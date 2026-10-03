@@ -17,19 +17,19 @@ export default {
     subtitle: 'Trasparenza totale sulle finanze cantonali. Ogni dato verificato, ogni fonte citata, ogni numero tracciabile.',
     metrics: {
       deficit: {
-        label: 'Disavanzo 2027',
-        value: '-98.5M',
-        sub: 'CHF -272 per abitante'
+        label: 'Risultato 2025',
+        value: '-32M',
+        sub: 'Disavanzo effettivo (C2025)'
       },
       debt: {
-        label: 'Debito pubblico',
-        value: '>3.0 Mia',
-        sub: '+20% dal 2023'
+        label: 'Debito 2025',
+        value: '3.056 Mia',
+        sub: 'CHF +51M vs 2024'
       },
-      premiums: {
-        label: 'Premi più alti CH',
-        value: '520 CHF',
-        sub: '+26% vs media svizzera'
+      spending: {
+        label: 'Spese 2025',
+        value: '4.583 Mia',
+        sub: 'Spese effettive (C2025)'
       }
     }
   },

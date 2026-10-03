@@ -17,19 +17,19 @@ export default {
     subtitle: 'Vollständige Transparenz über die kantonalen Finanzen. Jede Zahl überprüft, jede Quelle zitiert, jede Nummer nachvollziehbar.',
     metrics: {
       deficit: {
-        label: 'Defizit 2027',
-        value: '-98.5M',
-        sub: 'CHF -272 pro Einwohner'
+        label: 'Ergebnis 2025',
+        value: '-32M',
+        sub: 'Tatsächliches Defizit (C2025)'
       },
       debt: {
-        label: 'Öffentliche Schulden',
-        value: '>3.0 Mrd',
-        sub: '+20% seit 2023'
+        label: 'Schulden 2025',
+        value: '3.056 Mrd',
+        sub: 'CHF +51M vs 2024'
       },
-      premiums: {
-        label: 'Höchste Prämien CH',
-        value: '520 CHF',
-        sub: '+26% vs Schweizer Durchschnitt'
+      spending: {
+        label: 'Ausgaben 2025',
+        value: '4.583 Mrd',
+        sub: 'Tatsächliche Ausgaben (C2025)'
       }
     }
   },

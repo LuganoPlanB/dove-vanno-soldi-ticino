@@ -17,19 +17,19 @@ export default {
     subtitle: 'Full transparency on cantonal finances. Every figure verified, every source cited, every number traceable.',
     metrics: {
       deficit: {
-        label: '2027 Deficit',
-        value: '-98.5M',
-        sub: 'CHF -272 per resident'
+        label: '2025 Result',
+        value: '-32M',
+        sub: 'Actual deficit (C2025)'
       },
       debt: {
-        label: 'Public debt',
-        value: '>3.0 Bn',
-        sub: '+20% since 2023'
+        label: '2025 Debt',
+        value: '3.056 Bn',
+        sub: 'CHF +51M vs 2024'
       },
-      premiums: {
-        label: 'Highest premiums CH',
-        value: '520 CHF',
-        sub: '+26% vs Swiss average'
+      spending: {
+        label: '2025 Spending',
+        value: '4.583 Bn',
+        sub: 'Actual spending (C2025)'
       }
     }
   },
