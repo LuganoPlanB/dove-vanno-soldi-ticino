@@ -43,15 +43,22 @@
         "pagine": "p.7 (sintesi), p.78 (tabella evoluzione)",
         "citazioneLiterale": "Il disavanzo totale va ad aumentare il debito pubblico, portandolo da 1'349.2 milioni di franchi al 31.12.2011 a 1'440.4 milioni di franchi al 31.12.2012"
       },
+      "2013": {
+        "debito": 1708,
+        "delta": 267.6,
+        "proCapite": 4994,
+        "fonte": "DFE Serie storica Debito pubblico 2001-2013",
+        "documentoPDF": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/indicatori_serie_storica/14_Debito_pubblico.pdf",
+        "pagina": "p.1 tabella",
+        "citazioneLiterale": "Debito pubblico 2013: 1'708 milioni CHF (da tabella ufficiale DFE)"
+      },
       "2023": {
-        "debito": 2869.0,
-        "delta": 225.0,
-        "proCapite": 8221,
+        "debito": 2500,
         "fonte": "Comunicato stampa Consuntivo 2023",
         "documentoURL": "www4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=238533",
-        "dataComSalto": "11 aprile 2024",
-        "citazioneLiterale": "Il debito pubblico si situa a circa 2.5 miliardi di franchi [2023]",
-        "nota": "Valore ~2.5 miliardi conferma ordine grandezza 2869M da altre fonti DFE"
+        "data": "11 aprile 2024",
+        "citazioneLiterale": "Il debito pubblico si situa a circa 2.5 miliardi di franchi",
+        "nota": "APPROSSIMAZIONE dal comunicato. Numero esatto non stampato nel comunicato. Gap di precisione."
       },
       "2024": {
         "debito": 3005.0,
@@ -67,163 +74,15 @@
         "delta": 51.0,
         "proCapite": 8579,
         "fonte": "Messaggio Consuntivo 2025 n. 8672",
-        "documentoPDF": "C2025_messaggio_full.pdf (locale)",
         "documentoURL": "www4.ti.ch/dfe/dr/finanze/dati-finanziari/c2025",
         "dataApprovazione": "15 aprile 2026",
         "pagina": "p.15 tabella riassuntiva",
-        "citazioneLiterale": "Tabella MCA2: Risultato totale -51M, Debito pubblico stimato fine 2025"
+        "citazioneLiterale": "Risultato totale -51M, debito netto atteso 3.056 miliardi"
       }
     },
-    "2000": {
-      "debito": 765,
-      "nota": "Dato non trovato in documenti ufficiali. Serie inizia dal 2001."
-    },
-    "2001": {
-      "debito": 818,
-      "proCapite": 2591,
-      "fonte": "DFE Serie storica Debito pubblico 2001-2013",
-      "documentoPDF": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/indicatori_serie_storica/14_Debito_pubblico.pdf",
-      "nota": "Tabella ufficiale DFE"
-    },
-    "2002": {
-      "debito": 814,
-      "proCapite": 2570,
-      "fonte": "DFE Serie storica Debito pubblico 2001-2013",
-      "documentoPDF": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/indicatori_serie_storica/14_Debito_pubblico.pdf",
-      "nota": "Tabella ufficiale DFE"
-    },
-    "2003": {
-      "debito": 1092,
-      "delta": 278,
-      "proCapite": 3419,
-      "fonte": "DFE Serie storica Debito pubblico 2001-2013",
-      "documentoPDF": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/indicatori_serie_storica/14_Debito_pubblico.pdf",
-      "nota": "Tabella ufficiale DFE"
-    },
-    "2004": {
-      "debito": 1399,
-      "delta": 307,
-      "proCapite": 4327,
-      "fonte": "DFE Serie storica Debito pubblico 2001-2013",
-      "documentoPDF": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/indicatori_serie_storica/14_Debito_pubblico.pdf",
-      "nota": "Tabella ufficiale DFE"
-    },
-    "2005": {
-      "debito": 1046,
-      "delta": -353,
-      "proCapite": 3195,
-      "fonte": "DFE Serie storica Debito pubblico 2001-2013",
-      "documentoPDF": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/indicatori_serie_storica/14_Debito_pubblico.pdf",
-      "nota": "Tabella ufficiale DFE. Riduzione per provento straordinario oro BNS"
-    },
-    "2006": {
-      "debito": 1198,
-      "delta": 152,
-      "proCapite": 3618,
-      "fonte": "DFE Serie storica Debito pubblico 2001-2013",
-      "documentoPDF": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/indicatori_serie_storica/14_Debito_pubblico.pdf",
-      "nota": "Tabella ufficiale DFE"
-    },
-    "2007": {
-      "debito": 1285,
-      "delta": 87,
-      "proCapite": 3824,
-      "fonte": "DFE Serie storica Debito pubblico 2001-2013",
-      "documentoPDF": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/indicatori_serie_storica/14_Debito_pubblico.pdf",
-      "nota": "Tabella ufficiale DFE"
-    },
-    "2008": {
-      "debito": 1216,
-      "delta": -69,
-      "proCapite": 3568,
-      "fonte": "DFE Serie storica Debito pubblico 2001-2013",
-      "documentoPDF": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/indicatori_serie_storica/14_Debito_pubblico.pdf",
-      "nota": "Tabella ufficiale DFE"
-    },
-    "2009": {
-      "debito": 1237,
-      "delta": 21,
-      "proCapite": 3606,
-      "fonte": "DFE Serie storica Debito pubblico 2001-2013",
-      "documentoPDF": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/indicatori_serie_storica/14_Debito_pubblico.pdf",
-      "nota": "Tabella ufficiale DFE"
-    },
-    "2013": {
-      "debito": 1708,
-      "delta": 277,
-      "proCapite": 4994,
-      "fonte": "DFE Serie storica Debito pubblico 2001-2013",
-      "documentoPDF": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/indicatori_serie_storica/14_Debito_pubblico.pdf",
-      "nota": "Tabella ufficiale DFE"
-    },
-    "2014": {
-      "debito": 1900,
-      "delta": 192,
-      "proCapite": 5423,
-      "fonte": "Comunicato stampa Consuntivo 2014",
-      "documentoPDF": "www3.ti.ch/CAN/comunicati/02-04-2015-comunicato-stampa-419575277781.pdf",
-      "nota": "Comunicato stampa menziona 'circa 1.9 miliardi'"
-    },
-    "2015": {
-      "debito": 1900,
-      "proCapite": 5398,
-      "fonte": "Messaggio Consuntivo 2015",
-      "documentoPDF": "m3.ti.ch/CAN/cartellastampa/pdf-cartella-stampa-831160352977.pdf",
-      "nota": "Messaggio menziona '1.9 miliardi di franchi'"
-    },
-    "2016": {
-      "debito": 1900,
-      "proCapite": 5361,
-      "fonte": "Messaggio Consuntivo 2016 n. 7302",
-      "documentoPDF": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/C2016/C2016_messaggio.pdf",
-      "nota": "Messaggio menziona 'soglia critica di 1.9 miliardi di franchi'"
-    },
-    "2017": {
-      "debito": 1928,
-      "delta": 28,
-      "proCapite": 5451,
-      "fonte": "Messaggio Consuntivo 2018 (calcolato)",
-      "documentoPDF": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/C2018/2018_messaggio.pdf",
-      "nota": "C2018 menziona 'debito pubblico diminuisce di 28.4 milioni rispetto 2017', quindi ~1.9 + 28.4 M"
-    },
-    "2018": {
-      "debito": 1900,
-      "delta": -28,
-      "proCapite": 5377,
-      "fonte": "Messaggio Consuntivo 2018",
-      "documentoPDF": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/C2018/2018_messaggio.pdf",
-      "nota": "Messaggio menziona 'debito pubblico appena al di sotto di 1.9 miliardi di franchi'"
-    },
-    "2019": {
-      "debito": 1900,
-      "proCapite": 5406,
-      "fonte": "Messaggio Consuntivo 2019",
-      "documentoPDF": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/C2019/2019_messaggio.pdf",
-      "nota": "Messaggio menziona 'debito pubblico appena al di sotto di 1.9 miliardi di franchi'"
-    },
-    "2020": {
-      "debito": 2104,
-      "delta": 204,
-      "proCapite": 5994,
-      "fonte": "Calcolato da pro-capite CGF",
-      "documentoPDF": "m4.ti.ch/fileadmin/POTERI/GC/allegati/rapporti/29189_8562%20R1.pdf",
-      "nota": "Pro-capite 5'994 CHF * popolazione 350'986 = 2'104 M. Effetto COVID-19."
-    },
-    "2021": {
-      "debito": 2197,
-      "delta": 93,
-      "proCapite": 6238,
-      "fonte": "Calcolato da pro-capite CGF + Messaggio C2021",
-      "documentoPDF": "m4.ti.ch/fileadmin/DFE/DR-FINANZE/C2021/MessaggioConsuntivo2021_web.pdf",
-      "nota": "Pro-capite 6'238 CHF * popolazione 352'181 = 2'197 M. 'appena al di sotto di 2.2 miliardi'"
-    },
-    "2022": {
-      "debito": 2290,
-      "delta": 93,
-      "proCapite": 6468,
-      "fonte": "Calcolato da pro-capite CGF",
-      "documentoPDF": "m4.ti.ch/fileadmin/POTERI/GC/allegati/rapporti/29189_8562%20R1.pdf",
-      "nota": "Pro-capite 6'468 CHF * popolazione stimata ~354'000"
+    "lacune": {
+      "2000": "Dato non trovato in documenti ufficiali",
+      "2014_2022": "Nessun numero esatto stampato trovato nei documenti primari accessibili. Comunicati stampa e messaggi usano solo approssimazioni ('circa 1.9 miliardi', 'appena al di sotto di 1.9 miliardi', 'appena al di sotto di 2.2 miliardi'). Pro-capite CGF sono calcoli derivati, non debito stampato direttamente. Gap di 9 anni."
     }
   },
   
