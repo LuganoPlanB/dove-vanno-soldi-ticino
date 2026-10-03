@@ -1,8 +1,6 @@
 // Insight and trivia cards with visible formulas
 // Helping citizens understand public spending through concrete examples
 
-import { calculatePerCapita } from './ux-enhancements';
-
 export interface InsightCard {
   id: string;
   emoji: string;
