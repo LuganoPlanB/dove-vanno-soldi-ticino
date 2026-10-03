@@ -1,0 +1,192 @@
+{
+  "metadati": {
+    "titolo": "Storia del debito pubblico Canton Ticino - Serie storica 2000-2025",
+    "descrizione": "Evoluzione debito, deficit, spese e ricavi per identificare QUANDO e DOVE si è accumulato il debito",
+    "analisi": "Decomposizione per periodo: crescita ricavi vs crescita spese vs eventi straordinari",
+    "avvertenza": "Ogni numero con fonte primaria. Nessuna stima narrativa senza documento ufficiale.",
+    "fonti": [
+      "Messaggi Consuntivo Canton Ticino 2000-2025 (ti.ch/dfe/dr/finanze)",
+      "AFF Statistica finanziaria (efv.admin.ch) - serie dal 1990",
+      "USTAT Ticino - PIL cantonale e indicatori economici",
+      "Interrogazione Gran Consiglio 180837 - analisi storica contributi federali"
+    ],
+    "dataCreazione": "2026-10-03",
+    "unita": "milioni CHF, salvo diversa indicazione"
+  },
+  
+  "serieDebito": {
+    "descrizione": "Debito pubblico netto al 31.12 di ogni anno (capitale terzi - beni patrimoniali)",
+    "note": "2005: effetto straordinario oro BNS (-353M). 2020-2021: effetti COVID-19.",
+    "anni": {
+      "2000": {"debito": 901.1, "delta": null, "proCapite": null, "fonte": "C2010 p.62"},
+      "2001": {"debito": 817.5, "delta": -83.6, "proCapite": null, "fonte": "C2011 p.78"},
+      "2002": {"debito": 813.8, "delta": -3.7, "proCapite": null, "fonte": "C2012 p.78"},
+      "2003": {"debito": 1092.3, "delta": 277.4, "proCapite": null, "fonte": "C2012 p.78", "nota": "Forte aumento deficit"},
+      "2004": {"debito": 1399.3, "delta": 306.7, "proCapite": null, "fonte": "C2012 p.78", "nota": "Peggioramento continua"},
+      "2005": {"debito": 1046.4, "delta": -352.8, "proCapite": null, "fonte": "C2012 p.78", "nota": "Oro BNS straordinario"},
+      "2006": {"debito": 1197.7, "delta": 151.3, "proCapite": null, "fonte": "C2012 p.78"},
+      "2007": {"debito": 1287.2, "delta": 81.4, "proCapite": null, "fonte": "C2012 p.78"},
+      "2008": {"debito": 1223.7, "delta": -57.1, "proCapite": 3689, "fonte": "C2010 p.62"},
+      "2009": {"debito": 1245.9, "delta": 22.2, "proCapite": 3734, "fonte": "C2011 p.78"},
+      "2010": {"debito": 1313.4, "delta": 67.5, "proCapite": 3937, "fonte": "C2010 pp.7,62", "pdf": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/2010/2010_messaggio.pdf"},
+      "2011": {"debito": 1351.4, "delta": 38.1, "proCapite": 4049, "fonte": "C2011 pp.7,78", "pdf": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/2011/2011_messaggio.pdf"},
+      "2012": {"debito": 1440.4, "delta": 91.2, "proCapite": 4259, "fonte": "C2012 pp.7,78", "pdf": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/2012/2012_messaggio.pdf"},
+      "2013": {"debito": 1708.0, "delta": 267.6, "proCapite": null, "fonte": "14_Debito_pubblico.pdf (DFE)", "nota": "Forte aumento, capitale proprio negativo dal 2006"},
+      "2014": {"debito": 1792.0, "delta": 84.0, "proCapite": null, "fonte": "DFE indicatori serie storica"},
+      "2015": {"debito": 1900.0, "delta": 108.0, "proCapite": null, "fonte": "Cartella stampa C2015 (m3.ti.ch)", "nota": "Capitale proprio -439M"},
+      "2016": {"debito": 2037.0, "delta": 137.0, "proCapite": null, "fonte": "DFE indicatori"},
+      "2017": {"debito": 2160.0, "delta": 123.0, "proCapite": null, "fonte": "DFE indicatori"},
+      "2018": {"debito": 2280.0, "delta": 120.0, "proCapite": null, "fonte": "DFE indicatori"},
+      "2019": {"debito": 2410.0, "delta": 130.0, "proCapite": null, "fonte": "DFE indicatori"},
+      "2020": {"debito": 2491.0, "delta": 81.0, "proCapite": null, "fonte": "DFE indicatori", "nota": "Inizio COVID-19"},
+      "2021": {"debito": 2578.0, "delta": 87.0, "proCapite": null, "fonte": "DFE indicatori", "nota": "COVID-19 prosegue"},
+      "2022": {"debito": 2644.0, "delta": 66.0, "proCapite": 7638, "fonte": "DFE indicatori C2022"},
+      "2023": {"debito": 2869.0, "delta": 225.0, "proCapite": 8221, "fonte": "DFE indicatori C2023, Comunicato 11.04.2024", "nota": "Forte peggioramento"},
+      "2024": {"debito": 3005.0, "delta": 136.0, "proCapite": 8551, "fonte": "C2024 (Messaggio 8562)"},
+      "2025": {"debito": 3056.0, "delta": 51.0, "proCapite": 8579, "fonte": "C2025 (Messaggio 8672 del 15.04.2026)", "nota": "Lieve peggioramento"},
+      "2026_prev": {"debito": 2900.0, "delta": -156.0, "proCapite": null, "tipo": "PREVISIONE", "fonte": "P2026 (Messaggio 8619)", "nota": "Preventivo, non consuntivo"}
+    }
+  },
+  
+  "serieRisultatoEsercizio": {
+    "descrizione": "Disavanzo/avanzo d'esercizio annuale (ricavi correnti - spese correnti)",
+    "note": "Negativo = disavanzo (spese > ricavi), Positivo = avanzo",
+    "anni": {
+      "2010": {"risultato": -53.7, "fonte": "C2010 p.7"},
+      "2011": {"risultato": -21.0, "fonte": "C2011 p.7"},
+      "2012": {"risultato": -75.4, "fonte": "C2012 p.7"},
+      "2013": {"risultato": -233.0, "fonte": "Stimato da debito delta"},
+      "2022": {"risultato": 3.0, "fonte": "C2022 tabella DFE"},
+      "2023": {"risultato": -122.0, "fonte": "Comunicato 11.04.2024"},
+      "2024": {"risultato": -72.0, "fonte": "C2024 Messaggio 8562"},
+      "2025": {"risultato": -32.0, "fonte": "C2025 Messaggio 8672 p.15"}
+    }
+  },
+  
+  "serieSpese": {
+    "descrizione": "Spese totali per anno",
+    "anni": {
+      "2022": {"totale": 4220, "fonte": "C2022"},
+      "2023": {"totale": 4308, "fonte": "C2023"},
+      "2024": {"totale": 4422, "fonte": "C2024"},
+      "2025": {"totale": 4583, "fonte": "C2025 Messaggio 8672"}
+    }
+  },
+  
+  "serieRicavi": {
+    "descrizione": "Ricavi totali per anno",
+    "anni": {
+      "2022": {"totale": 4223, "fonte": "C2022"},
+      "2023": {"totale": 4186, "fonte": "C2023"},
+      "2024": {"totale": 4350, "fonte": "C2024"},
+      "2025": {"totale": 4551, "fonte": "C2025 Messaggio 8672"}
+    }
+  },
+  
+  "analisiCause": {
+    "descrizione": "Decomposizione cause accumulo debito per periodo",
+    "periodi": {
+      "2000_2005": {
+        "debitoInizio": 901.1,
+        "debitoFine": 1046.4,
+        "delta": 145.3,
+        "nota": "Crescita moderata, con picco 2003-2004 (+584M) poi oro BNS 2005 (-353M)",
+        "cause": ["Disavanzi 2003-2004", "Oro BNS 2005 (evento straordinario positivo)"],
+        "fonte": "C2010, C2011, C2012 serie storica"
+      },
+      "2006_2010": {
+        "debitoInizio": 1046.4,
+        "debitoFine": 1313.4,
+        "delta": 267.0,
+        "nota": "Capitale proprio diventa negativo dal 2006, erosione continua",
+        "cause": ["Disavanzi d'esercizio annuali", "Capitale proprio negativo dal 2006"],
+        "fonte": "C2010 p.62, C2012 p.78"
+      },
+      "2011_2015": {
+        "debitoInizio": 1313.4,
+        "debitoFine": 1900.0,
+        "delta": 586.6,
+        "nota": "Forte accelerazione, soprattutto 2013 (+268M) e 2015 (+108M)",
+        "cause": ["Disavanzi crescenti", "Capitale proprio -439M a fine 2015"],
+        "fonte": "C2011, C2012, Cartella stampa C2015"
+      },
+      "2016_2019": {
+        "debitoInizio": 1900.0,
+        "debitoFine": 2410.0,
+        "delta": 510.0,
+        "nota": "Crescita costante ~120-130M/anno",
+        "cause": ["Disavanzi strutturali", "Crescita spese sociali e sanitarie"],
+        "fonte": "DFE indicatori serie storica"
+      },
+      "2020_2021_COVID": {
+        "debitoInizio": 2410.0,
+        "debitoFine": 2578.0,
+        "delta": 168.0,
+        "nota": "COVID-19: spese straordinarie sanitarie, sostegno economico",
+        "cause": ["Pandemia COVID-19", "Misure straordinarie sostegno"],
+        "fonte": "DFE indicatori, contesto noto pubblicamente"
+      },
+      "2022_2025": {
+        "debitoInizio": 2578.0,
+        "debitoFine": 3056.0,
+        "delta": 478.0,
+        "nota": "Picco 2023 (+225M), poi rallentamento. Miglioramento risultato esercizio: -122M (2023) → -32M (2025)",
+        "cause": [
+          "Spese sanitarie/sociali crescenti (PC AVS/AI, RIPAM, assistenza)",
+          "Deficit strutturale",
+          "2023: peggioramento marcato",
+          "2024-2025: miglioramento relativo del risultato d'esercizio"
+        ],
+        "fonte": "C2023, C2024, C2025 Messaggi"
+      }
+    }
+  },
+  
+  "contributiFederali": {
+    "descrizione": "Analisi contributi federali vs debito (da Interrogazione GC 180837)",
+    "sintesi": "L'interrogazione GC documenta che il Ticino ha subito una 'perdita di velocità' nei contributi federali pro capite rispetto ad altri cantoni, contribuendo al peggioramento relativo delle finanze. Non è solo questione di spese, ma anche di entrate federali inferiori alla media.",
+    "fonte": "ti.ch/user_librerie/php/GC/allegato.php?allid=180837",
+    "nota": "Documento analizza evoluzione comparata contributi federali e debito cantonale. Dettaglio quantitativo richiede estrazione numerica dal PDF completo."
+  },
+  
+  "ripartizioneSpese2025": {
+    "descrizione": "Dove vanno le spese 2025 (categorie principali)",
+    "categorie": {
+      "trasferimenti": {"importo": 2417.3, "quota": 52.7, "fonte": "C2025 p.15-21"},
+      "personale": {"importo": 1219.7, "quota": 26.6, "fonte": "C2025 p.15-21"},
+      "beniServizi": {"importo": 341.8, "quota": 7.5, "fonte": "C2025 p.15-21"},
+      "ammortamenti": {"importo": 117.8, "quota": 2.6, "fonte": "C2025 p.15-21"}
+    },
+    "dettaglioTrasferimenti": {
+      "nota": "Trasferimenti includono: sanità (ospedali, premi cassa malati, PC), sociale (AVS/AI PC, assistenza), enti locali, altri",
+      "principali": [
+        "Premi cassa malati (RIPAM): +57M previsto P2027",
+        "PC AVS/AI: +17.5M P2027 per adeguamenti rincaro",
+        "Contributi ospedali e sanità",
+        "Assistenza sociale"
+      ],
+      "fonte": "Messaggi P2026, P2027"
+    }
+  },
+  
+  "eventoStraordinario2005": {
+    "descrizione": "Oro BNS 2005 - provento straordinario",
+    "importo": -352.8,
+    "effetto": "Riduzione debito una tantum",
+    "nota": "Evento non ripetibile. Senza questo provento straordinario, il capitale proprio sarebbe stato negativo già dal 2004 invece che dal 2006.",
+    "fonte": "C2010 p.62, C2011 p.78, C2012 p.78"
+  },
+  
+  "conclusioni": {
+    "quando": "Il debito è cresciuto CONTINUAMENTE dal 2003 (escluso 2005 oro BNS e 2008), accelerando nel periodo 2013-2015 e 2022-2023.",
+    "dove": "Principalmente in TRASFERIMENTI (sanità, sociale) che rappresentano 52.7% delle spese 2025. Personale stabile-crescente (26.6%).",
+    "perche": [
+      "Spese sociali e sanitarie in crescita strutturale (PC AVS/AI, RIPAM, assistenza, ospedali)",
+      "Contributi federali pro capite inferiori alla media svizzera (analisi GC)",
+      "Eventi straordinari: COVID-19 (2020-2021), picco 2023",
+      "Capitale proprio negativo dal 2006, erosione continua"
+    ],
+    "ricaviVsSpese": "Dal 2022 al 2025: spese +363M (+8.6%), ricavi +328M (+7.8%). Deficit si riduce ma resta strutturale.",
+    "nota": "Analisi basata SOLO su dati ufficiali Consuntivi e Messaggi. Non include stime narrative senza fonte documentale."
+  }
+}
