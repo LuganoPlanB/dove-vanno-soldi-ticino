@@ -64,7 +64,7 @@ export async function loadSpeseNatura(): Promise<SpeseNaturaData> {
   if (speseNaturaData) return speseNaturaData;
   
   const basePath = import.meta.env.BASE_URL || '/';
-  const response = await fetch(`${basePath}data/spese-per-natura-2027.json`);
+  const response = await fetch(`${basePath}data/spese-per-natura-2025.json`);
   speseNaturaData = await response.json();
   return speseNaturaData!;
 }
