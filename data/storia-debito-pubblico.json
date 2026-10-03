@@ -52,37 +52,21 @@
         "pagina": "p.1 tabella",
         "citazioneLiterale": "Debito pubblico 2013: 1'708 milioni CHF (da tabella ufficiale DFE)"
       },
-      "2023": {
-        "debito": 2500,
-        "fonte": "Comunicato stampa Consuntivo 2023",
-        "documentoURL": "www4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=238533",
-        "data": "11 aprile 2024",
-        "citazioneLiterale": "Il debito pubblico si situa a circa 2.5 miliardi di franchi",
-        "nota": "APPROSSIMAZIONE dal comunicato. Numero esatto non stampato nel comunicato. Gap di precisione."
-      },
       "2024": {
-        "debito": 3005.0,
-        "delta": 136.0,
-        "proCapite": 8551,
+        "debito": 2654,
+        "delta": 108,
+        "proCapite": 7557,
         "fonte": "Messaggio Consuntivo 2024 n. 8562",
-        "documentoURL": "www4.ti.ch/dfe/dr/finanze/dati-finanziari/c2024",
+        "documentoPDF": "www4.ti.ch/fileadmin/DFE/DR-FINANZE/C2024/MessaggioConsuntivo2024.pdf",
         "dataApprovazione": "9 aprile 2025",
-        "nota": "Tabella riassuntiva C2024"
-      },
-      "2025": {
-        "debito": 3056.0,
-        "delta": 51.0,
-        "proCapite": 8579,
-        "fonte": "Messaggio Consuntivo 2025 n. 8672",
-        "documentoURL": "www4.ti.ch/dfe/dr/finanze/dati-finanziari/c2025",
-        "dataApprovazione": "15 aprile 2026",
-        "pagina": "p.15 tabella riassuntiva",
-        "citazioneLiterale": "Risultato totale -51M, debito netto atteso 3.056 miliardi"
+        "pagina": "p.48 grafico evoluzione debito",
+        "citazioneLiterale": "Il debito pubblico a 2'654 milioni di franchi"
       }
     },
     "lacune": {
       "2000": "Dato non trovato in documenti ufficiali",
-      "2014_2022": "Nessun numero esatto stampato trovato nei documenti primari accessibili. Comunicati stampa e messaggi usano solo approssimazioni ('circa 1.9 miliardi', 'appena al di sotto di 1.9 miliardi', 'appena al di sotto di 2.2 miliardi'). Pro-capite CGF sono calcoli derivati, non debito stampato direttamente. Gap di 9 anni."
+      "2014_2023": "Nessun numero esatto stampato trovato nei documenti primari accessibili. Comunicati stampa e messaggi usano solo approssimazioni ('circa 1.9 miliardi', 'circa 2.5 miliardi', 'appena al di sopra di 2.7 miliardi'). Pro-capite CGF sono calcoli derivati. Gap di 10 anni.",
+      "2025": "C2025 usa linguaggio approssimativo 'appena al di sopra di 2.7 miliardi' - non citato numero esatto in milioni. Gap."
     }
   },
   

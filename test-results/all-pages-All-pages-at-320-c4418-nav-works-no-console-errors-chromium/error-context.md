@@ -149,352 +149,351 @@ Received:   0
               - generic [ref=e199]: 4.0Mia
             - generic [ref=e201] [cursor=pointer]
             - generic [ref=e202] [cursor=pointer]
-            - generic [ref=e203] [cursor=pointer]
-            - generic [ref=e204]: Current
-            - generic [ref=e205]: expenditure
-            - generic [ref=e206]: Current
-            - generic [ref=e207]: revenue
-            - generic [ref=e208]: Investments
-    - generic [ref=e212]:
-      - generic [ref=e213]:
-        - heading "Stato dei dati" [level=2] [ref=e214]
-        - paragraph [ref=e215]: Panoramica completa dei dati disponibili e delle limitazioni
-      - generic [ref=e216]:
-        - generic [ref=e217]:
-          - generic [ref=e218]: Disponibili
-          - list [ref=e222]:
-            - listitem [ref=e223]: ✓ Consuntivo 2025 (effettivo)
-            - listitem [ref=e224]: ✓ Preventivo 2026 (in corso)
-            - listitem [ref=e225]: ✓ Serie storiche verificate
-            - listitem [ref=e226]: ✓ Dati popolazione
-            - listitem [ref=e227]: ✓ Premi e contributi sanità
-        - generic [ref=e228]:
-          - generic [ref=e229]: Mancanti
-          - list [ref=e233]:
-            - listitem [ref=e234]: ⏳ Consuntivi 2024, 2026
-            - listitem [ref=e235]: ⏳ Spese per dipartimento
-            - listitem [ref=e236]: ⏳ Serie storiche pre-2023
-      - generic [ref=e237]:
-        - link "Metodologia completa" [ref=e238] [cursor=pointer]:
+            - generic [ref=e203]: Current
+            - generic [ref=e204]: expenditure
+            - generic [ref=e205]: Current
+            - generic [ref=e206]: revenue
+            - generic [ref=e207]: Investments
+    - generic [ref=e211]:
+      - generic [ref=e212]:
+        - heading "Stato dei dati" [level=2] [ref=e213]
+        - paragraph [ref=e214]: Panoramica completa dei dati disponibili e delle limitazioni
+      - generic [ref=e215]:
+        - generic [ref=e216]:
+          - generic [ref=e217]: Disponibili
+          - list [ref=e221]:
+            - listitem [ref=e222]: ✓ Consuntivo 2025 (effettivo)
+            - listitem [ref=e223]: ✓ Preventivo 2026 (in corso)
+            - listitem [ref=e224]: ✓ Serie storiche verificate
+            - listitem [ref=e225]: ✓ Dati popolazione
+            - listitem [ref=e226]: ✓ Premi e contributi sanità
+        - generic [ref=e227]:
+          - generic [ref=e228]: Mancanti
+          - list [ref=e232]:
+            - listitem [ref=e233]: ⏳ Consuntivi 2024, 2026
+            - listitem [ref=e234]: ⏳ Spese per dipartimento
+            - listitem [ref=e235]: ⏳ Serie storiche pre-2023
+      - generic [ref=e236]:
+        - link "Metodologia completa" [ref=e237] [cursor=pointer]:
           - /url: ./metodologia.html
-        - link "Codice sorgente" [ref=e242] [cursor=pointer]:
+        - link "Codice sorgente" [ref=e241] [cursor=pointer]:
           - /url: https://github.com/tiero/dove-vanno-soldi-ticino
-    - generic [ref=e248]:
-      - generic [ref=e249]:
-        - 'heading "💰 Amministrazione: dove vanno i soldi?" [level=2] [ref=e250]'
-        - paragraph [ref=e251]: "Breakdown economico dettagliato: stipendi, consulenze, IT, locazioni, energia e altri costi di funzionamento."
-        - generic [ref=e252]:
-          - paragraph [ref=e253]: 📊 Classificazione per natura economica (MCA2)
-          - paragraph [ref=e254]: Il Modello Contabile Armonizzato 2 classifica le spese per TIPO di costo (personale, beni, servizi) invece che per FUNZIONE (salute, educazione).
-          - generic [ref=e255]:
-            - generic [ref=e256]:
-              - generic [ref=e257]: ✅
+    - generic [ref=e247]:
+      - generic [ref=e248]:
+        - 'heading "💰 Amministrazione: dove vanno i soldi?" [level=2] [ref=e249]'
+        - paragraph [ref=e250]: "Breakdown economico dettagliato: stipendi, consulenze, IT, locazioni, energia e altri costi di funzionamento."
+        - generic [ref=e251]:
+          - paragraph [ref=e252]: 📊 Classificazione per natura economica (MCA2)
+          - paragraph [ref=e253]: Il Modello Contabile Armonizzato 2 classifica le spese per TIPO di costo (personale, beni, servizi) invece che per FUNZIONE (salute, educazione).
+          - generic [ref=e254]:
+            - generic [ref=e255]:
+              - generic [ref=e256]: ✅
               - text: VERIFICATO
-            - generic [ref=e258]:
-              - generic [ref=e259]: 📊
+            - generic [ref=e257]:
+              - generic [ref=e258]: 📊
               - text: AGGREGATO
-            - generic [ref=e260]:
-              - generic [ref=e261]: ⚠️
+            - generic [ref=e259]:
+              - generic [ref=e260]: ⚠️
               - text: STIMATO
-            - generic [ref=e262]:
-              - generic [ref=e263]: ❌
+            - generic [ref=e261]:
+              - generic [ref=e262]: ❌
               - text: NON DISPONIBILE
-        - generic [ref=e264]:
-          - paragraph [ref=e265]: ✅ Dati verificati
-          - paragraph [ref=e266]:
+        - generic [ref=e263]:
+          - paragraph [ref=e264]: ✅ Dati verificati
+          - paragraph [ref=e265]:
             - text: Il Consuntivo 2025 (Messaggio 8672) pubblica i dati effettivi con il
-            - strong [ref=e267]: Conto economico per natura
+            - strong [ref=e266]: Conto economico per natura
             - text: completo. Tutti i numeri mostrati sono verificabili contro il documento ufficiale.
-      - generic [ref=e268]:
-        - heading "Spese per natura economica 2025 (Consuntivo)" [level=3] [ref=e269]
-        - paragraph [ref=e270]: Clicca su ogni riquadro per vedere dettagli. I colori indicano la qualità del dato.
-    - generic [ref=e274]:
-      - generic [ref=e275]:
-        - 'heading "Healthcare spending: explanation for non-experts" [level=2] [ref=e276]'
-        - paragraph [ref=e277]: Healthcare represents one of the main items in the cantonal budget. Here's what you need to know.
-      - generic [ref=e278]:
-        - heading "Frequently asked question" [level=3] [ref=e279]
-        - generic [ref=e280]:
-          - paragraph [ref=e281]: Why does the Canton spend money on healthcare if I already pay health insurance premiums every month?
-          - paragraph [ref=e282]: Health insurance only covers basic care. The Canton must pay (by federal law) 55% of hospital admissions, help those who cannot afford premiums, and pay for extra services not covered by LAMal (elderly care, prevention, etc.).
-          - generic [ref=e283]:
-            - group [ref=e284]:
-              - generic "1. LAMal only covers basic care" [ref=e285] [cursor=pointer]
-            - group [ref=e286]:
-              - generic "2. Canton required to pay 55% of hospitals" [ref=e287] [cursor=pointer]
-            - group [ref=e288]:
-              - generic "3. Very high premiums in Ticino, many cannot afford them" [ref=e289] [cursor=pointer]
-            - group [ref=e290]:
-              - generic "4. Extra services for elderly and chronically ill" [ref=e291] [cursor=pointer]
-            - group [ref=e292]:
-              - generic "5. Prevention and public health" [ref=e293] [cursor=pointer]
-      - generic [ref=e294]:
-        - generic [ref=e295]:
-          - heading "Verified data" [level=3] [ref=e300]
-          - generic [ref=e301]:
-            - generic [ref=e302]:
-              - generic [ref=e303]: 627 M CHF
-              - generic [ref=e304]: "\"Public health\" function 2027"
-              - generic [ref=e305]: "Source: P2027_spese_02.pdf"
-            - generic [ref=e306]:
-              - generic [ref=e307]: 13.3% of total budget
-              - generic [ref=e308]: 1'731 CHF per resident
-        - generic [ref=e309]:
-          - heading "RIPAM (premium reduction)" [level=3] [ref=e314]
-          - generic [ref=e315]:
-            - generic [ref=e316]:
-              - generic [ref=e317]: 332 M CHF
-              - generic [ref=e318]: Classified in "Social welfare"
-            - generic [ref=e319]: ⚠️ RIPAM is classified in "Social welfare" function (not "Public health") because it is a direct transfer to families.
-      - generic [ref=e320]:
-        - heading "Key terms glossary" [level=3] [ref=e321]
-        - generic [ref=e322]:
-          - generic [ref=e323]:
-            - generic [ref=e324]: LAMal (Federal Health Insurance Act)
-            - paragraph [ref=e325]: The mandatory health insurance that every person residing in Switzerland must have. Every month you pay a premium to your health insurer (e.g. Helsana, CSS, Assura).
-            - generic [ref=e326]: "Legal basis: RS 832.10"
-          - generic [ref=e327]:
-            - generic [ref=e328]: Transfer expenses
-            - paragraph [ref=e329]: Money that the Canton 'transfers' to others (municipalities, hospitals, insurers, families) instead of using it directly for cantonal salaries or materials.
-            - generic [ref=e330]: "Examples: RIPAM (transfer to insurers), hospital quota (transfer to hospitals), PC (transfer to elderly)"
-          - generic [ref=e331]:
-            - generic [ref=e332]: Cantonal quota 55% (hospital financing)
-            - paragraph [ref=e333]: "When you are hospitalized, the cost is split by federal law: the Canton pays 55%, your health insurance pays 45%. You only pay the normal deductible."
-            - generic [ref=e334]: "Legal basis: LAMal art. 49a"
-          - generic [ref=e335]:
-            - generic [ref=e336]: PC (Supplementary Benefits AVS/AI)
-            - paragraph [ref=e337]: Economic aid for elderly and people with disabilities when pension (AVS or AI) is not enough to live. Also includes contributions for extra health expenses (dentist, glasses, non-reimbursed drugs).
-      - generic [ref=e342]:
-        - heading "Data NOT available in 2027 Budget" [level=4] [ref=e343]
-        - paragraph [ref=e344]: Message 8731 does not contain a detailed breakdown of health spending by individual item. The 627M is an aggregate.
-        - generic [ref=e345]:
-          - generic [ref=e346]:
-            - generic [ref=e347]: •
-            - generic [ref=e348]:
+      - generic [ref=e267]:
+        - heading "Spese per natura economica 2025 (Consuntivo)" [level=3] [ref=e268]
+        - paragraph [ref=e269]: Clicca su ogni riquadro per vedere dettagli. I colori indicano la qualità del dato.
+    - generic [ref=e273]:
+      - generic [ref=e274]:
+        - 'heading "Healthcare spending: explanation for non-experts" [level=2] [ref=e275]'
+        - paragraph [ref=e276]: Healthcare represents one of the main items in the cantonal budget. Here's what you need to know.
+      - generic [ref=e277]:
+        - heading "Frequently asked question" [level=3] [ref=e278]
+        - generic [ref=e279]:
+          - paragraph [ref=e280]: Why does the Canton spend money on healthcare if I already pay health insurance premiums every month?
+          - paragraph [ref=e281]: Health insurance only covers basic care. The Canton must pay (by federal law) 55% of hospital admissions, help those who cannot afford premiums, and pay for extra services not covered by LAMal (elderly care, prevention, etc.).
+          - generic [ref=e282]:
+            - group [ref=e283]:
+              - generic "1. LAMal only covers basic care" [ref=e284] [cursor=pointer]
+            - group [ref=e285]:
+              - generic "2. Canton required to pay 55% of hospitals" [ref=e286] [cursor=pointer]
+            - group [ref=e287]:
+              - generic "3. Very high premiums in Ticino, many cannot afford them" [ref=e288] [cursor=pointer]
+            - group [ref=e289]:
+              - generic "4. Extra services for elderly and chronically ill" [ref=e290] [cursor=pointer]
+            - group [ref=e291]:
+              - generic "5. Prevention and public health" [ref=e292] [cursor=pointer]
+      - generic [ref=e293]:
+        - generic [ref=e294]:
+          - heading "Verified data" [level=3] [ref=e299]
+          - generic [ref=e300]:
+            - generic [ref=e301]:
+              - generic [ref=e302]: 627 M CHF
+              - generic [ref=e303]: "\"Public health\" function 2027"
+              - generic [ref=e304]: "Source: P2027_spese_02.pdf"
+            - generic [ref=e305]:
+              - generic [ref=e306]: 13.3% of total budget
+              - generic [ref=e307]: 1'731 CHF per resident
+        - generic [ref=e308]:
+          - heading "RIPAM (premium reduction)" [level=3] [ref=e313]
+          - generic [ref=e314]:
+            - generic [ref=e315]:
+              - generic [ref=e316]: 332 M CHF
+              - generic [ref=e317]: Classified in "Social welfare"
+            - generic [ref=e318]: ⚠️ RIPAM is classified in "Social welfare" function (not "Public health") because it is a direct transfer to families.
+      - generic [ref=e319]:
+        - heading "Key terms glossary" [level=3] [ref=e320]
+        - generic [ref=e321]:
+          - generic [ref=e322]:
+            - generic [ref=e323]: LAMal (Federal Health Insurance Act)
+            - paragraph [ref=e324]: The mandatory health insurance that every person residing in Switzerland must have. Every month you pay a premium to your health insurer (e.g. Helsana, CSS, Assura).
+            - generic [ref=e325]: "Legal basis: RS 832.10"
+          - generic [ref=e326]:
+            - generic [ref=e327]: Transfer expenses
+            - paragraph [ref=e328]: Money that the Canton 'transfers' to others (municipalities, hospitals, insurers, families) instead of using it directly for cantonal salaries or materials.
+            - generic [ref=e329]: "Examples: RIPAM (transfer to insurers), hospital quota (transfer to hospitals), PC (transfer to elderly)"
+          - generic [ref=e330]:
+            - generic [ref=e331]: Cantonal quota 55% (hospital financing)
+            - paragraph [ref=e332]: "When you are hospitalized, the cost is split by federal law: the Canton pays 55%, your health insurance pays 45%. You only pay the normal deductible."
+            - generic [ref=e333]: "Legal basis: LAMal art. 49a"
+          - generic [ref=e334]:
+            - generic [ref=e335]: PC (Supplementary Benefits AVS/AI)
+            - paragraph [ref=e336]: Economic aid for elderly and people with disabilities when pension (AVS or AI) is not enough to live. Also includes contributions for extra health expenses (dentist, glasses, non-reimbursed drugs).
+      - generic [ref=e341]:
+        - heading "Data NOT available in 2027 Budget" [level=4] [ref=e342]
+        - paragraph [ref=e343]: Message 8731 does not contain a detailed breakdown of health spending by individual item. The 627M is an aggregate.
+        - generic [ref=e344]:
+          - generic [ref=e345]:
+            - generic [ref=e346]: •
+            - generic [ref=e347]:
               - text: "Hospital contributions: NOT AVAILABLE"
-              - generic [ref=e349]: "Where to find it: Detailed accounts (March), Annual reports EOC/OSC"
-          - generic [ref=e350]:
-            - generic [ref=e351]: •
-            - generic [ref=e352]:
+              - generic [ref=e348]: "Where to find it: Detailed accounts (March), Annual reports EOC/OSC"
+          - generic [ref=e349]:
+            - generic [ref=e350]: •
+            - generic [ref=e351]:
               - text: "PC health quota: NOT AVAILABLE"
-              - generic [ref=e353]: "Where to find it: Accounts, Economic account by nature"
-    - generic [ref=e356]:
-      - generic [ref=e357]:
-        - 'heading "🏛️ Amministrazione cantonale: chi controlla i controllori?" [level=2] [ref=e358]'
-        - paragraph [ref=e359]: Quanto costa l'amministrazione pubblica e chi controlla che i soldi siano spesi bene?
-      - generic [ref=e360]:
-        - generic [ref=e361]:
-          - generic [ref=e362]: Spesa totale 2025
-          - generic [ref=e363]: —
-          - generic [ref=e364]: Dato C2025 in verifica
-          - generic [ref=e365]: (no printed total found)
-        - generic [ref=e366]:
-          - generic [ref=e367]: "% del bilancio"
-          - generic [ref=e368]: —
-          - generic [ref=e369]: Dato in verifica
-        - generic [ref=e371]:
-          - generic [ref=e372]: Per abitante
-          - generic [ref=e373]: —
-          - generic [ref=e374]: Dato in verifica
-      - generic [ref=e375]:
-        - heading "🔍 Chi controlla?" [level=3] [ref=e376]
-        - generic [ref=e377]:
-          - generic [ref=e383]:
-            - generic [ref=e384]: Controllo cantonale delle finanze (CCF)
-            - paragraph [ref=e385]: I "revisori dei conti" del Cantone. Controllano che i soldi pubblici siano spesi correttamente e legalmente. Indipendente dal Governo, risponde al Parlamento.
-            - generic [ref=e386]: "Base legale: Legge 2.4.4.1"
-          - generic [ref=e392]:
-            - generic [ref=e393]: Commissione della gestione e delle finanze (CGF)
-            - paragraph [ref=e394]: Commissione parlamentare permanente che sorveglia gestione finanziaria Governo. Circa 15 deputati del Gran Consiglio.
-          - generic [ref=e400]:
-            - generic [ref=e401]: Corte dei conti
-            - paragraph [ref=e402]: ❌ Il Canton Ticino NON ha una Corte dei conti autonoma (a differenza di GE, VD). Il controllo è tramite CCF + CGF.
-      - generic [ref=e407]:
-        - heading "Dati Autorità - Verificati" [level=4] [ref=e408]
-        - generic [ref=e409]:
-          - generic [ref=e410]:
+              - generic [ref=e352]: "Where to find it: Accounts, Economic account by nature"
+    - generic [ref=e355]:
+      - generic [ref=e356]:
+        - 'heading "🏛️ Amministrazione cantonale: chi controlla i controllori?" [level=2] [ref=e357]'
+        - paragraph [ref=e358]: Quanto costa l'amministrazione pubblica e chi controlla che i soldi siano spesi bene?
+      - generic [ref=e359]:
+        - generic [ref=e360]:
+          - generic [ref=e361]: Spesa totale 2025
+          - generic [ref=e362]: —
+          - generic [ref=e363]: Dato C2025 in verifica
+          - generic [ref=e364]: (no printed total found)
+        - generic [ref=e365]:
+          - generic [ref=e366]: "% del bilancio"
+          - generic [ref=e367]: —
+          - generic [ref=e368]: Dato in verifica
+        - generic [ref=e370]:
+          - generic [ref=e371]: Per abitante
+          - generic [ref=e372]: —
+          - generic [ref=e373]: Dato in verifica
+      - generic [ref=e374]:
+        - heading "🔍 Chi controlla?" [level=3] [ref=e375]
+        - generic [ref=e376]:
+          - generic [ref=e382]:
+            - generic [ref=e383]: Controllo cantonale delle finanze (CCF)
+            - paragraph [ref=e384]: I "revisori dei conti" del Cantone. Controllano che i soldi pubblici siano spesi correttamente e legalmente. Indipendente dal Governo, risponde al Parlamento.
+            - generic [ref=e385]: "Base legale: Legge 2.4.4.1"
+          - generic [ref=e391]:
+            - generic [ref=e392]: Commissione della gestione e delle finanze (CGF)
+            - paragraph [ref=e393]: Commissione parlamentare permanente che sorveglia gestione finanziaria Governo. Circa 15 deputati del Gran Consiglio.
+          - generic [ref=e399]:
+            - generic [ref=e400]: Corte dei conti
+            - paragraph [ref=e401]: ❌ Il Canton Ticino NON ha una Corte dei conti autonoma (a differenza di GE, VD). Il controllo è tramite CCF + CGF.
+      - generic [ref=e406]:
+        - heading "Dati Autorità - Verificati" [level=4] [ref=e407]
+        - generic [ref=e408]:
+          - generic [ref=e409]:
             - text: "• Consiglio di Stato (consulenze/perizie 2025): CHF 1'014'905"
-            - generic [ref=e411]: ✅ Rendiconto CdS 2025 - Spese esterne consulenze, non stipendi CdS (stipendi in voce 30 Personale)
-          - generic [ref=e412]:
+            - generic [ref=e410]: ✅ Rendiconto CdS 2025 - Spese esterne consulenze, non stipendi CdS (stipendi in voce 30 Personale)
+          - generic [ref=e411]:
             - text: "• Gran Consiglio (indennità deputati 2025): CHF 1'777'559 nette"
-            - generic [ref=e413]: ✅ Resoconto Art. 166a LGC - 90 deputati, indennità + trasferte CHF 162'763
-          - generic [ref=e414]:
+            - generic [ref=e412]: ✅ Resoconto Art. 166a LGC - 90 deputati, indennità + trasferte CHF 162'763
+          - generic [ref=e413]:
             - text: "• FTE totali Canton Ticino: NON DISPONIBILE nel Preventivo"
-            - generic [ref=e415]: "Dove trovarlo: USTAT \"Il mercato del lavoro nel settore pubblico ticinese\" (pubblicazione annuale) o Consuntivo dettagliato"
-          - generic [ref=e416]:
+            - generic [ref=e414]: "Dove trovarlo: USTAT \"Il mercato del lavoro nel settore pubblico ticinese\" (pubblicazione annuale) o Consuntivo dettagliato"
+          - generic [ref=e415]:
             - text: "• Stipendi membri CdS: NON PUBBLICATI separatamente"
-            - generic [ref=e417]: "Inclusi nella voce 30 Personale aggregata (CHF 1'219.7M totale 2025). Base legale: LStip art. 3"
-          - generic [ref=e418]:
+            - generic [ref=e416]: "Inclusi nella voce 30 Personale aggregata (CHF 1'219.7M totale 2025). Base legale: LStip art. 3"
+          - generic [ref=e417]:
             - text: "• Budget CCF: NON DISPONIBILE"
-            - generic [ref=e419]: "Dove trovarlo: Rapporto annuale CCF o Consuntivo dettagliato"
-    - generic [ref=e422]:
-      - generic [ref=e423]:
-        - heading "🏘️ Dati per comune" [level=2] [ref=e424]
-        - paragraph [ref=e425]: Confronta moltiplicatori, entrate, uscite e debito pro capite dei comuni ticinesi.
-        - generic [ref=e426]:
-          - paragraph [ref=e427]: 📊 Dati ufficiali 2024
-          - paragraph [ref=e428]: Dati estratti dal Rapporto 'I conti dei comuni nel 2024', Allegato statistico tab.8. Popolazione, moltiplicatori fiscali, risorse e indice di forza finanziaria per 106 comuni.
-      - searchbox "Cerca un comune..." [ref=e430]
-    - generic [ref=e434]:
-      - generic [ref=e435]:
-        - heading "💡 Quanto costa? Le formule spiegate" [level=2] [ref=e436]
-        - paragraph [ref=e437]: Voci di spesa tradotte in costi per abitante, al giorno e per famiglia. Tutte le formule sono visibili per massima trasparenza.
-      - generic [ref=e438]:
-        - generic [ref=e439]:
-          - generic [ref=e440]:
-            - img "Consiglio di Stato" [ref=e441]: 🏛️
-            - generic [ref=e442]:
-              - heading "Consiglio di Stato" [level=3] [ref=e443]
-              - paragraph [ref=e444]: Costo dell'organo esecutivo del cantone (5 consiglieri + segretariato)
-          - generic [ref=e445]:
-            - generic [ref=e446]: "Formula:"
-            - generic [ref=e447]: 3'500'000 CHF ÷ 362'200 abitanti
-          - generic [ref=e448]:
-            - generic [ref=e449]:
-              - generic [ref=e450]: Per abitante
-              - generic [ref=e451]: 9.67 CHF/anno
-            - generic [ref=e452]:
-              - generic [ref=e453]: Al giorno
-              - generic [ref=e454]: 0.03 CHF/giorno
-            - generic [ref=e455]:
-              - generic [ref=e456]: Per famiglia
-              - generic [ref=e457]: 20.30 CHF/anno
-          - generic [ref=e458]: 💡 Circa 10 franchi all'anno per abitante, meno di 3 centesimi al giorno
-        - generic [ref=e459]:
-          - generic [ref=e460]:
-            - img "Contributi cantonali alla salute" [ref=e461]: 💊
-            - generic [ref=e462]:
-              - heading "Contributi cantonali alla salute" [level=3] [ref=e463]
-              - paragraph [ref=e464]: Sussidi per i premi dell'assicurazione malattia
-          - generic [ref=e465]:
-            - generic [ref=e466]: "Formula:"
-            - generic [ref=e467]: 332'000'000 CHF ÷ 362'200 abitanti
-          - generic [ref=e468]:
-            - generic [ref=e469]:
-              - generic [ref=e470]: Per abitante
-              - generic [ref=e471]: 917 CHF/anno
-            - generic [ref=e472]:
-              - generic [ref=e473]: Al giorno
-              - generic [ref=e474]: 2.51 CHF/giorno
-            - generic [ref=e475]:
-              - generic [ref=e476]: Per famiglia
-              - generic [ref=e477]: 1'925 CHF/anno
-          - generic [ref=e478]: 💡 Il cantone paga quasi 1000 franchi all'anno per ogni ticinese per aiutare con i premi della cassa malati
-        - generic [ref=e479]:
-          - generic [ref=e480]:
-            - img "Formazione" [ref=e481]: 🎓
-            - generic [ref=e482]:
-              - heading "Formazione" [level=3] [ref=e483]
-              - paragraph [ref=e484]: Scuole pubbliche, università, formazione professionale
-          - generic [ref=e485]:
-            - generic [ref=e486]: "Formula:"
-            - generic [ref=e487]: 850'000'000 CHF ÷ 362'200 abitanti
-          - generic [ref=e488]:
-            - generic [ref=e489]:
-              - generic [ref=e490]: Per abitante
-              - generic [ref=e491]: 2'347 CHF/anno
-            - generic [ref=e492]:
-              - generic [ref=e493]: Al giorno
-              - generic [ref=e494]: 6.43 CHF/giorno
-            - generic [ref=e495]:
-              - generic [ref=e496]: Per famiglia
-              - generic [ref=e497]: 4'929 CHF/anno
-          - generic [ref=e498]: 💡 Ogni famiglia ticinese "investe" circa 5000 franchi all'anno nell'educazione pubblica
-        - generic [ref=e499]:
-          - generic [ref=e500]:
-            - img "Trasporti pubblici" [ref=e501]: 🚆
-            - generic [ref=e502]:
-              - heading "Trasporti pubblici" [level=3] [ref=e503]
-              - paragraph [ref=e504]: Contributi a FFS, TPL, e altre aziende di trasporto
-          - generic [ref=e505]:
-            - generic [ref=e506]: "Formula:"
-            - generic [ref=e507]: 180'000'000 CHF ÷ 362'200 abitanti
-          - generic [ref=e508]:
-            - generic [ref=e509]:
-              - generic [ref=e510]: Per abitante
-              - generic [ref=e511]: 497 CHF/anno
-            - generic [ref=e512]:
-              - generic [ref=e513]: Al giorno
-              - generic [ref=e514]: 1.36 CHF/giorno
-            - generic [ref=e515]:
-              - generic [ref=e516]: Per famiglia
-              - generic [ref=e517]: 1'044 CHF/anno
-          - generic [ref=e518]: 💡 Anche chi non prende mai il treno contribuisce con 500 franchi all'anno ai trasporti pubblici
-        - generic [ref=e519]:
-          - generic [ref=e520]:
-            - img "Polizia cantonale" [ref=e521]: 👮
-            - generic [ref=e522]:
-              - heading "Polizia cantonale" [level=3] [ref=e523]
-              - paragraph [ref=e524]: Sicurezza pubblica e ordine
-          - generic [ref=e525]:
-            - generic [ref=e526]: "Formula:"
-            - generic [ref=e527]: 120'000'000 CHF ÷ 362'200 abitanti
-          - generic [ref=e528]:
-            - generic [ref=e529]:
-              - generic [ref=e530]: Per abitante
-              - generic [ref=e531]: 331 CHF/anno
-            - generic [ref=e532]:
-              - generic [ref=e533]: Al giorno
-              - generic [ref=e534]: 0.91 CHF/giorno
-            - generic [ref=e535]:
-              - generic [ref=e536]: Per famiglia
-              - generic [ref=e537]: 696 CHF/anno
-          - generic [ref=e538]: 💡 Meno di 1 franco al giorno per la sicurezza pubblica
-        - generic [ref=e539]:
-          - generic [ref=e540]:
-            - img "Cultura e tempo libero" [ref=e541]: 🎭
-            - generic [ref=e542]:
-              - heading "Cultura e tempo libero" [level=3] [ref=e543]
-              - paragraph [ref=e544]: Musei, teatri, biblioteche, sport
-          - generic [ref=e545]:
-            - generic [ref=e546]: "Formula:"
-            - generic [ref=e547]: 45'000'000 CHF ÷ 362'200 abitanti
-          - generic [ref=e548]:
-            - generic [ref=e549]:
-              - generic [ref=e550]: Per abitante
-              - generic [ref=e551]: 124 CHF/anno
-            - generic [ref=e552]:
-              - generic [ref=e553]: Al giorno
-              - generic [ref=e554]: 0.34 CHF/giorno
-            - generic [ref=e555]:
-              - generic [ref=e556]: Per famiglia
-              - generic [ref=e557]: 261 CHF/anno
-          - generic [ref=e558]: 💡 Ogni ticinese "paga" l'equivalente di un caffè all'anno per la cultura
-    - generic [ref=e561]:
-      - generic [ref=e562]:
-        - generic [ref=e563]:
-          - generic [ref=e564]: 📋
-          - generic [ref=e565]: Preventivo 2027 - In attesa approvazione
-        - heading "Sguardo al Budget 2027" [level=2] [ref=e566]
-        - paragraph [ref=e567]: Il Preventivo 2027 è stato licenziato dal Consiglio di Stato il 30 settembre 2026. Approvazione finale da parte del Gran Consiglio prevista per dicembre 2026.
-      - generic [ref=e568]:
-        - generic [ref=e569]:
-          - generic [ref=e570]: Disavanzo previsto
-          - generic [ref=e571]: "-98.5M"
-          - generic [ref=e572]: CHF -274 per abitante
-        - generic [ref=e573]:
-          - generic [ref=e574]: Spese totali
-          - generic [ref=e575]: 4'730M
-          - generic [ref=e576]: +3.2% vs C2025
-        - generic [ref=e577]:
-          - generic [ref=e578]: Ricavi totali
-          - generic [ref=e579]: 4'632M
-          - generic [ref=e580]: +1.8% vs C2025
-      - generic [ref=e581]:
-        - paragraph [ref=e582]: ⚠️ Nota importante
-        - paragraph [ref=e583]:
+            - generic [ref=e418]: "Dove trovarlo: Rapporto annuale CCF o Consuntivo dettagliato"
+    - generic [ref=e421]:
+      - generic [ref=e422]:
+        - heading "🏘️ Dati per comune" [level=2] [ref=e423]
+        - paragraph [ref=e424]: Confronta moltiplicatori, entrate, uscite e debito pro capite dei comuni ticinesi.
+        - generic [ref=e425]:
+          - paragraph [ref=e426]: 📊 Dati ufficiali 2024
+          - paragraph [ref=e427]: Dati estratti dal Rapporto 'I conti dei comuni nel 2024', Allegato statistico tab.8. Popolazione, moltiplicatori fiscali, risorse e indice di forza finanziaria per 106 comuni.
+      - searchbox "Cerca un comune..." [ref=e429]
+    - generic [ref=e433]:
+      - generic [ref=e434]:
+        - heading "💡 Quanto costa? Le formule spiegate" [level=2] [ref=e435]
+        - paragraph [ref=e436]: Voci di spesa tradotte in costi per abitante, al giorno e per famiglia. Tutte le formule sono visibili per massima trasparenza.
+      - generic [ref=e437]:
+        - generic [ref=e438]:
+          - generic [ref=e439]:
+            - img "Consiglio di Stato" [ref=e440]: 🏛️
+            - generic [ref=e441]:
+              - heading "Consiglio di Stato" [level=3] [ref=e442]
+              - paragraph [ref=e443]: Costo dell'organo esecutivo del cantone (5 consiglieri + segretariato)
+          - generic [ref=e444]:
+            - generic [ref=e445]: "Formula:"
+            - generic [ref=e446]: 3'500'000 CHF ÷ 362'200 abitanti
+          - generic [ref=e447]:
+            - generic [ref=e448]:
+              - generic [ref=e449]: Per abitante
+              - generic [ref=e450]: 9.67 CHF/anno
+            - generic [ref=e451]:
+              - generic [ref=e452]: Al giorno
+              - generic [ref=e453]: 0.03 CHF/giorno
+            - generic [ref=e454]:
+              - generic [ref=e455]: Per famiglia
+              - generic [ref=e456]: 20.30 CHF/anno
+          - generic [ref=e457]: 💡 Circa 10 franchi all'anno per abitante, meno di 3 centesimi al giorno
+        - generic [ref=e458]:
+          - generic [ref=e459]:
+            - img "Contributi cantonali alla salute" [ref=e460]: 💊
+            - generic [ref=e461]:
+              - heading "Contributi cantonali alla salute" [level=3] [ref=e462]
+              - paragraph [ref=e463]: Sussidi per i premi dell'assicurazione malattia
+          - generic [ref=e464]:
+            - generic [ref=e465]: "Formula:"
+            - generic [ref=e466]: 332'000'000 CHF ÷ 362'200 abitanti
+          - generic [ref=e467]:
+            - generic [ref=e468]:
+              - generic [ref=e469]: Per abitante
+              - generic [ref=e470]: 917 CHF/anno
+            - generic [ref=e471]:
+              - generic [ref=e472]: Al giorno
+              - generic [ref=e473]: 2.51 CHF/giorno
+            - generic [ref=e474]:
+              - generic [ref=e475]: Per famiglia
+              - generic [ref=e476]: 1'925 CHF/anno
+          - generic [ref=e477]: 💡 Il cantone paga quasi 1000 franchi all'anno per ogni ticinese per aiutare con i premi della cassa malati
+        - generic [ref=e478]:
+          - generic [ref=e479]:
+            - img "Formazione" [ref=e480]: 🎓
+            - generic [ref=e481]:
+              - heading "Formazione" [level=3] [ref=e482]
+              - paragraph [ref=e483]: Scuole pubbliche, università, formazione professionale
+          - generic [ref=e484]:
+            - generic [ref=e485]: "Formula:"
+            - generic [ref=e486]: 850'000'000 CHF ÷ 362'200 abitanti
+          - generic [ref=e487]:
+            - generic [ref=e488]:
+              - generic [ref=e489]: Per abitante
+              - generic [ref=e490]: 2'347 CHF/anno
+            - generic [ref=e491]:
+              - generic [ref=e492]: Al giorno
+              - generic [ref=e493]: 6.43 CHF/giorno
+            - generic [ref=e494]:
+              - generic [ref=e495]: Per famiglia
+              - generic [ref=e496]: 4'929 CHF/anno
+          - generic [ref=e497]: 💡 Ogni famiglia ticinese "investe" circa 5000 franchi all'anno nell'educazione pubblica
+        - generic [ref=e498]:
+          - generic [ref=e499]:
+            - img "Trasporti pubblici" [ref=e500]: 🚆
+            - generic [ref=e501]:
+              - heading "Trasporti pubblici" [level=3] [ref=e502]
+              - paragraph [ref=e503]: Contributi a FFS, TPL, e altre aziende di trasporto
+          - generic [ref=e504]:
+            - generic [ref=e505]: "Formula:"
+            - generic [ref=e506]: 180'000'000 CHF ÷ 362'200 abitanti
+          - generic [ref=e507]:
+            - generic [ref=e508]:
+              - generic [ref=e509]: Per abitante
+              - generic [ref=e510]: 497 CHF/anno
+            - generic [ref=e511]:
+              - generic [ref=e512]: Al giorno
+              - generic [ref=e513]: 1.36 CHF/giorno
+            - generic [ref=e514]:
+              - generic [ref=e515]: Per famiglia
+              - generic [ref=e516]: 1'044 CHF/anno
+          - generic [ref=e517]: 💡 Anche chi non prende mai il treno contribuisce con 500 franchi all'anno ai trasporti pubblici
+        - generic [ref=e518]:
+          - generic [ref=e519]:
+            - img "Polizia cantonale" [ref=e520]: 👮
+            - generic [ref=e521]:
+              - heading "Polizia cantonale" [level=3] [ref=e522]
+              - paragraph [ref=e523]: Sicurezza pubblica e ordine
+          - generic [ref=e524]:
+            - generic [ref=e525]: "Formula:"
+            - generic [ref=e526]: 120'000'000 CHF ÷ 362'200 abitanti
+          - generic [ref=e527]:
+            - generic [ref=e528]:
+              - generic [ref=e529]: Per abitante
+              - generic [ref=e530]: 331 CHF/anno
+            - generic [ref=e531]:
+              - generic [ref=e532]: Al giorno
+              - generic [ref=e533]: 0.91 CHF/giorno
+            - generic [ref=e534]:
+              - generic [ref=e535]: Per famiglia
+              - generic [ref=e536]: 696 CHF/anno
+          - generic [ref=e537]: 💡 Meno di 1 franco al giorno per la sicurezza pubblica
+        - generic [ref=e538]:
+          - generic [ref=e539]:
+            - img "Cultura e tempo libero" [ref=e540]: 🎭
+            - generic [ref=e541]:
+              - heading "Cultura e tempo libero" [level=3] [ref=e542]
+              - paragraph [ref=e543]: Musei, teatri, biblioteche, sport
+          - generic [ref=e544]:
+            - generic [ref=e545]: "Formula:"
+            - generic [ref=e546]: 45'000'000 CHF ÷ 362'200 abitanti
+          - generic [ref=e547]:
+            - generic [ref=e548]:
+              - generic [ref=e549]: Per abitante
+              - generic [ref=e550]: 124 CHF/anno
+            - generic [ref=e551]:
+              - generic [ref=e552]: Al giorno
+              - generic [ref=e553]: 0.34 CHF/giorno
+            - generic [ref=e554]:
+              - generic [ref=e555]: Per famiglia
+              - generic [ref=e556]: 261 CHF/anno
+          - generic [ref=e557]: 💡 Ogni ticinese "paga" l'equivalente di un caffè all'anno per la cultura
+    - generic [ref=e560]:
+      - generic [ref=e561]:
+        - generic [ref=e562]:
+          - generic [ref=e563]: 📋
+          - generic [ref=e564]: Preventivo 2027 - In attesa approvazione
+        - heading "Sguardo al Budget 2027" [level=2] [ref=e565]
+        - paragraph [ref=e566]: Il Preventivo 2027 è stato licenziato dal Consiglio di Stato il 30 settembre 2026. Approvazione finale da parte del Gran Consiglio prevista per dicembre 2026.
+      - generic [ref=e567]:
+        - generic [ref=e568]:
+          - generic [ref=e569]: Disavanzo previsto
+          - generic [ref=e570]: "-98.5M"
+          - generic [ref=e571]: CHF -274 per abitante
+        - generic [ref=e572]:
+          - generic [ref=e573]: Spese totali
+          - generic [ref=e574]: 4'730M
+          - generic [ref=e575]: +3.2% vs C2025
+        - generic [ref=e576]:
+          - generic [ref=e577]: Ricavi totali
+          - generic [ref=e578]: 4'632M
+          - generic [ref=e579]: +1.8% vs C2025
+      - generic [ref=e580]:
+        - paragraph [ref=e581]: ⚠️ Nota importante
+        - paragraph [ref=e582]:
           - text: Il focus di questo sito è sui
-          - strong [ref=e584]: dati effettivi
+          - strong [ref=e583]: dati effettivi
           - text: (Consuntivo 2025). I numeri del Preventivo 2027 sono previsioni soggette a modifica e approvazione parlamentare. Per analisi dettagliate, consultare il
-          - link "Messaggio 8731 completo" [ref=e585] [cursor=pointer]:
+          - link "Messaggio 8731 completo" [ref=e584] [cursor=pointer]:
             - /url: https://www4.ti.ch/dfe/dr/finanze/dati-finanziari/p2027/
           - text: .
-  - contentinfo [ref=e586]:
-    - generic [ref=e588]:
-      - generic [ref=e589]:
-        - generic [ref=e590]: Where does Ticino money go
-        - paragraph [ref=e591]: A financial transparency project. All data comes from official sources of Canton Ticino and the Swiss Confederation.
-      - generic [ref=e592]: This site is independent and is not affiliated with the cantonal government.
+  - contentinfo [ref=e585]:
+    - generic [ref=e587]:
+      - generic [ref=e588]:
+        - generic [ref=e589]: Where does Ticino money go
+        - paragraph [ref=e590]: A financial transparency project. All data comes from official sources of Canton Ticino and the Swiss Confederation.
+      - generic [ref=e591]: This site is independent and is not affiliated with the cantonal government.
 ```
 
 # Test source
