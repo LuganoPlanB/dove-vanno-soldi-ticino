@@ -1,0 +1,207 @@
+{
+  "metadati": {
+    "titolo": "Finanze Cantonali - Consuntivi 2020-2025 e Preventivi 2026-2027",
+    "descrizione": "DATI EFFETTIVI (consuntivi chiusi) e previsioni, con focus su anni passati",
+    "priorita": "CONSUNTIVI (dati reali) > PREVENTIVI (previsioni)",
+    "annoRiferimentoPrimario": 2025,
+    "fonte": "Repubblica e Cantone Ticino - Divisione delle risorse",
+    "dataEstrazione": "2026-10-03",
+    "unita": "milioni CHF",
+    "metodologia": "MCA2 (Modello Contabile Armonizzato 2)",
+    "linkFonti": [
+      {"anno": 2025, "tipo": "Consuntivo", "url": "https://www4.ti.ch/dfe/dr/finanze/dati-finanziari/c2025", "messaggio": "8672 del 15.04.2026"},
+      {"anno": 2024, "tipo": "Consuntivo", "url": "https://www4.ti.ch/dfe/dr/finanze/dati-finanziari/c2024", "messaggio": "8562 del 09.04.2025"},
+      {"anno": 2023, "tipo": "Consuntivo", "url": "https://www4.ti.ch/dfe/dr/finanze/dati-finanziari/c2023", "messaggio": "8413 del 10.04.2024"},
+      {"anno": 2026, "tipo": "Preventivo", "url": "https://www4.ti.ch/dfe/dr/finanze/dati-finanziari/p2026-e-pf27-29", "messaggio": "8619 del 29.09.2025", "stato": "Approvato GC 16.12.2025"},
+      {"anno": 2027, "tipo": "Preventivo", "url": "https://www4.ti.ch/dfe/dr/finanze/dati-finanziari/p2027-e-pf28-30", "messaggio": "8731 del 30.09.2026", "stato": "In attesa approvazione GC"}
+    ]
+  },
+  "consuntivi": {
+    "descrizione": "DATI EFFETTIVI - Anni chiusi con cifre definitive",
+    "anni": {
+      "2025": {
+        "stato": "Definitivo",
+        "messaggioN": "8672 del 15 aprile 2026",
+        "totali": {
+          "spese": 4583,
+          "ricavi": 4551,
+          "risultatoEsercizio": -32,
+          "investimentiNetti": 277,
+          "risultatoTotale": -51
+        },
+        "spesePerNatura": {
+          "30_personale": {"importo": 1219.7, "quota": 26.6, "proCapite": 3397},
+          "31_beniServizi": {"importo": 341.8, "quota": 7.5, "proCapite": 952},
+          "33_ammortamenti": {"importo": 117.8, "quota": 2.6, "proCapite": 328},
+          "35_versamentiFondi": {"importo": 28.4, "quota": 0.6, "proCapite": 79},
+          "36_trasferimenti": {"importo": 2417.3, "quota": 52.7, "proCapite": 6732}
+        },
+        "fonte": "Messaggio Consuntivo 2025, pp. 15-21"
+      },
+      "2024": {
+        "stato": "Definitivo",
+        "messaggioN": "8562 del 9 aprile 2025",
+        "totali": {
+          "spese": 4422,
+          "ricavi": 4350,
+          "risultatoEsercizio": -72,
+          "investimentiNetti": 302
+        },
+        "spesePerNatura": {
+          "30_personale": {"importo": 1188.2, "fonte": "Messaggio C2024, p. 15"},
+          "31_beniServizi": {"importo": 341.3, "fonte": "Messaggio C2024, p. 17"}
+        },
+        "fonte": "ti.ch/dfe/dr/finanze C2024"
+      },
+      "2023": {
+        "stato": "Definitivo",
+        "messaggioN": "8413 del 10 aprile 2024",
+        "totali": {
+          "spese": 4308,
+          "ricavi": 4186,
+          "risultatoEsercizio": -122,
+          "investimentiNetti": 319
+        },
+        "spesePerNatura": {
+          "30_personale": {"importo": 1181.7, "fonte": "Comunicato 11.04.2024"},
+          "31_beniServizi": {"importo": 327.7, "fonte": "Comunicato 11.04.2024"}
+        },
+        "fonte": "ti.ch/dfe/dr/finanze C2023"
+      },
+      "2022": {
+        "stato": "Definitivo",
+        "totali": {
+          "spese": 4220,
+          "ricavi": 4223,
+          "risultatoEsercizio": 3
+        },
+        "spesePerNatura": {
+          "30_personale": {"importo": 1175.2, "fonte": "Web search synthesis"},
+          "31_beniServizi": {"importo": 332.9, "fonte": "Web search synthesis"}
+        },
+        "fonte": "ti.ch/dfe/dr/finanze - dati aggregati"
+      },
+      "2021": {
+        "stato": "Definitivo",
+        "spesePerNatura": {
+          "30_personale": {"importo": 1108.3, "fonte": "Messaggio C2021 web.pdf"},
+          "31_beniServizi": {"importo": 314.5, "fonte": "Messaggio C2021 web.pdf"}
+        },
+        "fonte": "m4.ti.ch C2021/MessaggioConsuntivo2021_web.pdf"
+      },
+      "2020": {
+        "stato": "Definitivo",
+        "spesePerNatura": {
+          "30_personale": {"importo": 1075.7, "fonte": "Messaggio C2020 web.pdf"},
+          "31_beniServizi": {"importo": 297.9, "fonte": "Messaggio C2020 web.pdf"}
+        },
+        "fonte": "m4.ti.ch C2020/MessaggioConsuntivo2020_web.pdf"
+      }
+    }
+  },
+  "preventivi": {
+    "descrizione": "DATI PREVISIONALI - Stime e previsioni future",
+    "2026": {
+      "tipo": "IN CORSO",
+      "stato": "Anno in corso - dati preventivati, approvato GC 16.12.2025",
+      "messaggioN": "8619 del 29 settembre 2025",
+      "totali": {
+        "spese": 4624,
+        "ricavi": 4515,
+        "risultatoEsercizio": -109,
+        "investimentiNetti": 290
+      },
+      "spesePerNatura": {
+        "30_personale": {"importo": 1229.7, "nota": "Dato preventivato, non effettivo"},
+        "31_beniServizi": {"importo": 348.8, "nota": "Dato preventivato, non effettivo"}
+      },
+      "avvertenza": "Anno 2026 in corso - cifre da Preventivo, non da consuntivo",
+      "fonte": "Messaggio Preventivo 2026 n. 8619, ti.ch/dfe/dr/finanze p2026-e-pf27-29"
+    },
+    "2027": {
+      "tipo": "FUTURO (SOLO HEADLINE)",
+      "stato": "Previsione - in attesa approvazione GC (dicembre 2026)",
+      "messaggioN": "8731 del 30 settembre 2026",
+      "headline": {
+        "deficit": -98.5,
+        "speseTotali": 4731,
+        "ricaviTotali": 4633,
+        "investimentiNetti": 291,
+        "debitoPubblico": "~3.0 miliardi",
+        "cambiamentiChiave": [
+          "RIPAM: +57M per iniziative premi cassa malati",
+          "PC AVS/AI: +17.5M per adeguamenti rincaro",
+          "Trasporti: -6.7M per contrattazione imprese",
+          "Personale: +9.3M (rincaro 0.25% + scatti)"
+        ]
+      },
+      "avvertenza": "PREVENTIVO 2027: Solo headline - focus su C2025 effettivi",
+      "fonte": "Messaggio Preventivo 2027 n. 8731, ti.ch/dfe/dr/finanze p2027-e-pf28-30"
+    }
+  },
+  "costiAutorità": {
+    "descrizione": "Costi CdS e GC - dati verificati da Rendiconti ufficiali",
+    "consiglioDiStato": {
+      "anno": 2025,
+      "totale": 1014905,
+      "valuta": "CHF",
+      "ripartizione": [
+        {"dipartimento": "DI + Magistratura", "importo": 384713},
+        {"dipartimento": "DSS", "importo": 364219},
+        {"dipartimento": "DECS", "importo": 166492},
+        {"dipartimento": "CANC", "importo": 38241},
+        {"dipartimento": "DFE", "importo": 32064},
+        {"dipartimento": "DT", "importo": 29177}
+      ],
+      "fonte": "Rendiconto CdS 2025, ti.ch/fileadmin/CAN/TEMI/RENDICONTOCDS/2025/7_Rendiconto_DFE_2025.pdf",
+      "nota": "Totale spese consulenze esterne/perizie CdS, non stipendi (stipendi in voce 30 Personale)"
+    },
+    "granConsiglio": {
+      "anno": 2025,
+      "indennitàNette": 1777559,
+      "indennitàLorde": 2173729,
+      "trasferte": 162763,
+      "valuta": "CHF",
+      "fonte": "Resoconto Art. 166a LGC, ti.ch/poteri/gc/attivita/resoconti-finanziari",
+      "nota": "Indennità deputati GC (90 membri), non personale amministrativo SGC"
+    },
+    "avvertenza": "Stipendi CdS e personale amministrativo GC sono nella voce 30 Personale del conto economico"
+  },
+  "trend20202025": {
+    "personale": [
+      {"anno": 2020, "importo": 1075.7},
+      {"anno": 2021, "importo": 1108.3},
+      {"anno": 2022, "importo": 1175.2},
+      {"anno": 2023, "importo": 1181.7},
+      {"anno": 2024, "importo": 1188.2},
+      {"anno": 2025, "importo": 1219.7}
+    ],
+    "beniServizi": [
+      {"anno": 2020, "importo": 297.9},
+      {"anno": 2021, "importo": 314.5},
+      {"anno": 2022, "importo": 332.9},
+      {"anno": 2023, "importo": 327.7},
+      {"anno": 2024, "importo": 341.3},
+      {"anno": 2025, "importo": 341.8}
+    ],
+    "risultatoEsercizio": [
+      {"anno": 2023, "importo": -122},
+      {"anno": 2024, "importo": -72},
+      {"anno": 2025, "importo": -32}
+    ],
+    "fonte": "Messaggi Consuntivi 2020-2025, ti.ch/dfe/dr/finanze"
+  },
+  "dettaglioBeniServizi": {
+    "descrizione": "Breakdown 2-digit aggregato + line items narrativi pubblicati",
+    "avvertenza3digit": "Il Cantone NON pubblica i dettagli 3-digit (301, 302, 311, 312, etc.) nei Messaggi ufficiali. Solo aggregati 2-digit e descrizioni narrative.",
+    "categoriePubbliche": {
+      "locazioniAffitti": {"descrizione": "Incluso in 31 Beni/servizi", "esempioC2025": "-0.6M affitti stabili amministrativi vs P2025", "fonte": "Messaggio C2025 p.17"},
+      "manutenzioni": {"descrizione": "Manutenzione edili, beni mobili", "esempioC2025": "-1.5M manutenzione autostradale vs P2025", "fonte": "Messaggio C2025 p.17"},
+      "informatica": {"descrizione": "Licenze, programmi, applicativi", "esempioC2024": "-2.6M licenze software vs P2024", "esempioC2025": "-0.8M veicoli vs P2025", "fonte": "Messaggi C2024/C2025"},
+      "consulenzeMandati": {"descrizione": "Onorari consulenze, incarichi, perizie", "esempioC2024": "-1.3M vs P2024", "fonte": "Messaggio C2024 p.17"},
+      "energia": {"descrizione": "Elettricità, olio riscaldamento", "esempioC2024": "-2.7M energia elettrica SN, -0.6M olio vs P2024", "fonte": "Messaggio C2024 p.17"},
+      "trasporti": {"descrizione": "Trasporto allievi, veicoli, carburante", "esempioC2025": "-0.6M trasporto allievi scuole medie vs P2025", "fonte": "Messaggio C2025 p.17"}
+    },
+    "notaImportante": "Questi sono LINE ITEMS menzionati nei Messaggi (delta vs preventivo), non conti separati con totali pubblicati."
+  }
+}
