@@ -106,17 +106,15 @@ function translateCategory(category: string): string {
 function renderAllCharts() {
   Promise.all([
     loadJSON('data/spese-per-funzione-2027.json'),
-    loadJSON('data/debito-storico.json'),
+    loadJSON('data/storia-debito-pubblico.json'),
     loadJSON('data/deficit-storico.json'),
     loadJSON('data/premi-e-contributi-sanita.json'),
-    loadJSON('data/confronto-pluriennale-2025-2027.json'),
     loadJSON('data/preventivo-2027.json'),
   ]).then(([
     spesePerFunzione,
-    debitoStorico,
+    storiaDebito,
     deficitStorico,
     premiSanita,
-    _confronto,
     preventivo2027,
   ]) => {
     const treemapEl = document.getElementById('spending-function-treemap');
@@ -131,17 +129,21 @@ function renderAllCharts() {
     }
 
     const debtChartEl = document.getElementById('debt-history-chart');
-    if (debtChartEl && (debitoStorico as any).debitoSerie) {
-      const debtData = (debitoStorico as any).debitoSerie.map((d: any) => ({
-        anno: d.anno,
-        valore: d.debito,
-      }));
+    if (debtChartEl && (storiaDebito as any).serieDebito) {
+      const years = (storiaDebito as any).serieDebito.anni;
+      const debtData = Object.keys(years)
+        .map((anno: string) => ({
+          anno: parseInt(anno),
+          valore: years[anno].debito,
+        }))
+        .filter(d => d.valore != null)
+        .sort((a, b) => a.anno - b.anno);
       charts.renderLineChart(
         'debt-history-chart',
         debtData,
         i18n.t('charts.debt.title'),
         i18n.t('charts.debt.yAxis'),
-        (n) => `${(n / 1000).toFixed(2)} ${i18n.t('charts.debt.yAxis').split(' ')[1]}`
+        (n) => n != null ? `${(n / 1000).toFixed(2)} Mia` : '—'
       );
     }
 
