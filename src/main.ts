@@ -58,8 +58,8 @@ function createLanguageSwitcher() {
       </svg>
       <span class="hidden xs:inline">${currentLang}</span>
     </button>
-    <div id="lang-menu" class="hidden absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-background border z-50">
-      <div class="py-1">
+    <div id="lang-menu" class="hidden absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-background border border-border z-[100]">
+      <div class="py-1 bg-background">
         <button data-lang="it" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'it' ? 'font-bold text-primary' : ''}">🇮🇹 Italiano</button>
         <button data-lang="en" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'en' ? 'font-bold text-primary' : ''}">🇬🇧 English</button>
         <button data-lang="de" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'de' ? 'font-bold text-primary' : ''}">🇩🇪 Deutsch</button>
@@ -251,13 +251,45 @@ if (window.location.pathname === '/' ||
 async function renderSpeseNatura() {
   try {
     const data = await loadSpeseNatura();
-    const treemapData = prepareTreemapData(data);
     
-    // Render treemap
+    const treemapContainer = document.getElementById('spese-natura-treemap');
+    const detailsContainer = document.getElementById('spese-natura-details');
+    
+    // Check if we have real data
+    if (!data.spesePerNatura2027 || data.spesePerNatura2027.length === 0) {
+      // Show "data unavailable" message
+      if (treemapContainer) {
+        treemapContainer.innerHTML = `
+          <div class="flex items-center justify-center h-64 bg-muted/30 rounded-lg border-2 border-dashed">
+            <div class="text-center p-8 max-w-lg">
+              <div class="text-4xl mb-4">📋</div>
+              <h3 class="text-xl font-bold mb-2">Dati in estrazione da fonti ufficiali</h3>
+              <p class="text-muted-foreground mb-4">
+                Il breakdown dettagliato per natura economica (salari, consulenze, IT, ecc.) 
+                richiede il <strong>Consuntivo 2025</strong> con il "Conto economico per genere di spesa".
+              </p>
+              <p class="text-sm text-muted-foreground">
+                Ricerca in corso su ti.ch → Divisione delle risorse → Conti consuntivi
+              </p>
+              <p class="text-xs text-amber-600 dark:text-amber-400 mt-4 font-semibold">
+                ⚠️ NESSUN dato stimato o placeholder. Solo cifre ufficiali verificate.
+              </p>
+            </div>
+          </div>
+        `;
+      }
+      
+      if (detailsContainer) {
+        detailsContainer.innerHTML = '';
+      }
+      return;
+    }
+    
+    // Render treemap (only if we have data)
+    const treemapData = prepareTreemapData(data);
     charts.renderSpeseNaturaTreemap('spese-natura-treemap', treemapData);
     
     // Render detailed breakdown cards
-    const detailsContainer = document.getElementById('spese-natura-details');
     if (detailsContainer && data.spesePerNatura2027) {
       detailsContainer.innerHTML = data.spesePerNatura2027.map((spesa: SpesaNatura) => `
         <div class="bg-card border rounded-lg p-4 sm:p-6">
@@ -335,6 +367,32 @@ async function setupComuniSearch() {
   if (!searchInput || !resultsContainer) return;
   
   const data = await loadComuniData();
+  
+  // Check if we have real data
+  if (!data.comuni || data.comuni.length === 0) {
+    resultsContainer.innerHTML = `
+      <div class="flex items-center justify-center min-h-[300px] bg-muted/30 rounded-lg border-2 border-dashed">
+        <div class="text-center p-8 max-w-lg">
+          <div class="text-4xl mb-4">🏘️</div>
+          <h3 class="text-xl font-bold mb-2">Dati comunali in estrazione</h3>
+          <p class="text-muted-foreground mb-4">
+            I dati finanziari per comune devono essere estratti da 
+            <strong>USTAT</strong> (Ufficio di statistica) o dalla 
+            <strong>Sezione enti locali</strong> con conti consuntivi ufficiali verificati.
+          </p>
+          <p class="text-sm text-muted-foreground">
+            Fonti ufficiali: ti.ch/ustat e ti.ch/dfe/dr/sel
+          </p>
+          <p class="text-xs text-amber-600 dark:text-amber-400 mt-4 font-semibold">
+            ⚠️ NESSUN dato placeholder. Solo cifre verificate da bilanci comunali pubblicati.
+          </p>
+        </div>
+      </div>
+    `;
+    searchInput.disabled = true;
+    searchInput.placeholder = 'Dati in estrazione da fonti ufficiali...';
+    return;
+  }
   
   // Display all comuni initially
   const renderResults = (comuni: typeof data.comuni) => {
