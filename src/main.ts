@@ -56,7 +56,7 @@ function createLanguageSwitcher() {
       <svg class="h-3.5 w-3.5 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
       </svg>
-      <span class="hidden xs:inline">${currentLang}</span>
+      <span class="font-semibold">${currentLang}</span>
     </button>
     <div id="lang-menu" class="hidden absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-background border border-border z-[100]">
       <div class="py-1 bg-background">

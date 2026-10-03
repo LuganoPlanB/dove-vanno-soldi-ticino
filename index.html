@@ -21,7 +21,14 @@
         
         <!-- Right side controls -->
         <div class="flex items-center gap-1 sm:gap-3 flex-shrink-0">
-          <!-- Metodologia link - hidden on very small screens -->
+          <!-- Mobile menu button (< 400px) -->
+          <button id="mobile-menu-button" class="inline-flex xs:hidden btn btn-secondary h-8 w-8 p-0 items-center justify-center" aria-label="Menu">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+          
+          <!-- Metodologia link - hidden on very small screens, shown in mobile menu instead -->
           <a href="./metodologia.html" class="hidden xs:inline-block text-xs sm:text-sm font-medium text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap" data-i18n="nav.methodology">
             Metodologia
           </a>
@@ -38,6 +45,15 @@
             </svg>
           </button>
         </div>
+      </div>
+    </div>
+    
+    <!-- Mobile menu dropdown (< 400px) -->
+    <div id="mobile-menu" class="hidden border-t bg-background">
+      <div class="container mx-auto px-3 py-2">
+        <a href="./metodologia.html" class="block px-3 py-2 text-sm font-medium hover:bg-accent rounded" data-i18n="nav.methodology">
+          Metodologia
+        </a>
       </div>
     </div>
   </nav>
