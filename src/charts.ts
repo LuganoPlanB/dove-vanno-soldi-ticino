@@ -365,120 +365,103 @@ export function renderComparisonChart(containerId: string, data: ComparisonData[
     .attr('class', 'text-sm text-muted-foreground mb-4')
     .text('Evoluzione delle principali voci di bilancio');
 
-  const margin = mobile
-    ? { top: 10, right: 10, bottom: 80, left: 10 }
-    : { top: 20, right: 30, bottom: 100, left: 140 };
-  
-  const containerWidth = (container.node() as HTMLElement).offsetWidth;
-  const width = containerWidth - margin.left - margin.right;
-  const chartHeight = Math.max(mobile ? 350 : 400, data.length * (mobile ? 100 : 80));
-  const height = chartHeight - margin.top - margin.bottom;
-
-  const svg = container
-    .append('svg')
-    .attr('viewBox', `0 0 ${containerWidth} ${chartHeight}`)
-    .attr('width', '100%')
-    
-    .style('max-width', '100%')
-    .append('g')
-    .attr('transform', `translate(${margin.left},${margin.top})`);
-
-  const categories = data.map(d => d.categoria);
-  const subgroups = ['consuntivo2025', 'preventivo2026', 'preventivo2027'];
-  const colorScale = d3.scaleOrdinal<string>()
-    .domain(subgroups)
-    .range([colors.success, colors.primary, colors.purple]);
-
   if (mobile) {
-    const xBand = d3.scaleBand()
-      .domain(subgroups)
-      .range([0, width])
-      .padding(0.1);
-
-    // For mobile, we use separate y-scales per category
-    const tooltip = createTooltip();
-
-    data.forEach((category, catIndex) => {
-      const g = svg.append('g')
-        .attr('transform', `translate(0, ${catIndex * (height / data.length)})`);
-
-      g.append('text')
-        .attr('x', width / 2)
-        .attr('y', -5)
-        .attr('text-anchor', 'middle')
-        .attr('font-size', '11px')
-        .attr('font-weight', '600')
-        .attr('fill', colors.text)
-        .text(category.categoria);
-
-      const sectionHeight = height / data.length - 20;
-      const sectionY = d3.scaleLinear()
-        .domain([0, d3.max([category.consuntivo2025, category.preventivo2026, category.preventivo2027])! * 1.1])
-        .range([sectionHeight, 0]);
-
-      subgroups.forEach((key) => {
-        const value = (category as any)[key];
-        g.append('rect')
-          .attr('x', xBand(key)!)
-          .attr('y', sectionHeight)
-          .attr('width', xBand.bandwidth())
-          .attr('height', 0)
-          .attr('fill', colorScale(key))
-          .attr('rx', 3)
-          .attr('opacity', 0.9)
-          .style('cursor', 'pointer')
-          .on('touchstart mouseenter', function(event) {
-            event.preventDefault();
-            d3.select(this).attr('opacity', 1);
-            const label = key === 'consuntivo2025' ? 'C2025' :
-                          key === 'preventivo2026' ? 'P2026' : 'P2027';
-            const coords = getEventCoords(event);
-            showTooltip(tooltip, `
-              <div class="font-semibold mb-1">${category.categoria}</div>
-              <div class="text-xs text-muted-foreground mb-1">${label}</div>
-              <div class="text-sm font-medium">${value.toLocaleString('it-CH')} M CHF</div>
-            `, coords.x, coords.y);
-          })
-          .on('touchend mouseleave', function() {
-            d3.select(this).attr('opacity', 0.9);
-            hideTooltip(tooltip);
-          })
-          .transition()
-          .delay(catIndex * 100 + subgroups.indexOf(key) * 30)
-          .duration(400)
-          .ease(EASE_OUT)
-          .attr('y', sectionY(value))
-          .attr('height', sectionHeight - sectionY(value));
-      });
+    // Mobile: Use a clear table with deltas and arrows
+    const table = container.append('div')
+      .attr('class', 'overflow-x-auto');
+    
+    const tableEl = table.append('table')
+      .attr('class', 'w-full text-sm border-collapse');
+    
+    // Header
+    const thead = tableEl.append('thead');
+    const headerRow = thead.append('tr')
+      .attr('class', 'border-b');
+    
+    headerRow.append('th')
+      .attr('class', 'text-left py-3 px-2 font-semibold')
+      .text('Voce');
+    
+    headerRow.append('th')
+      .attr('class', 'text-right py-3 px-2 font-semibold text-xs')
+      .text('2025');
+    
+    headerRow.append('th')
+      .attr('class', 'text-right py-3 px-2 font-semibold text-xs')
+      .text('2027');
+    
+    headerRow.append('th')
+      .attr('class', 'text-right py-3 px-2 font-semibold text-xs')
+      .text('Δ%');
+    
+    // Body
+    const tbody = tableEl.append('tbody');
+    
+    data.forEach((d, i) => {
+      const delta = ((d.preventivo2027 - d.consuntivo2025) / d.consuntivo2025) * 100;
+      const isIncrease = delta > 0;
+      const deltaColor = Math.abs(delta) < 1 ? colors.textMuted : 
+                         isIncrease ? 'rgb(239 68 68)' : 'rgb(34 197 94)';
+      
+      const row = tbody.append('tr')
+        .attr('class', i < data.length - 1 ? 'border-b' : '');
+      
+      row.append('td')
+        .attr('class', 'py-3 px-2 font-medium')
+        .style('font-size', '13px')
+        .text(d.categoria);
+      
+      row.append('td')
+        .attr('class', 'text-right py-3 px-2')
+        .style('font-size', '12px')
+        .style('color', colors.textMuted)
+        .text(d.consuntivo2025.toFixed(0));
+      
+      row.append('td')
+        .attr('class', 'text-right py-3 px-2 font-semibold')
+        .style('font-size', '13px')
+        .text(d.preventivo2027.toFixed(0));
+      
+      const deltaCell = row.append('td')
+        .attr('class', 'text-right py-3 px-2 font-semibold')
+        .style('font-size', '12px')
+        .style('color', deltaColor);
+      
+      const arrow = isIncrease ? '↑' : delta < -0.5 ? '↓' : '→';
+      deltaCell.text(`${arrow} ${Math.abs(delta).toFixed(1)}%`);
     });
-
-    const legend = svg.append('g')
-      .attr('transform', `translate(0, ${height + 30})`);
-
-    const legendItems = [
-      { key: 'consuntivo2025', label: 'C2025' },
-      { key: 'preventivo2026', label: 'P2026' },
-      { key: 'preventivo2027', label: 'P2027' }
-    ];
-
-    legendItems.forEach((item, i) => {
-      const g = legend.append('g')
-        .attr('transform', `translate(${i * (width / 3)}, 0)`);
-
-      g.append('rect')
-        .attr('width', 12)
-        .attr('height', 12)
-        .attr('rx', 2)
-        .attr('fill', colorScale(item.key));
-
-      g.append('text')
-        .attr('x', 18)
-        .attr('y', 10)
-        .attr('font-size', '11px')
-        .attr('fill', colors.text)
-        .text(item.label);
-    });
+    
+    // Legend
+    container.append('div')
+      .attr('class', 'mt-4 text-xs text-muted-foreground flex gap-4 justify-center')
+      .html(`
+        <span><span style="color: rgb(239 68 68)">↑</span> Aumento</span>
+        <span><span style="color: rgb(34 197 94)">↓</span> Diminuzione</span>
+        <span>→ Stabile</span>
+      `);
+    
   } else {
+    // Desktop: Horizontal grouped bars
+    const margin = { top: 20, right: 30, bottom: 60, left: 140 };
+    const containerWidth = (container.node() as HTMLElement).offsetWidth;
+    const width = containerWidth - margin.left - margin.right;
+    const chartHeight = data.length * 80;
+    const height = chartHeight - margin.top - margin.bottom;
+
+    const svg = container
+      .append('svg')
+      .attr('viewBox', `0 0 ${containerWidth} ${chartHeight}`)
+      .attr('width', '100%')
+      .style('max-width', '100%')
+      .append('g')
+      .attr('transform', `translate(${margin.left},${margin.top})`);
+
+    const categories = data.map(d => d.categoria);
+    const subgroups = ['consuntivo2025', 'preventivo2026', 'preventivo2027'];
+    const colorScale = d3.scaleOrdinal<string>()
+      .domain(subgroups)
+      .range([colors.success, colors.primary, colors.purple]);
+
     const y = d3.scaleBand()
       .domain(categories)
       .range([0, height])

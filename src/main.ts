@@ -35,30 +35,39 @@ function initializeTheme() {
 }
 
 function createLanguageSwitcher() {
-  const nav = document.querySelector('nav .flex.items-center.gap-2');
+  const nav = document.querySelector('nav .flex.items-center.gap-1');
   if (!nav || document.getElementById('lang-switcher')) return;
   
   const switcher = document.createElement('div');
   switcher.id = 'lang-switcher';
-  switcher.className = 'relative';
+  switcher.className = 'relative flex-shrink-0';
   
   const currentLang = i18n.getLanguage().toUpperCase();
   
   switcher.innerHTML = `
-    <button id="lang-button" class="btn btn-secondary h-9 px-3 text-sm font-medium" aria-label="Change language">
-      ${currentLang}
+    <button id="lang-button" class="btn btn-secondary h-8 sm:h-9 px-2 sm:px-3 text-xs sm:text-sm font-medium flex items-center gap-1" aria-label="Change language">
+      <svg class="h-3.5 w-3.5 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+      </svg>
+      <span class="hidden xs:inline">${currentLang}</span>
     </button>
-    <div id="lang-menu" class="hidden absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-background border z-50">
+    <div id="lang-menu" class="hidden absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-background border z-50">
       <div class="py-1">
-        <button data-lang="it" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'it' ? 'font-bold' : ''}">Italiano</button>
-        <button data-lang="en" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'en' ? 'font-bold' : ''}">English</button>
-        <button data-lang="de" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'de' ? 'font-bold' : ''}">Deutsch</button>
-        <button data-lang="fr" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'fr' ? 'font-bold' : ''}">Français</button>
+        <button data-lang="it" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'it' ? 'font-bold text-primary' : ''}">🇮🇹 Italiano</button>
+        <button data-lang="en" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'en' ? 'font-bold text-primary' : ''}">🇬🇧 English</button>
+        <button data-lang="de" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'de' ? 'font-bold text-primary' : ''}">🇩🇪 Deutsch</button>
+        <button data-lang="fr" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'fr' ? 'font-bold text-primary' : ''}">🇫🇷 Français</button>
       </div>
     </div>
   `;
   
-  nav.insertBefore(switcher, nav.firstChild);
+  // Insert before theme toggle
+  const themeToggle = nav.querySelector('#theme-toggle');
+  if (themeToggle) {
+    nav.insertBefore(switcher, themeToggle);
+  } else {
+    nav.appendChild(switcher);
+  }
   
   const button = document.getElementById('lang-button');
   const menu = document.getElementById('lang-menu');
