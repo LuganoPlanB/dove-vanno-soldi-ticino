@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Storia del debito pubblico Canton Ticino - Quando e dove si è accumulato">
+  <meta name="description" content="Storia del debito pubblico Canton Ticino - Serie storica verificata">
   <meta name="theme-color" content="#3b82f6" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1e40af" media="(prefers-color-scheme: dark)">
   <title>Storia del debito | Dove vanno i soldi del Ticino</title>
@@ -14,8 +14,8 @@
     <div class="container mx-auto px-3 sm:px-6 lg:px-8">
       <div class="flex h-14 sm:h-16 items-center justify-between gap-2">
         <div class="flex items-center gap-1.5 sm:gap-2 min-w-0 flex-shrink">
-          <span class="text-xl sm:text-2xl flex-shrink-0">📊</span>
-          <a href="/" class="font-bold text-sm sm:text-lg truncate hover:text-primary transition-colors">Finanze Ticino</a>
+          <span class="text-xl sm:text-2xl flex-shrink-0">💰</span>
+          <a href="/" class="font-bold text-sm sm:text-lg truncate hover:text-primary transition-colors">Dove vanno i soldi del Ticino</a>
         </div>
         
         <div class="flex items-center gap-1 sm:gap-3 flex-shrink-0">
@@ -28,6 +28,8 @@
           <a href="./metodologia.html" class="hidden xs:inline-block text-xs sm:text-sm font-medium text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">
             Metodologia
           </a>
+          
+          <!-- Language switcher will be inserted here by JS -->
           
           <button id="theme-toggle" class="btn btn-secondary h-8 w-8 sm:h-9 sm:w-9 p-0 flex-shrink-0" aria-label="Toggle theme">
             <svg id="sun-icon" class="h-3.5 w-3.5 sm:h-4 sm:w-4 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -56,34 +58,20 @@
         <div class="mx-auto max-w-4xl text-center space-y-6">
           <div class="inline-flex items-center rounded-full border border-destructive/50 px-3 py-1 text-sm">
             <span class="mr-2">📉</span>
-            <span>Serie storica 2000-2025</span>
+            <span>Serie storica VERIFICATA - Solo anni con fonti primarie</span>
           </div>
           
           <h1 class="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Il passato e la <span class="text-destructive">storia del debito</span>
+            📈 <span class="text-destructive">Storia del debito</span> pubblico
           </h1>
           
           <p class="mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground">
-            <strong>Quando</strong> e <strong>dove</strong> si è accumulato il debito pubblico cantonale. 
-            Analisi basata esclusivamente su dati ufficiali verificati.
+            Evoluzione del debito netto verificato contro documenti primari. 
+            <strong>Lacune</strong> dove i dati non sono verificabili.
           </p>
 
-          <div class="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-3 pt-6">
-            <div class="metric-card">
-              <div class="text-sm font-medium text-muted-foreground">Debito 2000</div>
-              <div class="text-3xl font-bold">901M</div>
-              <div class="text-xs text-muted-foreground">CHF 901 milioni</div>
-            </div>
-            <div class="metric-card">
-              <div class="text-sm font-medium text-muted-foreground">Debito 2025</div>
-              <div class="text-3xl font-bold text-destructive">3'056M</div>
-              <div class="text-xs text-muted-foreground">+239% in 25 anni</div>
-            </div>
-            <div class="metric-card">
-              <div class="text-sm font-medium text-muted-foreground">Pro capite 2025</div>
-              <div class="text-3xl font-bold text-destructive">8'579</div>
-              <div class="text-xs text-muted-foreground">CHF per abitante</div>
-            </div>
+          <div id="hero-metrics" class="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-3 pt-6">
+            <!-- Populated by JS from audited JSON -->
           </div>
         </div>
       </div>
@@ -95,276 +83,42 @@
           <div>
             <h2 class="text-2xl font-bold mb-4">📈 Serie storica del debito pubblico</h2>
             <p class="text-muted-foreground mb-6">
-              Evoluzione del debito netto al 31 dicembre di ogni anno. Fonte: Consuntivi cantonali 2000-2025.
+              Debito netto al 31.12 di ogni anno. Solo anni VERIFICATI contro Consuntivi ufficiali.
             </p>
           </div>
 
           <div class="bg-card border rounded-lg p-6">
-            <div id="grafico-debito" class="w-full h-96">
-              <!-- Chart.js will render here -->
+            <div id="grafico-debito" class="w-full" style="height: 400px;">
               <canvas id="debito-chart"></canvas>
             </div>
           </div>
 
-          <div class="grid gap-6 md:grid-cols-2">
-            <div class="card p-6">
-              <h3 class="text-lg font-semibold mb-4">🔴 Periodi critici</h3>
-              <ul class="space-y-3 text-sm">
-                <li class="flex items-start gap-2">
-                  <span class="text-destructive font-bold">2003-2004:</span>
-                  <span>+584M in 2 anni (da 814M a 1'399M)</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-green-600 dark:text-green-400 font-bold">2005:</span>
-                  <span>-353M oro BNS (evento straordinario non ripetibile)</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-destructive font-bold">2013:</span>
-                  <span>+268M in 1 anno (picco pre-2020)</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-amber-600 dark:text-amber-400 font-bold">2020-2021:</span>
-                  <span>+168M COVID-19 (spese sanitarie e sostegno)</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-destructive font-bold">2023:</span>
-                  <span>+225M in 1 anno (massimo aumento annuale dal 2004)</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="card p-6">
-              <h3 class="text-lg font-semibold mb-4">📊 Risultato d'esercizio</h3>
-              <p class="text-sm text-muted-foreground mb-4">Deficit annuale (negativo = spese > ricavi)</p>
-              <ul class="space-y-2 text-sm">
-                <li class="flex justify-between">
-                  <span>2022:</span>
-                  <span class="font-mono text-green-600">+3.0M</span>
-                </li>
-                <li class="flex justify-between">
-                  <span>2023:</span>
-                  <span class="font-mono text-destructive">-122.0M</span>
-                </li>
-                <li class="flex justify-between">
-                  <span>2024:</span>
-                  <span class="font-mono text-destructive">-72.0M</span>
-                </li>
-                <li class="flex justify-between border-t pt-2">
-                  <span class="font-semibold">2025:</span>
-                  <span class="font-mono font-semibold text-amber-600">-32.0M</span>
-                </li>
-              </ul>
-              <p class="text-xs text-muted-foreground mt-4">
-                ℹ️ Miglioramento 2023→2025: deficit si riduce ma resta strutturale
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="dove-spese" class="py-16 sm:py-24 bg-muted/30">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-6xl space-y-8">
-          <div>
-            <h2 class="text-2xl font-bold mb-4">💰 Dove vanno le spese (2025)</h2>
-            <p class="text-muted-foreground">
-              Ripartizione spese totali 4'583 milioni CHF per categoria economica (MCA2).
-            </p>
+          <div id="gaps-notice" class="space-y-4">
+            <!-- Populated by JS -->
           </div>
 
-          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <div class="card p-6">
-              <div class="text-sm font-medium text-muted-foreground mb-2">Trasferimenti (36)</div>
-              <div class="text-3xl font-bold text-primary mb-1">2'417M</div>
-              <div class="text-sm text-muted-foreground">52.7% del totale</div>
-              <p class="text-xs mt-3 text-muted-foreground">
-                Sanità, sociale, PC AVS/AI, RIPAM, enti locali
-              </p>
+          <div class="bg-card border rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-4">📊 Tabella anni verificati</h3>
+            <div id="debito-table">
+              <!-- Populated by JS -->
             </div>
-
-            <div class="card p-6">
-              <div class="text-sm font-medium text-muted-foreground mb-2">Personale (30)</div>
-              <div class="text-3xl font-bold mb-1">1'220M</div>
-              <div class="text-sm text-muted-foreground">26.6% del totale</div>
-              <p class="text-xs mt-3 text-muted-foreground">
-                Stipendi, oneri sociali, docenti, amministrativi
-              </p>
-            </div>
-
-            <div class="card p-6">
-              <div class="text-sm font-medium text-muted-foreground mb-2">Beni/Servizi (31)</div>
-              <div class="text-3xl font-bold mb-1">342M</div>
-              <div class="text-sm text-muted-foreground">7.5% del totale</div>
-              <p class="text-xs mt-3 text-muted-foreground">
-                Locazioni, IT, manutenzioni, consulenze, energia
-              </p>
-            </div>
-
-            <div class="card p-6">
-              <div class="text-sm font-medium text-muted-foreground mb-2">Ammortamenti (33)</div>
-              <div class="text-3xl font-bold mb-1">118M</div>
-              <div class="text-sm text-muted-foreground">2.6% del totale</div>
-              <p class="text-xs mt-3 text-muted-foreground">
-                Immobili, infrastrutture, beni amministrativi
-              </p>
-            </div>
-          </div>
-
-          <div class="bg-blue-50 dark:bg-blue-950/20 border-l-4 border-blue-500 p-6">
-            <h3 class="font-semibold mb-3">🔍 Cause principali crescita debito</h3>
-            <ul class="space-y-2 text-sm">
-              <li class="flex items-start gap-2">
-                <span class="text-primary">▸</span>
-                <span><strong>Spese sociali e sanitarie in crescita strutturale:</strong> PC AVS/AI (+17.5M P2027), RIPAM (+57M P2027), assistenza, ospedali</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-primary">▸</span>
-                <span><strong>Contributi federali pro capite inferiori alla media CH:</strong> analisi Gran Consiglio doc. 180837 evidenzia perdita velocità vs altri cantoni</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-primary">▸</span>
-                <span><strong>Eventi straordinari:</strong> COVID-19 (2020-2021 +168M), picco 2023 (+225M)</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-primary">▸</span>
-                <span><strong>Capitale proprio negativo dal 2006:</strong> erosione continua, a fine 2015 già -439M</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="bg-amber-50 dark:bg-amber-950/20 border-l-4 border-amber-500 p-6">
-            <h3 class="font-semibold mb-3">📊 Crescita spese vs ricavi (2022-2025)</h3>
-            <div class="grid gap-4 md:grid-cols-2">
-              <div>
-                <p class="text-sm font-medium mb-2">Spese totali</p>
-                <ul class="text-sm space-y-1">
-                  <li>2022: 4'220M</li>
-                  <li>2025: 4'583M</li>
-                  <li class="font-semibold text-destructive">+363M (+8.6%)</li>
-                </ul>
-              </div>
-              <div>
-                <p class="text-sm font-medium mb-2">Ricavi totali</p>
-                <ul class="text-sm space-y-1">
-                  <li>2022: 4'223M</li>
-                  <li>2025: 4'551M</li>
-                  <li class="font-semibold text-primary">+328M (+7.8%)</li>
-                </ul>
-              </div>
-            </div>
-            <p class="text-xs mt-4 text-muted-foreground">
-              Spese crescono più velocemente dei ricavi → deficit strutturale persiste nonostante miglioramento relativo.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-16 sm:py-24">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-4xl">
-          <div class="card p-8">
-            <h2 class="text-2xl font-bold mb-6">📚 Fonti primarie verificate</h2>
-            <div class="space-y-4 text-sm">
-              <div>
-                <p class="font-semibold mb-2">Consuntivi Canton Ticino 2000-2025</p>
-                <ul class="list-disc list-inside space-y-1 text-muted-foreground ml-4">
-                  <li>Messaggio Consuntivo 2010: ti.ch/fileadmin/DFE/DR-FINANZE/2010/2010_messaggio.pdf</li>
-                  <li>Messaggio Consuntivo 2011: ti.ch/fileadmin/DFE/DR-FINANZE/2011/2011_messaggio.pdf</li>
-                  <li>Messaggio Consuntivo 2012: ti.ch/fileadmin/DFE/DR-FINANZE/2012/2012_messaggio.pdf</li>
-                  <li>Messaggio Consuntivo 2025 n. 8672 del 15 aprile 2026</li>
-                  <li>Serie completa: ti.ch/dfe/dr/finanze/dati-finanziari</li>
-                </ul>
-              </div>
-              <div>
-                <p class="font-semibold mb-2">Amministrazione federale delle finanze (AFF)</p>
-                <ul class="list-disc list-inside space-y-1 text-muted-foreground ml-4">
-                  <li>Statistica finanziaria Canton Ticino dal 1990: efv.admin.ch/it/dati-statistica-finanziaria</li>
-                  <li>Dashboard SF: confronti intercantonali debito e indicatori</li>
-                </ul>
-              </div>
-              <div>
-                <p class="font-semibold mb-2">Altre fonti ufficiali</p>
-                <ul class="list-disc list-inside space-y-1 text-muted-foreground ml-4">
-                  <li>Interrogazione Gran Consiglio 180837: analisi storica contributi federali vs debito</li>
-                  <li>DFE indicatori serie storica: debito pubblico dal 2014</li>
-                  <li>USTAT: PIL cantonale e popolazione residente</li>
-                </ul>
-              </div>
-            </div>
-            <p class="text-xs text-muted-foreground mt-6 p-4 bg-muted/50 rounded">
-              ⚠️ <strong>Nota metodologica:</strong> Tutti i numeri provengono esclusivamente da fonti primarie ufficiali. 
-              Nessuna stima o inferenza narrativa senza documento. Analisi causali basate solo su dati pubblicati, 
-              confonditori annotati dove applicabile.
-            </p>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t bg-muted/50 py-12">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p class="text-sm text-muted-foreground text-center sm:text-left">
-          Dati verificati da fonti ufficiali Canton Ticino e Confederazione
-        </p>
-        <div class="flex gap-4">
-          <a href="/" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Home</a>
-          <a href="./metodologia.html" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Metodologia</a>
-          <a href="./tassazione-imprese.html" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Tassazione imprese</a>
-        </div>
-      </div>
+  <footer class="border-t bg-muted/30 py-8">
+    <div class="container mx-auto px-4 text-center text-sm text-muted-foreground">
+      <p>Tutti i dati sono verificati contro fonti primarie ufficiali del Canton Ticino</p>
+      <p class="mt-2">
+        <a href="https://github.com/tiero/dove-vanno-soldi-ticino" target="_blank" rel="noopener" class="hover:text-foreground transition-colors">
+          Codice sorgente su GitHub
+        </a>
+      </p>
     </div>
   </footer>
 
-  <script type="module" src="/src/main.ts"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <script>
-    // Load debt data and create chart
-    fetch('/data/storia-debito-pubblico.json')
-      .then(r => r.json())
-      .then(data => {
-        const years = Object.keys(data.serieDebito.anni).filter(y => !y.includes('prev'));
-        const debiti = years.map(y => data.serieDebito.anni[y].debito);
-        
-        const ctx = document.getElementById('debito-chart').getContext('2d');
-        new Chart(ctx, {
-          type: 'line',
-          data: {
-            labels: years,
-            datasets: [{
-              label: 'Debito pubblico (milioni CHF)',
-              data: debiti,
-              borderColor: 'rgb(239, 68, 68)',
-              backgroundColor: 'rgba(239, 68, 68, 0.1)',
-              tension: 0.3,
-              fill: true
-            }]
-          },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-              legend: { position: 'top' },
-              tooltip: {
-                callbacks: {
-                  label: (context) => `${context.parsed.y.toFixed(0)}M CHF`
-                }
-              }
-            },
-            scales: {
-              y: {
-                beginAtZero: false,
-                ticks: {
-                  callback: (value) => `${value}M`
-                }
-              }
-            }
-          }
-        });
-      });
-  </script>
+  <script type="module" src="/src/storia-debito.ts"></script>
 </body>
 </html>

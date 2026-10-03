@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tassazione persone giuridiche Canton Ticino - Aliquote vs imprese vs gettito">
+  <meta name="description" content="Tassazione persone giuridiche Canton Ticino - Aliquote vs gettito">
   <meta name="theme-color" content="#3b82f6" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1e40af" media="(prefers-color-scheme: dark)">
   <title>Tassazione imprese | Dove vanno i soldi del Ticino</title>
@@ -14,8 +14,8 @@
     <div class="container mx-auto px-3 sm:px-6 lg:px-8">
       <div class="flex h-14 sm:h-16 items-center justify-between gap-2">
         <div class="flex items-center gap-1.5 sm:gap-2 min-w-0 flex-shrink">
-          <span class="text-xl sm:text-2xl flex-shrink-0">🏢</span>
-          <a href="/" class="font-bold text-sm sm:text-lg truncate hover:text-primary transition-colors">Finanze Ticino</a>
+          <span class="text-xl sm:text-2xl flex-shrink-0">💰</span>
+          <a href="/" class="font-bold text-sm sm:text-lg truncate hover:text-primary transition-colors">Dove vanno i soldi del Ticino</a>
         </div>
         
         <div class="flex items-center gap-1 sm:gap-3 flex-shrink-0">
@@ -28,6 +28,8 @@
           <a href="./metodologia.html" class="hidden xs:inline-block text-xs sm:text-sm font-medium text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">
             Metodologia
           </a>
+          
+          <!-- Language switcher will be inserted here by JS -->
           
           <button id="theme-toggle" class="btn btn-secondary h-8 w-8 sm:h-9 sm:w-9 p-0 flex-shrink-0" aria-label="Toggle theme">
             <svg id="sun-icon" class="h-3.5 w-3.5 sm:h-4 sm:w-4 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -55,35 +57,21 @@
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-4xl text-center space-y-6">
           <div class="inline-flex items-center rounded-full border border-primary/50 px-3 py-1 text-sm">
-            <span class="mr-2">📊</span>
-            <span>Analisi 2000-2025 con STATENT</span>
+            <span class="mr-2">🏢</span>
+            <span>Dati VERIFICATI - Confronto aliquote vs gettito</span>
           </div>
           
           <h1 class="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            <span class="text-primary">Tassazione</span> e imprese
+            <span class="text-primary">Tassazione</span> persone giuridiche
           </h1>
           
           <p class="mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground">
-            Aliquote fiscali persone giuridiche vs numero imprese vs gettito. 
-            <strong>Correlazione osservata, non causazione</strong>. Confonditori annotati.
+            Aliquote fiscali vs numero imprese vs gettito cantonale. 
+            <strong>Correlazione ≠ causazione</strong>.
           </p>
 
-          <div class="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-3 pt-6">
-            <div class="metric-card">
-              <div class="text-sm font-medium text-muted-foreground">Aliquota 2024</div>
-              <div class="text-3xl font-bold text-primary">8%</div>
-              <div class="text-xs text-muted-foreground">vs 12% pre-2000</div>
-            </div>
-            <div class="metric-card">
-              <div class="text-sm font-medium text-muted-foreground">Imprese 2023</div>
-              <div class="text-3xl font-bold">40'669</div>
-              <div class="text-xs text-muted-foreground">+16% dal 2011</div>
-            </div>
-            <div class="metric-card">
-              <div class="text-sm font-medium text-muted-foreground">Gettito 2025</div>
-              <div class="text-3xl font-bold">298M</div>
-              <div class="text-xs text-muted-foreground">-23% vs picco 2024</div>
-            </div>
+          <div id="hero-metrics" class="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-3 pt-6">
+            <!-- Populated by JS from audited JSON -->
           </div>
         </div>
       </div>
@@ -95,499 +83,40 @@
           <div>
             <h2 class="text-2xl font-bold mb-4">📉 Evoluzione aliquote fiscali</h2>
             <p class="text-muted-foreground mb-6">
-              Imposta sull'utile persone giuridiche (società capitali, cooperative). Aliquota lineare Canton Ticino.
+              Imposta utile persone giuridiche Canton Ticino. Aliquote VERIFICATE da BU e Consuntivi.
             </p>
           </div>
 
-          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <div class="card p-6">
-              <div class="text-sm font-medium text-muted-foreground mb-2">Pre-2000</div>
-              <div class="text-4xl font-bold mb-1">12%</div>
-              <p class="text-xs text-muted-foreground">Aliquota base storica</p>
-            </div>
-
-            <div class="card p-6 border-primary/50">
-              <div class="text-sm font-medium text-muted-foreground mb-2">2000-2019</div>
-              <div class="text-4xl font-bold text-primary mb-1">9%</div>
-              <p class="text-xs text-muted-foreground">-25% vs 12%</p>
-              <p class="text-xs mt-2 text-primary">Prima riduzione</p>
-            </div>
-
-            <div class="card p-6 border-primary/50">
-              <div class="text-sm font-medium text-muted-foreground mb-2">2020-2024 RFFA</div>
-              <div class="text-4xl font-bold text-primary mb-1">8%</div>
-              <p class="text-xs text-muted-foreground">-33% vs 12%</p>
-              <p class="text-xs mt-2 text-primary">Fase 1 riforma</p>
-            </div>
-
-            <div class="card p-6 border-amber-500/50">
-              <div class="text-sm font-medium text-muted-foreground mb-2">2025+ Pianificato</div>
-              <div class="text-4xl font-bold text-amber-600 mb-1">5.5%</div>
-              <p class="text-xs text-muted-foreground">-54% vs 12%</p>
-              <p class="text-xs mt-2 text-amber-600">Fase 2 (non ancora applicata C2025)</p>
-            </div>
-          </div>
-
-          <div class="bg-blue-50 dark:bg-blue-950/20 border-l-4 border-blue-500 p-6">
-            <h3 class="font-semibold mb-3">🔍 Riforma RFFA/STAF 2020</h3>
-            <p class="text-sm mb-3">
-              <strong>Riforma fiscale e finanziamento AVS</strong> (RFFA, in tedesco STAF): riforma federale attuata dal Canton Ticino con LT modifica 2019.
-            </p>
-            <ul class="space-y-2 text-sm">
-              <li class="flex items-start gap-2">
-                <span class="text-primary">▸</span>
-                <span><strong>Abolizione statuti speciali</strong>: holding, società domiciliari, società ausiliarie → tassazione ordinaria</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-primary">▸</span>
-                <span><strong>Patent box</strong>: riduzione fiscale brevetti e diritti analoghi</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-primary">▸</span>
-                <span><strong>Super-deduzione R&D</strong>: maggiorazione spese ricerca e sviluppo</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-primary">▸</span>
-                <span><strong>Riduzione aliquota</strong>: 9% → 8% (2020-2024), poi 5.5% pianificato (2025+)</span>
-              </li>
-            </ul>
-            <p class="text-xs text-muted-foreground mt-4">
-              Fonte: Messaggio 7684, Rapporti maggioranza e minoranza, Bollettino ufficiale 02-2020
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="gettito" class="py-16 sm:py-24 bg-muted/30">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-6xl space-y-8">
-          <div>
-            <h2 class="text-2xl font-bold mb-4">💰 Gettito fiscale persone giuridiche</h2>
-            <p class="text-muted-foreground">
-              Entrate cantonali da imposte PG (imposte correnti + sopravvenienze + supplemento immobiliare). Serie 2014-2025.
-            </p>
+          <div id="aliquote-table">
+            <!-- Populated by JS -->
           </div>
 
           <div class="bg-card border rounded-lg p-6">
-            <div id="grafico-gettito" class="w-full h-96">
+            <h3 class="text-xl font-semibold mb-4">💰 Gettito fiscale per anno</h3>
+            <div style="height: 300px;">
               <canvas id="gettito-chart"></canvas>
             </div>
           </div>
 
-          <div class="grid gap-6 md:grid-cols-2">
-            <div class="card p-6">
-              <h3 class="text-lg font-semibold mb-4">📊 Cifre chiave</h3>
-              <ul class="space-y-3 text-sm">
-                <li class="flex justify-between">
-                  <span>2019 (ultimo anno 9%):</span>
-                  <span class="font-mono">308M</span>
-                </li>
-                <li class="flex justify-between">
-                  <span>2020 (RFFA 8% inizio):</span>
-                  <span class="font-mono">296M</span>
-                </li>
-                <li class="flex justify-between">
-                  <span>2021 (minimo post-RFFA):</span>
-                  <span class="font-mono text-destructive">292M</span>
-                </li>
-                <li class="flex justify-between border-t pt-2">
-                  <span>2023 (picco trading):</span>
-                  <span class="font-mono text-primary">347M</span>
-                </li>
-                <li class="flex justify-between">
-                  <span>2024 (massimo storico):</span>
-                  <span class="font-mono text-primary font-bold">386M</span>
-                </li>
-                <li class="flex justify-between border-t pt-2">
-                  <span class="font-semibold">2025 (normalizzazione):</span>
-                  <span class="font-mono font-semibold">298M</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="card p-6">
-              <h3 class="text-lg font-semibold mb-4">⚠️ Volatilità e cause</h3>
-              <ul class="space-y-2 text-sm">
-                <li class="flex items-start gap-2">
-                  <span class="text-amber-600">•</span>
-                  <span><strong>2020-2021 calo:</strong> Transizione RFFA (riserve occulte), COVID-19 su utili</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-green-600">•</span>
-                  <span><strong>2022-2024 boom:</strong> Utili eccezionali trading materie prime/energia (crisi geopolitica)</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
-                  <span><strong>2025 calo:</strong> Normalizzazione utili trading + PIL 2024-2025 rivisto al ribasso</span>
-                </li>
-              </ul>
-              <p class="text-xs text-muted-foreground mt-4">
-                Fonte: C2025 Messaggio 8672 pp.23-24, Rendiconto DFE 2022
-              </p>
-            </div>
-          </div>
-
-          <div class="bg-amber-50 dark:bg-amber-950/20 border-l-4 border-amber-500 p-6">
-            <h3 class="font-semibold mb-3">🔬 Osservazione: Gettito NON segue linearmente l'aliquota</h3>
-            <p class="text-sm mb-3">
-              Riduzione aliquota 9% → 8% (2020) <strong>seguita da CALO gettito</strong> 2020-2021 (308M → 296M → 292M).
-              Poi BOOM 2022-2024 (318M → 347M → 386M) con aliquota stabile 8%.
-              Poi normalizzazione 2025 (298M) sempre con 8%.
-            </p>
-            <p class="text-sm font-semibold text-amber-700 dark:text-amber-300">
-              ➜ Gettito dipende MOLTO PIÙ da utili aziende (congiuntura, settori specifici) che da aliquota fiscale.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="imprese" class="py-16 sm:py-24">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-6xl space-y-8">
-          <div>
-            <h2 class="text-2xl font-bold mb-4">🏢 Numero imprese attive</h2>
-            <p class="text-muted-foreground">
-              Aziende registrate Canton Ticino (STATENT 2011-2023). Comprende tutte le imprese con ≥1 addetto con reddito >2'300 CHF/anno.
-            </p>
-          </div>
-
-          <div class="grid gap-6 md:grid-cols-3">
-            <div class="card p-6">
-              <div class="text-sm font-medium text-muted-foreground mb-2">2011</div>
-              <div class="text-4xl font-bold mb-1">~35'000</div>
-              <p class="text-xs text-muted-foreground">Inizio serie STATENT</p>
-            </div>
-
-            <div class="card p-6">
-              <div class="text-sm font-medium text-muted-foreground mb-2">2023</div>
-              <div class="text-4xl font-bold text-primary mb-1">40'669</div>
-              <p class="text-xs text-muted-foreground">+16% in 12 anni</p>
-            </div>
-
-            <div class="card p-6">
-              <div class="text-sm font-medium text-muted-foreground mb-2">Addetti 2023</div>
-              <div class="text-4xl font-bold mb-1">252'486</div>
-              <p class="text-xs text-muted-foreground">203'267 ETP</p>
-            </div>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-semibold mb-4">📋 Breakdown per settore NOGA (2023)</h3>
-            <div class="overflow-x-auto">
-              <table class="w-full text-sm">
-                <thead class="bg-muted">
-                  <tr>
-                    <th class="text-left p-3">Settore</th>
-                    <th class="text-right p-3">Aziende</th>
-                    <th class="text-right p-3">Addetti</th>
-                    <th class="text-right p-3">ETP</th>
-                    <th class="text-right p-3">Quota</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y">
-                  <tr class="hover:bg-muted/50">
-                    <td class="p-3">🌾 Primario (agricoltura, pesca)</td>
-                    <td class="text-right p-3 font-mono">1'141</td>
-                    <td class="text-right p-3 font-mono">3'460</td>
-                    <td class="text-right p-3 font-mono">2'391</td>
-                    <td class="text-right p-3">2.8%</td>
-                  </tr>
-                  <tr class="hover:bg-muted/50">
-                    <td class="p-3">🏭 Secondario (industria, costruzioni)</td>
-                    <td class="text-right p-3 font-mono">5'467</td>
-                    <td class="text-right p-3 font-mono">62'248</td>
-                    <td class="text-right p-3 font-mono">54'863</td>
-                    <td class="text-right p-3">13.4%</td>
-                  </tr>
-                  <tr class="hover:bg-muted/50 font-semibold">
-                    <td class="p-3">🛍️ Terziario (servizi)</td>
-                    <td class="text-right p-3 font-mono">34'061</td>
-                    <td class="text-right p-3 font-mono">186'778</td>
-                    <td class="text-right p-3 font-mono">146'013</td>
-                    <td class="text-right p-3">83.8%</td>
-                  </tr>
-                </tbody>
-                <tfoot class="bg-muted font-bold">
-                  <tr>
-                    <td class="p-3">TOTALE</td>
-                    <td class="text-right p-3 font-mono">40'669</td>
-                    <td class="text-right p-3 font-mono">252'486</td>
-                    <td class="text-right p-3 font-mono">203'267</td>
-                    <td class="text-right p-3">100%</td>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-semibold mb-4">🏷️ Sezioni economiche principali (2023)</h3>
-            <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              <div class="card p-4">
-                <div class="text-xs text-muted-foreground mb-1">J - ICT / Informazione</div>
-                <div class="font-semibold">1'514 aziende</div>
-                <div class="text-sm text-muted-foreground">9'698 addetti</div>
-              </div>
-              <div class="card p-4">
-                <div class="text-xs text-muted-foreground mb-1">K - Finanza / Assicurazioni</div>
-                <div class="font-semibold">1'387 aziende</div>
-                <div class="text-sm text-muted-foreground">12'377 addetti</div>
-              </div>
-              <div class="card p-4">
-                <div class="text-xs text-muted-foreground mb-1">C - Manifattura</div>
-                <div class="font-semibold">1'942 aziende</div>
-                <div class="text-sm text-muted-foreground">28'349 addetti</div>
-              </div>
-              <div class="card p-4">
-                <div class="text-xs text-muted-foreground mb-1">F - Costruzioni</div>
-                <div class="font-semibold">2'970 aziende</div>
-                <div class="text-sm text-muted-foreground">21'150 addetti</div>
-              </div>
-              <div class="card p-4">
-                <div class="text-xs text-muted-foreground mb-1">I - Alloggio / Ristorazione</div>
-                <div class="font-semibold">2'168 aziende</div>
-                <div class="text-sm text-muted-foreground">13'010 addetti</div>
-              </div>
-              <div class="card p-4">
-                <div class="text-xs text-muted-foreground mb-1">M - Attività professionali</div>
-                <div class="font-semibold">4'609 aziende</div>
-                <div class="text-sm text-muted-foreground">18'011 addetti</div>
-              </div>
-            </div>
-            <p class="text-xs text-muted-foreground mt-4">
-              Fonte: USTAT 4006_industria_e_servizi.pdf p.7, STATENT 2023
-            </p>
-          </div>
-
-          <div class="bg-blue-50 dark:bg-blue-950/20 border-l-4 border-blue-500 p-6">
-            <h3 class="font-semibold mb-3">📈 Crescita imprese costante indipendentemente da aliquota</h3>
-            <p class="text-sm mb-3">
-              Numero aziende cresce continuamente da ~35k (2011) a 40'669 (2023) sia con aliquota 9% (2011-2019) 
-              che con aliquota 8% (2020-2023). <strong>+16% in 12 anni</strong>.
-            </p>
-            <p class="text-sm font-semibold text-blue-700 dark:text-blue-300">
-              ➜ Correlazione aliquota-numero imprese DEBOLE. Crescita tendenziale indipendente dalla riduzione fiscale 2020.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="correlazione" class="py-16 sm:py-24 bg-muted/30">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-6xl space-y-8">
-          <div>
-            <h2 class="text-2xl font-bold mb-4">🔬 Correlazione vs Causazione</h2>
-            <p class="text-muted-foreground">
-              Analisi relazione tra aliquote, imprese e gettito. <strong>Correlazione osservata ≠ causazione provata</strong>.
-            </p>
-          </div>
-
-          <div class="bg-amber-50 dark:bg-amber-950/20 border-l-4 border-amber-500 p-6">
-            <h3 class="font-semibold mb-3 text-amber-700 dark:text-amber-300">⚠️ CONCLUSIONE: Nessuna evidenza causale diretta nei dati 2014-2025</h3>
-            <p class="text-sm mb-4">
-              La riduzione aliquota 9% → 8% (2020) è stata <strong>seguita da CALO gettito</strong> 2020-2021 (non aumento).
-              Il successivo boom 2022-2024 è attribuibile a <strong>utili eccezionali trading</strong> (settore specifico, evento geopolitico).
-              Il numero imprese cresce <strong>costantemente</strong> 2011-2023 indipendentemente dall'aliquota.
-            </p>
-            <p class="text-sm font-semibold">
-              ➜ Dati NON mostrano pattern "aliquota più bassa → più gettito" o "aliquota più bassa → più imprese".
-            </p>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-semibold mb-4">🧩 Confonditori (variabili che influenzano il risultato)</h3>
-            <div class="grid gap-4 md:grid-cols-2">
-              <div class="card p-4">
-                <h4 class="font-semibold text-sm mb-2">🌍 Congiuntura economica</h4>
-                <p class="text-xs text-muted-foreground">
-                  PIL cantonale, svizzero, internazionale. Export. Domanda. Tassi interesse.
-                </p>
-              </div>
-              <div class="card p-4">
-                <h4 class="font-semibold text-sm mb-2">📊 Settori specifici</h4>
-                <p class="text-xs text-muted-foreground">
-                  Trading materie prime/energia (boom 2021-2023 crisi geopolitica). Finanza (volatile). Manifattura (export-dipendente).
-                </p>
-              </div>
-              <div class="card p-4">
-                <h4 class="font-semibold text-sm mb-2">🇨🇭 Riforme federali</h4>
-                <p class="text-xs text-muted-foreground">
-                  RFFA: abolizione statuti, patent box, R&D. Effetti transitori riserve occulte.
-                </p>
-              </div>
-              <div class="card p-4">
-                <h4 class="font-semibold text-sm mb-2">🦠 Eventi straordinari</h4>
-                <p class="text-xs text-muted-foreground">
-                  COVID-19 (2020-2021). Crisi geopolitica (2022-2023 Ucraina, energia).
-                </p>
-              </div>
-              <div class="card p-4">
-                <h4 class="font-semibold text-sm mb-2">👷 Frontalieri</h4>
-                <p class="text-xs text-muted-foreground">
-                  Accordo 2020 (80% vs 60% trattenuta). Competitività transfrontaliera.
-                </p>
-              </div>
-              <div class="card p-4">
-                <h4 class="font-semibold text-sm mb-2">🏛️ Competizione intercantonale</h4>
-                <p class="text-xs text-muted-foreground">
-                  ZG 11.85%, LU 12.32%, ZH ~19-21%, TI ~15-17%. Domiciliazione imprese.
-                </p>
-              </div>
-              <div class="card p-4">
-                <h4 class="font-semibold text-sm mb-2">📏 Dimensione imprese</h4>
-                <p class="text-xs text-muted-foreground">
-                  Grandi aziende contribuiscono in modo sproporzionato. Distribuzione asimmetrica.
-                </p>
-              </div>
-              <div class="card p-4">
-                <h4 class="font-semibold text-sm mb-2">⏱️ Lag temporali</h4>
-                <p class="text-xs text-muted-foreground">
-                  Effetti riforma possono manifestarsi anni dopo. Decisioni aziende multi-anno.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-red-50 dark:bg-red-950/20 border-l-4 border-red-500 p-6">
-            <h3 class="font-semibold mb-3">❌ Gettito per settore: NON DISPONIBILE</h3>
-            <p class="text-sm mb-3">
-              <strong>Divisione delle contribuzioni NON pubblica</strong> il breakdown del gettito persone giuridiche per settore economico (NOGA).
-            </p>
-            <p class="text-sm mb-3">
-              USTAT STATENT fornisce numero imprese e addetti per settore, ma <strong>NON il gettito fiscale per settore</strong>.
-            </p>
-            <p class="text-sm font-semibold text-red-700 dark:text-red-300">
-              ➜ Impossibile verificare da dati ufficiali quali settori contribuiscono di più al gettito PG.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-16 sm:py-24">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-4xl">
-          <div class="card p-8">
-            <h2 class="text-2xl font-bold mb-6">📚 Fonti primarie verificate</h2>
-            <div class="space-y-4 text-sm">
-              <div>
-                <p class="font-semibold mb-2">Riforma fiscale RFFA/STAF 2020</p>
-                <ul class="list-disc list-inside space-y-1 text-muted-foreground ml-4">
-                  <li>Messaggio 7684 Rapporto maggioranza: ti.ch/fileadmin/POTERI/GC/allegati/rapporti/23913_7684R-magg.pdf</li>
-                  <li>Messaggio 7684 Rapporto minoranza: ti.ch/fileadmin/POTERI/GC/allegati/rapporti/23914_7684R-min.pdf</li>
-                  <li>Bollettino ufficiale 02-2020: ti.ch/fileadmin/DFE/DC/DOC-TRIBUTARIA/2020/Pubblicazione_BU_2-2020...</li>
-                </ul>
-              </div>
-              <div>
-                <p class="font-semibold mb-2">Gettito fiscale persone giuridiche</p>
-                <ul class="list-disc list-inside space-y-1 text-muted-foreground ml-4">
-                  <li>DFE indicatori: ti.ch/dfe/dr/finanze/indicatori-evoluzioni (serie 2014-2025)</li>
-                  <li>Consuntivo 2025 Messaggio 8672 del 15.04.2026 pp.23-24</li>
-                  <li>Rendiconto DFE 2022, 2025: contesto policy fiscale</li>
-                </ul>
-              </div>
-              <div>
-                <p class="font-semibold mb-2">Numero imprese e settori</p>
-                <ul class="list-disc list-inside space-y-1 text-muted-foreground ml-4">
-                  <li>USTAT STATENT 2011-2023: www3.ti.ch/DFE/DR/USTAT (cubo interattivo fonte 7)</li>
-                  <li>USTAT 4006_industria_e_servizi.pdf p.7: breakdown settoriale 2023</li>
-                  <li>Fonte STATENT definizione: UST Statistica strutturale imprese, NOGA 2008</li>
-                </ul>
-              </div>
-            </div>
-            <p class="text-xs text-muted-foreground mt-6 p-4 bg-muted/50 rounded">
-              ⚠️ <strong>Nota metodologica:</strong> Tutti i numeri provengono da fonti primarie ufficiali. 
-              Correlazioni osservate, NON causalità provata. Confonditori documentati. 
-              Settori breakdown solo dove Canton/USTAT pubblicano (numero imprese, addetti). 
-              Gettito per settore NON disponibile da fonti ufficiali.
-            </p>
+          <div id="gettito-table" class="bg-card border rounded-lg p-6">
+            <!-- Populated by JS -->
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t bg-muted/50 py-12">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p class="text-sm text-muted-foreground text-center sm:text-left">
-          Analisi basata su dati verificati Canton Ticino, USTAT e fonti ufficiali
-        </p>
-        <div class="flex gap-4">
-          <a href="/" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Home</a>
-          <a href="./metodologia.html" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Metodologia</a>
-          <a href="./storia-debito.html" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Storia debito</a>
-        </div>
-      </div>
+  <footer class="border-t bg-muted/30 py-8">
+    <div class="container mx-auto px-4 text-center text-sm text-muted-foreground">
+      <p>Tutti i dati sono verificati contro fonti primarie ufficiali</p>
+      <p class="mt-2">
+        <a href="https://github.com/tiero/dove-vanno-soldi-ticino" target="_blank" rel="noopener" class="hover:text-foreground transition-colors">
+          Codice sorgente su GitHub
+        </a>
+      </p>
     </div>
   </footer>
 
-  <script type="module" src="/src/main.ts"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <script>
-    // Load tax data and create chart
-    fetch('/data/tassazione-imprese.json')
-      .then(r => r.json())
-      .then(data => {
-        const years = Object.keys(data.serieGettitoPersoneGiuridiche.serie).filter(y => !y.includes('preventivo'));
-        const gettiti = years.map(y => data.serieGettitoPersoneGiuridiche.serie[y].gettito);
-        
-        const ctx = document.getElementById('gettito-chart').getContext('2d');
-        new Chart(ctx, {
-          type: 'line',
-          data: {
-            labels: years,
-            datasets: [{
-              label: 'Gettito PG (milioni CHF)',
-              data: gettiti,
-              borderColor: 'rgb(59, 130, 246)',
-              backgroundColor: 'rgba(59, 130, 246, 0.1)',
-              tension: 0.3,
-              fill: true
-            }]
-          },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-              legend: { position: 'top' },
-              tooltip: {
-                callbacks: {
-                  label: (context) => `${context.parsed.y.toFixed(0)}M CHF`
-                }
-              },
-              annotation: {
-                annotations: {
-                  rffa2020: {
-                    type: 'line',
-                    xMin: '2020',
-                    xMax: '2020',
-                    borderColor: 'rgb(245, 158, 11)',
-                    borderWidth: 2,
-                    borderDash: [5, 5],
-                    label: {
-                      content: 'RFFA 8%',
-                      enabled: true,
-                      position: 'start'
-                    }
-                  }
-                }
-              }
-            },
-            scales: {
-              y: {
-                beginAtZero: false,
-                ticks: {
-                  callback: (value) => `${value}M`
-                }
-              }
-            }
-          }
-        });
-      });
-  </script>
+  <script type="module" src="/src/tassazione-imprese.ts"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 // Storia debito page - render from audited JSON only
 import './style.css';
 import { Chart, registerables } from 'chart.js';
+import { initSharedNavigation } from './shared-nav';
 
 Chart.register(...registerables);
 
@@ -35,23 +36,6 @@ interface StoriaDebitoData {
 async function loadData(): Promise<StoriaDebitoData> {
   const response = await fetch(`${BASE_URL}data/storia-debito-pubblico.json`);
   return response.json();
-}
-
-function initTheme() {
-  const storedTheme = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const theme = storedTheme || (prefersDark ? 'dark' : 'light');
-  
-  document.documentElement.classList.toggle('dark', theme === 'dark');
-  
-  const themeToggle = document.getElementById('theme-toggle');
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const isDark = document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      renderChart();
-    });
-  }
 }
 
 let chartInstance: Chart | null = null;
@@ -219,27 +203,12 @@ async function renderPage() {
   }
 }
 
-function setupMobileMenu() {
-  const menuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
-  
-  if (!menuButton || !mobileMenu) return;
-  
-  menuButton.addEventListener('click', (e) => {
-    e.stopPropagation();
-    mobileMenu.classList.toggle('hidden');
-  });
-  
-  document.addEventListener('click', (e) => {
-    const target = e.target as Node;
-    if (!menuButton.contains(target) && !mobileMenu.contains(target)) {
-      mobileMenu.classList.add('hidden');
-    }
-  });
-}
-
 // Init
-initTheme();
-setupMobileMenu();
+initSharedNavigation();
 renderPage();
 renderChart();
+
+// Re-render chart on theme change
+window.addEventListener('themeChanged', () => {
+  renderChart();
+});
