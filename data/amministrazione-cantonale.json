@@ -1,0 +1,327 @@
+{
+  "metadata": {
+    "title": "Amministrazione cantonale - Costi e personale",
+    "description": "Dettaglio costi amministrazione pubblica cantonale: personale, stipendi organi politici, spese di funzionamento, organismi di controllo",
+    "lastUpdated": "2026-10-03",
+    "sources": [
+      {
+        "name": "Messaggio 8731 - Preventivo 2027 e Piano finanziario 2028-2030",
+        "url": "https://www4.ti.ch/generale/gran-consiglio/messaggi-e-atti/ricerca-messaggi-e-atti/risultati/dettaglio/?user_gcatti_pi1%5Bid_messaggio%5D=11046",
+        "date": "2024-08-28"
+      },
+      {
+        "name": "Legge sugli stipendi dei magistrati e funzionari (LStip)",
+        "url": "https://www3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/legge/vid/1_3_3_1",
+        "codice": "1.3.3.1"
+      },
+      {
+        "name": "Legge sul Controllo cantonale delle finanze",
+        "url": "https://www3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/legge/vid/2_4_4_1",
+        "codice": "2.4.4.1"
+      },
+      {
+        "name": "USTAT - Statistica dei dipendenti pubblici",
+        "url": "https://www3.ti.ch/DFE/DR/USTAT/",
+        "note": "Pubblicazione annuale dati occupazione settore pubblico"
+      }
+    ],
+    "avvertenze": [
+      "Dati limitati dalla disponibilità nei documenti pubblici",
+      "Breakdown dettagliato per dipartimento NON disponibile nel Messaggio 8731",
+      "Dati occupazione (FTE/headcount) richiede accesso a USTAT o Consuntivo dettagliato",
+      "Stipendi individuali Consiglio di Stato e Gran Consiglio: regolati da legge ma importi esatti non sempre pubblicati nei preventivi"
+    ]
+  },
+  "glossario": {
+    "FTE": {
+      "termine": "FTE (Full-Time Equivalent)",
+      "definizione": "Equivalenti a tempo pieno. Misura del numero di posti di lavoro calcolati come se fossero tutti a tempo pieno.",
+      "spiegazioneSemplice": "Se hai 2 persone che lavorano part-time al 50%, sono 1 FTE. Se hai 3 persone al 100%, sono 3 FTE. È il modo standard per contare i dipendenti.",
+      "esempio": "10 dipendenti al 80% = 8 FTE"
+    },
+    "Headcount": {
+      "termine": "Headcount",
+      "definizione": "Numero di teste. Il numero effettivo di persone impiegate, indipendentemente dalla percentuale lavorativa.",
+      "spiegazioneSemplice": "Quante persone fisiche lavorano, anche se sono part-time. Si conta ognuno come '1' persona.",
+      "esempio": "10 dipendenti al 80% = 10 headcount (ma solo 8 FTE)"
+    },
+    "SpesePersonale": {
+      "termine": "Spese per il personale",
+      "definizione": "Tutti i costi legati ai dipendenti: stipendi, contributi sociali (AVS, cassa pensioni), assicurazioni, indennità.",
+      "spiegazioneSemplice": "Quanto costa al Cantone pagare tutti i suoi dipendenti: stipendio netto più AVS, pensione, assicurazioni pagate dal datore di lavoro.",
+      "componenti": "Stipendi base, contributi AVS/AI/AD, contributi cassa pensioni (circa 15-20%), assicurazioni infortuni, indennità varie"
+    },
+    "SpeseFunzionamento": {
+      "termine": "Spese di funzionamento (beni e servizi)",
+      "definizione": "Tutti i costi per far funzionare l'amministrazione: affitti uffici, elettricità, materiale ufficio, informatica, telefonia, pulizie, manutenzioni.",
+      "spiegazioneSemplice": "Tutto ciò che serve per lavorare oltre agli stipendi: computer, carta, affitto, bollette, licenze software, manutenzione edifici.",
+      "esempi": "Affitto Palazzo delle Orsoline, elettricità e riscaldamento uffici, computer e software, consulenze IT, cancelleria, pulizie"
+    },
+    "ConsiglioDiStato": {
+      "termine": "Consiglio di Stato",
+      "definizione": "Il Governo del Canton Ticino. Composto da 5 membri (consiglieri di Stato) eletti dal popolo ogni 4 anni. Dirige i dipartimenti cantonali.",
+      "spiegazioneSemplice": "I 5 'ministri' del Ticino. Ogni consigliere di Stato dirige un dipartimento (Finanze, Sanità, Educazione, ecc.).",
+      "membri": 5,
+      "mandato": "4 anni, rinnovabile"
+    },
+    "GranConsiglio": {
+      "termine": "Gran Consiglio",
+      "definizione": "Il Parlamento del Canton Ticino. Composto da 90 deputati eletti dal popolo ogni 4 anni. Vota le leggi e approva il preventivo.",
+      "spiegazioneSemplice": "I 90 'parlamentari' del Ticino. Fanno le leggi cantonali e decidono come spendere i soldi pubblici.",
+      "membri": 90,
+      "mandato": "4 anni"
+    },
+    "ControlloCantonale": {
+      "termine": "Controllo cantonale delle finanze (CCF)",
+      "definizione": "Ufficio indipendente che controlla la gestione finanziaria del Cantone e degli enti pubblici. Verifica che i soldi pubblici siano spesi correttamente e legalmente.",
+      "spiegazioneSemplice": "I 'revisori dei conti' del Cantone. Controllano che non ci siano sprechi, errori o irregolarità nell'uso dei soldi pubblici.",
+      "indipendenza": "Indipendente dal Consiglio di Stato, risponde al Gran Consiglio"
+    },
+    "CommissioneGestioneFinanze": {
+      "termine": "Commissione della gestione e delle finanze (CGF)",
+      "definizione": "Commissione parlamentare permanente del Gran Consiglio. Sorveglia la gestione finanziaria e amministrativa del Consiglio di Stato.",
+      "spiegazioneSemplice": "Gruppo di deputati del Gran Consiglio che controlla come il Governo spende i soldi e gestisce l'amministrazione.",
+      "membri": "Circa 15 deputati del Gran Consiglio",
+      "compiti": "Esame preventivo, esame consuntivo, controllo amministrazione, rapporti su temi specifici"
+    }
+  },
+  "funzioneAmministrazioneGenerale": {
+    "descrizione": "Funzione 'Amministrazione generale' include organi politici (Gran Consiglio, Consiglio di Stato), Cancelleria dello Stato, Controllo finanze, servizi comuni (informatica, logistica, formazione).",
+    "spesaTotale2027": 384,
+    "percentualeBilancioCantonale": 8.1,
+    "dettaglioDisponibile": "limitato",
+    "nota": "Il Messaggio 8731 riporta solo il totale della funzione. Il breakdown dettagliato per organo (Gran Consiglio, Consiglio di Stato, Cancelleria, ecc.) NON è disponibile nel preventivo pubblicato."
+  },
+  "personaleCantonale": {
+    "datoCOMPLETO_NON_DISPONIBILE": true,
+    "note": "Il Messaggio 8731 (Preventivo 2027) NON pubblica dati aggregati su occupazione cantonale (FTE totali, headcount). Questi dati sono pubblicati annualmente da USTAT nel 'Consuntivo' e nelle statistiche del personale pubblico.",
+    "doveTrovarlo": [
+      "USTAT - Statistica annuale dipendenti settore pubblico cantonale",
+      "Consuntivo annuale (marzo anno successivo) - sezione personale",
+      "Messaggio sul Consuntivo (aprile-maggio) può contenere dati aggregati occupazione"
+    ],
+    "datiParziali": {
+      "insegnantiScuoleCantonali": {
+        "FTE_2024_stimato": "~3500-4000",
+        "note": "Docenti scuole medie, licei, scuole professionali. Dato stimato, non ufficiale da preventivo.",
+        "fonte": "Stima da spese personale funzione Formazione"
+      },
+      "ospedalieri_EOC": {
+        "FTE_2024_stimato": "~4500-5000",
+        "note": "Personale Ente Ospedaliero Cantonale (medici, infermieri, amministrazione). EOC è ente autonomo, non amministrazione diretta Cantone.",
+        "fonte": "Rapporti EOC, non preventivo cantonale"
+      },
+      "magistratiGiudici": {
+        "numero": "~150-200",
+        "note": "Giudici tribunali cantonali, Ministero pubblico, magistrati. Dato stimato.",
+        "fonte": "Leggi organiche tribunali"
+      }
+    },
+    "totaleStimato_INDICATIVO": {
+      "FTE_amministrazioneGeneraleDipartimentiServizi": "~8000-9000",
+      "headcount": "~10000-11000",
+      "note": "STIMA MOLTO INDICATIVA basata su spese personale totali preventivo 2027. Include amministrazione, insegnanti, magistrati. ESCLUSI EOC e OSC (enti autonomi). Dato NON UFFICIALE."
+    }
+  },
+  "spesePersonaleTotali": {
+    "totale2027": 2850,
+    "totale2026": 2790,
+    "variazione": 60,
+    "percentualeBilancio": 60.2,
+    "perAbitante": 7872,
+    "note": "Spese per il personale su TUTTO il bilancio cantonale (amministrazione, scuole, ospedali, polizia, giustizia, ecc.). Include stipendi, contributi sociali, assicurazioni.",
+    "fonte": "Messaggio 8731, somma spese personale tutte le funzioni",
+    "caveat": "Include EOC (ospedali) e OSC (psichiatria) che sono enti autonomi, non amministrazione diretta"
+  },
+  "costoMedioDipendente": {
+    "stimaNON_UFFICIALE": true,
+    "costoMedioAnnuoFTE": "~95000-110000",
+    "calcoloIndicativo": "Spese personale 2850M / FTE stimati 8500-9000 (esclusi EOC/OSC) = ~100'000-110'000 CHF/FTE. Include stipendio lordo + contributi datore di lavoro.",
+    "composizione": {
+      "stipendioLordoMedio": "~75000-85000",
+      "contributiSocialiDatoreLavoro": "~20000-25000",
+      "note": "Contributi: AVS/AI/AD (~13%), Cassa pensioni (~15-18%), assicurazioni, altri oneri"
+    },
+    "variazionePerProfilo": "Un docente universitario guadagna ~120'000-150'000 CHF/anno lordo, un impiegato amministrativo ~60'000-80'000 CHF, un magistrato ~180'000-250'000 CHF. La media nasconde grandi differenze.",
+    "nota": "STIMA INDICATIVA. Dato ufficiale richiede accesso a statistiche dettagliate USTAT o Ufficio del personale."
+  },
+  "stipendiOrganiPolitici": {
+    "consiglioDiStato": {
+      "membri": 5,
+      "stipendioAnnuoLordo": 235000,
+      "baseLegale": "Legge sugli stipendi dei magistrati e funzionari (LStip) art. 3",
+      "note": "Stipendio fisso identico per tutti e 5 i consiglieri di Stato. Comprende tutte le indennità (nessun rimborso spese aggiuntivo).",
+      "importoTotale5Membri": 1175000,
+      "fonte": "LStip vigente al 2026",
+      "confronto": "Circa equivalente ad un giudice federale o direttore importante amministrazione federale"
+    },
+    "granConsiglio": {
+      "membri": 90,
+      "indennita": {
+        "annua": 25000,
+        "descrizione": "Indennità fissa annua per ogni deputato, indipendentemente da presenza/assenze",
+        "note": "Copre attività parlamentare, commissioni, lavoro preparatorio"
+      },
+      "gettoneSeduta": {
+        "importo": 200,
+        "descrizione": "Gettone di presenza per ogni seduta plenaria del Gran Consiglio (circa 30-35 sedute/anno)",
+        "totaleAnnuo": "~6000-7000 per deputato attivo"
+      },
+      "rimborsiSpese": {
+        "descrizione": "Rimborso spese viaggio (trasporti pubblici o km auto) e vitto per sedute",
+        "stimaAnnua": "~2000-3000 per deputato"
+      },
+      "compensoTotaleAnnuo": "~33000-35000 per deputato (indennità + gettoni + rimborsi)",
+      "importoTotaleBudget": "~3000000-3150000 per tutti i 90 deputati",
+      "baseLegale": "Legge sul Gran Consiglio, regolamento indennità",
+      "nota": "I deputati NON hanno uno stipendio fisso. Ricevono un'indennità + gettoni presenza. La maggior parte dei deputati ha un altro lavoro.",
+      "confronto": "Un deputato guadagna circa 1/7 di un consigliere di Stato. Il Gran Consiglio NON è un parlamento di professionisti a tempo pieno."
+    },
+    "totaleOrganiEletti": {
+      "consiglioDiStato": 1175000,
+      "granConsiglio": 3075000,
+      "totale": 4250000,
+      "percentualeBilancio": 0.09,
+      "perAbitante": 11.7,
+      "nota": "Costo diretto degli organi politici eletti (5 consiglieri + 90 deputati) è lo 0.09% del bilancio cantonale totale."
+    }
+  },
+  "speseFunzionamentoAmministrazione": {
+    "descrizione": "Spese di funzionamento (beni e servizi) dell'amministrazione cantonale: edifici, informatica, consulenze, materiale, utenze.",
+    "totale2027_funzioneAmministrazioneGenerale": 150,
+    "stima": "indicativa",
+    "dettaglioNON_DISPONIBILE": true,
+    "nota": "Il Messaggio 8731 NON pubblica un breakdown dettagliato delle spese di funzionamento per categoria (IT, edifici, consulenze, ecc.). Questi dati sono nel Consuntivo dettagliato.",
+    "componentiPrincipali": {
+      "informaticaEDigitalizzazione": {
+        "stimaAnnua": "~50-70M",
+        "descrizione": "Licenze software, server e cloud, manutenzione sistemi, progetti digitalizzazione, cybersecurity",
+        "nota": "Stima basata su trend settore pubblico. Dato ufficiale richiede accesso Consuntivo IT."
+      },
+      "edificiERent": {
+        "stimaAnnua": "~30-40M",
+        "descrizione": "Affitti sedi amministrative, manutenzione edifici di proprietà cantonale, utenze (elettricità, riscaldamento, acqua)",
+        "esempi": "Palazzo Orsoline, Palazzo governativo, sedi decentrate dipartimenti"
+      },
+      "consulenzeEMandati": {
+        "stimaAnnua": "~20-30M",
+        "descrizione": "Consulenze esterne (legali, tecniche, organizzative), studi, mandati di progetto, audit",
+        "nota": "Include mandati a studi legali, ingegneri, società informatiche, esperti vari"
+      },
+      "materialeEForniture": {
+        "stimaAnnua": "~10-15M",
+        "descrizione": "Materiale ufficio, cancelleria, stampanti, mobilio, piccole attrezzature"
+      },
+      "altro": {
+        "stimaAnnua": "~10-15M",
+        "descrizione": "Telefonia, posta, assicurazioni, piccole spese varie"
+      }
+    },
+    "doveTrovarlo": "Consuntivo annuale (marzo) - sezione Conto economico per natura - Beni e servizi dettagliati"
+  },
+  "organismiControllo": {
+    "controlloCantonaleFinanze": {
+      "nome": "Controllo cantonale delle finanze (CCF)",
+      "descrizione": "Organo di controllo indipendente che verifica la legalità e regolarità della gestione finanziaria del Cantone e degli enti sovvenzionati.",
+      "personale": "~15-20 FTE (revisori, analisti finanziari, esperti contabili)",
+      "budgetAnnuo2027": "~2.5-3.0M",
+      "stima": "indicativa",
+      "compiti": [
+        "Revisione contabile conti cantonali",
+        "Audit enti sovvenzionati (EOC, OSC, università, ecc.)",
+        "Controlli tematici su gestione amministrativa",
+        "Rapporti annuali al Gran Consiglio",
+        "Consulenza preventiva su progetti finanziari"
+      ],
+      "indipendenza": "Organo indipendente dal Consiglio di Stato. Risponde al Gran Consiglio.",
+      "baseLegale": "Legge sul Controllo cantonale delle finanze (2.4.4.1)",
+      "pubblicazioni": "Rapporti pubblici su ti.ch",
+      "nota": "Budget stimato da funzione Amministrazione generale. Dato dettagliato NON disponibile nel Messaggio 8731."
+    },
+    "commissioneGestioneFinanze": {
+      "nome": "Commissione della gestione e delle finanze (CGF)",
+      "descrizione": "Commissione parlamentare permanente del Gran Consiglio. Sorveglia gestione finanziaria e amministrativa del Governo.",
+      "membri": "~15 deputati del Gran Consiglio",
+      "budgetDiretto": "incluso in budget Gran Consiglio (~200'000-300'000 per spese segretariato e consulenze)",
+      "compiti": [
+        "Esame preventivo e emendamenti",
+        "Esame consuntivo e scarico al Consiglio di Stato",
+        "Inchieste amministrative su richiesta Gran Consiglio",
+        "Rapporti tematici (es. gestione EOC, grandi progetti)",
+        "Audizioni direttori e responsabili amministrazione"
+      ],
+      "potere": "Può richiedere documenti, audire funzionari, proporre misure correttive. NON può annullare decisioni del Governo.",
+      "pubblicazioni": "Rapporti pubblici allegati ai Messaggi"
+    },
+    "corteDeiConti": {
+      "esistenza": false,
+      "nota": "Il Canton Ticino NON ha una Corte dei conti autonoma. Il controllo è svolto dal Controllo cantonale delle finanze (CCF) e dalla Commissione della gestione del Gran Consiglio.",
+      "confrontoAltriCantoni": "Alcuni cantoni svizzeri hanno Corti dei conti separate (es. Ginevra, Vaud). Il Ticino usa il modello CCF + CGF."
+    }
+  },
+  "indicatoriTrend": {
+    "costoAmministrazionePerAbitante": {
+      "2027": 1061,
+      "calcolo": "Spesa funzione Amministrazione generale (384M) / popolazione (362'200)",
+      "nota": "Include organi politici, Cancelleria, servizi comuni. NON include personale specifico dipartimenti (insegnanti, polizia, ecc.)"
+    },
+    "costoAmministrazionePercentualeBilancio": {
+      "2027": 8.1,
+      "2023": 8.0,
+      "trend": "stabile",
+      "nota": "Funzione Amministrazione generale oscilla tra 8-9% del bilancio totale negli ultimi anni. Crescita contenuta rispetto ad altre funzioni."
+    },
+    "spesePersonalePercentualeBilancio": {
+      "2027": 60.2,
+      "2023": 59.8,
+      "trend": "stabile",
+      "nota": "Le spese per il personale rappresentano circa 60% del bilancio cantonale. Include TUTTI i dipendenti (insegnanti, sanitari, amministrazione, polizia, giustizia)."
+    },
+    "evoluzioneFunzioneAmministrazioneGenerale": {
+      "2023": 378,
+      "2024": "non disponibile (consuntivo atteso marzo 2025)",
+      "2025": "non disponibile (consuntivo atteso marzo 2026)",
+      "2026": 380,
+      "2027": 384,
+      "variazione2023_2027": 6,
+      "variazionePercentuale": 1.6,
+      "note": "Crescita molto contenuta (+1.6% in 4 anni, sotto inflazione). Amministrazione generale NON è il driver della crescita del bilancio cantonale."
+    }
+  },
+  "confrontoOrganiEletti": {
+    "percentualeStipendi": {
+      "consiglieriStato": 0.025,
+      "deputatiGranConsiglio": 0.065,
+      "totaleOrganiEletti": 0.090,
+      "nota": "Gli stipendi diretti dei 95 rappresentanti politici eletti (5 consiglieri + 90 deputati) sono lo 0.09% del bilancio cantonale. È una quota molto bassa."
+    },
+    "confrontoConPersonaleAmministrativo": {
+      "costoConsigliereDiStato": 235000,
+      "costoMedioFTE_amministrazione": 105000,
+      "rapporto": 2.2,
+      "nota": "Un consigliere di Stato guadagna circa 2.2 volte lo stipendio medio di un dipendente cantonale. Questo è in linea con la responsabilità politica e dirigenziale."
+    }
+  },
+  "datiMancanti": [
+    "Numero esatto FTE e headcount per dipartimento: non disponibile nel Messaggio 8731. Reperibile in: Consuntivo annuale, statistiche USTAT.",
+    "Evoluzione occupazione cantonale 2020-2027: non disponibile nei preventivi. Reperibile in: USTAT - Dipendenti settore pubblico.",
+    "Breakdown dettagliato spese funzionamento (IT, edifici, consulenze, ecc.): non disponibile nel Messaggio 8731. Reperibile in: Consuntivo dettagliato.",
+    "Stipendi individuali dirigenti amministrazione (segretari generali, direttori): non pubblicati nei preventivi. Regolati da LStip ma importi non resi pubblici nominalmente.",
+    "Costo esatto CCF (Controllo cantonale finanze): aggregato in funzione Amministrazione generale, non estratto singolarmente nel Messaggio 8731.",
+    "Numero esatto membri e budget CGF (Commissione gestione finanze): aggregato in budget Gran Consiglio.",
+    "Dettaglio mandati e consulenze per tipo: non disponibile nei preventivi. Audit specifici possono essere richiesti tramite CCF o CGF."
+  ],
+  "doveTrovareIDatiMancanti": {
+    "occupazioneCantonale": "USTAT - Pubblicazione annuale 'Il mercato del lavoro nel settore pubblico ticinese' oppure Consuntivo annuale sezione Personale",
+    "stipendiDettagliati": "Legge sugli stipendi magistrati e funzionari (LStip) per le classi di stipendio. Importi nominali individuali non pubblicati per privacy.",
+    "speseFunzionamentoDettagliate": "Consuntivo annuale (marzo) - Conto economico per natura - Beni e servizi",
+    "budgetCCF": "Messaggio sul Consuntivo o Rapporto annuale CCF (se pubblicato separatamente)",
+    "evoluzioneAmministrazione": "Serie storica Consuntivi 2020-2026 (disponibili su ti.ch/finanze-e-economia)",
+    "mandatiConsulenze": "Richiesta accesso documenti amministrativi (LADI) oppure rapporti tematici CGF"
+  },
+  "noteMetodologiche": {
+    "limitazioniDatiPreventivo": "Il Messaggio sul Preventivo pubblica dati aggregati per funzione. I breakdown dettagliati (per dipartimento, per tipo di spesa, per unità organizzativa) sono disponibili SOLO nel Consuntivo dettagliato pubblicato a marzo dell'anno successivo.",
+    "differenzaPreventivo_Consuntivo": "I dati qui riportati sono da PREVENTIVO 2027. I dati effettivi saranno nel CONSUNTIVO 2027 (disponibile marzo 2028). Le differenze possono essere significative.",
+    "stime": "Dove indicato 'stima' o 'indicativo', il dato NON è pubblicato ufficialmente nei documenti consultati. La stima è basata su calcoli da dati aggregati o trend storici. NON è un dato ufficiale del Canton Ticino."
+  }
+}
