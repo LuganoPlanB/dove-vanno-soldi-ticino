@@ -1,6 +1,10 @@
 import './style.css';
 import * as charts from './charts';
 import { i18n, type Language } from './locales';
+import { enableShareableViews, addShareButtons } from './ux-enhancements';
+
+// Enable URL-based view sharing
+enableShareableViews();
 
 // Respect base path for production builds
 const BASE_URL = import.meta.env?.BASE_URL || '/';
@@ -231,4 +235,9 @@ if (window.location.pathname === '/' ||
   createLanguageSwitcher();
   renderAllCharts();
   setupResponsiveCharts();
+  
+  // UX enhancements: Add share buttons after content loads
+  setTimeout(() => {
+    addShareButtons();
+  }, 1000);
 }
