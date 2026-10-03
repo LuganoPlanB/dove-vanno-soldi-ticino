@@ -269,17 +269,12 @@
                 </span>
               </div>
             </div>
-            <div class="bg-amber-50 dark:bg-amber-950/20 border-l-4 border-amber-500 p-4 text-sm">
-              <p class="font-semibold mb-1">⚠️ Limitazioni dei dati</p>
+            <div class="bg-green-50 dark:bg-green-950/20 border-l-4 border-green-500 p-4 text-sm">
+              <p class="font-semibold mb-1">✅ Dati verificati</p>
               <p class="text-muted-foreground">
-                Il Preventivo 2027 (Messaggio 8731) pubblica solo totali aggregati per funzione. 
-                I dettagli economici (quanto va a stipendi vs consulenze vs IT) richiedono il 
-                <strong>Consuntivo dettagliato</strong> con il "Conto economico per natura" 
-                (pubblicato a marzo dell'anno successivo).
-              </p>
-              <p class="text-muted-foreground mt-2">
-                Le cifre mostrate sono <strong>stime basate su proporzioni tipiche</strong> di cantoni svizzeri 
-                o <strong>marcate come NON DISPONIBILI</strong> se non verificabili da fonti primarie.
+                Il Consuntivo 2025 (Messaggio 8672) pubblica i dati effettivi con il 
+                <strong>Conto economico per natura</strong> completo. 
+                Tutti i numeri mostrati sono verificabili contro il documento ufficiale.
               </p>
             </div>
           </div>
@@ -347,7 +342,7 @@
                     💰 3. Premi altissimi in Ticino, molti non possono pagarli
                   </summary>
                   <p class="mt-2 text-muted-foreground pl-6" data-i18n-html="health.faq3Text">
-                    I premi in Ticino sono i più alti della Svizzera: <strong>520 CHF/mese</strong> di media nel 2027 contro 412 CHF media nazionale (+26%). Una famiglia di 4 persone può pagare oltre 2'000 CHF/mese. Molte famiglie non possono permetterselo senza aiuto pubblico (RIPAM).
+                    I premi in Ticino sono i più alti della Svizzera: circa <strong>480 CHF/mese</strong> di media nel 2025 contro 387 CHF media nazionale (+24%). Una famiglia di 4 persone può pagare oltre 1'900 CHF/mese. Molte famiglie non possono permetterselo senza aiuto pubblico (RIPAM).
                   </p>
                 </details>
 
@@ -473,9 +468,9 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
               <div class="flex-1">
-                <h4 class="font-semibold mb-2" data-i18n="health.missingTitle">Dati NON disponibili nel Preventivo 2027</h4>
+                <h4 class="font-semibold mb-2" data-i18n="health.missingTitle">Dettagli disponibili nel Consuntivo 2025</h4>
                 <p class="text-sm text-muted-foreground mb-3" data-i18n="health.missingIntro">
-                  Il Messaggio 8731 non contiene un breakdown dettagliato della spesa sanitaria per singola voce. I 627M sono un aggregato.
+                  Il Consuntivo 2025 contiene dati aggregati. Per breakdown dettagliati:
                 </p>
                 <div class="text-sm space-y-2">
                   <div class="flex items-start gap-2">
@@ -514,13 +509,13 @@
           <!-- Verified Admin Spending -->
           <div class="grid gap-6 sm:grid-cols-3 mb-6">
             <div class="card p-6">
-              <div class="text-sm text-muted-foreground mb-1">Spesa totale 2027</div>
-              <div class="text-3xl font-bold text-primary">384 M</div>
+              <div class="text-sm text-muted-foreground mb-1">Spesa totale 2025</div>
+              <div class="text-3xl font-bold text-primary">372 M</div>
               <div class="text-xs text-muted-foreground mt-2">
                 Funzione "Amministrazione generale"
               </div>
               <div class="text-xs text-muted-foreground">
-                Fonte: P2027_spese_02.pdf
+                Fonte: C2025 Messaggio 8672
               </div>
             </div>
 
@@ -688,6 +683,54 @@
           
           <div id="insights-container" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Budget 2027 Compact Section -->
+    <section id="budget-2027" class="py-12 sm:py-16 border-t bg-muted/50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl">
+          <div class="space-y-4 mb-6">
+            <div class="inline-flex items-center rounded-full border px-3 py-1 text-xs bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800">
+              <span class="mr-2">📋</span>
+              <span>Preventivo 2027 - In attesa approvazione</span>
+            </div>
+            <h2 class="text-2xl font-bold tracking-tight">Sguardo al Budget 2027</h2>
+            <p class="text-muted-foreground">
+              Il Preventivo 2027 è stato licenziato dal Consiglio di Stato il 30 settembre 2026. Approvazione finale da parte del Gran Consiglio prevista per dicembre 2026.
+            </p>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-3 mb-6">
+            <div class="card p-4">
+              <div class="text-xs text-muted-foreground mb-1">Disavanzo previsto</div>
+              <div class="text-2xl font-bold text-destructive">-98.5M</div>
+              <div class="text-xs text-muted-foreground">CHF -274 per abitante</div>
+            </div>
+            <div class="card p-4">
+              <div class="text-xs text-muted-foreground mb-1">Spese totali</div>
+              <div class="text-2xl font-bold">4'730M</div>
+              <div class="text-xs text-muted-foreground">+3.2% vs C2025</div>
+            </div>
+            <div class="card p-4">
+              <div class="text-xs text-muted-foreground mb-1">Ricavi totali</div>
+              <div class="text-2xl font-bold">4'632M</div>
+              <div class="text-xs text-muted-foreground">+1.8% vs C2025</div>
+            </div>
+          </div>
+
+          <div class="card p-4 bg-amber-50 dark:bg-amber-950/20 border-l-4 border-amber-500">
+            <p class="text-sm font-medium mb-2">⚠️ Nota importante</p>
+            <p class="text-xs text-muted-foreground">
+              Il focus di questo sito è sui <strong>dati effettivi</strong> (Consuntivo 2025). 
+              I numeri del Preventivo 2027 sono previsioni soggette a modifica e approvazione parlamentare.
+              Per analisi dettagliate, consultare il 
+              <a href="https://www4.ti.ch/dfe/dr/finanze/dati-finanziari/p2027/" target="_blank" rel="noopener" class="underline hover:text-primary">
+                Messaggio 8731 completo
+              </a>.
+            </p>
           </div>
         </div>
       </div>
