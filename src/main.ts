@@ -4,7 +4,7 @@ import { i18n, type Language } from './locales';
 import { enableShareableViews, addShareButtons } from './ux-enhancements';
 import { loadComuniData, searchComuni, renderComuneCard } from './comuni';
 import { renderAllInsightCards } from './insights';
-import { loadSpeseNatura, prepareTreemapData, type SpesaNatura, renderAvailabilityBadge, formatMillions, formatCurrency } from './spese-natura';
+import { loadSpeseNatura, prepareTreemapData, renderAvailabilityBadge, formatMillions, formatCurrency } from './spese-natura';
 
 // Enable URL-based view sharing
 enableShareableViews();

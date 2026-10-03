@@ -1,6 +1,5 @@
 // Storia debito page - render from audited JSON only
 import './style.css';
-import { i18n } from './locales';
 import { Chart, registerables } from 'chart.js';
 
 Chart.register(...registerables);
@@ -12,6 +11,7 @@ interface StoriaDebitoData {
     titolo: string;
     avvertenza: string;
     fonti: string[];
+    dataRevisione?: string;
   };
   serieDebito: {
     anni: Record<string, {
@@ -111,7 +111,7 @@ async function renderChart() {
           beginAtZero: true,
           ticks: {
             color: isDark ? '#e5e7eb' : '#1f2937',
-            callback: (value) => `${value}M`
+            callback: (value: number | string) => `${value}M`
           },
           grid: {
             color: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'
