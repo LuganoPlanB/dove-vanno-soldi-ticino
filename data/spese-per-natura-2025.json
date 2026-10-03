@@ -145,7 +145,7 @@
     {
       "id": "spese-trasferimento-2027",
       "categoria": "36 - Spese di trasferimento",
-      "descrizione": "Prestazioni complementari AVS/AI, partecipazione premi cassa malati (RIPAM), contributi ospedalieri e trasporti, assistenza, asilo, università, perequazione intercomunale",
+      "descrizione": "Prestazioni complementari AVS/AI, partecipazione premi cassa malati (RIPAM), contributi ospedalieri e trasporti, assistenza, asilo, universita, perequazione intercomunale",
       "importoMilioni": 2549.3,
       "importoProCapite": 7094,
       "percentualeTotale": 53.9,
@@ -153,7 +153,8 @@
       "fonte": "Messaggio Preventivo 2027 n. 8731, p. 13 + pp. 15-17 dettaglio",
       "note": "Principali voci: RIPAM 332 M (+57 M), PC AVS 157 M (+8 M), PC AI 119 M (+9.5 M), ospedalizzazioni Cantone 393.7 M (+3 M), trasporti 108 M (-6.7 M per misure iniziative cassa malati e contrattazione), asilo -8.1 M (misure contenimento)"
     }
-  ],
+  ]
+  },
   "popolazione": {
     "2025": 359000,
     "2027": 359300,
