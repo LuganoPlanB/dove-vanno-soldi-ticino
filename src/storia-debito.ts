@@ -80,7 +80,7 @@ async function renderChart() {
         },
         subtitle: {
           display: true,
-          text: 'Lacune 2000-2009, 2013-2022: dati non verificabili rimossi',
+          text: 'Lacune 2000-2009, 2014-2023, 2025: dati non verificabili rimossi',
           color: isDark ? '#9ca3af' : '#6b7280',
           font: { size: 12 }
         },
@@ -119,8 +119,18 @@ async function renderPage() {
   
   // Hero metrics - use ONLY verified data
   const years = Object.keys(data.serieDebito.anni).sort();
+  if (years.length === 0) {
+    console.error('No verified debt data available');
+    return;
+  }
+  
   const earliest = data.serieDebito.anni[years[0]];
   const latest = data.serieDebito.anni[years[years.length - 1]];
+  
+  if (!earliest || !latest || earliest.debito == null || latest.debito == null) {
+    console.error('Invalid debt data structure');
+    return;
+  }
   
   const heroMetrics = document.getElementById('hero-metrics');
   if (heroMetrics) {

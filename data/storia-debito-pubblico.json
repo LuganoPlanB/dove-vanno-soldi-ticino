@@ -65,7 +65,7 @@
     },
     "lacune": {
       "2000": "Dato non trovato in documenti ufficiali",
-      "2014_2023": "Nessun numero esatto stampato trovato nei documenti primari accessibili. Comunicati stampa e messaggi usano solo approssimazioni ('circa 1.9 miliardi', 'circa 2.5 miliardi', 'appena al di sopra di 2.7 miliardi'). Pro-capite CGF sono calcoli derivati. Gap di 10 anni.",
+      "2014_2023": "Nessun numero esatto stampato trovato nei documenti primari accessibili per 2014-2023 (eccetto 2024 verificato). Comunicati stampa usano approssimazioni ('circa 1.9 miliardi', 'circa 2.5 miliardi'). Pro-capite CGF sono calcoli derivati. Gap di 10 anni.",
       "2025": "C2025 usa linguaggio approssimativo 'appena al di sopra di 2.7 miliardi' - non citato numero esatto in milioni. Gap."
     }
   },
@@ -184,7 +184,7 @@
   
   "REMOVED": {
     "descrizione": "Numeri RIMOSSI per impossibilità verifica contro documento primario stampato",
-    "anniRimossi": ["2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"],
+    "anniRimossi": ["2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2025"],
     "motivo": "Valori sospetti (tondi) o fonte generica 'DFE indicatori' senza pagina verificabile. Impossibile confermare contro tabella stampata in documento primario.",
     "causeRimosse": [
       "2003-2004: '+584M in 2 anni' - basato su numeri rimossi",
