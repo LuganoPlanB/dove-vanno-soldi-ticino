@@ -1,0 +1,41 @@
+🔬 ADVERSARIAL QA TEST SUITE
+
+Testing production build on mobile viewports...
+
+Testing iPhone-portrait-it-light...
+Test suite error: elementHandle.fill: Timeout 30000ms exceeded.
+Call log:
+    - fill("test")
+  - attempting fill action
+    2 × waiting for element to be visible, enabled and editable
+      - element is not enabled
+    - retrying fill action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and editable
+      - element is not enabled
+    - retrying fill action
+      - waiting 100ms
+    59 × waiting for element to be visible, enabled and editable
+       - element is not enabled
+     - retrying fill action
+       - waiting 500ms
+
+    at runAdversarialTests (/workspace/test-adversarial-qa.mjs:189:29) {
+  log: [
+    '    - fill("test")',
+    '  - attempting fill action',
+    '    2 × waiting for element to be visible, enabled and editable',
+    '      - element is not enabled',
+    '    - retrying fill action',
+    '    - waiting 20ms',
+    '    2 × waiting for element to be visible, enabled and editable',
+    '      - element is not enabled',
+    '    - retrying fill action',
+    '      - waiting 100ms',
+    '    59 × waiting for element to be visible, enabled and editable',
+    '       - element is not enabled',
+    '     - retrying fill action',
+    '       - waiting 500ms'
+  ],
+  name: 'TimeoutError'
+}

@@ -8,6 +8,9 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      screens: {
+        xs: '400px', // Custom breakpoint for narrow mobile -> desktop navbar transition
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

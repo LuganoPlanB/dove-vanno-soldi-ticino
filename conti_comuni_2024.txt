@@ -1,0 +1,591 @@
+         I CONTI DEI COMUNI
+              NEL 2024
+
+
+
+
+John Derighetti e Daniela Baroni, Sezione degli enti locali, Dipartimento delle istituzioni
+                             Bellinzona, dicembre 2025
+                                                   INDICE
+Introduzione e sintesi                                                            pagina    1
+Conto economico                                                                   pagina    2
+     Tabella 1 Conto economico dal 2020
+     Tabella 2 Spese e ricavi per genere a due cifre dal 2022
+     Tabella 3 Ripartizione funzionale a una cifra nel 2024
+Conto degli investimenti e conto di finanziamento                                 pagina    5
+     Tabella 4 Conto degli investimenti e conto di finanziamento dal 2020
+Bilancio                                                                          pagina    6
+      Tabella 5 Bilancio e debito pubblico dal 2020
+Indicatori finanziari                                                             pagina    7
+      Tabella 6 Indicatori finanziari dal 2019
+Servizi finanziati con tasse causali: acqua potabile e gestione rifiuti          pagina     8
+      Tabella 7 Servizi finanziati con tasse causali, grado di copertura e fondo dal 2022
+Definizione degli indicatori e proposta di scala di valutazione                   pagina    10
+
+Allegato statistico: dati per comune*
+       Tabella 8        Alcuni valori indicativi
+       Tabella 9        Conto economico
+               9a       Spese del conto economico per genere a due cifre
+               9b       Ricavi del conto economico per genere a due cifre
+               9c       Spese del conto economico per genere a tre cifre
+               9d       Ricavi del conto economico per genere a tre cifre
+               9e       Ripartizione funzionale a una cifra del conto economico
+       Tabella 10 Conto degli investimenti e Conto di finanziamento
+               10a Conto degli investimenti per genere a due cifre
+               10b Uscite del conto degli investimenti per genere a tre cifre
+               10c Entrate del conto degli investimenti per genere a tre cifre
+       Tabella 11 Bilancio patrimoniale
+               11a Attivi del bilancio patrimoniale per genere a tre cifre
+               11b Passivi del bilancio patrimoniale per genere a tre cifre
+       Tabella 12       Indicatori finanziari
+       Tabella 13       Servizio approvvigionamento idrico
+       Tabella 14       Servizio gestione rifiuti
+
+Appendice: dettaglio ripartizione funzionale per comune
+     Tabella A Spese secondo la ripartizione funzionale a due cifre
+     Tabella B Ricavi secondo la ripartizione funzionale a due cifre
+     Tabella C Spesa netta secondo la ripartizione funzionale a due cifre
+     Tabella D Spese secondo la ripartizione funzionale a tre cifre
+     Tabella E Ricavi secondo la ripartizione funzionale a tre cifre
+     Tabella F Spesa netta secondo la ripartizione funzionale a tre cifre
+
+Le tabelle dell’allegato e dell’appendice possono essere scaricate dal sito della Sezione degli enti
+locali => comuni => dati finanziari => statistica finanziaria
+https://www4.ti.ch/di/sel/comuni/dati-finanziari/statistica-finanziaria
+
+
+* numero di consuntivi della statistica finanziaria 2024 = 106
+                                                            INTRODUZIONE
+Come già nel 2023 tutti i comuni ticinesi hanno                           segnalati con l’indicazione [*] accanto al nome e
+allestito i propri consuntivi secondo il nuovo                            nei loro conti figurano anche costi, ricavi,
+modello contabile armonizzato MCA2.                                       investimenti,     averi      e    debiti    relativi
+                                                                          all’approvvigionamento idrico che negli altri non
+Le tabelle e i grafici di questo rapporto presentano
+                                                                          sono inclusi nella contabilità comunale.
+con un breve commento gli esiti dei 106
+consuntivi comunali 2024 rispetto all’andamento                           Per una corretta interpretazione è pure importante
+di breve-medio periodo.                                                   ricordare che questi dati riguardano solo le
+                                                                          contabilità comunali ma non quelle di aziende,
+L’allegato statistico con i valori dettagliati per
+                                                                          consorzi, enti autonomi e in taluni casi anche
+comune può essere scaricato dal sito della
+                                                                          società    anonime,       che     sono      allestite
+Sezione degli enti locali, dove sono anche
+                                                                          separatamente e il cui numero varia negli anni
+disponibili le pubblicazioni degli anni precedenti
+                                                                          con la costituzione di nuovi soggetti, lo
+https://www4.ti.ch/di/sel/comuni/dati-finanziari/statistica-finanziaria
+                                                                          scioglimento o la modifica di altri (in merito cfr. la
+Nella lettura dei dati, occorre tener presente che                        pubblicazione 2021, pp. 2-3).
+molti comuni hanno integrato i conti relativi
+alla distribuzione dell’acqua potabile nella                              Occorre quindi adottare le dovute cautele
+contabilità del comune. Questi casi, che con                              nell’operare confronti (nel tempo o tra
+MCA2 sono divenuti la netta maggioranza, sono                             comuni), che vanno sempre contestualizzati.
+
+
+
+
+                                                                     SINTESI
+Anche nel 2024 il conto economico dell’insieme dei                        Anche nel 2024 il volume degli investimenti
+comuni chiude con un avanzo totale d’esercizio.                           raggiunge livelli molto elevati, con un importo
+L’utile è di 33,4 milioni di franchi (2023: 55,0) a                       lordo di circa 364 milioni (analogo a quello dei due
+fronte di preventivati disavanzi per 59,9 milioni.                        anni precedenti) e un onere netto che sfiora i 290
+Si conferma quindi il positivo andamento degli                            milioni, tra i valori maggiori di sempre.
+ultimi 11 anni, periodo durante il quale solo nel
+2020 è stato registrato un disavanzo d’insieme.
+Due terzi dei comuni (70 su 106) hanno chiuso
+il conto economico con un avanzo, con maggiori
+entrate totali per 52,8 mio. Gli utili più consistenti
+sono stati registrati a Val Mara (5,6) e Mendrisio
+(4,8). I restanti 36 comuni hanno invece chiuso con
+un disavanzo, per maggiori uscite complessive di
+19,4 milioni, con i valori più rilevanti a Castel San
+Pietro (-2,9) e Cadempino (-2,7).
+
+
+
+                                                                          Rispetto al 2023, il calo del risultato d’esercizio e la
+                                                                          sostanziale equivalenza degli ammortamenti
+                                                                          conducono a una diminuzione dell’autofinanzia-
+                                                                          mento di oltre 20 mio. Il rispettivo grado, in netta
+Dopo una costante diminuzione dal 2018, dovuta                            contrazione anche a causa degli alti investimenti,
+anche all’introduzione di MCA2, gli ammorta-                              raggiunge solo il 56,1%, valore insoddisfacente.
+menti amministrativi risalgono leggermente.
+                                                                          Anche nel 2024 il risultato globale risulta
+Nuovo aumento significativo delle spese per                               negativo, attestandosi a -127 milioni, quindi a un
+interessi (+20%), già cresciute (+30%) nel 2023.                          livello consistente.
+
+
+________________________________________________________________________________________________
+statistica finanziaria dei comuni 2024                                                                                  - pagina 1 -
+                                                         CONTO ECONOMICO
+Tabella 1 Conto economico (senza imputazioni interne), dal 2020
+
+                                                       in milioni di franchi                                             pro capite in franchi
+                                           2020*       2021*         2022        2023        2024            2020*       2021*          2022    2023    2024
+Spese operative                           1.897,2     1.934,6     1.950,1      1.996,8     2.030,8            5.405       5.493         5.508   5.582   5.658
+Ricavi operativi                          1.803,7     1.870,5     1.954,4      1.971,2     1.996,3            5.139       5.311         5.520   5.511   5.562
+Risultato operativo                          -93,5       -64,1         4,3       -25,6       -34,5             -266        -182           12      -72     -96
+Spese finanziarie                             28,2       26,0         28,3        40,1        46,5               80          74           80     112     130
+Ricavi finanziari                             97,4      104,1        100,0       105,7       114,0              278         296          282     295     318
+Risultato finanziario                         69,2        78,2        71,7        65,6        67,4              197         222          202     183     188
+Risultato ordinario                          -24,3        14,0        76,0        40,0        32,9              -69          40          215     112      92
+Spese straordinarie                            1,8            -        0,3         0,7          1,7                5           -           1       2       5
+Ricavi straordinari                              -            -        0,2        15,6          2,2                -           -           0      44       6
+Risultato straordinario                       -1,8            -        -0,1       15,0          0,5               -5           -           -0     42       1
+
+Risultato totale d'esercizio                -26,0        14,0        75,9         55,0        33,4              -74          40          214     154      93
+* per consentire un confronto dell’andamento sul breve termine, sono stati ricostruiti i dati 2020 e 2021 secondo l’impostazione MCA2
+
+______________________________________________________________________________________
+
+Grafico 1a Conto economico
+Media annuale 2020-24 e anno 2024
+Le colonne piene indicano la media dei
+risultati degli ultimi 5 anni suddivisi
+secondo i diversi livelli del conto
+economico, messi a confronto dei rispettivi
+valori del solo anno 2024 (colonne
+tratteggiate).
+Il risultato totale d’esercizio 2024 è
+sostanzialmente in linea con la media degli
+ultimi anni (di tre milioni superiore), a
+seguito di un risultato ordinario più elevato
+(dovuto soprattutto a un contenimento del
+disavanzo operativo) e a un risultato
+finanziario un po’ inferiore.
+
+______________________________________________________________________________________
+
+Grafico 1b Conto economico
+Somma dei risultati 2020-2024
+Il conto economico deve pareggiare a
+medio termine (art. 2 RGFCC). Nell’ultimo
+quinquennio la somma dei risultati totali
+d’esercizio, negativo solo nel 2020, supera
+i 150 milioni di franchi. L’obiettivo del
+pareggio a termine è pertanto raggiunto e
+superato.
+Questo è però quasi esclusivamente
+dovuto alle ampie eccedenze annuali del
+conto finanziario, mentre quello operativo è
+deficitario, salvo nel 2022 sostanzialmente
+in pari.
+
+
+
+____________________________________________________________________________________________________________
+- pagina 2 -                                                                   statistica finanziaria dei comuni 2024
+Tabella 2 Spese e ricavi del conto economico per genere a due cifre (con imputazioni interne), dal 2022
+
+                                                         in milioni di franchi                 pro capite in franchi                   percentuale
+                                                          2022        2023         2024          2022      2023     2024           2022      2023      2024
+Spese*
+30 Spese per il personale                                691,5        708,8       715,4          1.953    1.981     1.993           33,9      33,7      33,3
+31 Spese per beni e servizi                              347,7        369,4       373,0            982    1.033     1.039           17,1      17,6      17,4
+33 Ammortamento beni amministrativi                      118,5        104,7       109,2            335      293       304            5,8       5,0       5,1
+34 Spese finanziarie                                      28,3         40,1        46,5             80      112       130            1,4       1,9       2,2
+35 Versamenti a fondi e finanz. speciali                   …*          26,6        24,4             …*       74        68            …*        1,3       1,1
+36 Spese di trasferimento                                  …*         787,2       808,9             …*    2.201     2.254            …*       37,4      37,7
+37 Riversamento contributi                                 0,1          0,1         0,1              0        0         0            0,0       0,0       0,0
+38 Spese straordinarie                                     …*           0,7         1,7             …*        2         5            …*        0,0       0,1
+39 Addebiti interni                                       59,7         64,7        67,4            169      181       188            2,9       3,1       3,1
+Totale spese                                          2.038,3 2.102,3 2.146,5                   5.758 5.877 5.981                 100,0 100,0 100,0
+Ricavi*
+40 Ricavi fiscali                                      1.370,7      1.382,4     1.415,8          3.872    3.865     3.945           64,8      64,1      64,9
+41 Regalie e concessioni                                  22,0         25,3        24,8             62       71        69            1,0       1,2       1,1
+42 Tasse e retribuzioni                                    …*         271,1       269,5             …*      758       751            …*       12,6      12,4
+43 Ricavi diversi                                          …*           8,3         7,9             …*       23        22            …*        0,4       0,4
+44 Ricavi finanziari                                     100,0        105,7       114,0            282      295       318            4,7       4,9       5,2
+45 Prelievi da fondi e finanz. speciali                   15,9         17,5        19,0             45       49        53            0,8       0,8       0,9
+46 Ricavi da trasferimento                                 …*         266,5       259,3             …*      745       722            …*       12,4      11,9
+47 Contributi da riversare                                 0,1          0,1         0,1              0        0         0            0,0       0,0       0,0
+48 Ricavi straordinari                                     …*          15,6         2,2             …*       44         6            …*        0,7       0,1
+49 Accrediti interni                                      59,7         64,7        67,4            169      181       188            2,8       3,0       3,1
+Totale ricavi                                         2.114,2 2.157,3 2.179,9                   5.972 6.031 6.074                 100,0 100,0 100,0
+* classificazione per genere di conto secondo il modello contabile MCA2; sono qui riportati solo i dati per i quali i valori dei comuni che applicavano MCA1 possono
+  essere convertiti in modo equivalente o almeno comparabile secondo MCA2; per le altre voci il dato non è determinabile (…)
+
+
+L’introduzione di MCA2 ha modificato, in parte in                                         rende solo parzialmente possibile una lettura
+modo sostanziale, la suddivisione secondo la                                              dell’andamento nel tempo, almeno fintanto che
+classificazione per genere di conto, ciò che                                              non vi sarà una serie pluriennale completa.
+
+Dopo 5 anni di forte e continua                         Prosegue l’aumento dell’onere                           Nuovamente in crescita i ricavi
+diminuzione, conseguenza anche                          per interessi passivi iniziato                          fiscali, che sono una valutazione
+del passaggio al nuovo modello                          con il sensibile incremento avve-                       di quanto i comuni ritengono di
+contabile (che prevede ammorta-                         nuto nel 2023, dopo le continue                         incassare nell’anno di riferimen-
+menti lineari sulla durata dell’uso                     contrazioni del lungo periodo                           to, dopo che nel 2020 la stima è
+e non consente più quelli                               precedente. Basti ricordare che                         stata molto ridotta a causa del-
+straordinari), gli ammortamenti                         questa spesa, oggi di quasi 39                          l’incertezza generata della crisi
+amministrativi registrano un                            mio, nella seconda metà degli                           sanitaria, nonché a seguito della
+piccolo incremento, pari a 4,5                          anni Novanta superava (anche di                         riduzione dell’aliquota d’imposta
+milioni.                                                molto) i 100 milioni di franchi.                        sull’utile delle persone giuridiche.
+Grafico 2a                                              Grafico 2b                                              Grafico 2c
+Ammortamenti amm. 2015-2024                             Interessi passivi 2015-2024                             Ricavi fiscali 2015-2024
+
+
+
+
+________________________________________________________________________________________________
+statistica finanziaria dei comuni 2024                                                                                                                  - pagina 3 -
+Tabella 3 Ripartizione funzionale a una cifra del conto economico, 2024
+
+                                                                            in milioni di franchi                                  spesa netta
+                                                                          spese                        spesa          fr. pro capite         % somma fun. 0-7*
+Funzione                                                                                 ricavi
+                                                                           lorde                        netta           2024 2023             2024     2023
+0 - Amministrazione generale                                               228,0           46,3         181,7            506       507          14%          15%
+1 - Ordine pubblico e sicurezza, difesa                                    187,0           77,3         109,7            306       301            9%          9%
+2 - Formazione                                                             312,5           72,5         240,1            669       667          19%          19%
+3 - Cultura, sport e tempo libero, chiesa                                  133,2           22,5         110,8            309       297            9%          9%
+4 - Sanità                                                                 331,1           64,0         267,1            744       715          21%          20%
+5 - Sicurezza sociale                                                      211,3           14,5         196,8            548       551          15%          16%
+6 - Trasporti e comunicazioni                                              223,0           79,6         143,4            399       385          11%          11%
+7 – Protezione dell’ambiente e pianificazione del territorio               205,9         179,7           26,2             73        71            2%          2%
+8 - Economia pubblica                                                       16,0           19,6           -3,7           -10        -12
+9 - Finanze e imposte                                                      298,5       1.604,1       -1.305,6         -3.638 -3.634
+
+* le funzioni da 0 a 7 sono quelle che generano una spesa netta a carico del comune, la ripartizione percentuale è quindi significativa limitatamente agli ambiti che
+  comportano un onere finanziario netto al comune
+
+Oltre alla classificazione per genere di conto                                          incassare ricavi), mentre la stessa attività svolta
+(Tabella 2), MCA2 ne prevede una anche secondo                                          direttamente dal comune genera costi ma a volte
+le dieci funzioni in cui sono ripartite le attività                                     anche entrate, quindi con una spesa netta minore.
+pubbliche (Tabella 3, dettagliate nell’appendice).                                      Esemplificativo, tra gli altri, il caso di case anziani
+                                                                                        gestite dai comuni, con l’incasso di rette e altri
+Il Grafico 3 indica le spese lorde e nette secondo
+                                                                                        ricavi, rispetto ai comuni che fanno capo a entità
+l’onere netto. Le funzioni 9 (che nelle spese include
+                                                                                        terze quali consorzi, altri comuni o enti di diritto
+gli ammortamenti) e 8 generano più ricavi che
+                                                                                        comunale (che incassano i ricavi). Il costo lordo in
+spese, quindi a saldo creano un introito, molto alto
+                                                                                        casi come questi non può essere paragonato,
+nel primo caso. I compiti più onerosi riguardano
+                                                                                        mentre può esserlo quello netto.
+la sanità, con il settore delle case anziani, e la
+formazione, con le scuole comunali.                                                     Va infine ricordato che la funzione 7 comprende i
+                                                                                        servizi finanziati in tutto o gran parte attraverso
+In generale nell’analisi secondo le funzioni i dati                                     tasse d’uso, quali l’approvvigionamento idrico e la
+lordi non sono adatti per confronti tra comuni.                                         gestione dei rifiuti (che devono autofinanziarsi) e la
+Questo perché i compiti possono essere organizzati                                      depurazione delle acque (che dovrà esserlo nel
+diversamente; si pensi p. es. alle attività affidate a                                  prossimo futuro). I relativi introiti spiegano il grande
+terzi i cui costi lordi e netti per il comune coincidono                                divario tra spesa lorda e netta in questo settore.
+(questo versa la propria quota all’ente senza
+
+Grafico 3 Spesa lorda e netta per funzione, 2024, in milioni di franchi
+
+
+
+
+_____________________________________ ___________________________________________________________
+- pagina 4 -                                                                                                            statistica finanziaria dei comuni 2024
+         CONTO DEGLI INVESTIMENTI E CONTO DI FINANZIAMENTO
+Tabella 4 Conto degli investimenti e conto di finanziamento, dal 2020
+
+                                                               in milioni di franchi                              pro capite in franchi
+                                                 2020        2021        2022        2023        2024      2020   2021   2022    2023     2024
+Conto degli investimenti
+Uscite per investimenti                          295,3       347,4       364,7       364,6       364,4      841    987   1.030   1.019    1.015
+Entrate per investimenti                          57,5        80,8        80,9       142,4        75,2      164    229     228     398      210
+Onere netto per investimenti                    237,7       266,7       283,8       222,2       289,1      677     757    802     621      806
+Conto di finanziamento
+Onere netto per investimenti                     237,7       266,7       283,8       222,2       289,1      677    757     802    621      806
+Autofinanziamento *                              144,4       160,5       217,2       183,3       162,2      411    456     613    512      452
+Risultato globale                                -93,4     -106,2        -66,6       -38,9     -127,0      -266   -302    -188   -109     -354
+* autofinanziamento 2021-2022 calcolato secondo il rispettivo modello contabile applicato da ogni comune
+
+______________________________________________________________________________________
+
+Grafico 4a Conto degli investimenti e conto di finanziamento
+Media annuale 2020-24 e anno 2024
+Le colonne piene indicano la media
+quinquennale delle componenti dei conti
+di investimento e di finanziamento messe
+a confronto con i rispettivi valori del solo
+anno 2024 (colonne tratteggiate).
+Il 2024 conferma il livello molto
+sostenuto degli investimenti lordi,
+praticamente identico negli ultimi tre anni.
+A seguito di entrate per investimento
+meno importanti rispetto agli anni
+precedenti, l’onere netto raggiunge uno
+dei valori più alti di sempre.
+L’autofinanziamento 2024 è inferiore alla
+media del quinquennio e il risultato
+globale, sempre negativo dal 2020, è il
+peggiore del periodo.
+
+________________________________________________________________________________________________
+
+Grafico 4b Conto degli investimenti e conto di finanziamento
+Somma dei risultati 2020-2024
+Tra il 2020 e il 2024 i comuni hanno
+effettuato investimenti lordi per oltre 1,7
+miliardi di franchi, con entrate superiori a
+400 milioni, per un onere netto di
+investimento di circa 1,3 miliardi.
+L’autofinanziamento cumulato durante
+questi cinque anni ammonta 868 milioni e
+di conseguenza il risultato globale sul
+medesimo periodo è negativo per un
+importo di 432 milioni.
+Il grado di autofinanziamento del
+quinquennio è quindi del 67%, un livello
+che nel contesto è da ritenere
+insufficiente.
+
+
+
+
+____________________________________________________________________________________________________________
+statistica finanziaria dei comuni 2024                                                             - pagina 5 -
+                                                   BILANCIO
+Tabella 5 Bilancio e debito pubblico, dal 2020
+
+                                     in milioni di franchi                             pro capite in franchi
+                           2020      2021      2022      2023      2024       2020     2021      2022      2023      2024
+
+Bilancio
+Beni patrimoniali         1.807,4   1.748,0   1.792,7   1.871,2   2.001,3     5.150    4.963     5.064     5.231     5.576
+Beni amministrativi       2.502,1   2.686,9   2.950,0   3.065,4   3.232,1     7.129    7.629     8.333     8.569     9.006
+Totale attivi            4.309,6 4.434,8 4.742,7 4.936,6 5.233,4             12.278   12.592   13.397    13.800 14.582
+Capitale di terzi         3.570,3   3.633,6   3.796,9   3.889,1   4.156,1    10.172   10.317    10.725    10.872    11.580
+Capitale proprio            739,3     801,2     945,8   1.047,5   1.077,3     2.106    2.275     2.672     2.928     3.002
+Totale passivi           4.309,6 4.434,8 4.742,7 4.936,6 5.233,4             12.278   12.592   13.397    13.800 14.582
+Calcolo del debito
+pubblico
+Capitale di terzi         3.570,3   3.633,6   3.796,9   3.889,1   4.156,1    10.172   10.317    10.725    10.872    11.580
+./. Beni patrimoniali     1.807,4   1.748,0   1.792,7   1.871,2   2.001,3     5.150    4.963     5.064     5.231     5.576
+Debito pubblico          1.762,8 1.885,6 2.004,2 2.017,9 2.154,8              5.023    5.354    5.661      5.641    6.004
+
+
+Il bilancio indica i beni di cui dispone il comune        riserve per budget globali, dalle riserve per
+(attivi) e in parallelo gli impegni verso terzi (iscritti rivalutazioni dei beni patrimoniali e dall’eccedenza
+ai passivi); la differenza tra queste due grandezze       o disavanzo di bilancio (somma dei risultati totali
+è rappresentata dal capitale proprio. Quest’ultimo        degli anni precedenti). Un eventuale disavanzo di
+si compone dai fondi del capitale proprio, dalle          bilancio deve essere ammortizzato entro 4 anni.
+______________________________________________________________________________________
+
+
+Grafico 5a Composizione dei beni patrimoniali 2024                Grafico 5b Composizione del capitale proprio 2024
+
+
+
+
+________________________________________________________________________________________________
+- pagina 6 -                                                                            statistica finanziaria dei comuni 2024
+                                                    INDICATORI FINANZIARI
+Gli indicatori finanziari sono uno strumento di                                          rispetto ad altri e all'andamento generale. Va però
+aiuto alla gestione e alla decisione nella politica                                      pure ricordato che questi indicatori hanno anche
+finanziaria. Con le rispettive scale di valutazione                                      dei limiti in quanto descrivono una situazione ma
+valide a livello intercantonale (cfr. riquadro a fine                                    non le sue cause e neppure danno indicazioni
+testo) permettono di dare un giudizio sommario                                           sullo stato delle infrastrutture pubbliche o sulla
+sulla situazione del singolo comune situandolo                                           quantità/qualità delle prestazioni erogate.
+
+Tabella 6 Indicatori finanziari, dal 2019
+                                                                                                                                           Valutazione
+                                                                                                                                2024
+                                                       2019*        2020*       2021*         2022         2023        2024 mediana** indicatore medio
+                                                                                                                                                  2024
+Risultato in punti di moltiplicatore aritmetico                                    1,2          6,2         4,4          2,6           2,1                 avanzo
+Tasso di indebitamento netto I                             …            …           …      146,2%      146,0%       152,2%           164,3               eccessivo
+Grado di autofinanziamento                           100,7%        60,8%       60,2%        76,5%        82,5%       56,1%          61,1%             insufficiente
+Quota delle spese per interessi                            …            …           …        0,8%         1,0%         1,2%          1,3%             molto bassa
+Debito pubblico netto I pro capite (fr.)               4.770        5.023       5.354        5.661       5.641        6.004          5.292           molto elevato
+Quota degli investimenti                              14,1%        14,4%       16,2%        16,8%        16,2%       15,9%          16,0%                    media
+Quota di capitale proprio                             17,4%        17,1%       18,1%        19,9%        21,2%       20,6%          20,7%            media/buona
+Quota delle eccedenze di bilancio                                                           18,8%        20,7%       20,2%          19,3%            media/buona
+
+* negli anni 2019-2021 i valori sono stati determinati in MCA1 utilizzando dati equivalenti o quantomeno comparabili per i comuni che applicavano MCA2
+** la mediana è il numero che occupa la posizione centrale di un insieme di numeri, quindi metà dei comuni ha un valore superiore alla mediana e l’altra metà inferiore
+__________________________________________________________________________________________________________________________________________________
+
+
+Significato degli indicatori
+Risultato in punti di moltiplicatore aritmetico                                          Quota delle spese per interessi
+quantifica i punti di moltiplicatore aritmetico (MA) in                                  informa sulla parte di ricavi assorbita dalle spese per
+eccesso (+) o in difetto (-) corrispondenti al risultato                                 interessi netti; più il valore è basso, maggiore è il margine
+d’esercizio (nb: non è corretto concludere che il                                        di manovra
+moltiplicatore politico (MP) avrebbe potuto essere                                       Debito pubblico netto I pro capite
+diminuito/aumentato dei punti di MA risultanti da questo                                 indicatore dalla portata informativa limitata; la valutazione
+calcolo per chiudere in pari, in quanto di regola modificare                             dell’importanza del debito pubblico dovrebbe in primo
+il MP incide sul contributo di livellamento percepito/pagato                             luogo tenere conto della capacità finanziaria della
+e quindi sul risultato)                                                                  popolazione piuttosto che del numero
+Tasso di indebitamento netto I                                                           Quota degli investimenti
+informa sulla parte dei ricavi fiscali che sarebbe necessaria                            indica la parte delle spese totali dedicata agli investimenti
+per ammortizzare il debito; un valore del 150% significa
+che occorrerebbe dedicare tutti i ricavi fiscali di 1,5 anni                             Quota di capitale proprio
+per estinguere il debito pubblico                                                        quantifica la parte della somma di bilancio rappresentata
+                                                                                         dal capitale proprio
+Grado di autofinanziamento
+indica la parte degli investimenti netti che può essere                                  Quota delle eccedenze di bilancio
+finanziata con mezzi propri, generati dalla gestione                                     quantifica la parte della somma di bilancio che costituisce
+corrente (autofinanziamento), quindi senza indebitarsi o far                             la riserva per assorbire eventuali disavanzi d’esercizio
+capo alla liquidità giacente; l’indicatore può essere                                    futuri; questo indicatore considera solo le eccedenze di
+soggetto a forti fluttuazioni annuali e quindi va considerato                            bilancio (e non tutto il capitale proprio), termine di
+soprattutto sul medio termine per essere significativo                                   riferimento nell’applicazione dei disposti dell’art. 178 LOC
+                                                                                         relativi alla fissazione dei moltiplicatori
+
+
+
+  Contesto intercantonale
+  La “Conferenza delle autorità cantonali di vigilanza sulle finanze comunali”, che riunisce rappresentanti di tutti i cantoni incaricati del
+  controllo istituzionale sui comuni, raccoglie e pubblica annualmente una serie di indicatori finanziari, consultabili al link
+  https://www.kkag-cacsfc.ch/de/fachthemen/finanzkennzahlen-im-kantonsvergleich.html
+  Nella lettura di questi dati, oltre alle avvertenze già segnalate in ingresso (v. al punto Introduzione), occorre anche prestare attenzione
+  al fatto che in Svizzera ogni cantone organizza le relazioni con i comuni secondo il proprio ordinamento (ripartizione di compiti e
+  competenze, suddivisione dei finanziamenti e dei contributi, flussi finanziari, perequazione ecc.), che può divergere anche in maniera
+  sostanziale, ciò che può incidere su certi indicatori.
+
+
+
+________________________________________________________________________________________________
+statistica finanziaria dei comuni 2024                                                                                                                - pagina 7 -
+Grafico 6a                                               Grafico 6b
+Tasso d’indebitamento netto I per regione, 2022-2024     Grado di autofinanziamento per regione, 2022-2024
+
+
+
+
+Grafico 6a                                               Grafico 6b
+Tasso d’indebitamento netto I per regione, 2022-2024     Grado di autofinanziamento per regione, 2022-2024
+
+
+
+
+Grafico 6c                                               Grafico 6d
+Quota delle spese per interessi per regione, 2022-2024   Debito pubblico netto I pro-capite per regione, 2022-2024
+
+
+
+
+Grafico 6e                                               Grafico 6f
+Quota degli investimenti per regione, 2022-2024          Quota di capitale proprio per regione, 2022-2024
+
+
+
+
+________________________________________________________________________________________________
+- pagina 8 -                                                                    statistica finanziaria dei comuni 2024
+                            SERVIZI FINANZIATI CON TASSE CAUSALI:
+                                 ACQUA POTABILE E GESTIONE RIFIUTI
+Alcuni servizi comunali devono essere finanziati                                 Il risultato annuale del servizio va attribuito allo
+tramite tasse d’uso. Attualmente tale obbligo                                    specifico fondo del capitale proprio, che non può
+concerne due servizi: l’approvvigionamento e la                                  essere negativo per più di quattro anni. Non tutti i
+distribuzione dell’acqua potabile, nonché la                                     comuni hanno integrato il servizio acqua nella
+raccolta e lo smaltimento dei rifiuti, i cui costi e                             contabilità comunale; in questi casi l’obbligo di
+ricavi devono figurare in uno specifico centro                                   autofinanziamento si applica alla rispettiva
+costo appositamente dedicato.                                                    azienda.
+
+Tabella 7 Servizi finanziati con tasse causali, grado di copertura e fondo, dal 2022
+
+                                                           Approvvigionamento idrico*                        Gestione rifiuti
+
+                                                              2022           2023            2024        2022         2023           2024
+
+Grado di copertura dei costi                               105,9%           98,8%           95,7%       95,7%       99,2%          99,7%
+Comuni con copertura >= 100%                              39 (52%)        33 (43%)       32 (41%)     41 (38%)    54 (51%)       50 (47%)
+Comuni con copertura < 100%                               36 (48%)        44 (57%)       46 (59%)     67 (62%)    52 (49%)       56 (53%)
+
+Fondo al 31 dicembre (in 1.000 fr.)**                    29.850,3        30.300,7        29.248,7     -4.399,9    -5.218,1       -5.340,3
+Comuni con fondo negativo**                              16 (21%)        21 (27%)       26 (33%)      67 (67%)    69 (65%)      66 (62%)
+
+* unicamente per i consuntivi comunali in cui sono integrati i conti del servizio acqua potabile
+** anno 2022: il fondo è presente solo nei consuntivi allestiti in MCA2
+________________________________________________________________________________________________
+
+
+Approvvigionamento idrico
+Nel 2024 il disavanzo dei 78 consuntivi i cui conti
+di questo servizio sono integrati alla contabilità
+comunale è di circa 1,5 milioni e il grado di
+copertura avvicina il 96%. Considerando l’intero
+triennio 2022-2024, la situazione è equilibrata,
+ma la tendenza denota un progressivo calo. La
+dotazione del fondo rimane consistente,
+superiore all’80% delle spese complessive, ciò
+che costituisce una riserva considerevole.
+I dati d’insieme nascondono situazioni con
+differenze molto sensibili, che occorre esaminare
+singolarmente (v. Tabella 13).
+______________________________________________________________________________________
+
+
+Gestione dei rifiuti
+Come già nel 2023, il tasso di copertura
+complessivo è ancora, anche se di poco, inferiore
+al 100% e circa la metà dei comuni non coprono i
+costi con i ricavi del servizio.
+Diversamente dal caso dell’approvvigionamento
+idrico, il totale del fondo rifiuti era ed è negativo e
+solo in un terzo dei comuni è positivo. Pertanto,
+diversi comuni dovranno migliorare la propria
+situazione incrementando, a volte di molto, il
+grado di copertura di questo servizio.
+Anche in questo ambito, i singoli casi sono
+estremamente differenziati (v. Tabella 14).
+
+________________________________________________________________________________________________
+statistica finanziaria dei comuni 2024                                                                                          - pagina 9 -
+                                       DEFINIZIONE DEGLI INDICATORI E
+                                  PROPOSTA DI SCALA DI VALUTAZIONE
+
+
+
+  Risultato espresso in punti di moltiplicatore                        Debito pubblico netto 1 pro capite
+  aritmetico di consuntivo                                             (debito pubblico / popolazione residente)
+  (risultato totale d’esercizio / imposta base potenziale) x           [ (20 - 10) /
+                                                                       (popolazione residente permanente a fine anno) ]
+  100
+     2990 /                                                                < 1.000 fr.             basso                  
+    [ (4000.0 / MP-PF x 100 ) + (4010.0 / MP-PG x 100) ]
+    x 100                                                                  fr. 1.000 - fr. 3.000   medio                  
+      > 0 punti                  avanzo                                    fr. 3.000 - fr. 5.000   elevato                
+      0 punti                    pareggio                                  > fr. 5.000             molto elevato          
+      < 0 punti                  disavanzo
+  MP-PF = moltiplicatore politico comunale per le persone fisiche
+  MP-PG = moltiplicatore politico comunale per le persone giuridiche
+
+
+  Tasso d’indebitamento netto                                          Quota degli investimenti
+                                                                       (investimenti lordi / uscite totali consolidate) x 100
+  (debito pubblico netto 1 / ricavi fiscali) x 100
+                                                                       (5 - 57) / [30 + 31 - 3180 + 34 - 344 + 36 - 364 - 365 - 366
+  [ (20 - 10) / 40 ] x 100
+                                                                       + 380 + 381 + 3840 + 386 + 5 - 57)] x 100
+      < 100%                     basso                                    > 30%                   molto elevata
+      100% - 150%                medio                                    20% - 30%               elevata
+      > 150%                     eccessivo                                10% - 20%               media
+                                                                           < 10%                   ridotta
+  Grado di autofinanziamento
+  (autofinanziamento / investimenti netti) x 100
+  [ (4 - 3 + 33 + 35 - 45 + 364 + 365 + 366 + 389 - 4892) /
+  (5 - 6) ) ] x 100
+      > 100%                     buono                                Quota di capitale proprio
+      80% - 100%                 sufficiente                          (capitale proprio / totale dei passivi) x 100
+                                                                       (29 / 2) x 100
+      < 80%                      debole                                   > 40%                   molto elevata          
+  se negativo                                                              20% - 40%               buona                  
+  - se negativo perché AF <0: situazione critica:
+      significa indebitarsi anche per coprire la gestione
+                                                                           10% - 20%               media                  
+      corrente                                                             < 10%                   debole                 
+  - se negativo perché investimenti netti <0: significa
+      riduzione dell’indebitamento
+
+  Quota delle spese per interessi                                      Quota delle eccedenze di bilancio
+  (interessi netti / ricavi correnti) x 100                            (eccedenze di bilancio / totale dei passivi) x 100
+  [ (340 - 440) /                                                      (299 / 2) x 100
+  (40 + 41 + 42 + 43 + 44 + 45 + 46 + 48 - 4892) ] x 100                   > 40%                   molto elevata          
+      < 4%                       bassa                                    20% - 40%               buona                  
+      4% - 9%                    media                                    10% - 20%               media                  
+      > 9%                       eccessiva                                < 10%                   debole                 
+
+
+
+
+________________________________________________________________________________________________
+- pagina 10 -                                                                                   statistica finanziaria dei comuni 2024
+

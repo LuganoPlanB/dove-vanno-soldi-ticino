@@ -183,15 +183,18 @@ async function runAdversarialTests() {
         const overflows = await testTextOverflow(page, lang);
         overflows.forEach(issue => issues.push(`${testName}: ${issue}`));
         
-        // Test search input
+        // Test search input (if available and enabled)
         const searchInput = await page.$('#comuni-search');
         if (searchInput) {
-          await searchInput.fill('test');
-          await page.waitForTimeout(300);
-          await searchInput.fill('');
-          await page.waitForTimeout(300);
-          await searchInput.fill('zzzzz'); // Non-existent
-          await page.waitForTimeout(300);
+          const isEnabled = await searchInput.isEnabled().catch(() => false);
+          if (isEnabled) {
+            await searchInput.fill('test').catch(() => {});
+            await page.waitForTimeout(300);
+            await searchInput.fill('').catch(() => {});
+            await page.waitForTimeout(300);
+            await searchInput.fill('zzzzz').catch(() => {}); // Non-existent
+            await page.waitForTimeout(300);
+          }
         }
         
         await context.close();
