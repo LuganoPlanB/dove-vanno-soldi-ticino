@@ -236,6 +236,7 @@ if (window.location.pathname === '/' ||
     translatePage();
   });
   createLanguageSwitcher();
+  setupMobileMenu();
   renderAllCharts();
   setupResponsiveCharts();
   setupComuniSearch();
@@ -358,6 +359,33 @@ function renderInsights() {
   if (!container) return;
   
   container.innerHTML = renderAllInsightCards();
+}
+
+function setupMobileMenu() {
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (!menuButton || !mobileMenu) return;
+  
+  menuButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    mobileMenu.classList.toggle('hidden');
+  });
+  
+  // Close on click outside
+  document.addEventListener('click', (e) => {
+    const target = e.target as Node;
+    if (!menuButton.contains(target) && !mobileMenu.contains(target)) {
+      mobileMenu.classList.add('hidden');
+    }
+  });
+  
+  // Close on link click
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  });
 }
 
 async function setupComuniSearch() {
