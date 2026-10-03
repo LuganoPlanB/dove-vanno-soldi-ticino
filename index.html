@@ -15,10 +15,10 @@
       <div class="flex h-16 items-center justify-between">
         <div class="flex items-center gap-2">
           <span class="text-2xl">💰</span>
-          <span class="font-bold text-lg sm:text-xl">Dove vanno i soldi del Ticino</span>
+          <span class="font-bold text-lg sm:text-xl" data-i18n="nav.title">Dove vanno i soldi del Ticino</span>
         </div>
         <div class="flex items-center gap-2 sm:gap-4">
-          <a href="./metodologia.html" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+          <a href="./metodologia.html" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors" data-i18n="nav.methodology">
             Metodologia
           </a>
           <button id="theme-toggle" class="btn btn-secondary h-9 w-9 p-0" aria-label="Toggle theme">
@@ -41,14 +41,14 @@
         <div class="mx-auto max-w-4xl text-center space-y-8">
           <div class="inline-flex items-center rounded-full border px-3 py-1 text-sm">
             <span class="mr-2">📊</span>
-            <span>Dati ufficiali aggiornati al 3 ottobre 2026</span>
+            <span data-i18n="hero.badge">Dati ufficiali aggiornati al 3 ottobre 2026</span>
           </div>
           
           <h1 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-balance">
-            Dove vanno i soldi del <span class="text-primary">Ticino</span>?
+            <span data-i18n="hero.title">Dove vanno i soldi del</span> <span class="text-primary" data-i18n="hero.titleHighlight">Ticino</span><span data-i18n="hero.titleQuestion">?</span>
           </h1>
           
-          <p class="mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground text-balance">
+          <p class="mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground text-balance" data-i18n="hero.subtitle">
             Trasparenza totale sulle finanze cantonali. Ogni dato verificato, ogni fonte citata, ogni numero tracciabile.
           </p>
 
@@ -56,29 +56,29 @@
           <div class="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-3 pt-8">
             <div class="metric-card group">
               <div class="flex items-center justify-between">
-                <div class="text-sm font-medium text-muted-foreground">Disavanzo 2027</div>
+                <div class="text-sm font-medium text-muted-foreground" data-i18n="hero.metrics.deficit.label">Disavanzo 2027</div>
                 <svg class="h-4 w-4 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path>
                 </svg>
               </div>
-              <div class="text-3xl sm:text-4xl font-bold text-destructive">-98.5M</div>
-              <div class="text-xs text-muted-foreground">CHF -272 per abitante</div>
+              <div class="text-3xl sm:text-4xl font-bold text-destructive" data-i18n="hero.metrics.deficit.value">-98.5M</div>
+              <div class="text-xs text-muted-foreground" data-i18n="hero.metrics.deficit.sub">CHF -272 per abitante</div>
             </div>
 
             <div class="metric-card group">
               <div class="flex items-center justify-between">
-                <div class="text-sm font-medium text-muted-foreground">Debito pubblico</div>
+                <div class="text-sm font-medium text-muted-foreground" data-i18n="hero.metrics.debt.label">Debito pubblico</div>
                 <svg class="h-4 w-4 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                 </svg>
               </div>
-              <div class="text-3xl sm:text-4xl font-bold text-destructive">>3.0 Mia</div>
-              <div class="text-xs text-muted-foreground">+20% dal 2023</div>
+              <div class="text-3xl sm:text-4xl font-bold text-destructive" data-i18n="hero.metrics.debt.value">>3.0 Mia</div>
+              <div class="text-xs text-muted-foreground" data-i18n="hero.metrics.debt.sub">+20% dal 2023</div>
             </div>
 
             <div class="metric-card group">
               <div class="flex items-center justify-between">
-                <div class="text-sm font-medium text-muted-foreground">Premi più alti CH</div>
+                <div class="text-sm font-medium text-muted-foreground" data-i18n="hero.metrics.premiums.label">Premi più alti CH</div>
                 <svg class="h-4 w-4 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
                 </svg>
@@ -127,8 +127,8 @@
     <section class="py-16 sm:py-24 bg-muted/30">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div class="text-center space-y-4">
-          <h2 class="text-3xl font-bold tracking-tight">Dove vanno i soldi?</h2>
-          <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 class="text-3xl font-bold tracking-tight" data-i18n="charts.title">Dove vanno i soldi?</h2>
+          <p class="text-lg text-muted-foreground max-w-2xl mx-auto" data-i18n="charts.subtitle">
             Breakdown completo delle spese cantonali per funzione
           </p>
         </div>
@@ -548,12 +548,12 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-3xl space-y-6 text-center">
         <div class="space-y-2">
-          <div class="text-lg font-semibold">Dove vanno i soldi del Ticino</div>
-          <p class="text-sm text-muted-foreground">
+          <div class="text-lg font-semibold" data-i18n="footer.title">Dove vanno i soldi del Ticino</div>
+          <p class="text-sm text-muted-foreground" data-i18n="footer.description">
             Un progetto di trasparenza finanziaria. Tutti i dati provengono da fonti ufficiali del Canton Ticino e della Confederazione Svizzera.
           </p>
         </div>
-        <div class="text-xs text-muted-foreground">
+        <div class="text-xs text-muted-foreground" data-i18n="footer.disclaimer">
           Questo sito è indipendente e non è affiliato al governo cantonale.
         </div>
       </div>
