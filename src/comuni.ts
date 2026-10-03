@@ -1,25 +1,23 @@
 // Comune financial data interface and utilities
 
 export interface ComuneFinanze {
-  id: string;
   nome: string;
-  popolazione: number;
-  anno: number;
-  finanze: {
-    moltiplicatore_comunale: number;
-    entrate_totali_mchf: number;
-    uscite_totali_mchf: number;
-    debito_pubblico_mchf: number;
-    entrate_pro_capite_chf: number;
-    uscite_pro_capite_chf: number;
-    debito_pro_capite_chf: number;
-  };
-  fonte: string;
+  popolazione_2024: number;
+  moltiplicatore_PF_2025: number;
+  moltiplicatore_PG_2025: number;
+  moltiplicatore_coordinato_2025: number;
+  risorse_fiscali_procapite_2022: number;
+  indice_forza_finanziaria_2025_26: number;
 }
 
 export interface ComuniData {
+  metadati: {
+    titolo: string;
+    fonte: string;
+    numeroComuni: number;
+    note: string[];
+  };
   comuni: ComuneFinanze[];
-  note: string[];
 }
 
 let comuniData: ComuniData | null = null;
@@ -28,7 +26,7 @@ export async function loadComuniData(): Promise<ComuniData> {
   if (comuniData) return comuniData;
   
   const basePath = import.meta.env.BASE_URL || '/';
-  const response = await fetch(`${basePath}data/comuni-finanze-2023.json`);
+  const response = await fetch(`${basePath}data/comuni-finanze-2024.json`);
   comuniData = await response.json();
   return comuniData!;
 }
@@ -38,15 +36,14 @@ export function searchComuni(query: string, data: ComuniData): ComuneFinanze[] {
   if (!lowerQuery) return data.comuni;
   
   return data.comuni.filter(comune => 
-    comune.nome.toLowerCase().includes(lowerQuery) ||
-    comune.id.toLowerCase().includes(lowerQuery)
+    comune.nome.toLowerCase().includes(lowerQuery)
   );
 }
 
 export function renderComuneCard(comune: ComuneFinanze): string {
-  const saldo = comune.finanze.entrate_pro_capite_chf - comune.finanze.uscite_pro_capite_chf;
-  const saldoClass = saldo >= 0 ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400';
-  const saldoIcon = saldo >= 0 ? '✅' : '⚠️';
+  const forza = comune.indice_forza_finanziaria_2025_26;
+  const forzaClass = forza >= 100 ? 'text-green-600 dark:text-green-400' : forza >= 80 ? 'text-amber-600 dark:text-amber-400' : 'text-red-600 dark:text-red-400';
+  const forzaIcon = forza >= 100 ? '💪' : forza >= 80 ? '⚠️' : '🔴';
   
   return `
     <div class="p-4 border rounded-lg bg-card hover:shadow-md transition-shadow">
@@ -54,38 +51,34 @@ export function renderComuneCard(comune: ComuneFinanze): string {
       
       <div class="grid grid-cols-2 gap-3 text-sm mb-3">
         <div>
-          <div class="text-muted-foreground">Popolazione</div>
-          <div class="font-semibold">${comune.popolazione.toLocaleString()}</div>
+          <div class="text-muted-foreground">Popolazione 2024</div>
+          <div class="font-semibold">${comune.popolazione_2024.toLocaleString()}</div>
         </div>
         <div>
-          <div class="text-muted-foreground">Moltiplicatore</div>
-          <div class="font-semibold">${comune.finanze.moltiplicatore_comunale}%</div>
+          <div class="text-muted-foreground">MP PF 2025</div>
+          <div class="font-semibold">${comune.moltiplicatore_PF_2025}%</div>
         </div>
       </div>
       
       <div class="border-t pt-3 space-y-2 text-sm">
         <div class="flex justify-between">
-          <span class="text-muted-foreground">Entrate pro capite:</span>
-          <span class="font-semibold">${comune.finanze.entrate_pro_capite_chf.toLocaleString()} CHF</span>
+          <span class="text-muted-foreground">MP PG:</span>
+          <span class="font-semibold">${comune.moltiplicatore_PG_2025}%</span>
         </div>
         <div class="flex justify-between">
-          <span class="text-muted-foreground">Uscite pro capite:</span>
-          <span class="font-semibold">${comune.finanze.uscite_pro_capite_chf.toLocaleString()} CHF</span>
+          <span class="text-muted-foreground">Risorse fiscali p.c. (2022):</span>
+          <span class="font-semibold">${Math.round(comune.risorse_fiscali_procapite_2022).toLocaleString()} CHF</span>
         </div>
         <div class="flex justify-between items-center border-t pt-2">
-          <span class="text-muted-foreground">Saldo pro capite:</span>
-          <span class="font-bold ${saldoClass}">
-            ${saldoIcon} ${saldo >= 0 ? '+' : ''}${saldo.toLocaleString()} CHF
+          <span class="text-muted-foreground">Indice forza finanziaria:</span>
+          <span class="font-bold ${forzaClass}">
+            ${forzaIcon} ${comune.indice_forza_finanziaria_2025_26.toFixed(1)}
           </span>
-        </div>
-        <div class="flex justify-between text-xs">
-          <span class="text-muted-foreground">Debito pro capite:</span>
-          <span class="font-semibold text-amber-600 dark:text-amber-400">${comune.finanze.debito_pro_capite_chf.toLocaleString()} CHF</span>
         </div>
       </div>
       
       <div class="mt-3 pt-3 border-t text-xs text-muted-foreground">
-        ${comune.fonte}
+        Fonte: Rapporto conti comuni 2024 - Allegato statistico tab.8
       </div>
     </div>
   `;

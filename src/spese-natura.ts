@@ -26,25 +26,36 @@ export interface SpesaSottocategoria {
 }
 
 export interface SpeseNaturaData {
-  metadata: {
-    dataQualityNote: string;
-    sources: Array<{
-      name: string;
-      url?: string;
-      note: string;
-    }>;
-    limitazioni: string[];
+  metadati: {
+    titolo: string;
+    descrizione: string;
+    fonte: string;
+    annoRiferimento: string;
+    unita: string;
   };
-  anni: Record<string, {
+  consuntivo2025: {
     anno: number;
     tipo: string;
-    note: string;
-    disponibilita: string;
-    speseTotali: number;
-    fonte: string;
-  }>;
-  spesePerNatura2027: SpesaNatura[];
-  note: string[];
+    stato: string;
+    spese: Array<{
+      id: string;
+      categoria: string;
+      descrizione: string;
+      importoMilioni: number;
+      importoProCapite: number;
+      percentualeTotale: number;
+      fonte: string;
+      note?: string;
+    }>;
+  };
+  preventivo2027?: {
+    anno: number;
+    spese: Array<{
+      categoria: string;
+      importoMilioni: number;
+      percentualeTotale: number;
+    }>;
+  };
 }
 
 let speseNaturaData: SpeseNaturaData | null = null;
@@ -69,22 +80,17 @@ export interface TreemapNode {
 }
 
 export function prepareTreemapData(data: SpeseNaturaData): TreemapNode {
+  const spese = data.consuntivo2025?.spese || [];
   return {
-    name: 'Spese Canton Ticino',
+    name: 'Spese Canton Ticino 2025',
     value: 0,
-    disponibilita: 'AGGREGATO',
-    children: data.spesePerNatura2027.map(spesa => ({
+    disponibilita: 'VERIFICATO',
+    children: spese.map(spesa => ({
       name: spesa.categoria.split(' - ')[1] || spesa.categoria,
-      value: spesa.importo_mchf,
-      disponibilita: spesa.disponibilita,
-      perAbitante: spesa.perAbitante_chf,
-      descrizione: spesa.descrizione,
-      children: spesa.sottoCategorie?.map(sub => ({
-        name: sub.nome,
-        value: sub.importo_mchf,
-        disponibilita: sub.disponibilita,
-        descrizione: sub.descrizione
-      }))
+      value: spesa.importoMilioni,
+      disponibilita: 'VERIFICATO',
+      perAbitante: spesa.importoProCapite,
+      descrizione: spesa.descrizione
     }))
   };
 }
