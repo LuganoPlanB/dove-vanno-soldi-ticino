@@ -1,0 +1,278 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Spese cantonali per natura economica (MCA2)",
+  "description": "Classificazione economica delle spese: personale, beni/servizi, ammortamenti, trasferimenti. Basato su Modello Contabile Armonizzato 2.",
+  "version": "2026.10.03",
+  "metadata": {
+    "dataQualityNote": "DEMO/PARZIALE: Struttura basata su MCA2 standard e dati pubblici parziali. Per dati completi verificati serve Consuntivo dettagliato con 'Conto economico per natura' pubblicato.",
+    "sources": [
+      {
+        "name": "Preventivo 2027 (Messaggio 8731)",
+        "url": "https://www4.ti.ch/generale/gran-consiglio/messaggi-e-atti/ricerca-messaggi-e-atti/risultati/dettaglio/?user_gcatti_pi1%5Bid_messaggio%5D=11046",
+        "note": "Contiene totali per funzione, NON breakdown dettagliato per natura"
+      },
+      {
+        "name": "Modello Contabile Armonizzato 2 (MCA2)",
+        "url": "https://www.efd.admin.ch/efd/it/home/finanzpolitik_grundlagen/finanzausgleich/handbuch-harmonisiertes-rechnungslegungsmodell.html",
+        "note": "Standard federale per classificazione conti cantoni e comuni svizzeri"
+      },
+      {
+        "name": "Consuntivo 2025 (quando pubblicato)",
+        "expectedDate": "marzo 2026",
+        "note": "Dovrebbe contenere 'Conto economico per natura' con breakdown: 30 Spese personale, 31 Spese beni/servizi, 33 Ammortamenti, 36 Trasferimenti correnti, ecc."
+      }
+    ],
+    "limitazioni": [
+      "I dati dettagliati per natura (salari vs consulenze vs IT) NON sono pubblici nel Preventivo 2027",
+      "Alcuni valori sono STIMATI in base a proporzioni tipiche cantoni svizzeri",
+      "Per dati ufficiali completi: attendere Consuntivo 2025 (marzo 2026) o richiedere via LADI",
+      "Dati 2026 e 2027 sono preventivi, soggetti a revisione"
+    ]
+  },
+  "anni": {
+    "2025": {
+      "anno": 2025,
+      "tipo": "Consuntivo (previsto)",
+      "note": "Dati effettivi quando disponibili dal Consuntivo 2025 (marzo 2026)",
+      "disponibilita": "PARZIALE - Alcuni aggregati disponibili, dettagli da verificare",
+      "speseTotali": 4583,
+      "fonte": "Preventivo 2027 - Tabella comparativa pluriennale"
+    },
+    "2026": {
+      "anno": 2026,
+      "tipo": "Preventivo",
+      "note": "Stime preventivate, non ancora consuntivate",
+      "disponibilita": "AGGREGATA - Solo totali per funzione nel Preventivo 2027",
+      "speseTotali": 4624,
+      "fonte": "Preventivo 2027 - Tabella comparativa pluriennale"
+    },
+    "2027": {
+      "anno": 2027,
+      "tipo": "Preventivo",
+      "note": "Budget previsto per 2027",
+      "disponibilita": "AGGREGATA - Solo totali per funzione nel Messaggio 8731",
+      "speseTotali": 4731,
+      "fonte": "Messaggio 8731 - Preventivo 2027"
+    }
+  },
+  "classificazioneMCA2": {
+    "descrizione": "Il Modello Contabile Armonizzato 2 (MCA2) classifica le spese in conti a 4 cifre. Esempio: 301 = Stipendi, 302 = Contributi sociali datore lavoro, 311 = Beni materiali, 319 = Consulenze, ecc.",
+    "gruppiPrincipali": {
+      "30": "Spese per il personale",
+      "31": "Spese per beni e servizi e altre spese d'esercizio",
+      "33": "Ammortamenti del patrimonio amministrativo",
+      "35": "Conferimenti alle riserve e correzioni di valore",
+      "36": "Trasferimenti correnti",
+      "38": "Trasferimenti per investimenti",
+      "39": "Altre uscite d'esercizio"
+    }
+  },
+  "spesePerNatura2027": [
+    {
+      "id": "personale",
+      "categoria": "30 - Spese per il personale",
+      "descrizione": "Stipendi lordi, contributi sociali (AVS/AI/AD, cassa pensioni, assicurazioni), indennità",
+      "importo_mchf": 2850,
+      "percentuale": 60.2,
+      "perAbitante_chf": 7870,
+      "disponibilita": "STIMATO",
+      "nota": "Stima basata su proporzione tipica 55-65% spese correnti per cantoni svizzeri. Dato esatto da verificare nel Consuntivo 2025.",
+      "fonte": "STIMA - Proporzione standard MCA2 applicata al totale spese correnti",
+      "sottoCategorie": [
+        {
+          "id": "stipendi",
+          "codice": "301",
+          "nome": "Stipendi e salari",
+          "importo_mchf": 2100,
+          "percentuale": 73.7,
+          "descrizione": "Stipendi lordi di tutti i dipendenti cantonali (insegnanti, polizia, amministrativi, magistrati, personale sanità, ecc.)",
+          "disponibilita": "STIMATO",
+          "nota": "Circa 70-75% delle spese personale sono stipendi base"
+        },
+        {
+          "id": "contributi_sociali",
+          "codice": "302",
+          "nome": "Contributi del datore di lavoro",
+          "importo_mchf": 650,
+          "percentuale": 22.8,
+          "descrizione": "AVS/AI/AD (~13%), Cassa pensioni (~15-18%), Assicurazioni infortuni, IPG, Assegni familiari",
+          "disponibilita": "STIMATO",
+          "nota": "Contributi sociali rappresentano tipicamente 25-30% degli stipendi base"
+        },
+        {
+          "id": "altre_spese_personale",
+          "codice": "303-309",
+          "nome": "Altre spese per il personale",
+          "importo_mchf": 100,
+          "percentuale": 3.5,
+          "descrizione": "Formazione dipendenti, reclutamento, rimborsi spese, indumenti lavoro, welfare aziendale",
+          "disponibilita": "STIMATO"
+        }
+      ]
+    },
+    {
+      "id": "beni_servizi",
+      "categoria": "31 - Spese per beni e servizi e altre spese d'esercizio",
+      "descrizione": "Acquisto beni, manutenzioni, energia, consulenze, locazioni, IT, telefonia, assicurazioni",
+      "importo_mchf": 720,
+      "percentuale": 15.2,
+      "perAbitante_chf": 1988,
+      "disponibilita": "STIMATO",
+      "nota": "Stima basata su proporzione tipica 12-18% spese correnti. Include tutti i costi di funzionamento escluso personale.",
+      "fonte": "STIMA - Proporzione standard MCA2",
+      "sottoCategorie": [
+        {
+          "id": "beni_materiali",
+          "codice": "311",
+          "nome": "Beni, materiale e merci",
+          "importo_mchf": 180,
+          "percentuale": 25.0,
+          "descrizione": "Materiale ufficio, libri scolastici, medicinali, materiale polizia, combustibili, cancelleria",
+          "disponibilita": "NON DISPONIBILE",
+          "nota": "Breakdown dettagliato richiede Consuntivo con sub-conti"
+        },
+        {
+          "id": "manutenzioni",
+          "codice": "312",
+          "nome": "Immobili e manutenzioni",
+          "importo_mchf": 120,
+          "percentuale": 16.7,
+          "descrizione": "Manutenzione edifici cantonali (scuole, uffici, ospedali), riparazioni impianti, pulizie",
+          "disponibilita": "NON DISPONIBILE"
+        },
+        {
+          "id": "locazioni",
+          "codice": "313",
+          "nome": "Locazioni, affitti, leasing",
+          "importo_mchf": 45,
+          "percentuale": 6.3,
+          "descrizione": "Affitto spazi per uffici, leasing veicoli, noleggio attrezzature",
+          "disponibilita": "NON DISPONIBILE"
+        },
+        {
+          "id": "energia",
+          "codice": "314",
+          "nome": "Energia e smaltimento",
+          "importo_mchf": 35,
+          "percentuale": 4.9,
+          "descrizione": "Elettricità, gas, riscaldamento edifici cantonali, smaltimento rifiuti",
+          "disponibilita": "NON DISPONIBILE"
+        },
+        {
+          "id": "consulenze",
+          "codice": "318",
+          "nome": "Onorari e consulenze",
+          "importo_mchf": 95,
+          "percentuale": 13.2,
+          "descrizione": "Consulenti esterni, studi legali, audit, perizie tecniche, mandati professionali",
+          "disponibilita": "NON DISPONIBILE",
+          "nota": "Categoria spesso sotto scrutinio per trasparenza spesa pubblica"
+        },
+        {
+          "id": "it_digitale",
+          "codice": "319",
+          "nome": "IT, telefonia e digitale",
+          "importo_mchf": 85,
+          "percentuale": 11.8,
+          "descrizione": "Software, licenze, manutenzione server, cloud services, telecomunicazioni, cybersecurity",
+          "disponibilita": "NON DISPONIBILE",
+          "nota": "IT è voce in crescita per digitalizzazione amministrazione"
+        },
+        {
+          "id": "assicurazioni_tasse",
+          "codice": "315-316",
+          "nome": "Assicurazioni, tasse, altre spese",
+          "importo_mchf": 80,
+          "percentuale": 11.1,
+          "descrizione": "Assicurazioni edifici/responsabilità, tasse, contributi ad enti, spese finanziarie",
+          "disponibilita": "NON DISPONIBILE"
+        },
+        {
+          "id": "trasporti",
+          "codice": "317",
+          "nome": "Trasporti e veicoli",
+          "importo_mchf": 30,
+          "percentuale": 4.2,
+          "descrizione": "Carburante, manutenzione veicoli (polizia, protezione civile, ispettori), pedaggi",
+          "disponibilita": "NON DISPONIBILE"
+        },
+        {
+          "id": "altri_servizi",
+          "codice": "319 (altro)",
+          "nome": "Altri servizi",
+          "importo_mchf": 50,
+          "percentuale": 6.9,
+          "descrizione": "Servizi vari non classificati altrove",
+          "disponibilita": "NON DISPONIBILE"
+        }
+      ]
+    },
+    {
+      "id": "ammortamenti",
+      "categoria": "33 - Ammortamenti del patrimonio amministrativo",
+      "descrizione": "Ammortamento contabile edifici, infrastrutture, attrezzature (non è uscita di cassa)",
+      "importo_mchf": 248,
+      "percentuale": 5.2,
+      "perAbitante_chf": 685,
+      "disponibilita": "VERIFICATO",
+      "nota": "Ammortamenti sono spese contabili non monetarie. Riducono il valore degli asset nel tempo.",
+      "fonte": "Preventivo 2027 - Spese per funzione (aggregato)",
+      "sottoCategorie": []
+    },
+    {
+      "id": "trasferimenti_correnti",
+      "categoria": "36 - Trasferimenti correnti",
+      "descrizione": "Sussidi, contributi a comuni/enti/privati (RIPAM, contributi ospedali, aiuti sociali, ecc.)",
+      "importo_mchf": 850,
+      "percentuale": 18.0,
+      "perAbitante_chf": 2347,
+      "disponibilita": "AGGREGATO",
+      "nota": "Trasferimenti: il Cantone dà soldi ad altri (comuni, ospedali, famiglie) senza contropartita diretta.",
+      "fonte": "STIMA - Da verificare nel Consuntivo per breakdown",
+      "sottoCategorie": [
+        {
+          "id": "comuni",
+          "nome": "Trasferimenti a comuni",
+          "importo_mchf": 280,
+          "descrizione": "Contributi finanziari a comuni ticinesi per compiti delegati",
+          "disponibilita": "NON DISPONIBILE"
+        },
+        {
+          "id": "enti_istituzioni",
+          "nome": "Trasferimenti a enti e istituzioni",
+          "importo_mchf": 420,
+          "descrizione": "Contributi a ospedali, EOC, università, FFS, TPL, enti sociali, ecc.",
+          "disponibilita": "NON DISPONIBILE"
+        },
+        {
+          "id": "famiglie",
+          "nome": "Trasferimenti a famiglie",
+          "importo_mchf": 150,
+          "descrizione": "RIPAM (riduzione premi LAMal), PC (prestazioni complementari), borse studio",
+          "disponibilita": "PARZIALE",
+          "nota": "RIPAM 2027 è 332M, ma classificato in Previdenza sociale"
+        }
+      ]
+    },
+    {
+      "id": "interessi_passivi",
+      "categoria": "32 - Interessi passivi",
+      "descrizione": "Interessi sul debito pubblico (3 miliardi CHF)",
+      "importo_mchf": 63,
+      "percentuale": 1.3,
+      "perAbitante_chf": 174,
+      "disponibilita": "VERIFICATO",
+      "nota": "Con debito >3 mia CHF e tassi ~2%, interessi sono circa 60M/anno",
+      "fonte": "Preventivo 2027 - Spese finanziarie",
+      "sottoCategorie": []
+    }
+  ],
+  "note": [
+    "⚠️ IMPORTANTE: Molti dettagli (salari vs consulenze vs IT) NON sono pubblicati nel Preventivo 2027.",
+    "Per dati ufficiali completi serve il 'Consuntivo 2025' (marzo 2026) con 'Conto economico per natura'.",
+    "I valori con disponibilita='STIMATO' o 'NON DISPONIBILE' sono indicativi o mancanti.",
+    "La classificazione MCA2 (codici 30x, 31x, ecc.) è lo standard federale per contabilità cantoni svizzeri.",
+    "Le sottoCategorie dettagliate (es. IT, consulenze) richiedono accesso ai sub-conti del Consuntivo.",
+    "Per richiedere dati non pubblicati: LADI (Legge accesso documenti amministrativi) o domanda scritta al DFE."
+  ]
+}

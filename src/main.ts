@@ -4,6 +4,7 @@ import { i18n, type Language } from './locales';
 import { enableShareableViews, addShareButtons } from './ux-enhancements';
 import { loadComuniData, searchComuni, renderComuneCard } from './comuni';
 import { renderAllInsightCards } from './insights';
+import { loadSpeseNatura, prepareTreemapData, type SpesaNatura, renderAvailabilityBadge, formatMillions, formatCurrency } from './spese-natura';
 
 // Enable URL-based view sharing
 enableShareableViews();
@@ -239,11 +240,85 @@ if (window.location.pathname === '/' ||
   setupResponsiveCharts();
   setupComuniSearch();
   renderInsights();
+  renderSpeseNatura();
   
   // UX enhancements: Add share buttons after content loads
   setTimeout(() => {
     addShareButtons();
   }, 1000);
+}
+
+async function renderSpeseNatura() {
+  try {
+    const data = await loadSpeseNatura();
+    const treemapData = prepareTreemapData(data);
+    
+    // Render treemap
+    charts.renderSpeseNaturaTreemap('spese-natura-treemap', treemapData);
+    
+    // Render detailed breakdown cards
+    const detailsContainer = document.getElementById('spese-natura-details');
+    if (detailsContainer && data.spesePerNatura2027) {
+      detailsContainer.innerHTML = data.spesePerNatura2027.map((spesa: SpesaNatura) => `
+        <div class="bg-card border rounded-lg p-4 sm:p-6">
+          <div class="flex items-start justify-between mb-3">
+            <div>
+              <h3 class="text-xl font-bold">${spesa.categoria}</h3>
+              <p class="text-sm text-muted-foreground mt-1">${spesa.descrizione}</p>
+            </div>
+            <div>${renderAvailabilityBadge(spesa.disponibilita)}</div>
+          </div>
+          
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
+            <div>
+              <div class="text-sm text-muted-foreground">Importo</div>
+              <div class="text-2xl font-bold">${formatMillions(spesa.importo_mchf)}</div>
+            </div>
+            <div>
+              <div class="text-sm text-muted-foreground">% bilancio</div>
+              <div class="text-2xl font-bold">${spesa.percentuale.toFixed(1)}%</div>
+            </div>
+            <div>
+              <div class="text-sm text-muted-foreground">Per abitante</div>
+              <div class="text-xl font-bold">${formatCurrency(spesa.perAbitante_chf)}</div>
+            </div>
+            <div>
+              <div class="text-sm text-muted-foreground">Per giorno</div>
+              <div class="text-lg font-bold">${formatCurrency(spesa.perAbitante_chf / 365, 2)}/g</div>
+            </div>
+          </div>
+          
+          ${spesa.sottoCategorie && spesa.sottoCategorie.length > 0 ? `
+            <div class="border-t pt-4">
+              <h4 class="font-semibold mb-3 text-sm">Dettaglio sottocategorie:</h4>
+              <div class="space-y-2">
+                ${spesa.sottoCategorie.map(sub => `
+                  <div class="flex items-center justify-between text-sm p-2 rounded hover:bg-muted/50">
+                    <div class="flex-1">
+                      <span class="font-medium">${sub.nome}</span>
+                      ${sub.codice ? `<span class="text-xs text-muted-foreground ml-2">(${sub.codice})</span>` : ''}
+                      <p class="text-xs text-muted-foreground mt-0.5">${sub.descrizione}</p>
+                    </div>
+                    <div class="text-right ml-4">
+                      <div class="font-semibold">${formatMillions(sub.importo_mchf)}</div>
+                      <div class="text-xs text-muted-foreground">${sub.percentuale.toFixed(1)}%</div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+          
+          <div class="mt-4 pt-4 border-t text-sm">
+            <p class="text-muted-foreground italic mb-2">${spesa.nota}</p>
+            <p class="text-xs text-muted-foreground">📄 ${spesa.fonte}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+  } catch (err) {
+    console.error('Error loading spese natura:', err);
+  }
 }
 
 function renderInsights() {

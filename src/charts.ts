@@ -742,3 +742,122 @@ export function renderSimpleBarChart(containerId: string, data: SimpleBarData[],
       .attr('width', (bar) => x(bar.value));
   }
 }
+
+// Treemap for expenses by economic nature
+export function renderSpeseNaturaTreemap(containerId: string, data: any) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  
+  container.innerHTML = '';
+  
+  const width = container.offsetWidth;
+  const height = Math.max(600, width * 0.6);
+  
+  const root = d3.hierarchy(data)
+    .sum((d: any) => d.value)
+    .sort((a: any, b: any) => (b.value || 0) - (a.value || 0));
+  
+  const treemap = d3.treemap<any>()
+    .size([width, height])
+    .padding(2)
+    .round(true);
+  
+  treemap(root);
+  
+  const svg = d3.create('svg')
+    .attr('width', width)
+    .attr('height', height)
+    .attr('viewBox', `0 0 ${width} ${height}`)
+    .style('font', '12px sans-serif');
+  
+  const colors = getColors();
+  
+  const colorMap: Record<string, string> = {
+    'VERIFICATO': colors.success,
+    'AGGREGATO': colors.primary,
+    'STIMATO': colors.amber,
+    'NON DISPONIBILE': colors.destructive
+  };
+  
+  const cell = svg.selectAll('g')
+    .data(root.leaves())
+    .join('g')
+    .attr('transform', (d: any) => `translate(${d.x0},${d.y0})`);
+  
+  cell.append('rect')
+    .attr('width', (d: any) => d.x1 - d.x0)
+    .attr('height', (d: any) => d.y1 - d.y0)
+    .attr('fill', (d: any) => {
+      const status = d.data.disponibilita || 'STIMATO';
+      return colorMap[status] || colors.textMuted;
+    })
+    .attr('fill-opacity', 0.7)
+    .attr('stroke', colors.grid)
+    .attr('stroke-width', 2)
+    .style('cursor', 'pointer')
+    .on('mouseover', function(event: any, d: any) {
+      d3.select(this).attr('fill-opacity', 1);
+      
+      const status = d.data.disponibilita || 'STIMATO';
+      const statusColor = colorMap[status] || colors.textMuted;
+      
+      const tooltip = createTooltip();
+      tooltip.style('opacity', 1);
+      
+      tooltip.html(`
+        <div style="max-width: 300px;">
+          <strong style="font-size: 14px;">${d.data.name}</strong><br/>
+          <span style="font-size: 18px; font-weight: bold; color: ${statusColor};">${d.data.value} M CHF</span><br/>
+          ${d.data.perAbitante ? `<span style="opacity: 0.8;">${Math.round(d.data.perAbitante).toLocaleString()} CHF per abitante</span><br/>` : ''}
+          ${d.data.descrizione ? `<span style="opacity: 0.7; font-size: 12px;">${d.data.descrizione}</span><br/>` : ''}
+          <span style="margin-top: 4px; display: inline-block; padding: 2px 6px; background: ${statusColor}; color: white; border-radius: 3px; font-size: 10px;">
+            ${status}
+          </span>
+        </div>
+      `)
+        .style('left', `${event.pageX + 10}px`)
+        .style('top', `${event.pageY - 10}px`);
+    })
+    .on('mouseout', function() {
+      d3.select(this).attr('fill-opacity', 0.7);
+      createTooltip().style('opacity', 0);
+    });
+  
+  cell.append('text')
+    .attr('x', 4)
+    .attr('y', 16)
+    .attr('fill', 'white')
+    .attr('font-weight', 'bold')
+    .attr('font-size', (d: any) => {
+      const area = (d.x1 - d.x0) * (d.y1 - d.y0);
+      return area > 5000 ? '14px' : area > 2000 ? '12px' : '10px';
+    })
+    .style('text-shadow', '1px 1px 2px rgba(0,0,0,0.5)')
+    .text((d: any) => {
+      const area = (d.x1 - d.x0) * (d.y1 - d.y0);
+      const width = d.x1 - d.x0;
+      if (area < 1500) return '';
+      
+      const name = d.data.name;
+      const maxChars = Math.floor(width / 7);
+      return name.length > maxChars ? name.substring(0, maxChars - 3) + '...' : name;
+    });
+  
+  cell.append('text')
+    .attr('x', 4)
+    .attr('y', (d: any) => {
+      const area = (d.x1 - d.x0) * (d.y1 - d.y0);
+      return area > 5000 ? 36 : area > 2000 ? 30 : 24;
+    })
+    .attr('fill', 'white')
+    .attr('font-size', '12px')
+    .attr('opacity', 0.9)
+    .style('text-shadow', '1px 1px 2px rgba(0,0,0,0.5)')
+    .text((d: any) => {
+      const area = (d.x1 - d.x0) * (d.y1 - d.y0);
+      return area > 2000 ? `${d.data.value} M` : area > 1500 ? `${d.data.value}M` : '';
+    });
+  
+  container.appendChild(svg.node()!);
+}
+
