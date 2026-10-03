@@ -1,10 +1,16 @@
 import './style.css';
 import * as charts from './charts';
 
+// Respect base path for production builds
+// In production (GitHub Pages): /dove-vanno-soldi-ticino/
+// In development: /
+const BASE_URL = import.meta.env?.BASE_URL || '/';
+
 async function loadJSON<T>(path: string): Promise<T> {
-  const response = await fetch(path);
+  const url = `${BASE_URL}${path.startsWith('/') ? path.slice(1) : path}`;
+  const response = await fetch(url);
   if (!response.ok) {
-    throw new Error(`Failed to load ${path}: ${response.statusText}`);
+    throw new Error(`Failed to load ${url}: ${response.statusText}`);
   }
   return response.json();
 }
@@ -31,12 +37,12 @@ function initializeTheme() {
 
 function renderAllCharts() {
   Promise.all([
-    loadJSON('/data/spese-per-funzione-2027.json'),
-    loadJSON('/data/debito-storico.json'),
-    loadJSON('/data/deficit-storico.json'),
-    loadJSON('/data/premi-e-contributi-sanita.json'),
-    loadJSON('/data/confronto-pluriennale-2025-2027.json'),
-    loadJSON('/data/preventivo-2027.json'),
+    loadJSON('data/spese-per-funzione-2027.json'),
+    loadJSON('data/debito-storico.json'),
+    loadJSON('data/deficit-storico.json'),
+    loadJSON('data/premi-e-contributi-sanita.json'),
+    loadJSON('data/confronto-pluriennale-2025-2027.json'),
+    loadJSON('data/preventivo-2027.json'),
   ]).then(([
     spesePerFunzione,
     debitoStorico,
@@ -46,15 +52,15 @@ function renderAllCharts() {
     preventivo2027,
   ]) => {
     const treemapEl = document.getElementById('spending-function-treemap');
-    if (treemapEl && (spesePerFunzione as any).spese) {
-      charts.renderTreemap('spending-function-treemap', (spesePerFunzione as any).spese);
+    if (treemapEl && (spesePerFunzione as any).spesePerFunzione) {
+      charts.renderTreemap('spending-function-treemap', (spesePerFunzione as any).spesePerFunzione);
     }
 
     const debtChartEl = document.getElementById('debt-history-chart');
-    if (debtChartEl && (debitoStorico as any).serie) {
-      const debtData = (debitoStorico as any).serie.map((d: any) => ({
+    if (debtChartEl && (debitoStorico as any).debitoSerie) {
+      const debtData = (debitoStorico as any).debitoSerie.map((d: any) => ({
         anno: d.anno,
-        valore: d.debito_mln,
+        valore: d.debito,
       }));
       charts.renderLineChart(
         'debt-history-chart',
@@ -66,10 +72,10 @@ function renderAllCharts() {
     }
 
     const deficitChartEl = document.getElementById('deficit-history-chart');
-    if (deficitChartEl && (deficitStorico as any).serie) {
-      const deficitData = (deficitStorico as any).serie.map((d: any) => ({
+    if (deficitChartEl && (deficitStorico as any).deficitSerie) {
+      const deficitData = (deficitStorico as any).deficitSerie.map((d: any) => ({
         anno: d.anno,
-        valore: Math.abs(d.disavanzo_mln),
+        valore: Math.abs(d.disavanzo),
       }));
       charts.renderLineChart(
         'deficit-history-chart',
@@ -81,7 +87,7 @@ function renderAllCharts() {
     }
 
     const healthChartEl = document.getElementById('health-premiums-chart');
-    if (healthChartEl && (premiSanita as any).premi) {
+    if (healthChartEl && (premiSanita as any).premiMedi) {
       const healthData: charts.ComparisonData[] = [
         {
           categoria: 'Contributi cantonali',
@@ -106,31 +112,41 @@ function renderAllCharts() {
     }
 
     const budgetOverviewEl = document.getElementById('budget-overview-chart');
-    if (budgetOverviewEl && (preventivo2027 as any)) {
-      const prev = preventivo2027 as any;
+    if (budgetOverviewEl && (preventivo2027 as any).preventivo2027) {
+      const prev = (preventivo2027 as any).preventivo2027;
       const budgetData: charts.SimpleBarData[] = [
-        { label: 'Uscite correnti', value: prev.uscite_correnti_mln, color: 'rgb(239 68 68)' },
-        { label: 'Entrate correnti', value: prev.ricavi_correnti_mln, color: 'rgb(34 197 94)' },
-        { label: 'Investimenti', value: prev.investimenti_netti_mln, color: 'rgb(59 130 246)' },
+        { label: 'Uscite correnti', value: prev.speseCorrente?.value || 0, color: 'rgb(239 68 68)' },
+        { label: 'Entrate correnti', value: prev.ricaviCorrenti?.value || 0, color: 'rgb(34 197 94)' },
+        { label: 'Investimenti', value: prev.investimentiNetti?.value || 0, color: 'rgb(59 130 246)' },
       ];
       charts.renderSimpleBarChart('budget-overview-chart', budgetData, 'Preventivo 2027 - Panoramica');
     }
 
     const healthSpendingEl = document.getElementById('health-spending-chart');
-    if (healthSpendingEl && (confronto as any).voci) {
-      const sanita = (confronto as any).voci.find((v: any) => v.voce === 'Sanità pubblica');
-      if (sanita) {
-        const data: charts.ComparisonData[] = [{
-          categoria: 'Sanità pubblica',
-          consuntivo2025: sanita.consuntivo_2025,
-          preventivo2026: sanita.preventivo_2026,
-          preventivo2027: sanita.preventivo_2027,
-        }];
-        charts.renderComparisonChart('health-spending-chart', data);
-      }
+    if (healthSpendingEl && (confronto as any).contoEconomico) {
+      // Data not available in correct format yet - skip for now
+      // TODO: Add health spending comparison data
     }
   }).catch(error => {
     console.error('Error loading data:', error);
+    // Display error in chart containers
+    const chartIds = [
+      'spending-function-treemap',
+      'debt-history-chart', 
+      'deficit-history-chart',
+      'health-premiums-chart',
+      'budget-overview-chart',
+      'health-spending-chart'
+    ];
+    chartIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.innerHTML = `<div class="p-4 text-center text-red-600 dark:text-red-400">
+          <p class="font-semibold">Errore caricamento dati</p>
+          <p class="text-sm mt-1">${error.message}</p>
+        </div>`;
+      }
+    });
   });
 }
 
@@ -144,7 +160,10 @@ function setupResponsiveCharts() {
   });
 }
 
-if (window.location.pathname === '/' || window.location.pathname.includes('index.html')) {
+if (window.location.pathname === '/' || 
+    window.location.pathname.includes('index.html') ||
+    window.location.pathname === '/dove-vanno-soldi-ticino/' ||
+    window.location.pathname === '/dove-vanno-soldi-ticino/index.html') {
   initializeTheme();
   renderAllCharts();
   setupResponsiveCharts();

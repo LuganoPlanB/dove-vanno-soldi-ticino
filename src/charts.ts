@@ -105,7 +105,6 @@ export function renderTreemap(containerId: string, data: TreemapData[]): void {
     .append('svg')
     .attr('viewBox', `0 0 ${width} ${height}`)
     .attr('width', '100%')
-    .attr('height', 'auto')
     .style('max-width', '100%')
     .style('height', 'auto');
 
@@ -170,7 +169,7 @@ export function renderTreemap(containerId: string, data: TreemapData[]): void {
     .data((d: TreemapNode) => {
       const width = d.x1 - d.x0;
       const height = d.y1 - d.y0;
-      const text = d.data.categoria;
+      const text = d.data.categoria || '';
       const minWidth = mobile ? 60 : 80;
       const minHeight = mobile ? 40 : 50;
       if (width < minWidth || height < minHeight) return [];
@@ -249,7 +248,7 @@ export function renderLineChart(
     .append('svg')
     .attr('viewBox', `0 0 ${containerWidth} ${chartHeight}`)
     .attr('width', '100%')
-    .attr('height', 'auto')
+    
     .style('max-width', '100%')
     .append('g')
     .attr('transform', `translate(${margin.left},${margin.top})`);
@@ -379,7 +378,7 @@ export function renderComparisonChart(containerId: string, data: ComparisonData[
     .append('svg')
     .attr('viewBox', `0 0 ${containerWidth} ${chartHeight}`)
     .attr('width', '100%')
-    .attr('height', 'auto')
+    
     .style('max-width', '100%')
     .append('g')
     .attr('transform', `translate(${margin.left},${margin.top})`);
@@ -616,7 +615,7 @@ export function renderSimpleBarChart(containerId: string, data: SimpleBarData[],
     .append('svg')
     .attr('viewBox', `0 0 ${containerWidth} ${chartHeight}`)
     .attr('width', '100%')
-    .attr('height', 'auto')
+    
     .style('max-width', '100%')
     .append('g')
     .attr('transform', `translate(${margin.left},${margin.top})`);
@@ -689,9 +688,9 @@ export function renderSimpleBarChart(containerId: string, data: SimpleBarData[],
         .attr('text-anchor', 'middle')
         .attr('font-size', '10px')
         .attr('fill', colors.text)
-        .text(bar.label.split(' ')[0]);
+        .text((bar.label || '').split(' ')[0]);
       
-      if (bar.label.split(' ').length > 1) {
+      if (bar.label && bar.label.split(' ').length > 1) {
         svg.append('text')
           .attr('x', x(bar.label)! + x.bandwidth() / 2)
           .attr('y', height + 27)

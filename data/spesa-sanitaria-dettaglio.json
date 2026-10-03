@@ -1,258 +1,161 @@
 {
   "metadata": {
     "title": "Spesa sanitaria cantonale - Dettaglio 2027",
-    "description": "Breakdown completo della spesa sanitaria del Canton Ticino: contributi, ospedali, cure, prevenzione",
+    "description": "Breakdown spesa sanitaria Canton Ticino con spiegazioni per non esperti",
     "lastUpdated": "2026-10-03",
+    "dataQualityNote": "SOLO dati verificabili da fonti primarie. Stime eliminate. Dati mancanti documentati con fonte per reperimento.",
     "sources": [
       {
         "name": "Messaggio 8731 - Preventivo 2027 e Piano finanziario 2028-2030",
         "url": "https://www4.ti.ch/generale/gran-consiglio/messaggi-e-atti/ricerca-messaggi-e-atti/risultati/dettaglio/?user_gcatti_pi1%5Bid_messaggio%5D=11046",
-        "date": "2024-08-28",
-        "pages": "varie"
+        "date": "2024-08-28"
+      },
+      {
+        "name": "P2027_spese_02.pdf - Spese per funzione",
+        "url": "https://www4.ti.ch/fileadmin/DFE/DR-FINANZE/P2027/P2027_spese_02.pdf",
+        "date": "2026-09-30",
+        "extractedData": "Funzione Salute pubblica: 627M CHF (P2027), 616M (P2026), 603M (C2025)"
       },
       {
         "name": "Legge federale sull'assicurazione malattie (LAMal)",
         "url": "https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/it",
-        "codice": "RS 832.10"
+        "codice": "RS 832.10",
+        "articoliRilevanti": "art. 49a (finanziamento ospedaliero - quota cantonale 55%)"
       },
       {
-        "name": "UFSP/BAG - Informazioni LAMal",
-        "url": "https://www.bag.admin.ch/bag/it/home/versicherungen/krankenversicherung.html"
-      },
-      {
-        "name": "Canton Ticino - Dipartimento della sanità e della socialità",
-        "url": "https://www4.ti.ch/dss/dsp/",
-        "note": "Informazioni su RIPAM, ospedali, prestazioni"
+        "name": "UFSP/BAG - Premi cantonali 2027",
+        "url": "https://www.bag.admin.ch/bag/it/home/versicherungen/krankenversicherung.html",
+        "extractedData": "Premio medio mensile Ticino 2027: 519.90 CHF; Premio medio Svizzera 2027: 412.00 CHF"
       }
-    ],
-    "notes": [
-      "Importi in milioni di CHF salvo diversa indicazione",
-      "Preventivo 2027 approvato dal Gran Consiglio",
-      "Dati ufficiali estratti da documenti pubblici del Canton Ticino"
     ]
   },
   "glossario": {
     "LAMal": {
-      "termine": "LAMal",
-      "definizione": "Legge federale sull'assicurazione malattie. È la legge svizzera che obbliga ogni persona residente in Svizzera ad avere un'assicurazione sanitaria di base.",
-      "spiegazioneSemplice": "L'assicurazione malattia obbligatoria che ogni cittadino svizzero deve pagare mensilmente ad una cassa malati privata.",
-      "baseLegale": "RS 832.10"
+      "termine": "LAMal (Legge federale sull'assicurazione malattie)",
+      "spiegazioneSemplice": "L'assicurazione malattia obbligatoria che ogni persona residente in Svizzera deve avere. Ogni mese paghi un premio alla tua cassa malati (ad esempio Helsana, CSS, Assura).",
+      "baseLegale": "RS 832.10",
+      "copreCosa": "Visite mediche, esami, farmaci della lista federale, cure ospedaliere",
+      "NONcopreCosa": "Dentista (salvo incidenti), molti occhiali, cure a domicilio anziani, case anziani"
     },
     "RIPAM": {
-      "termine": "RIPAM",
-      "definizione": "Riduzione dei Premi dell'Assicurazione Malattia. Sussidi cantonali per aiutare le famiglie a basso reddito a pagare i premi dell'assicurazione malattia obbligatoria.",
-      "spiegazioneSemplice": "Aiuto economico del Cantone per chi non può permettersi il premio mensile della cassa malati. Riduce l'importo che la famiglia deve pagare ogni mese.",
-      "beneficiari": "Famiglie con reddito basso e medio-basso secondo criteri cantonali",
-      "importoMedio": "Varia da alcune decine a diverse centinaia di franchi al mese per famiglia"
-    },
-    "PC_AVS_AI": {
-      "termine": "PC AVS/AI",
-      "definizione": "Prestazioni Complementari all'AVS (Assicurazione Vecchiaia e Superstiti) e all'AI (Assicurazione Invalidità). Sussidi per coprire i costi della vita quando la rendita non basta.",
-      "spiegazioneSemplice": "Aiuto economico per anziani e persone con disabilità che non riescono a vivere con la sola pensione. Copre anche spese sanitarie extra.",
-      "componenti": "Include quota per spese malattia, farmaci, cure non coperte da LAMal"
+      "termine": "RIPAM (Riduzione Premi Assicurazione Malattia)",
+      "spiegazioneSemplice": "Aiuto economico del Cantone per le famiglie che non possono permettersi il premio mensile della cassa malati. Il Cantone paga una parte del premio direttamente alla cassa malati, così la famiglia paga meno ogni mese.",
+      "esempio": "Una famiglia con premio di 500 CHF/mese riceve aiuto di 200 CHF/mese RIPAM → paga solo 300 CHF/mese"
     },
     "SpeseDiTrasferimento": {
       "termine": "Spese di trasferimento",
-      "definizione": "Pagamenti del Cantone ad altri enti (Confederazione, comuni, ospedali, casse malati, famiglie) senza ottenere direttamente un bene o servizio. Sono contributi, sussidi, indennità.",
-      "spiegazioneSemplice": "Soldi che il Cantone 'trasferisce' ad altri invece di spendere direttamente. Esempio: il Cantone dà 332 milioni alle casse malati per ridurre i premi delle famiglie.",
+      "spiegazioneSemplice": "Soldi che il Cantone 'trasferisce' ad altri (comuni, ospedali, casse malati, famiglie) invece di usarli direttamente per stipendi o materiali cantonali.",
       "esempi": [
-        "Contributo RIPAM: il Cantone paga parte del premio assicurativo della famiglia",
-        "Contributo ospedalizzazione: il Cantone paga la sua quota della degenza ospedaliera",
-        "Prestazioni complementari: il Cantone integra la pensione insufficiente"
+        "RIPAM: il Cantone trasferisce soldi alle casse malati per ridurre il conto delle famiglie",
+        "Quota ospedaliera: il Cantone trasferisce soldi agli ospedali per coprire il 55% dei ricoveri",
+        "PC: il Cantone trasferisce soldi agli anziani per integrare la pensione insufficiente"
       ],
-      "contrapposizione": "Le 'spese di funzionamento' sono invece pagamenti diretti per beni e servizi (stipendi dipendenti, elettricità, materiali)"
+      "opposto": "Spese di funzionamento = stipendi dipendenti cantonali, materiali, elettricità uffici"
     },
-    "QuotaCantonale": {
-      "termine": "Quota cantonale (55%)",
-      "definizione": "Percentuale delle spese ospedaliere a carico del Cantone per legge federale (LAMal art. 49a). Il resto (45%) è pagato dalle casse malati.",
-      "spiegazioneSemplice": "Quando qualcuno è ricoverato in ospedale, la fattura viene divisa: 55% lo paga il Cantone con le tasse, 45% lo paga la cassa malati con i premi.",
+    "QuotaCantonale55": {
+      "termine": "Quota cantonale 55% (finanziamento ospedaliero)",
+      "spiegazioneSemplice": "Quando sei ricoverato in ospedale, il costo viene diviso per legge federale: il Cantone paga il 55%, la tua cassa malati paga il 45%. Tu paghi solo la franchigia normale.",
       "baseLegale": "LAMal art. 49a",
-      "nota": "Vale solo per le cure ospedaliere comprese nell'elenco dei ricoveri pianificati. Le cure ambulatoriali sono pagate interamente dalle casse malati."
+      "esempio": "Operazione costa 10'000 CHF → Cantone paga 5'500 CHF + Cassa malati paga 4'500 CHF. Tu paghi franchigia (300-2500 CHF) + aliquota 10%.",
+      "valePerCureStazionarie": true,
+      "NONvalePerCureAmbulatoriali": "Le cure ambulatoriali (visite, esami senza ricovero) sono pagate interamente dalle casse malati. Il Cantone NON paga nulla per le cure ambulatoriali."
     },
-    "CureStazionarie": {
-      "termine": "Cure stazionarie",
-      "definizione": "Ricoveri ospedalieri con pernottamento. La persona è ricoverata almeno una notte in ospedale o clinica.",
-      "spiegazioneSemplice": "Quando devi dormire in ospedale per un'operazione o una malattia grave.",
-      "esempi": "Operazione chirurgica, parto, ricovero per infarto, degenza in reparto"
-    },
-    "CureAmbulatoriali": {
-      "termine": "Cure ambulatoriali",
-      "definizione": "Visite e trattamenti senza ricovero. Il paziente torna a casa lo stesso giorno.",
-      "spiegazioneSemplice": "Visite mediche, esami, piccoli interventi dove non dormi in ospedale. Vai e torni a casa in giornata.",
-      "esempi": "Visita dal medico, analisi del sangue, radiografia, piccola operazione in day hospital",
-      "finanziamento": "Pagate interamente dalle casse malati (tramite i premi). Il Cantone NON paga nulla per le cure ambulatoriali."
-    },
-    "EOC": {
-      "termine": "EOC",
-      "definizione": "Ente Ospedaliero Cantonale. L'azienda pubblica che gestisce gli ospedali regionali del Canton Ticino.",
-      "spiegazioneSemplice": "L'ospedale pubblico del Ticino. Ha sedi a Bellinzona, Lugano, Locarno, Mendrisio.",
-      "struttura": "Ente di diritto pubblico, autonomo ma di proprietà cantonale"
-    },
-    "ClinicaPsichiatrica": {
-      "termine": "Organizzazione sociopsichiatrica cantonale (OSC)",
-      "definizione": "Struttura cantonale che si occupa di salute mentale, psichiatria e dipendenze.",
-      "spiegazioneSemplice": "I servizi pubblici per chi ha problemi psichiatrici o di dipendenza (droghe, alcol). Comprende cliniche, ambulatori, centri diurni.",
-      "nota": "Include sia degenze (ricoveri) che ambulatori"
+    "PC_AVS_AI": {
+      "termine": "PC (Prestazioni Complementari AVS/AI)",
+      "spiegazioneSemplice": "Aiuto economico per anziani e persone con disabilità quando la pensione (AVS o AI) non basta per vivere. Include anche contributi per spese sanitarie extra (dentista, occhiali, farmaci non rimborsati)."
     }
   },
-  "spesaTotaleSanita2027": {
-    "totale": 627,
-    "percentualeBilancio": 13.3,
-    "perAbitante": 1731,
-    "note": "Totale spesa funzione 'Salute pubblica' nel preventivo 2027. NON include i contributi RIPAM (332M) che sono classificati nella funzione 'Previdenza sociale'.",
-    "fonte": "Messaggio 8731",
-    "chiarimento": "La classificazione per funzione nel preventivo cantonale NON coincide perfettamente con la classificazione economica. I 332M di RIPAM sono 'spesa sanitaria' dal punto di vista economico (aiutano a pagare l'assicurazione malattia) ma sono classificati nella funzione 'Previdenza sociale' perché sono trasferimenti alle famiglie."
-  },
-  "dettaglioSpese": {
-    "contributiOspedalizzazioni": {
-      "titolo": "Contributi per ospedalizzazioni (quota cantonale 55%)",
-      "importo2027": 428.7,
-      "importo2026": 275.0,
-      "variazione": 57.0,
-      "percentualeDelTotale": 52.9,
-      "spiegazione": "Il Cantone aiuta le famiglie a basso e medio-basso reddito a pagare i premi mensili della cassa malati obbligatoria. Ogni mese, invece di pagare (ad esempio) 500 CHF di premio, la famiglia paga meno e il Cantone paga la differenza direttamente alla cassa malati.",
-      "perche": "I premi LAMal in Ticino sono tra i più alti della Svizzera (520 CHF/mese di media nel 2027 contro 412 CHF media nazionale). Molte famiglie non potrebbero permetterselo senza aiuto pubblico.",
-      "chiBeneficia": "Circa 85'000-90'000 persone in Ticino (circa 1 abitante su 4)",
-      "componenti": {
-        "RIPAM_ordinaria": {
-          "importo": 143.5,
-          "descrizione": "Riduzione premi per famiglie con reddito basso/medio-basso secondo soglie cantonali"
-        },
-        "RIPAM_PC": {
-          "importo": 188.5,
-          "descrizione": "Riduzione premi per beneficiari di prestazioni complementari (anziani e disabili con pensione insufficiente)"
-        }
-      },
-      "tipoSpesa": "Spesa di trasferimento (il Cantone 'gira' i soldi alle casse malati per ridurre il conto delle famiglie)",
-      "fonte": "Messaggio 8731, tabella preventivo funzione Salute pubblica",
-      "noteTecniche": "Include potenziamento transitorio modello RIPAM (+38M) in attesa attuazione iniziativa popolare '10% del reddito' prevista per il 2029"
+  "spesaTotaleSanitaVerificata": {
+    "funzioneSalutePubblica2027": {
+      "importo": 627,
+      "fonte": "P2027_spese_02.pdf - Preventivo 2027, funzione 'Salute pubblica'",
+      "paginaFonte": "Tabella spese per funzione",
+      "percentualeBilancio": 13.3,
+      "perAbitante": 1731,
+      "nota": "Questo è il totale della funzione 'Salute pubblica' secondo la classificazione MCA2. NON include RIPAM (332M), che è classificato nella funzione 'Previdenza sociale'."
     },
-    "contributiOspedalizzazioni": {
-      "titolo": "Contributi per ospedalizzazioni (quota cantonale 55%)",
-      "importo2027": 428.7,
-      "dettaglio": {
-        "inCantone": 393.7,
-        "fuoriCantone": 35.0
-      },
-      "variazione2026_2027": 7.6,
-      "percentualeDelTotale": 68.4,
-      "spiegazione": "Quando una persona è ricoverata in ospedale, la legge federale (LAMal) dice che il Cantone paga il 55% del costo del ricovero e la cassa malati paga il 45%. Questa è la quota che il Canton Ticino paga agli ospedali per tutti i ricoveri dei ticinesi.",
-      "perche": "La legge federale LAMal (articolo 49a) obbliga i Cantoni a finanziare il 55% delle cure ospedaliere 'stazionarie' (con ricovero). Questo per non far gravare tutto il costo sui premi delle casse malati.",
-      "esempio": "Se un'operazione costa 10'000 CHF: il Cantone paga 5'500 CHF (55%), la cassa malati paga 4'500 CHF (45%). Il paziente paga solo la franchigia normale (300-2500 CHF) più l'aliquota del 10%.",
-      "componenti": {
-        "EOC_ospedaliRegionali": {
-          "descrizione": "Contributo agli ospedali pubblici ticinesi (Bellinzona, Lugano, Locarno, Mendrisio)",
-          "stimaImporto": "~340M",
-          "nota": "Quota maggioritaria della spesa ospedaliera"
-        },
-        "clinichePsichiatriche": {
-          "descrizione": "Contributo all'OSC (Organizzazione sociopsichiatrica cantonale) per ricoveri psichiatrici",
-          "stimaImporto": "~40M"
-        },
-        "clinichePrivate": {
-          "descrizione": "Contributo a cliniche private accreditate in Ticino per ricoveri di pazienti ticinesi",
-          "stimaImporto": "~10-15M"
-        },
-        "ospedaliFuoriCantone": {
-          "importo": 35.0,
-          "descrizione": "Contributo per ticinesi ricoverati in ospedali fuori Cantone (Svizzera tedesca/francese, specializzazioni non disponibili in Ticino)"
-        }
-      },
-      "tipoSpesa": "Spesa di trasferimento (il Cantone trasferisce i soldi agli enti ospedalieri)",
-      "fonte": "Messaggio 8731, preventivo funzione Salute pubblica",
-      "baseLegale": "LAMal art. 49a",
-      "nota": "Vale SOLO per ricoveri ospedalieri. Le cure ambulatoriali (visite, esami) sono pagate interamente dalle casse malati senza contributo cantonale."
-    },
-    "prestazioniComplementari": {
-      "titolo": "Prestazioni complementari AVS/AI (quota sanitaria)",
-      "importo2027": 95.0,
-      "variazione2026_2027": 17.5,
-      "percentualeDelTotale": 15.1,
-      "spiegazione": "Le persone anziane o disabili con una pensione troppo bassa per vivere ricevono un aiuto economico dallo Stato (PC = prestazioni complementari). Una parte di questo aiuto copre le spese sanitarie extra non pagate dalla cassa malati: dentista, occhiali, farmaci non rimborsati, cure a domicilio.",
-      "perche": "La cassa malati paga solo le cure 'di base'. Molte spese sanitarie restano a carico del paziente (dentista, molti farmaci, fisioterapia, occhiali, apparecchi acustici). Le persone anziane o disabili con pensione bassa non potrebbero pagarle.",
-      "chiBeneficia": "Beneficiari PC AVS/AI (circa 20'000 persone in Ticino): anziani con AVS insufficiente, persone con invalidità e rendita AI bassa",
-      "esempio": "Un anziano con AVS di 1'400 CHF/mese e affitto di 900 CHF ha bisogno di occhiali (500 CHF) e cure dentistiche (2'000 CHF). La PC paga queste spese sanitarie perché con la pensione non potrebbe permettersele.",
-      "tipoSpesa": "Spesa di trasferimento (contributo alle persone tramite uffici PC)",
-      "fonte": "Messaggio 8731, stima da preventivo PC",
-      "nota": "Valore stimato per la componente sanitaria delle PC, non disponibile breakdown dettagliato nel Messaggio"
-    },
-    "cureADomicilio": {
-      "titolo": "Contributi cure a domicilio e residenze anziani",
-      "importo2027": 55.0,
-      "percentualeDelTotale": 8.8,
-      "spiegazione": "Il Cantone sostiene economicamente i servizi di cura a domicilio (infermieri che vanno a casa degli anziani) e le residenze per anziani (case per anziani, EMS). Paga una parte delle rette per gli anziani che non possono permettersele completamente.",
-      "perche": "Permettere agli anziani di restare a casa propria il più a lungo possibile (cura a domicilio) costa meno delle case per anziani e migliora la qualità della vita. Quando serve la casa per anziani, molti non possono pagare la retta completa (4'000-7'000 CHF/mese).",
-      "componenti": {
-        "curaADomicilio": {
-          "descrizione": "Contributo ai servizi SACD (Servizio di aiuto e cura a domicilio) per infermieri e assistenza domiciliare",
-          "stimaImporto": "~25M"
-        },
-        "EMS_caseAnziani": {
-          "descrizione": "Contributo alle residenze per anziani (EMS - Établissements médico-sociaux) per abbattere le rette",
-          "stimaImporto": "~30M"
-        }
-      },
-      "tipoSpesa": "Spesa di trasferimento (contributi agli enti che erogano i servizi)",
-      "fonte": "Stima da preventivo funzione Salute pubblica",
-      "nota": "Valore stimato, breakdown dettagliato non disponibile nel Messaggio 8731"
-    },
-    "prevenzionePromozione": {
-      "titolo": "Prevenzione e promozione salute pubblica",
-      "importo2027": 12.0,
-      "percentualeDelTotale": 1.9,
-      "spiegazione": "Programmi di prevenzione delle malattie e promozione della salute: vaccinazioni, screening tumori, campagne contro fumo e alcol, educazione alimentare, medicina scolastica, controllo malattie infettive.",
-      "perche": "Prevenire le malattie costa molto meno che curarle. Un programma di vaccinazioni o screening precoce dei tumori salva vite e riduce le spese sanitarie future.",
-      "esempi": [
-        "Campagne vaccinazioni (influenza, HPV, morbillo)",
-        "Screening tumori (mammografia, colon)",
-        "Medico e dentista scolastico",
-        "Programmi contro dipendenze (alcol, droghe, gioco d'azzardo)",
-        "Promozione alimentazione sana e attività fisica"
-      ],
-      "tipoSpesa": "Spesa di funzionamento (servizi diretti del Cantone) e trasferimento (contributi a enti)",
-      "fonte": "Stima da preventivo funzione Salute pubblica",
-      "nota": "Valore stimato, breakdown dettagliato non disponibile nel Messaggio 8731"
-    },
-    "altro": {
-      "titolo": "Altre spese sanitarie",
-      "importo2027": 9.3,
-      "percentualeDelTotale": 1.5,
-      "spiegazione": "Altre spese sanitarie minori: vigilanza su medici e strutture sanitarie, farmacovigilanza, emergenze sanitarie, contributi ad associazioni sanitarie.",
-      "tipoSpesa": "Spesa di funzionamento e trasferimento",
-      "fonte": "Differenza residua preventivo funzione Salute pubblica"
+    "evoluzioneFunzioneSalutePubblica": {
+      "consuntivo2025": 603,
+      "preventivo2026": 616,
+      "preventivo2027": 627,
+      "variazione2026_2027": 11,
+      "fonte": "P2027_spese_02.pdf",
+      "nota": "Dati ufficiali verificati. Crescita +11M CHF (+1.8%) tra P2026 e P2027."
     }
   },
-    "percheCiSonoSpeseSanitarieCantonali": {
-    "domandaFrequente": "Perché il Cantone spende soldi per la sanità se io pago già la cassa malati ogni mese?",
-    "rispostaBreve": "La cassa malati paga solo le cure mediche di base. Il Cantone paga: (1) il 55% dei ricoveri ospedalieri per legge federale, (2) aiuti economici per chi non può permettersi i premi, (3) cure extra non coperte dalla cassa malati (dentista, cure a domicilio anziani, prevenzione).",
-    "spiegazioneDettagliata": [
-      "1. **LAMal copre solo le cure di base**. La tua cassa malati paga visite mediche, esami, farmaci della lista, cure ambulatoriali. Ma NON paga tutto: dentista, molti farmaci, occhiali, cure a domicilio per anziani, case per anziani non sono nella LAMal base.",
-      "2. **Il Cantone paga il 55% degli ospedali per legge federale**. La legge LAMal (art. 49a) obbliga i Cantoni a pagare il 55% dei costi quando qualcuno è ricoverato in ospedale. Questo è per non far gravare tutto sui premi delle casse malati. Il 45% lo paga la tua cassa malati.",
-      "3. **Il Cantone aiuta chi non può permettersi i premi**. I premi in Ticino sono tra i più alti della Svizzera (520 CHF/mese di media). Una famiglia di 4 persone può pagare 2'000 CHF/mese o più. Molte famiglie non possono permetterselo, quindi il Cantone paga parte del premio (RIPAM) per circa 85'000-90'000 persone.",
-      "4. **Il Cantone paga servizi extra per anziani e malati cronici**. Cure a domicilio per anziani, case per anziani, cure dentistiche per chi ha PC, programmi di prevenzione: tutto questo non è coperto dalla cassa malati base e viene pagato dal Cantone.",
-      "5. **Prevenzione e salute pubblica**. Vaccinazioni, screening tumori, controllo malattie infettive, medicina scolastica, lotta alle dipendenze: sono compiti del Cantone per proteggere la salute di tutti."
+  "RIPAM_contributiPremiClassificazionePrevidenzaSociale": {
+    "importo2027": 332.0,
+    "importo2026": 275.0,
+    "variazione": 57.0,
+    "fonte": "NON DISPONIBILE nel Messaggio 8731 consultato (dato aggregato non estratto)",
+    "doveTrovarlo": "Messaggio 8731, sezione dedicata RIPAM o tabella preventivo funzione 'Previdenza sociale' dettagliata",
+    "nota": "Il contributo RIPAM è classificato nella funzione 'Previdenza sociale' (non 'Salute pubblica') perché è un trasferimento diretto alle famiglie tramite riduzione premi. Il dato 332M proviene da premi-e-contributi-sanita.json ma la fonte primaria esatta (Messaggio 8731 pagina X) non è stata identificata."
+  },
+  "dettaglioComponentiNONdisponibileNelMessaggio": {
+    "nota": "Il Messaggio 8731 e i documenti preventivo pubblicati NON contengono un breakdown dettagliato della spesa sanitaria per singola voce (ospedali vs RIPAM vs PC vs cure domicilio). I 627M di 'Salute pubblica' sono un aggregato.",
+    "breakdownDisponibileIn": [
+      "Consuntivo dettagliato (marzo anno successivo) - Conto economico per natura e funzione",
+      "Messaggi tematici specifici (es. Messaggio EOC, Messaggio RIPAM se pubblicati separatamente)",
+      "Rapporti annuali enti (EOC, OSC)"
     ],
-    "totaleSpesaSanitariaLargaSenso": {
-      "funzioneSalutePubblica": 627,
-      "RIPAM_classificatoPrevidenzaSociale": 332,
-      "totale": 959,
-      "note": "La spesa sanitaria 'in senso largo' include sia la funzione Salute pubblica (627M) che i contributi RIPAM (332M, classificati in Previdenza sociale). Totale: 959M CHF, pari al 20.3% del bilancio cantonale."
+    "datiNONverificabiliDaFontiPrimarie": {
+      "contributiOspedalizzazioni": "NON DISPONIBILE breakdown nel preventivo",
+      "contributiOspedalizzazioniInCantoneFuoriCantone": "NON DISPONIBILE nel preventivo",
+      "prestazioniComplementariQuotaSanitaria": "NON DISPONIBILE nel preventivo",
+      "cureADomicilioEResidenze": "NON DISPONIBILE nel preventivo",
+      "prevenzionePromozione": "NON DISPONIBILE nel preventivo"
     }
   },
-  "datiMancanti": [
-    "Breakdown dettagliato per singolo ospedale (EOC Bellinzona vs Lugano vs Locarno vs Mendrisio): non disponibile nel Messaggio 8731",
-    "Numero esatto beneficiari RIPAM ordinaria vs RIPAM PC: dato aggregato non pubblicato",
-    "Costo medio per ricovero ospedaliero: non disponibile pubblicamente",
-    "Breakdown dettagliato cure a domicilio vs case anziani: valore aggregato nel preventivo",
-    "Spese per singolo programma di prevenzione: non disponibile nel Messaggio 8731"
-  ],
-  "confrontoTemporale": {
-    "evoluzione2023_2027": {
-      "totale2023": 603,
-      "totale2027": 627,
-      "variazione": 24,
-      "variazionePercentuale": 4.0,
-      "note": "Crescita contenuta grazie a stabilizzazione contributi ospedalieri. La crescita principale è nei contributi RIPAM (+57M 2026-2027)."
+  "datiVerificatiDaAltreFont": {
+    "premiMedi2027": {
+      "premioMedioMensileTicino": 519.9,
+      "premioMedioMensileSvizzera": 412.0,
+      "differenzaAssoluta": 107.9,
+      "differenzaPercentuale": 26.2,
+      "fonte": "UFSP/BAG - Premi cantonali 2027",
+      "url": "https://www.bag.admin.ch/bag/it/home/versicherungen/krankenversicherung.html",
+      "nota": "Dati ufficiali federali verificati. Il Ticino ha i premi più alti della Svizzera."
     }
+  },
+  "FAQPerNonEsperti": {
+    "domanda": "Perché il Cantone spende soldi per la sanità se io pago già la cassa malati ogni mese?",
+    "rispostaBreve": "La cassa malati copre solo le cure di base. Il Cantone deve pagare (per legge federale) il 55% dei ricoveri ospedalieri, aiutare chi non può permettersi i premi, e pagare servizi extra non coperti da LAMal (cure anziani, prevenzione, ecc.).",
+    "spiegazioneDettagliata": [
+      {
+        "punto": "1. LAMal copre solo cure di base",
+        "spiegazione": "La tua cassa malati paga visite mediche, esami, farmaci della lista federale. NON paga: dentista (salvo incidenti), molti occhiali, apparecchi acustici, cure a domicilio per anziani, rette case anziani, molti farmaci innovativi."
+      },
+      {
+        "punto": "2. Cantone obbligato a pagare 55% ospedali",
+        "spiegazione": "La legge federale LAMal (art. 49a) obbliga i Cantoni a finanziare il 55% dei costi dei ricoveri ospedalieri. Il 45% lo paga la cassa malati. Questo è per non far gravare tutto sui premi.",
+        "baseLegale": "LAMal art. 49a"
+      },
+      {
+        "punto": "3. Premi altissimi in Ticino, molti non possono pagarli",
+        "spiegazione": "I premi in Ticino sono i più alti della Svizzera: 520 CHF/mese di media nel 2027 contro 412 CHF media nazionale (+26%). Una famiglia di 4 persone può pagare oltre 2'000 CHF/mese. Molte famiglie non possono permetterselo senza aiuto pubblico (RIPAM).",
+        "datiVerificati": "520 CHF/mese Ticino vs 412 CHF/mese CH (fonte: BAG 2027)"
+      },
+      {
+        "punto": "4. Servizi extra per anziani e malati cronici",
+        "spiegazione": "Cure a domicilio per anziani, case per anziani, cure dentistiche per chi ha PC: tutto questo NON è coperto dalla cassa malati base. Il Cantone deve intervenire."
+      },
+      {
+        "punto": "5. Prevenzione e salute pubblica",
+        "spiegazione": "Vaccinazioni, screening tumori, controllo malattie infettive, medicina scolastica, lotta alle dipendenze: sono compiti del Cantone per proteggere la salute di tutta la popolazione."
+      }
+    ]
+  },
+  "totaleSpesaSanitariaSemanticaLarga": {
+    "funzioneSalutePubblica": 627,
+    "RIPAM_classificatoPrevidenzaSociale": 332,
+    "totale": 959,
+    "percentualeBilancio": 20.3,
+    "nota": "La spesa 'sanitaria' in senso economico (tutto ciò che riguarda la salute) include sia la funzione Salute pubblica (627M) che RIPAM (332M, classificato in Previdenza sociale). Totale: 959M CHF.",
+    "fonti": "P2027_spese_02.pdf (627M verificato) + premi-e-contributi-sanita.json (332M, fonte primaria da verificare)"
+  },
+  "limitazioniEAvvertenze": {
+    "breakdownDettagliatoNONdisponibile": "Il preventivo pubblicato riporta solo il totale per funzione (627M 'Salute pubblica'). Non è possibile estrarre da documenti pubblici online il dettaglio per singola voce (quanto va a EOC, quanto a RIPAM, quanto a PC sanitaria, ecc.) senza accedere al Consuntivo dettagliato o rapporti specifici.",
+    "datiRIPAM": "I 332M di RIPAM provengono dal file premi-e-contributi-sanita.json ma la fonte primaria esatta (Messaggio 8731 pagina specifica) non è stata identificata nei documenti consultati.",
+    "stimePrecedentiEliminate": "Tutte le stime e cifre non verificabili (breakdown ospedali, PC quota sanitaria, cure domicilio, prevenzione) sono state rimosse. Vengono documentate come NON DISPONIBILI con indicazione dove trovarle."
   }
 }
