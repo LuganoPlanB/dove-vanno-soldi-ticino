@@ -214,6 +214,10 @@ if (window.location.pathname === '/' ||
     window.location.pathname === '/dove-vanno-soldi-ticino/' ||
     window.location.pathname === '/dove-vanno-soldi-ticino/index.html') {
   initializeTheme();
+  // Import translator dynamically
+  import('./translator').then(({ translatePage }) => {
+    translatePage();
+  });
   createLanguageSwitcher();
   renderAllCharts();
   setupResponsiveCharts();

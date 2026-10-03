@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Visualizzazione trasparente delle finanze del Canton Ticino - Dove vanno i soldi del Ticino">
+  <meta name="theme-color" content="#3b82f6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1e40af" media="(prefers-color-scheme: dark)">
+  <title>Dove vanno i soldi del Ticino</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="font-sans antialiased">
+  <nav class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">💰</span>
+          <span class="font-bold text-lg sm:text-xl">Dove vanno i soldi del Ticino</span>
+        </div>
+        <div class="flex items-center gap-2 sm:gap-4">
+          <a href="./metodologia.html" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            Metodologia
+          </a>
+          <button id="theme-toggle" class="btn btn-secondary h-9 w-9 p-0" aria-label="Toggle theme">
+            <svg id="sun-icon" class="h-4 w-4 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+            <svg id="moon-icon" class="h-4 w-4 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-primary/10 via-background to-background py-20 sm:py-32">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl text-center space-y-8">
+          <div class="inline-flex items-center rounded-full border px-3 py-1 text-sm">
+            <span class="mr-2">📊</span>
+            <span>Dati ufficiali aggiornati al 3 ottobre 2026</span>
+          </div>
+          
+          <h1 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-balance">
+            Dove vanno i soldi del <span class="text-primary">Ticino</span>?
+          </h1>
+          
+          <p class="mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground text-balance">
+            Trasparenza totale sulle finanze cantonali. Ogni dato verificato, ogni fonte citata, ogni numero tracciabile.
+          </p>
+
+          <!-- Key Metrics Grid -->
+          <div class="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-3 pt-8">
+            <div class="metric-card group">
+              <div class="flex items-center justify-between">
+                <div class="text-sm font-medium text-muted-foreground">Disavanzo 2027</div>
+                <svg class="h-4 w-4 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path>
+                </svg>
+              </div>
+              <div class="text-3xl sm:text-4xl font-bold text-destructive">-98.5M</div>
+              <div class="text-xs text-muted-foreground">CHF -272 per abitante</div>
+            </div>
+
+            <div class="metric-card group">
+              <div class="flex items-center justify-between">
+                <div class="text-sm font-medium text-muted-foreground">Debito pubblico</div>
+                <svg class="h-4 w-4 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+              </div>
+              <div class="text-3xl sm:text-4xl font-bold text-destructive">>3.0 Mia</div>
+              <div class="text-xs text-muted-foreground">+20% dal 2023</div>
+            </div>
+
+            <div class="metric-card group">
+              <div class="flex items-center justify-between">
+                <div class="text-sm font-medium text-muted-foreground">Premi più alti CH</div>
+                <svg class="h-4 w-4 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                </svg>
+              </div>
+              <div class="text-3xl sm:text-4xl font-bold text-destructive">520 CHF</div>
+              <div class="text-xs text-muted-foreground">+26% vs media svizzera</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Context Section -->
+    <section class="py-16 sm:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl space-y-8">
+          <div class="space-y-4">
+            <h2 class="text-3xl font-bold tracking-tight">La situazione finanziaria</h2>
+            <p class="text-lg text-muted-foreground leading-relaxed">
+              Il Canton Ticino affronta sfide finanziarie significative: un deficit in crescita, 
+              un debito pubblico che supererà i 3 miliardi di franchi e premi di cassa malattia 
+              tra i più alti della Svizzera. Questo sito rende accessibili e comprensibili i dati 
+              finanziari ufficiali del Cantone.
+            </p>
+          </div>
+
+          <div class="card p-6 bg-muted/50">
+            <div class="flex gap-3">
+              <svg class="h-6 w-6 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <div class="space-y-1">
+                <div class="font-medium">Dati verificati e tracciabili</div>
+                <div class="text-sm text-muted-foreground">
+                  Ogni numero proviene da fonti ufficiali del Canton Ticino e della Confederazione Svizzera. 
+                  Tutte le cifre sono state verificate matematicamente con test automatici.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="py-16 sm:py-24 bg-muted/30">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div class="text-center space-y-4">
+          <h2 class="text-3xl font-bold tracking-tight">Dove vanno i soldi?</h2>
+          <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Breakdown completo delle spese cantonali per funzione
+          </p>
+        </div>
+
+        <div id="spending-function-treemap" class="chart-container"></div>
+
+        <div class="grid gap-6 lg:grid-cols-2">
+          <div id="debt-history-chart" class="chart-container"></div>
+          <div id="deficit-history-chart" class="chart-container"></div>
+        </div>
+
+        <div id="health-premiums-chart" class="chart-container"></div>
+
+        <div class="grid gap-6 lg:grid-cols-2">
+          <div id="budget-overview-chart" class="chart-container"></div>
+          <div id="health-spending-chart" class="chart-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data Status -->
+    <section class="py-16 sm:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl space-y-8">
+          <div class="space-y-4">
+            <h2 class="text-3xl font-bold tracking-tight">Stato dei dati</h2>
+            <p class="text-lg text-muted-foreground">
+              Panoramica completa dei dati disponibili e delle limitazioni
+            </p>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="card p-6 space-y-2">
+              <div class="flex items-center gap-2">
+                <svg class="h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <div class="font-semibold">Disponibili</div>
+              </div>
+              <ul class="space-y-1 text-sm text-muted-foreground">
+                <li>✓ Spese per funzione 2027</li>
+                <li>✓ Confronto 2025-2027</li>
+                <li>✓ Serie storiche debito/deficit</li>
+                <li>✓ Dati popolazione</li>
+                <li>✓ Premi e contributi sanità</li>
+              </ul>
+            </div>
+
+            <div class="card p-6 space-y-2">
+              <div class="flex items-center gap-2">
+                <svg class="h-5 w-5 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                </svg>
+                <div class="font-semibold">Mancanti</div>
+              </div>
+              <ul class="space-y-1 text-sm text-muted-foreground">
+                <li>⏳ Consuntivi 2024, 2026</li>
+                <li>⏳ Spese per dipartimento</li>
+                <li>⏳ Serie storiche pre-2023</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="./metodologia.html" class="btn btn-primary h-11 px-8">
+              <span>Metodologia completa</span>
+              <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+            <a href="https://github.com/tiero/dove-vanno-soldi-ticino" target="_blank" rel="noopener" class="btn btn-secondary h-11 px-8">
+              <svg class="mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Codice sorgente</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t py-12 sm:py-16">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl space-y-6 text-center">
+        <div class="space-y-2">
+          <div class="text-lg font-semibold">Dove vanno i soldi del Ticino</div>
+          <p class="text-sm text-muted-foreground">
+            Un progetto di trasparenza finanziaria. Tutti i dati provengono da fonti ufficiali del Canton Ticino e della Confederazione Svizzera.
+          </p>
+        </div>
+        <div class="text-xs text-muted-foreground">
+          Questo sito è indipendente e non è affiliato al governo cantonale.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

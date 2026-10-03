@@ -1,4 +1,8 @@
 export default {
+  meta: {
+    title: 'Dove vanno i soldi del Ticino',
+    description: 'Visualizzazione trasparente delle finanze del Canton Ticino - Dove vanno i soldi del Ticino'
+  },
   nav: {
     title: 'Dove vanno i soldi del Ticino',
     home: 'Dashboard',

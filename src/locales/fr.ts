@@ -1,4 +1,8 @@
 export default {
+  meta: {
+    title: 'Où va l\'argent du Tessin',
+    description: 'Visualisation transparente des finances du Canton du Tessin - Où va l\'argent du Tessin'
+  },
   nav: {
     title: 'Où va l\'argent du Tessin',
     home: 'Tableau de bord',

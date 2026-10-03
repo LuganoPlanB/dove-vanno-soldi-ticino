@@ -1,4 +1,8 @@
 export default {
+  meta: {
+    title: 'Where does Ticino money go',
+    description: 'Transparent visualization of Canton Ticino finances - Where does Ticino money go'
+  },
   nav: {
     title: 'Where does Ticino money go',
     home: 'Dashboard',

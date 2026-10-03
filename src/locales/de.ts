@@ -1,4 +1,8 @@
 export default {
+  meta: {
+    title: 'Wohin geht das Tessiner Geld',
+    description: 'Transparente Visualisierung der Tessiner Kantonsfinanzen - Wohin geht das Tessiner Geld'
+  },
   nav: {
     title: 'Wohin geht das Tessiner Geld',
     home: 'Dashboard',
