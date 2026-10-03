@@ -127,7 +127,7 @@ async function renderPage() {
   const earliest = data.serieDebito.anni[years[0]];
   const latest = data.serieDebito.anni[years[years.length - 1]];
   
-  if (!earliest || !latest || earliest.debito == null || latest.debito == null) {
+  if (!earliest || !latest || earliest.debito == null || latest.debito == null || latest.proCapite == null) {
     console.error('Invalid debt data structure');
     return;
   }
@@ -171,13 +171,14 @@ async function renderPage() {
           <tbody>
             ${years.map(y => {
               const d = data.serieDebito.anni[y];
+              if (!d || d.debito == null) return '';
               return `
                 <tr class="border-b hover:bg-muted/50">
                   <td class="p-2 font-semibold">${y}</td>
                   <td class="p-2 text-right font-mono">${d.debito.toFixed(1)}</td>
-                  <td class="p-2 text-right font-mono ${d.delta > 0 ? 'text-destructive' : 'text-green-600'}">${d.delta > 0 ? '+' : ''}${d.delta.toFixed(1)}</td>
-                  <td class="p-2 text-right font-mono">${d.proCapite.toLocaleString()}</td>
-                  <td class="p-2 text-xs text-muted-foreground">${d.fonte}${d.pagine ? ', ' + d.pagine : ''}</td>
+                  <td class="p-2 text-right font-mono ${d.delta > 0 ? 'text-destructive' : 'text-green-600'}">${d.delta != null ? (d.delta > 0 ? '+' : '') + d.delta.toFixed(1) : '—'}</td>
+                  <td class="p-2 text-right font-mono">${d.proCapite != null ? d.proCapite.toLocaleString() : '—'}</td>
+                  <td class="p-2 text-xs text-muted-foreground">${d.fonte || 'N/A'}${d.pagine ? ', ' + d.pagine : ''}</td>
                 </tr>
               `;
             }).join('')}

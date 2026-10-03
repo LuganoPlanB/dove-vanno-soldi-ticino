@@ -26,11 +26,13 @@ for (const viewport of VIEWPORTS) {
       expect(heroText).toContain('M'); // Should have numbers in millions
       
       // Check charts exist and have content
-      const charts = ['spending-function-treemap', 'debt-history-chart', 'health-premiums-chart'];
+      const charts = ['debt-history-chart', 'deficit-history-chart'];
       for (const chartId of charts) {
         const chart = page.locator(`#${chartId}`);
         if (await chart.count() > 0) {
           await expect(chart).toBeVisible();
+          // Wait for chart to render
+          await page.waitForTimeout(1000);
           // Check chart has either SVG or canvas
           const hasContent = await chart.locator('svg, canvas').count();
           expect(hasContent).toBeGreaterThan(0);

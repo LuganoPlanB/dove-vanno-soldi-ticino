@@ -262,12 +262,14 @@ async function renderSpeseNatura() {
     
     // Render detailed breakdown cards
     if (detailsContainer && data.consuntivo2025?.spese) {
-      detailsContainer.innerHTML = data.consuntivo2025.spese.map((spesa) => `
+      detailsContainer.innerHTML = data.consuntivo2025.spese
+        .filter(spesa => spesa && spesa.categoria && spesa.importoMilioni != null)
+        .map((spesa) => `
         <div class="bg-card border rounded-lg p-4 sm:p-6">
           <div class="flex items-start justify-between mb-3">
             <div>
               <h3 class="text-xl font-bold">${spesa.categoria}</h3>
-              <p class="text-sm text-muted-foreground mt-1">${spesa.descrizione}</p>
+              <p class="text-sm text-muted-foreground mt-1">${spesa.descrizione || ''}</p>
             </div>
             <div>${renderAvailabilityBadge('VERIFICATO')}</div>
           </div>
@@ -279,16 +281,16 @@ async function renderSpeseNatura() {
             </div>
             <div>
               <div class="text-sm text-muted-foreground">% bilancio</div>
-              <div class="text-2xl font-bold">${spesa.percentualeTotale.toFixed(1)}%</div>
+              <div class="text-2xl font-bold">${(spesa.percentualeTotale || 0).toFixed(1)}%</div>
             </div>
             <div>
               <div class="text-sm text-muted-foreground">Per abitante</div>
-              <div class="text-xl font-bold">${formatCurrency(spesa.importoProCapite)}</div>
+              <div class="text-xl font-bold">${spesa.importoProCapite != null ? formatCurrency(spesa.importoProCapite) : '—'}</div>
             </div>
           </div>
           
           <div class="text-xs text-muted-foreground border-t pt-2 mt-2">
-            <strong>Fonte:</strong> ${spesa.fonte}
+            <strong>Fonte:</strong> ${spesa.fonte || 'N/A'}
           </div>
           ${spesa.note ? `<div class="text-xs text-muted-foreground mt-1"><strong>Note:</strong> ${spesa.note}</div>` : ''}
         </div>
