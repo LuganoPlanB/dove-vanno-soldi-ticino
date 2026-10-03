@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "title": "Serie storica - Debito pubblico Canton Ticino",
+    "description": "Evoluzione del debito pubblico cantonale",
+    "sources": [
+      {
+        "name": "Consiglio di Stato - Comunicato 30.09.2026",
+        "url": "https://m4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=261157"
+      }
+    ],
+    "notes": "Dati 2027 sono stime dal preventivo. Serie storica completa da verificare con archivio preventivi/consuntivi Divisione delle risorse."
+  },
+  "debitoSerie": [
+    {
+      "anno": 2027,
+      "debito": 3000,
+      "tipo": "preventivo",
+      "note": "Stima: superiore a 3 miliardi"
+    }
+  ],
+  "noteSerieMancanti": "I dati storici del debito pubblico (2020-2026) devono essere estratti dai consuntivi ufficiali disponibili presso la Divisione delle risorse del Canton Ticino (www.ti.ch/finanze). I preventivi e consuntivi sono pubblicati in formato PDF."
+}

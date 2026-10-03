@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Metodologia e fonti dei dati - Dove vanno i soldi del Ticino">
+  <title>Metodologia e Fonti - Dove vanno i soldi del Ticino</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>💰 Dove vanno i soldi del Ticino</h1>
+      <p class="subtitle">Metodologia e Fonti</p>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/metodologia.html">Metodologia e Fonti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="content-page">
+      <h2>Come sono stati estratti i dati</h2>
+      
+      <h3>Fonti primarie</h3>
+      <p>
+        Tutti i dati visualizzati su questo sito provengono da <strong>fonti ufficiali pubbliche</strong>. 
+        Non vengono fatte stime o proiezioni: ogni numero è tracciabile a un documento ufficiale.
+      </p>
+
+      <div class="source-list">
+        <div class="source-item">
+          <h4>📄 Preventivo 2027 del Canton Ticino</h4>
+          <p><strong>Ente</strong>: Consiglio di Stato del Canton Ticino</p>
+          <p><strong>Data pubblicazione</strong>: 30 settembre 2026</p>
+          <p><strong>Documento</strong>: Comunicato stampa e Messaggio n. 8731</p>
+          <p>
+            <strong>Link</strong>: 
+            <a href="https://m4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=261157" target="_blank">
+              Comunicato stampa
+            </a>
+          </p>
+          <p><strong>Dati estratti</strong>:</p>
+          <ul>
+            <li>Disavanzo preventivato 2027: -98.5 milioni CHF</li>
+            <li>Spese correnti 2027: 4'318.2 milioni CHF</li>
+            <li>Debito pubblico stimato fine 2027: &gt;3 miliardi CHF</li>
+            <li>Variazioni di spesa 2026-2027 per categoria</li>
+            <li>Dettaglio spese sanitarie e contributi</li>
+          </ul>
+        </div>
+
+        <div class="source-item">
+          <h4>💼 Divisione delle risorse - Canton Ticino</h4>
+          <p><strong>Ente</strong>: Dipartimento delle finanze e dell'economia (DFE)</p>
+          <p>
+            <strong>Link</strong>: 
+            <a href="https://www4.ti.ch/dfe/dr/cosa-facciamo/ufficio-della-gestione-finanziaria/" target="_blank">
+              Ufficio della gestione finanziaria
+            </a>
+          </p>
+          <p><strong>Disponibile</strong>: Archivio completo di preventivi e consuntivi (formato PDF)</p>
+          <p><strong>Uso</strong>: Fonte per serie storiche (non ancora estratte)</p>
+        </div>
+      </div>
+
+      <h3>Metodo di estrazione</h3>
+      <p>
+        I dati del Preventivo 2027 sono stati estratti <strong>manualmente</strong> dal comunicato stampa del Consiglio di Stato. 
+        Il processo è documentato nel file <code>data/ESTRAZIONE.md</code> nel repository del progetto.
+      </p>
+      <p>
+        Dove necessario, sono stati effettuati calcoli semplici e trasparenti. Ad esempio:
+      </p>
+      <ul>
+        <li>Ricavi correnti 2027 = Spese correnti - Disavanzo = 4'318.2M - 98.5M = 4'219.7M CHF</li>
+      </ul>
+
+      <h3>Dati mancanti</h3>
+      <p>
+        Al momento della pubblicazione del sito (3 ottobre 2026), <strong>non sono ancora disponibili</strong> i seguenti dati:
+      </p>
+      <ul>
+        <li><strong>Serie storiche</strong>: debito pubblico e disavanzi 2020-2026</li>
+        <li><strong>Dettaglio per dipartimento</strong>: suddivisione delle spese per i 7 dipartimenti cantonali</li>
+        <li><strong>Dettaglio per funzione</strong>: classificazione delle spese per settore (educazione, sanità, giustizia, ecc.)</li>
+        <li><strong>Dati comunali aggregati</strong>: finanze dei comuni ticinesi</li>
+      </ul>
+      <p>
+        Questi dati sono <strong>disponibili nei documenti ufficiali</strong> (preventivi e consuntivi in formato PDF), 
+        ma richiedono un'estrazione manuale che non è ancora stata completata.
+      </p>
+      <p>
+        Se il Canton Ticino pubblicasse questi dati in formato aperto e strutturato 
+        (es. CSV o JSON su <a href="https://dati.ti.ch/" target="_blank">dati.ti.ch</a>), 
+        sarebbe possibile integrare automaticamente le serie storiche complete.
+      </p>
+
+      <h3>Come verificare i dati</h3>
+      <p>
+        Ogni cittadino può verificare l'accuratezza dei dati visualizzati:
+      </p>
+      <ol>
+        <li>Consultare il <a href="https://m4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=261157" target="_blank">comunicato ufficiale</a></li>
+        <li>Confrontare i numeri con quelli visualizzati sul sito</li>
+        <li>Consultare i file JSON nella cartella <code>data/</code> del <a href="https://github.com/tiero/dove-vanno-soldi-ticino" target="_blank">repository GitHub</a></li>
+        <li>Leggere il documento <code>data/ESTRAZIONE.md</code> che descrive passo per passo l'estrazione</li>
+      </ol>
+
+      <h3>Come contribuire</h3>
+      <p>
+        Questo è un progetto aperto. Puoi contribuire in diversi modi:
+      </p>
+      <ul>
+        <li><strong>Estrarre dati storici</strong>: aiutarci a completare le serie storiche dai consuntivi PDF</li>
+        <li><strong>Verificare i dati</strong>: segnalare eventuali errori o imprecisioni</li>
+        <li><strong>Migliorare le visualizzazioni</strong>: proporre nuovi grafici o miglioramenti</li>
+        <li><strong>Tradurre</strong>: aggiungere traduzioni in tedesco, francese o romancio</li>
+      </ul>
+      <p>
+        Il codice sorgente è disponibile su <a href="https://github.com/tiero/dove-vanno-soldi-ticino" target="_blank">GitHub</a> 
+        sotto licenza aperta. Leggi il README per le istruzioni su come contribuire.
+      </p>
+
+      <h3>Limitazioni e note</h3>
+      <ul>
+        <li>I dati del preventivo 2027 sono <strong>stime</strong> e potrebbero differire dal consuntivo finale</li>
+        <li>Il debito pubblico di fine 2027 è indicato come "superiore a 3 miliardi": utilizziamo 3'000M come valore di riferimento</li>
+        <li>Le percentuali sono arrotondate a una cifra decimale</li>
+        <li>Non vengono fatte proiezioni o stime: solo dati ufficiali pubblicati</li>
+        <li>Il sito è <strong>indipendente</strong> e non è affiliato al governo cantonale</li>
+      </ul>
+
+      <h3>Aggiornamenti</h3>
+      <p>
+        Il sito verrà aggiornato quando saranno pubblicati nuovi dati ufficiali:
+      </p>
+      <ul>
+        <li>Consuntivo 2026 (previsto: primavera 2027)</li>
+        <li>Consuntivo 2027 (previsto: primavera 2028)</li>
+        <li>Preventivo 2028 (previsto: autunno 2027)</li>
+      </ul>
+      <p>
+        Per essere informato degli aggiornamenti, segui il repository su 
+        <a href="https://github.com/tiero/dove-vanno-soldi-ticino" target="_blank">GitHub</a>.
+      </p>
+
+      <h3>Contatti</h3>
+      <p>
+        Per domande, suggerimenti o segnalazioni, apri una issue sul 
+        <a href="https://github.com/tiero/dove-vanno-soldi-ticino/issues" target="_blank">repository GitHub</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        <strong>Dove vanno i soldi del Ticino</strong> - Un progetto di trasparenza finanziaria
+      </p>
+      <p>
+        Tutti i dati provengono da fonti ufficiali del Canton Ticino e della Confederazione Svizzera. 
+        Questo sito è indipendente e non è affiliato al governo cantonale.
+      </p>
+      <p>
+        Codice sorgente disponibile su <a href="https://github.com/tiero/dove-vanno-soldi-ticino" target="_blank">GitHub</a> 
+        con licenza libera.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Visualizzazione trasparente delle finanze del Canton Ticino - Dove vanno i soldi del Ticino">
+  <title>Dove vanno i soldi del Ticino</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>💰 Dove vanno i soldi del Ticino</h1>
+      <p class="subtitle">Trasparenza sulle finanze del Canton Ticino</p>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/metodologia.html">Metodologia e Fonti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h2>Perché questo sito?</h2>
+      <p>
+        Il Canton Ticino si trova in una situazione finanziaria difficile: <strong>deficit crescente</strong>, 
+        <strong>debito pubblico superiore ai 3 miliardi di franchi</strong>, e <strong>premi di cassa malattia in continuo aumento</strong>.
+      </p>
+      <p>
+        Questo sito rende accessibili e comprensibili i dati finanziari ufficiali del Cantone, 
+        per permettere a ogni cittadino di capire dove vengono spesi i nostri soldi.
+      </p>
+      <p class="source-note">
+        📊 Dati ufficiali dal <a href="https://m4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=261157" target="_blank">Preventivo 2027</a> 
+        pubblicato dal Consiglio di Stato (30 settembre 2026)
+      </p>
+    </section>
+
+    <section class="highlights">
+      <h2>I numeri chiave del 2027</h2>
+      <div class="cards">
+        <div class="card negative">
+          <div class="card-value">-98.5M</div>
+          <div class="card-label">Disavanzo preventivato</div>
+          <div class="card-note">milioni CHF</div>
+        </div>
+        <div class="card negative">
+          <div class="card-value">&gt;3 miliardi</div>
+          <div class="card-label">Debito pubblico atteso</div>
+          <div class="card-note">fine 2027</div>
+        </div>
+        <div class="card negative">
+          <div class="card-value">-336.8M</div>
+          <div class="card-label">Capitale proprio</div>
+          <div class="card-note">patrimonio negativo</div>
+        </div>
+        <div class="card">
+          <div class="card-value">4'318M</div>
+          <div class="card-label">Spese correnti</div>
+          <div class="card-note">+2.4% vs 2026</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chart-section">
+      <h2>Entrate e uscite 2027</h2>
+      <p class="chart-intro">
+        Il preventivo 2027 prevede spese correnti per 4'318 milioni di franchi, 
+        a fronte di ricavi correnti di circa 4'220 milioni, generando un disavanzo di 98.5 milioni.
+      </p>
+      <div id="budget-overview-chart" class="chart"></div>
+      <p class="chart-note">
+        Fonte: Preventivo 2027, Consiglio di Stato CT. Le spese non includono gli investimenti netti (290.5M CHF).
+      </p>
+    </section>
+
+    <section class="chart-section">
+      <h2>Dove aumentano le spese?</h2>
+      <p class="chart-intro">
+        Tra il 2026 e il 2027, le spese correnti aumentano di 101 milioni di franchi (+2.4%). 
+        L'aumento maggiore riguarda le <strong>spese sanitarie</strong>.
+      </p>
+      <div id="spending-growth-chart" class="chart"></div>
+      <p class="chart-note">
+        Fonte: Preventivo 2027, Consiglio di Stato CT. Variazioni rispetto al preventivo 2026.
+      </p>
+    </section>
+
+    <section class="chart-section">
+      <h2>Il peso della sanità</h2>
+      <p class="chart-intro">
+        Le spese sanitarie rappresentano una parte crescente del bilancio cantonale. 
+        Il preventivo 2027 prevede un aumento di <strong>94.6 milioni di franchi</strong> nelle principali voci sanitarie.
+      </p>
+      <div id="health-spending-chart" class="chart"></div>
+      <p class="chart-note">
+        Fonte: Preventivo 2027, Consiglio di Stato CT. Include: contributi premi assicurazione (+69.5M), 
+        prestazioni complementari AVS/AI (+17.5M), contributi ospedalizzazioni (+7.6M).
+      </p>
+    </section>
+
+    <section class="data-gap">
+      <h3>⚠️ Dati non ancora disponibili</h3>
+      <p>
+        Per una visualizzazione completa dell'evoluzione delle finanze cantonali mancano ancora alcuni dati storici:
+      </p>
+      <ul>
+        <li>Serie storica del debito pubblico (2020-2026)</li>
+        <li>Serie storica dei disavanzi/avanzi (2020-2026)</li>
+        <li>Dettaglio delle spese per dipartimento</li>
+        <li>Dettaglio delle spese per funzione (educazione, sanità, giustizia, ecc.)</li>
+      </ul>
+      <p>
+        Questi dati sono disponibili nei <strong>consuntivi ufficiali</strong> pubblicati dalla 
+        <a href="https://www4.ti.ch/dfe/dr/cosa-facciamo/ufficio-della-gestione-finanziaria/" target="_blank">Divisione delle risorse</a> 
+        del Canton Ticino, ma richiedono un'estrazione manuale dai documenti PDF.
+      </p>
+      <p>
+        <strong>Aiutaci!</strong> Se vuoi contribuire ad aggiungere questi dati, consulta la 
+        <a href="/metodologia.html">pagina metodologia</a> per le istruzioni.
+      </p>
+    </section>
+
+    <section class="actions">
+      <h2>Approfondisci</h2>
+      <div class="action-cards">
+        <a href="https://m4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=261157" target="_blank" class="action-card">
+          <h3>📄 Preventivo 2027</h3>
+          <p>Comunicato ufficiale del Consiglio di Stato (30.09.2026)</p>
+        </a>
+        <a href="https://www4.ti.ch/dfe/dr/cosa-facciamo/ufficio-della-gestione-finanziaria/" target="_blank" class="action-card">
+          <h3>💼 Divisione delle risorse</h3>
+          <p>Archivio completo di preventivi e consuntivi</p>
+        </a>
+        <a href="/metodologia.html" class="action-card">
+          <h3>🔍 Metodologia</h3>
+          <p>Come sono stati estratti e verificati i dati</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        <strong>Dove vanno i soldi del Ticino</strong> - Un progetto di trasparenza finanziaria
+      </p>
+      <p>
+        Tutti i dati provengono da fonti ufficiali del Canton Ticino e della Confederazione Svizzera. 
+        Questo sito è indipendente e non è affiliato al governo cantonale.
+      </p>
+      <p>
+        Codice sorgente disponibile su <a href="https://github.com/tiero/dove-vanno-soldi-ticino" target="_blank">GitHub</a> 
+        con licenza libera.
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

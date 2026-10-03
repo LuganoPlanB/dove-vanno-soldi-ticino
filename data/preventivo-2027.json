@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "title": "Preventivo 2027 - Canton Ticino",
+    "description": "Dati finanziari del Canton Ticino - Preventivo 2027",
+    "source": "Consiglio di Stato del Canton Ticino",
+    "sourceUrl": "https://m4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=261157",
+    "datePublished": "2026-09-30",
+    "dataExtractedDate": "2026-10-03",
+    "notes": "Dati estratti dal comunicato stampa del Consiglio di Stato del 30 settembre 2026"
+  },
+  "preventivo2027": {
+    "disavanzo": {
+      "value": -98.5,
+      "unit": "millionsCHF",
+      "label": "Disavanzo d'esercizio 2027"
+    },
+    "autofinanziamento": {
+      "value": 129.1,
+      "unit": "millionsCHF",
+      "label": "Autofinanziamento"
+    },
+    "gradoAutofinanziamento": {
+      "value": 44.4,
+      "unit": "percent",
+      "label": "Grado di autofinanziamento"
+    },
+    "investimentiNetti": {
+      "value": 290.5,
+      "unit": "millionsCHF",
+      "label": "Investimenti netti"
+    },
+    "debitoPubblicoFine2027": {
+      "value": 3000,
+      "unit": "millionsCHF",
+      "label": "Debito pubblico previsto a fine 2027",
+      "note": "Superiore a 3 miliardi"
+    },
+    "capitaleProprio": {
+      "value": -336.8,
+      "unit": "millionsCHF",
+      "label": "Capitale proprio negativo stimato"
+    },
+    "speseCorrente": {
+      "value": 4318.2,
+      "unit": "millionsCHF",
+      "label": "Spese correnti 2027"
+    },
+    "ricaviCorrenti": {
+      "value": 4219.7,
+      "unit": "millionsCHF",
+      "label": "Ricavi correnti 2027",
+      "note": "Calcolato: spese correnti - disavanzo"
+    }
+  },
+  "variazioni2026_2027": {
+    "speseCorrente": {
+      "value": 101.0,
+      "unit": "millionsCHF",
+      "percent": 2.4,
+      "label": "Aumento spese correnti rispetto al 2026"
+    },
+    "speseTrasferimento": {
+      "value": 85.1,
+      "unit": "millionsCHF",
+      "percent": 3.5,
+      "label": "Aumento spese di trasferimento"
+    },
+    "spesePersonale": {
+      "value": 9.3,
+      "unit": "millionsCHF",
+      "percent": 0.8,
+      "label": "Aumento spese per il personale"
+    },
+    "ricaviCorrenti": {
+      "value": 106.9,
+      "unit": "millionsCHF",
+      "percent": 2.6,
+      "label": "Aumento ricavi correnti"
+    }
+  },
+  "speseSanitarie": {
+    "contributiPremiAssicurazione": {
+      "value": 69.5,
+      "unit": "millionsCHF",
+      "label": "Aumento contributi premi assicurazione malattia",
+      "note": "Variazione 2026-2027"
+    },
+    "prestazioniComplementariAVS_AI": {
+      "value": 17.5,
+      "unit": "millionsCHF",
+      "label": "Aumento prestazioni complementari AVS/AI",
+      "note": "Variazione 2026-2027"
+    },
+    "contributiOspedalizzazioni": {
+      "total": 7.6,
+      "inCantone": 393.7,
+      "fuoriCantone": 35.0,
+      "unit": "millionsCHF",
+      "label": "Contributi per ospedalizzazioni",
+      "note": "Aumento totale: 7.6M (in Cantone +3M, fuori Cantone +4.6M)"
+    }
+  },
+  "entrate": {
+    "regalieConcessioni": {
+      "value": 181.9,
+      "variazione": 54.0,
+      "unit": "millionsCHF",
+      "label": "Regalie e concessioni",
+      "note": "Include due quote utili BNS"
+    },
+    "ricaviTrasferimento": {
+      "variazione": 32.9,
+      "percent": 2.6,
+      "unit": "millionsCHF",
+      "label": "Aumento ricavi da trasferimento",
+      "dettaglio": {
+        "quoteRicavo": 27.7,
+        "quotaIFD": 16.0,
+        "quoteRecupero": 10.0
+      }
+    }
+  },
+  "misureRiequilibrio": {
+    "nuoveMisure2027": {
+      "value": 47.0,
+      "unit": "millionsCHF",
+      "label": "Nuove misure di contenimento 2027"
+    },
+    "impattoTotale2027": {
+      "value": 237.0,
+      "unit": "millionsCHF",
+      "label": "Impatto totale misure su preventivo 2027",
+      "note": "Include misure legislatura corrente e attuazione iniziative cassa malattia"
+    }
+  },
+  "pianoFinanziario2028_2030": {
+    "disavanziStimatiPre": {
+      "value": 700.0,
+      "unit": "millionsCHF",
+      "label": "Disavanzi stimati prima degli interventi (circa)"
+    },
+    "disavanziStimatiPost": {
+      "value": 500.0,
+      "unit": "millionsCHF",
+      "label": "Disavanzi stimati dopo interventi (sotto i)",
+      "note": "Ancora molto preoccupante"
+    }
+  }
+}

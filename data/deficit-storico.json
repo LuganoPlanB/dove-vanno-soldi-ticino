@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "title": "Serie storica - Deficit Canton Ticino",
+    "description": "Evoluzione del disavanzo d'esercizio cantonale",
+    "sources": [
+      {
+        "name": "Consiglio di Stato - Comunicato 30.09.2026",
+        "url": "https://m4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=261157"
+      }
+    ],
+    "notes": "Dati 2027 sono preventivo. Piano finanziario 2028-2030 mostra disavanzi stimati sotto i 500M CHF. Serie storica completa da verificare con archivio consuntivi."
+  },
+  "deficitSerie": [
+    {
+      "anno": 2027,
+      "disavanzo": -98.5,
+      "tipo": "preventivo"
+    }
+  ],
+  "pianoFinanziario": [
+    {
+      "periodo": "2028-2030",
+      "disavanzoMedio": -500,
+      "tipo": "stima",
+      "note": "Disavanzi stimati sotto i 500M CHF/anno dopo interventi di riequilibrio"
+    }
+  ],
+  "noteSerieMancanti": "I dati storici dei disavanzi d'esercizio (2020-2026) devono essere estratti dai consuntivi ufficiali disponibili presso la Divisione delle risorse del Canton Ticino."
+}
