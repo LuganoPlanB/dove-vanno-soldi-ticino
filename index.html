@@ -1,214 +1,229 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Visualizzazione trasparente delle finanze del Canton Ticino - Dove vanno i soldi del Ticino">
+  <meta name="theme-color" content="#3b82f6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1e40af" media="(prefers-color-scheme: dark)">
   <title>Dove vanno i soldi del Ticino</title>
   <link rel="stylesheet" href="/src/style.css">
 </head>
-<body>
-  <header>
-    <div class="container">
-      <h1>💰 Dove vanno i soldi del Ticino</h1>
-      <p class="subtitle">Trasparenza sulle finanze del Canton Ticino</p>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/metodologia.html">Metodologia e Fonti</a>
-      </nav>
+<body class="font-sans antialiased">
+  <nav class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">💰</span>
+          <span class="font-bold text-lg sm:text-xl">Dove vanno i soldi del Ticino</span>
+        </div>
+        <div class="flex items-center gap-2 sm:gap-4">
+          <a href="/metodologia.html" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            Metodologia
+          </a>
+          <button id="theme-toggle" class="btn btn-secondary h-9 w-9 p-0" aria-label="Toggle theme">
+            <svg id="sun-icon" class="h-4 w-4 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+            <svg id="moon-icon" class="h-4 w-4 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <main class="container">
-    <section class="intro">
-      <h2>Perché questo sito?</h2>
-      <p>
-        Il Canton Ticino si trova in una situazione finanziaria difficile: <strong>deficit crescente</strong>, 
-        <strong>debito pubblico superiore ai 3 miliardi di franchi</strong>, e <strong>premi di cassa malattia in continuo aumento</strong>.
-      </p>
-      <p>
-        Questo sito rende accessibili e comprensibili i dati finanziari ufficiali del Cantone, 
-        per permettere a ogni cittadino di capire dove vengono spesi i nostri soldi.
-      </p>
-      <p class="source-note">
-        📊 Dati ufficiali dal <a href="https://m4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=261157" target="_blank">Preventivo 2027</a> 
-        pubblicato dal Consiglio di Stato (30 settembre 2026)
-      </p>
-    </section>
+  <main class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-primary/10 via-background to-background py-20 sm:py-32">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl text-center space-y-8">
+          <div class="inline-flex items-center rounded-full border px-3 py-1 text-sm">
+            <span class="mr-2">📊</span>
+            <span>Dati ufficiali aggiornati al 3 ottobre 2026</span>
+          </div>
+          
+          <h1 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-balance">
+            Dove vanno i soldi del <span class="text-primary">Ticino</span>?
+          </h1>
+          
+          <p class="mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground text-balance">
+            Trasparenza totale sulle finanze cantonali. Ogni dato verificato, ogni fonte citata, ogni numero tracciabile.
+          </p>
 
-    <section class="highlights">
-      <h2>I numeri chiave del 2027</h2>
-      <div class="cards">
-        <div class="card negative">
-          <div class="card-value">-98.5M</div>
-          <div class="card-label">Disavanzo preventivato</div>
-          <div class="card-note">milioni CHF</div>
-        </div>
-        <div class="card negative">
-          <div class="card-value">&gt;3 miliardi</div>
-          <div class="card-label">Debito pubblico atteso</div>
-          <div class="card-note">fine 2027</div>
-        </div>
-        <div class="card negative">
-          <div class="card-value">-336.8M</div>
-          <div class="card-label">Capitale proprio</div>
-          <div class="card-note">patrimonio negativo</div>
-        </div>
-        <div class="card">
-          <div class="card-value">4'318M</div>
-          <div class="card-label">Spese correnti</div>
-          <div class="card-note">+2.4% vs 2026</div>
+          <!-- Key Metrics Grid -->
+          <div class="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-3 pt-8">
+            <div class="metric-card group">
+              <div class="flex items-center justify-between">
+                <div class="text-sm font-medium text-muted-foreground">Disavanzo 2027</div>
+                <svg class="h-4 w-4 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path>
+                </svg>
+              </div>
+              <div class="text-3xl sm:text-4xl font-bold text-destructive">-98.5M</div>
+              <div class="text-xs text-muted-foreground">CHF -272 per abitante</div>
+            </div>
+
+            <div class="metric-card group">
+              <div class="flex items-center justify-between">
+                <div class="text-sm font-medium text-muted-foreground">Debito pubblico</div>
+                <svg class="h-4 w-4 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+              </div>
+              <div class="text-3xl sm:text-4xl font-bold text-destructive">>3.0 Mia</div>
+              <div class="text-xs text-muted-foreground">+20% dal 2023</div>
+            </div>
+
+            <div class="metric-card group">
+              <div class="flex items-center justify-between">
+                <div class="text-sm font-medium text-muted-foreground">Premi più alti CH</div>
+                <svg class="h-4 w-4 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                </svg>
+              </div>
+              <div class="text-3xl sm:text-4xl font-bold text-destructive">520 CHF</div>
+              <div class="text-xs text-muted-foreground">+26% vs media svizzera</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="chart-section">
-      <h2>Dove vanno i soldi? Spese per funzione 2027</h2>
-      <p class="chart-intro">
-        La maggior parte del bilancio cantonale (30%) va alla <strong>previdenza sociale</strong> (sostegno sociale, handicappati, anziani). 
-        Seguono <strong>formazione</strong> (22%) e <strong>salute pubblica</strong> (13%).
-      </p>
-      <div id="spending-function-treemap" class="chart"></div>
-      <p class="chart-note">
-        Fonte: Preventivo 2027, ripartizione funzionale federale. Ogni riquadro rappresenta una funzione, 
-        dimensionato proporzionalmente alla spesa. Pro-capite calcolato su 362'200 abitanti stimati (2027).
-      </p>
+    <!-- Context Section -->
+    <section class="py-16 sm:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl space-y-8">
+          <div class="space-y-4">
+            <h2 class="text-3xl font-bold tracking-tight">La situazione finanziaria</h2>
+            <p class="text-lg text-muted-foreground leading-relaxed">
+              Il Canton Ticino affronta sfide finanziarie significative: un deficit in crescita, 
+              un debito pubblico che supererà i 3 miliardi di franchi e premi di cassa malattia 
+              tra i più alti della Svizzera. Questo sito rende accessibili e comprensibili i dati 
+              finanziari ufficiali del Cantone.
+            </p>
+          </div>
+
+          <div class="card p-6 bg-muted/50">
+            <div class="flex gap-3">
+              <svg class="h-6 w-6 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <div class="space-y-1">
+                <div class="font-medium">Dati verificati e tracciabili</div>
+                <div class="text-sm text-muted-foreground">
+                  Ogni numero proviene da fonti ufficiali del Canton Ticino e della Confederazione Svizzera. 
+                  Tutte le cifre sono state verificate matematicamente con test automatici.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="chart-section">
-      <h2>Evoluzione del debito pubblico</h2>
-      <p class="chart-intro">
-        Il debito pubblico del Canton Ticino è cresciuto costantemente negli ultimi anni, 
-        passando da circa 2.5 miliardi nel 2023 a oltre 3 miliardi previsti per fine 2027.
-      </p>
-      <div id="debt-history-chart" class="chart"></div>
-      <p class="chart-note">
-        Fonte: Consuntivi 2023-2025 e Preventivo 2027, Consiglio di Stato CT. 
-        Valori 2024 e 2026 stimati (consuntivi non ancora pubblicati).
-      </p>
+    <!-- Charts Section -->
+    <section class="py-16 sm:py-24 bg-muted/30">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div class="text-center space-y-4">
+          <h2 class="text-3xl font-bold tracking-tight">Dove vanno i soldi?</h2>
+          <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Breakdown completo delle spese cantonali per funzione
+          </p>
+        </div>
+
+        <div id="spending-function-treemap" class="chart-container"></div>
+
+        <div class="grid gap-6 lg:grid-cols-2">
+          <div id="debt-history-chart" class="chart-container"></div>
+          <div id="deficit-history-chart" class="chart-container"></div>
+        </div>
+
+        <div id="health-premiums-chart" class="chart-container"></div>
+
+        <div class="grid gap-6 lg:grid-cols-2">
+          <div id="budget-overview-chart" class="chart-container"></div>
+          <div id="health-spending-chart" class="chart-container"></div>
+        </div>
+      </div>
     </section>
 
-    <section class="chart-section">
-      <h2>Evoluzione del disavanzo</h2>
-      <p class="chart-intro">
-        Dopo un miglioramento significativo tra il 2023 e il 2025, il disavanzo torna a crescere. 
-        Il piano finanziario 2028-2030 mostra un peggioramento drammatico con deficit superiori ai 400 milioni all'anno.
-      </p>
-      <div id="deficit-history-chart" class="chart"></div>
-      <p class="chart-note">
-        Fonte: Consuntivi 2023-2025 e Preventivo 2027, Divisione delle risorse CT. 
-        Valori negativi indicano disavanzo (deficit).
-      </p>
-    </section>
+    <!-- Data Status -->
+    <section class="py-16 sm:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl space-y-8">
+          <div class="space-y-4">
+            <h2 class="text-3xl font-bold tracking-tight">Stato dei dati</h2>
+            <p class="text-lg text-muted-foreground">
+              Panoramica completa dei dati disponibili e delle limitazioni
+            </p>
+          </div>
 
-    <section class="chart-section">
-      <h2>Premi cassa malati Ticino</h2>
-      <p class="chart-intro">
-        Il Ticino ha i <strong>premi di cassa malati più alti della Svizzera</strong>: 520 CHF/mese nel 2027, 
-        il 26% sopra la media nazionale. I contributi cantonali per ridurre i premi pesano sempre di più sul bilancio.
-      </p>
-      <div id="health-premiums-chart" class="chart"></div>
-      <p class="chart-note">
-        Fonte: UFSP/BAG (premi medi mensili su tutte le classi d'età) e Preventivo 2027 CT (contributi cantonali).
-      </p>
-    </section>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="card p-6 space-y-2">
+              <div class="flex items-center gap-2">
+                <svg class="h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <div class="font-semibold">Disponibili</div>
+              </div>
+              <ul class="space-y-1 text-sm text-muted-foreground">
+                <li>✓ Spese per funzione 2027</li>
+                <li>✓ Confronto 2025-2027</li>
+                <li>✓ Serie storiche debito/deficit</li>
+                <li>✓ Dati popolazione</li>
+                <li>✓ Premi e contributi sanità</li>
+              </ul>
+            </div>
 
-    <section class="chart-section">
-      <h2>Dove aumentano le spese?</h2>
-      <p class="chart-intro">
-        Tra il 2026 e il 2027, le spese correnti aumentano di 101 milioni di franchi (+2.4%). 
-        L'aumento maggiore riguarda le <strong>spese sanitarie</strong>.
-      </p>
-      <div id="spending-growth-chart" class="chart"></div>
-      <p class="chart-note">
-        Fonte: Preventivo 2027, Consiglio di Stato CT. Variazioni rispetto al preventivo 2026.
-      </p>
-    </section>
+            <div class="card p-6 space-y-2">
+              <div class="flex items-center gap-2">
+                <svg class="h-5 w-5 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                </svg>
+                <div class="font-semibold">Mancanti</div>
+              </div>
+              <ul class="space-y-1 text-sm text-muted-foreground">
+                <li>⏳ Consuntivi 2024, 2026</li>
+                <li>⏳ Spese per dipartimento</li>
+                <li>⏳ Serie storiche pre-2023</li>
+              </ul>
+            </div>
+          </div>
 
-    <section class="chart-section">
-      <h2>Il peso della sanità</h2>
-      <p class="chart-intro">
-        Le spese sanitarie rappresentano una parte crescente del bilancio cantonale. 
-        Il preventivo 2027 prevede un aumento di <strong>94.6 milioni di franchi</strong> nelle principali voci sanitarie.
-      </p>
-      <div id="health-spending-chart" class="chart"></div>
-      <p class="chart-note">
-        Fonte: Preventivo 2027, Consiglio di Stato CT. Include: contributi premi assicurazione (+69.5M), 
-        prestazioni complementari AVS/AI (+17.5M), contributi ospedalizzazioni (+7.6M).
-      </p>
-    </section>
-
-    <section class="data-gap">
-      <h3>📊 Dati ora disponibili (aggiornamento 03.10.2026)</h3>
-      <p>
-        Questo sito ora include:
-      </p>
-      <ul>
-        <li>✅ <strong>Spese per funzione</strong>: breakdown completo delle 4.7 miliardi di spese per settore (previdenza, formazione, sanità, ecc.)</li>
-        <li>✅ <strong>Serie storiche</strong>: debito pubblico e disavanzi 2023-2027 con proiezioni piano finanziario</li>
-        <li>✅ <strong>Dati popolazione</strong>: calcoli pro-capite per tutte le cifre principali</li>
-        <li>✅ <strong>Premi e contributi sanitari</strong>: evoluzione premi cassa malati Ticino e contributi cantonali</li>
-      </ul>
-      <h3>⚠️ Dati ancora mancanti</h3>
-      <p>
-        Per una visualizzazione ancora più completa mancherebbero:
-      </p>
-      <ul>
-        <li>Consuntivi 2024 e 2026 (non ancora pubblicati al 03.10.2026)</li>
-        <li>Dettaglio spese per dipartimento (disponibile nel Messaggio completo al Gran Consiglio)</li>
-        <li>Serie storiche complete pre-2023 (richiedono estrazione da consuntivi PDF anni precedenti)</li>
-      </ul>
-      <p>
-        Tutti i dati visualizzati provengono da <strong>fonti ufficiali verificate</strong>. 
-        Consulta la <a href="/metodologia.html">pagina metodologia</a> per i dettagli delle fonti e il processo di estrazione.
-      </p>
-    </section>
-
-    <section class="chart-section">
-      <h2>Entrate e uscite 2027</h2>
-      <p class="chart-intro">
-        Il preventivo 2027 prevede spese correnti per 4'318 milioni di franchi, 
-        a fronte di ricavi correnti di circa 4'220 milioni, generando un disavanzo di 98.5 milioni.
-      </p>
-      <div id="budget-overview-chart" class="chart"></div>
-      <p class="chart-note">
-        Fonte: Preventivo 2027, Consiglio di Stato CT. Le spese non includono gli investimenti netti (290.5M CHF).
-        Pro-capite calcolato su 362'200 abitanti stimati (2027).
-      </p>
-    </section>
-
-    <section class="actions">
-      <h2>Approfondisci</h2>
-      <div class="action-cards">
-        <a href="https://m4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=261157" target="_blank" class="action-card">
-          <h3>📄 Preventivo 2027</h3>
-          <p>Comunicato ufficiale del Consiglio di Stato (30.09.2026)</p>
-        </a>
-        <a href="https://www4.ti.ch/dfe/dr/cosa-facciamo/ufficio-della-gestione-finanziaria/" target="_blank" class="action-card">
-          <h3>💼 Divisione delle risorse</h3>
-          <p>Archivio completo di preventivi e consuntivi</p>
-        </a>
-        <a href="/metodologia.html" class="action-card">
-          <h3>🔍 Metodologia</h3>
-          <p>Come sono stati estratti e verificati i dati</p>
-        </a>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/metodologia.html" class="btn btn-primary h-11 px-8">
+              <span>Metodologia completa</span>
+              <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+            <a href="https://github.com/tiero/dove-vanno-soldi-ticino" target="_blank" rel="noopener" class="btn btn-secondary h-11 px-8">
+              <svg class="mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Codice sorgente</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>
-        <strong>Dove vanno i soldi del Ticino</strong> - Un progetto di trasparenza finanziaria
-      </p>
-      <p>
-        Tutti i dati provengono da fonti ufficiali del Canton Ticino e della Confederazione Svizzera. 
-        Questo sito è indipendente e non è affiliato al governo cantonale.
-      </p>
-      <p>
-        Codice sorgente disponibile su <a href="https://github.com/tiero/dove-vanno-soldi-ticino" target="_blank">GitHub</a> 
-        con licenza libera.
-      </p>
+  <footer class="border-t py-12 sm:py-16">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl space-y-6 text-center">
+        <div class="space-y-2">
+          <div class="text-lg font-semibold">Dove vanno i soldi del Ticino</div>
+          <p class="text-sm text-muted-foreground">
+            Un progetto di trasparenza finanziaria. Tutti i dati provengono da fonti ufficiali del Canton Ticino e della Confederazione Svizzera.
+          </p>
+        </div>
+        <div class="text-xs text-muted-foreground">
+          Questo sito è indipendente e non è affiliato al governo cantonale.
+        </div>
+      </div>
     </div>
   </footer>
 

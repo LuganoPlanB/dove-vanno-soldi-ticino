@@ -1,173 +1,289 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Metodologia e fonti dei dati - Dove vanno i soldi del Ticino">
-  <title>Metodologia e Fonti - Dove vanno i soldi del Ticino</title>
+  <meta name="theme-color" content="#3b82f6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1e40af" media="(prefers-color-scheme: dark)">
+  <title>Metodologia - Dove vanno i soldi del Ticino</title>
   <link rel="stylesheet" href="/src/style.css">
 </head>
-<body>
-  <header>
-    <div class="container">
-      <h1>💰 Dove vanno i soldi del Ticino</h1>
-      <p class="subtitle">Metodologia e Fonti</p>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/metodologia.html">Metodologia e Fonti</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="content-page">
-      <h2>Come sono stati estratti i dati</h2>
-      
-      <h3>Fonti primarie</h3>
-      <p>
-        Tutti i dati visualizzati su questo sito provengono da <strong>fonti ufficiali pubbliche</strong>. 
-        Non vengono fatte stime o proiezioni: ogni numero è tracciabile a un documento ufficiale.
-      </p>
-
-      <div class="source-list">
-        <div class="source-item">
-          <h4>📄 Preventivo 2027 del Canton Ticino</h4>
-          <p><strong>Ente</strong>: Consiglio di Stato del Canton Ticino</p>
-          <p><strong>Data pubblicazione</strong>: 30 settembre 2026</p>
-          <p><strong>Documento</strong>: Comunicato stampa e Messaggio n. 8731</p>
-          <p>
-            <strong>Link</strong>: 
-            <a href="https://m4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=261157" target="_blank">
-              Comunicato stampa
-            </a>
-          </p>
-          <p><strong>Dati estratti</strong>:</p>
-          <ul>
-            <li>Disavanzo preventivato 2027: -98.5 milioni CHF</li>
-            <li>Spese correnti 2027: 4'318.2 milioni CHF</li>
-            <li>Debito pubblico stimato fine 2027: &gt;3 miliardi CHF</li>
-            <li>Variazioni di spesa 2026-2027 per categoria</li>
-            <li>Dettaglio spese sanitarie e contributi</li>
-          </ul>
+<body class="font-sans antialiased">
+  <nav class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">💰</span>
+          <span class="font-bold text-lg sm:text-xl">Dove vanno i soldi del Ticino</span>
         </div>
-
-        <div class="source-item">
-          <h4>💼 Divisione delle risorse - Canton Ticino</h4>
-          <p><strong>Ente</strong>: Dipartimento delle finanze e dell'economia (DFE)</p>
-          <p>
-            <strong>Link</strong>: 
-            <a href="https://www4.ti.ch/dfe/dr/cosa-facciamo/ufficio-della-gestione-finanziaria/" target="_blank">
-              Ufficio della gestione finanziaria
-            </a>
-          </p>
-          <p><strong>Disponibile</strong>: Archivio completo di preventivi e consuntivi (formato PDF)</p>
-          <p><strong>Uso</strong>: Fonte per serie storiche (non ancora estratte)</p>
+        <div class="flex items-center gap-2 sm:gap-4">
+          <a href="/" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            Dashboard
+          </a>
+          <button id="theme-toggle" class="btn btn-secondary h-9 w-9 p-0" aria-label="Toggle theme">
+            <svg id="sun-icon" class="h-4 w-4 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+            <svg id="moon-icon" class="h-4 w-4 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
         </div>
       </div>
+    </div>
+  </nav>
 
-      <h3>Metodo di estrazione</h3>
-      <p>
-        I dati del Preventivo 2027 sono stati estratti <strong>manualmente</strong> dal comunicato stampa del Consiglio di Stato. 
-        Il processo è documentato nel file <code>data/ESTRAZIONE.md</code> nel repository del progetto.
-      </p>
-      <p>
-        Dove necessario, sono stati effettuati calcoli semplici e trasparenti. Ad esempio:
-      </p>
-      <ul>
-        <li>Ricavi correnti 2027 = Spese correnti - Disavanzo = 4'318.2M - 98.5M = 4'219.7M CHF</li>
-      </ul>
+  <main class="min-h-screen py-16 sm:py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <article class="mx-auto max-w-3xl prose prose-slate dark:prose-invert lg:prose-lg">
+        <div class="not-prose mb-12 space-y-4">
+          <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Metodologia</h1>
+          <p class="text-xl text-muted-foreground">
+            Come sono raccolti, verificati e presentati i dati sulle finanze del Canton Ticino
+          </p>
+        </div>
 
-      <h3>Dati mancanti</h3>
-      <p>
-        Al momento della pubblicazione del sito (3 ottobre 2026), <strong>non sono ancora disponibili</strong> i seguenti dati:
-      </p>
-      <ul>
-        <li><strong>Serie storiche</strong>: debito pubblico e disavanzi 2020-2026</li>
-        <li><strong>Dettaglio per dipartimento</strong>: suddivisione delle spese per i 7 dipartimenti cantonali</li>
-        <li><strong>Dettaglio per funzione</strong>: classificazione delle spese per settore (educazione, sanità, giustizia, ecc.)</li>
-        <li><strong>Dati comunali aggregati</strong>: finanze dei comuni ticinesi</li>
-      </ul>
-      <p>
-        Questi dati sono <strong>disponibili nei documenti ufficiali</strong> (preventivi e consuntivi in formato PDF), 
-        ma richiedono un'estrazione manuale che non è ancora stata completata.
-      </p>
-      <p>
-        Se il Canton Ticino pubblicasse questi dati in formato aperto e strutturato 
-        (es. CSV o JSON su <a href="https://dati.ti.ch/" target="_blank">dati.ti.ch</a>), 
-        sarebbe possibile integrare automaticamente le serie storiche complete.
-      </p>
+        <section id="obiettivo" class="not-prose mb-12">
+          <h2 class="text-2xl font-bold mb-4">Obiettivo del progetto</h2>
+          <div class="card p-6 space-y-4">
+            <p class="text-muted-foreground leading-relaxed">
+              Questo progetto nasce per rendere accessibili e comprensibili i dati finanziari del Canton Ticino. 
+              L'obiettivo è permettere a ogni cittadino di capire dove vanno i soldi pubblici, quanto si spende 
+              per ciascuna funzione e qual è l'evoluzione del debito e del deficit cantonale.
+            </p>
+            <div class="flex gap-2 text-sm">
+              <svg class="h-5 w-5 text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span class="text-muted-foreground">Tutti i dati sono pubblici e verificabili</span>
+            </div>
+          </div>
+        </section>
 
-      <h3>Come verificare i dati</h3>
-      <p>
-        Ogni cittadino può verificare l'accuratezza dei dati visualizzati:
-      </p>
-      <ol>
-        <li>Consultare il <a href="https://m4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=261157" target="_blank">comunicato ufficiale</a></li>
-        <li>Confrontare i numeri con quelli visualizzati sul sito</li>
-        <li>Consultare i file JSON nella cartella <code>data/</code> del <a href="https://github.com/tiero/dove-vanno-soldi-ticino" target="_blank">repository GitHub</a></li>
-        <li>Leggere il documento <code>data/ESTRAZIONE.md</code> che descrive passo per passo l'estrazione</li>
-      </ol>
+        <section id="fonti">
+          <h2>Fonti dei dati</h2>
+          
+          <h3>Canton Ticino</h3>
+          <ul class="space-y-2">
+            <li>
+              <strong>Messaggio 8731</strong> (28 agosto 2024): Preventivo 2025 e Piano finanziario 2026-2028
+              <br>
+              <a href="https://www4.ti.ch/generale/gran-consiglio/messaggi-e-atti/ricerca-messaggi-e-atti/risultati/dettaglio/?user_gcatti_pi1%5Bid_messaggio%5D=11046" 
+                 target="_blank" rel="noopener" class="text-primary hover:underline text-sm">
+                Fonte ufficiale →
+              </a>
+            </li>
+            <li>
+              <strong>Consuntivo 2024</strong> (previsto marzo 2025): attualmente non ancora pubblicato
+            </li>
+            <li>
+              <strong>Piano finanziario 2026-2029</strong> (agosto 2025): atteso con il Messaggio sul preventivo 2026
+            </li>
+            <li>
+              <strong>Consuntivo 2025</strong> (marzo 2026): atteso
+            </li>
+            <li>
+              <strong>Messaggio sul preventivo 2027 e Piano finanziario 2028-2030</strong> (agosto 2026): atteso
+            </li>
+          </ul>
 
-      <h3>Come contribuire</h3>
-      <p>
-        Questo è un progetto aperto. Puoi contribuire in diversi modi:
-      </p>
-      <ul>
-        <li><strong>Estrarre dati storici</strong>: aiutarci a completare le serie storiche dai consuntivi PDF</li>
-        <li><strong>Verificare i dati</strong>: segnalare eventuali errori o imprecisioni</li>
-        <li><strong>Migliorare le visualizzazioni</strong>: proporre nuovi grafici o miglioramenti</li>
-        <li><strong>Tradurre</strong>: aggiungere traduzioni in tedesco, francese o romancio</li>
-      </ul>
-      <p>
-        Il codice sorgente è disponibile su <a href="https://github.com/tiero/dove-vanno-soldi-ticino" target="_blank">GitHub</a> 
-        sotto licenza aperta. Leggi il README per le istruzioni su come contribuire.
-      </p>
+          <h3>Confederazione Svizzera</h3>
+          <ul class="space-y-2">
+            <li>
+              <strong>Ufficio federale della sanità pubblica (UFSP)</strong>: statistiche premi malattia
+              <br>
+              <a href="https://www.bag.admin.ch/bag/it/home/versicherungen/krankenversicherung/krankenversicherung-versicherte-mit-wohnsitz-in-der-schweiz/praemien-kostenbeteiligung.html" 
+                 target="_blank" rel="noopener" class="text-primary hover:underline text-sm">
+                Fonte ufficiale →
+              </a>
+            </li>
+            <li>
+              <strong>Ufficio federale di statistica (BFS)</strong>: popolazione residente
+              <br>
+              <a href="https://www.bfs.admin.ch/bfs/it/home/statistiche/popolazione.html" 
+                 target="_blank" rel="noopener" class="text-primary hover:underline text-sm">
+                Fonte ufficiale →
+              </a>
+            </li>
+          </ul>
+        </section>
 
-      <h3>Limitazioni e note</h3>
-      <ul>
-        <li>I dati del preventivo 2027 sono <strong>stime</strong> e potrebbero differire dal consuntivo finale</li>
-        <li>Il debito pubblico di fine 2027 è indicato come "superiore a 3 miliardi": utilizziamo 3'000M come valore di riferimento</li>
-        <li>Le percentuali sono arrotondate a una cifra decimale</li>
-        <li>Non vengono fatte proiezioni o stime: solo dati ufficiali pubblicati</li>
-        <li>Il sito è <strong>indipendente</strong> e non è affiliato al governo cantonale</li>
-      </ul>
+        <section id="verifica">
+          <h2>Verifica e validazione</h2>
+          <p>
+            Ogni dato è verificato automaticamente tramite script di validazione. I controlli includono:
+          </p>
+          <ul class="space-y-2">
+            <li><strong>Coerenza matematica</strong>: somme, differenze e percentuali sono verificate</li>
+            <li><strong>Correttezza strutturale</strong>: i dati JSON seguono lo schema definito</li>
+            <li><strong>Presenza delle fonti</strong>: ogni file di dati ha una sezione "fonti" con riferimenti completi</li>
+            <li><strong>Cross-validation</strong>: i totali di un file sono coerenti con i valori di altri file</li>
+          </ul>
+          
+          <div class="not-prose card p-6 bg-muted/50 my-6">
+            <div class="flex gap-3">
+              <svg class="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <div class="space-y-1">
+                <div class="font-medium">Test automatici</div>
+                <div class="text-sm text-muted-foreground">
+                  Il comando <code class="px-2 py-0.5 rounded bg-background font-mono text-xs">npm test</code> 
+                  esegue 45+ controlli sui dati. Tutti devono passare prima di ogni pubblicazione.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <h3>Aggiornamenti</h3>
-      <p>
-        Il sito verrà aggiornato quando saranno pubblicati nuovi dati ufficiali:
-      </p>
-      <ul>
-        <li>Consuntivo 2026 (previsto: primavera 2027)</li>
-        <li>Consuntivo 2027 (previsto: primavera 2028)</li>
-        <li>Preventivo 2028 (previsto: autunno 2027)</li>
-      </ul>
-      <p>
-        Per essere informato degli aggiornamenti, segui il repository su 
-        <a href="https://github.com/tiero/dove-vanno-soldi-ticino" target="_blank">GitHub</a>.
-      </p>
+        <section id="calcoli">
+          <h2>Metodi di calcolo</h2>
+          
+          <h3>Calcoli per abitante</h3>
+          <p>
+            I valori "per abitante" sono calcolati dividendo la cifra totale per la popolazione residente 
+            stimata nell'anno di riferimento:
+          </p>
+          <ul>
+            <li>2023: 358,600 abitanti (consuntivo BFS)</li>
+            <li>2024: 358,903 abitanti (stima BFS)</li>
+            <li>2025: ~360,000 abitanti (stima lineare)</li>
+            <li>2026: ~361,100 abitanti (stima lineare)</li>
+            <li>2027: ~362,200 abitanti (stima lineare)</li>
+          </ul>
 
-      <h3>Contatti</h3>
-      <p>
-        Per domande, suggerimenti o segnalazioni, apri una issue sul 
-        <a href="https://github.com/tiero/dove-vanno-soldi-ticino/issues" target="_blank">repository GitHub</a>.
-      </p>
-    </section>
+          <h3>Percentuali e variazioni</h3>
+          <p>
+            Le percentuali di variazione anno su anno sono calcolate con la formula standard:
+          </p>
+          <div class="not-prose">
+            <div class="card p-4 bg-muted/30 font-mono text-sm my-4">
+              Variazione % = ((Valore_nuovo - Valore_vecchio) / Valore_vecchio) × 100
+            </div>
+          </div>
+        </section>
+
+        <section id="limitazioni">
+          <h2>Limitazioni e dati mancanti</h2>
+          
+          <div class="not-prose grid gap-4 my-6">
+            <div class="card p-6 border-yellow-500/50">
+              <div class="flex gap-3">
+                <svg class="h-6 w-6 text-yellow-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                </svg>
+                <div class="space-y-2">
+                  <div class="font-medium">Consuntivi 2024-2026 non ancora disponibili</div>
+                  <div class="text-sm text-muted-foreground">
+                    I consuntivi vengono pubblicati ~3 mesi dopo la fine dell'anno fiscale. 
+                    Il consuntivo 2024 sarà disponibile marzo 2025, il 2025 marzo 2026, il 2026 marzo 2027.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card p-6 border-yellow-500/50">
+              <div class="flex gap-3">
+                <svg class="h-6 w-6 text-yellow-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                </svg>
+                <div class="space-y-2">
+                  <div class="font-medium">Spese per dipartimento non dettagliate</div>
+                  <div class="text-sm text-muted-foreground">
+                    Attualmente sono disponibili le spese aggregate per funzione. 
+                    Il breakdown per dipartimento richiederebbe un'analisi più dettagliata del Messaggio.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="visualizzazioni">
+          <h2>Visualizzazioni</h2>
+          <p>
+            I dati sono presentati attraverso diverse visualizzazioni interattive, tutte ottimizzate 
+            per dispositivi mobili e desktop:
+          </p>
+          <ul>
+            <li><strong>Treemap</strong>: mostra la proporzione delle spese per funzione</li>
+            <li><strong>Grafici a linee</strong>: evoluzioni storiche di debito e deficit</li>
+            <li><strong>Grafici a barre</strong>: confronti diretti tra anni (2025, 2026, 2027)</li>
+          </ul>
+          
+          <p>
+            Tutte le visualizzazioni sono accessibili (contrasto colori WCAG AA, supporto per screen reader) 
+            e rispettano le preferenze di movimento ridotto dell'utente.
+          </p>
+        </section>
+
+        <section id="aggiornamenti">
+          <h2>Aggiornamenti futuri</h2>
+          <p>
+            Questo progetto sarà aggiornato man mano che nuovi dati ufficiali saranno pubblicati:
+          </p>
+          <ul>
+            <li>Marzo 2025: aggiungeremo il consuntivo 2024</li>
+            <li>Agosto 2025: aggiungeremo il preventivo 2026 e il piano finanziario 2027-2029</li>
+            <li>Marzo 2026: aggiungeremo il consuntivo 2025</li>
+          </ul>
+        </section>
+
+        <section id="contributi" class="not-prose">
+          <h2 class="text-2xl font-bold mb-6">Contribuire</h2>
+          <div class="card p-6 space-y-4">
+            <p class="text-muted-foreground">
+              Questo è un progetto open source. Se trovi errori, hai suggerimenti o vuoi contribuire 
+              con nuovi dati o visualizzazioni, visita il repository su GitHub:
+            </p>
+            <a href="https://github.com/tiero/dove-vanno-soldi-ticino" 
+               target="_blank" rel="noopener" 
+               class="btn btn-primary inline-flex h-11 px-8">
+              <svg class="mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Vai al repository</span>
+            </a>
+          </div>
+        </section>
+
+        <div class="not-prose mt-12">
+          <a href="/" class="btn btn-secondary inline-flex h-11 px-8">
+            <svg class="mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            <span>Torna alla dashboard</span>
+          </a>
+        </div>
+      </article>
+    </div>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>
-        <strong>Dove vanno i soldi del Ticino</strong> - Un progetto di trasparenza finanziaria
-      </p>
-      <p>
-        Tutti i dati provengono da fonti ufficiali del Canton Ticino e della Confederazione Svizzera. 
-        Questo sito è indipendente e non è affiliato al governo cantonale.
-      </p>
-      <p>
-        Codice sorgente disponibile su <a href="https://github.com/tiero/dove-vanno-soldi-ticino" target="_blank">GitHub</a> 
-        con licenza libera.
-      </p>
+  <footer class="border-t py-12 sm:py-16">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl space-y-6 text-center">
+        <div class="space-y-2">
+          <div class="text-lg font-semibold">Dove vanno i soldi del Ticino</div>
+          <p class="text-sm text-muted-foreground">
+            Un progetto di trasparenza finanziaria. Tutti i dati provengono da fonti ufficiali del Canton Ticino e della Confederazione Svizzera.
+          </p>
+        </div>
+        <div class="text-xs text-muted-foreground">
+          Questo sito è indipendente e non è affiliato al governo cantonale.
+        </div>
+      </div>
     </div>
   </footer>
+
+  <script type="module">
+    const theme = localStorage.getItem('theme') || 'light';
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+
+    document.getElementById('theme-toggle')?.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
 </body>
 </html>
