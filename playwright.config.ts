@@ -8,7 +8,7 @@ export default defineConfig({
   workers: process.env.CI ? 2 : undefined,
   reporter: 'html',
   use: {
-    baseURL: 'http://localhost:4173/dove-vanno-soldi-ticino',
+    baseURL: 'http://localhost:4173/dove-vanno-soldi-ticino/',
     trace: 'on-first-retry',
   },
   webServer: {

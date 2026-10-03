@@ -150,8 +150,8 @@ export function renderTreemap(containerId: string, data: TreemapData[], title?: 
       const coords = getEventCoords(event);
       showTooltip(tooltip, `
         <div class="font-semibold mb-1">${d.data.categoria}</div>
-        <div class="text-xs text-muted-foreground">${d.data.importo.toLocaleString('it-CH')} M CHF</div>
-        <div class="text-xs font-medium">${d.data.percentuale.toFixed(1)}% del totale</div>
+        <div class="text-xs text-muted-foreground">${d.data.importo != null ? d.data.importo.toLocaleString('it-CH') : '—'} M CHF</div>
+        <div class="text-xs font-medium">${d.data.percentuale != null ? d.data.percentuale.toFixed(1) : '—'}% del totale</div>
       `, coords.x, coords.y);
     })
     .on('mousemove', (event) => {
@@ -526,7 +526,7 @@ export function renderComparisonChart(containerId: string, data: ComparisonData[
         showTooltip(tooltip, `
           <div class="font-semibold mb-1">${bar.categoria}</div>
           <div class="text-xs text-muted-foreground mb-1">${label}</div>
-          <div class="text-sm font-medium">${bar.value.toLocaleString('it-CH')} M CHF</div>
+          <div class="text-sm font-medium">${bar.value != null ? bar.value.toLocaleString('it-CH') : '—'} M CHF</div>
         `, coords.x, coords.y);
       })
       .on('touchend mouseleave', function() {
@@ -650,7 +650,7 @@ export function renderSimpleBarChart(containerId: string, data: SimpleBarData[],
         const coords = getEventCoords(event);
         showTooltip(tooltip, `
           <div class="font-semibold mb-1">${bar.label}</div>
-          <div class="text-sm">${bar.value.toLocaleString('it-CH')} M CHF</div>
+          <div class="text-sm">${bar.value != null ? bar.value.toLocaleString('it-CH') : '—'} M CHF</div>
         `, coords.x, coords.y);
       })
       .on('touchend mouseleave', function() {
@@ -728,7 +728,7 @@ export function renderSimpleBarChart(containerId: string, data: SimpleBarData[],
         const coords = getEventCoords(event);
         showTooltip(tooltip, `
           <div class="font-semibold mb-1">${bar.label}</div>
-          <div class="text-sm">${bar.value.toLocaleString('it-CH')} CHF</div>
+          <div class="text-sm">${bar.value != null ? bar.value.toLocaleString('it-CH') : '—'} CHF</div>
         `, coords.x, coords.y);
       })
       .on('touchend mouseleave', function() {
@@ -808,7 +808,7 @@ export function renderSpeseNaturaTreemap(containerId: string, data: any) {
         <div style="max-width: 300px;">
           <strong style="font-size: 14px;">${d.data.name}</strong><br/>
           <span style="font-size: 18px; font-weight: bold; color: ${statusColor};">${d.data.value} M CHF</span><br/>
-          ${d.data.perAbitante ? `<span style="opacity: 0.8;">${Math.round(d.data.perAbitante).toLocaleString()} CHF per abitante</span><br/>` : ''}
+          ${(d.data.perAbitante != null) ? `<span style="opacity: 0.8;">${Math.round(d.data.perAbitante).toLocaleString()} CHF per abitante</span><br/>` : ''}
           ${d.data.descrizione ? `<span style="opacity: 0.7; font-size: 12px;">${d.data.descrizione}</span><br/>` : ''}
           <span style="margin-top: 4px; display: inline-block; padding: 2px 6px; background: ${statusColor}; color: white; border-radius: 3px; font-size: 10px;">
             ${status}

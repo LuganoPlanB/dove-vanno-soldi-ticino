@@ -26,10 +26,12 @@ function calculateStats(): void {
   
   if (totalEl) totalEl.textContent = allComuni.length.toString();
   
-  const avgMp = allComuni.reduce((sum, c) => sum + c.moltiplicatore_PF_2025, 0) / allComuni.length;
+  const validMp = allComuni.filter(c => c.moltiplicatore_PF_2025 != null);
+  const avgMp = validMp.length > 0 ? validMp.reduce((sum, c) => sum + c.moltiplicatore_PF_2025, 0) / validMp.length : 0;
   if (avgMpEl) avgMpEl.textContent = avgMp.toFixed(1) + '%';
   
-  const avgForza = allComuni.reduce((sum, c) => sum + c.indice_forza_finanziaria_2025_26, 0) / allComuni.length;
+  const validForza = allComuni.filter(c => c.indice_forza_finanziaria_2025_26 != null);
+  const avgForza = validForza.length > 0 ? validForza.reduce((sum, c) => sum + c.indice_forza_finanziaria_2025_26, 0) / validForza.length : 0;
   if (avgForzaEl) avgForzaEl.textContent = avgForza.toFixed(1);
 }
 
@@ -148,28 +150,28 @@ function renderComuneCard(comune: ComuneFinanze): string {
       <div class="space-y-2 text-sm">
         <div class="flex justify-between">
           <span class="text-muted-foreground">Popolazione (2024):</span>
-          <span class="font-semibold">${comune.popolazione_2024.toLocaleString()}</span>
+          <span class="font-semibold">${comune.popolazione_2024 != null ? comune.popolazione_2024.toLocaleString() : '—'}</span>
         </div>
         <div class="flex justify-between">
           <span class="text-muted-foreground">MP Persone Fisiche:</span>
-          <span class="font-semibold">${comune.moltiplicatore_PF_2025}%</span>
+          <span class="font-semibold">${comune.moltiplicatore_PF_2025 != null ? comune.moltiplicatore_PF_2025 : '—'}%</span>
         </div>
         <div class="flex justify-between">
           <span class="text-muted-foreground">MP Persone Giuridiche:</span>
-          <span class="font-semibold">${comune.moltiplicatore_PG_2025}%</span>
+          <span class="font-semibold">${comune.moltiplicatore_PG_2025 != null ? comune.moltiplicatore_PG_2025 : '—'}%</span>
         </div>
         <div class="flex justify-between">
           <span class="text-muted-foreground">MP Coordinato:</span>
-          <span class="font-semibold">${comune.moltiplicatore_coordinato_2025}%</span>
+          <span class="font-semibold">${comune.moltiplicatore_coordinato_2025 != null ? comune.moltiplicatore_coordinato_2025 : '—'}%</span>
         </div>
         <div class="flex justify-between pt-2 border-t">
           <span class="text-muted-foreground">Risorse fiscali p.c. (2022):</span>
-          <span class="font-semibold">${Math.round(comune.risorse_fiscali_procapite_2022).toLocaleString()} CHF</span>
+          <span class="font-semibold">${comune.risorse_fiscali_procapite_2022 != null ? Math.round(comune.risorse_fiscali_procapite_2022).toLocaleString() : '—'} CHF</span>
         </div>
         <div class="flex justify-between items-center pt-2 border-t">
           <span class="text-muted-foreground">Indice forza finanziaria:</span>
           <span class="font-bold ${forzaClass}">
-            ${forzaIcon} ${comune.indice_forza_finanziaria_2025_26.toFixed(1)}
+            ${forzaIcon} ${comune.indice_forza_finanziaria_2025_26 != null ? comune.indice_forza_finanziaria_2025_26.toFixed(1) : '—'}
           </span>
         </div>
       </div>
@@ -205,23 +207,23 @@ function compareComuni(): void {
         <div class="space-y-2 text-sm">
           <div class="flex justify-between">
             <span class="text-muted-foreground">Popolazione:</span>
-            <span class="font-semibold">${comuneA.popolazione_2024.toLocaleString()}</span>
+            <span class="font-semibold">${comuneA.popolazione_2024 != null ? comuneA.popolazione_2024.toLocaleString() : '—'}</span>
           </div>
           <div class="flex justify-between">
             <span class="text-muted-foreground">MP PF:</span>
-            <span class="font-semibold">${comuneA.moltiplicatore_PF_2025}%</span>
+            <span class="font-semibold">${comuneA.moltiplicatore_PF_2025 != null ? comuneA.moltiplicatore_PF_2025 : '—'}%</span>
           </div>
           <div class="flex justify-between">
             <span class="text-muted-foreground">MP PG:</span>
-            <span class="font-semibold">${comuneA.moltiplicatore_PG_2025}%</span>
+            <span class="font-semibold">${comuneA.moltiplicatore_PG_2025 != null ? comuneA.moltiplicatore_PG_2025 : '—'}%</span>
           </div>
           <div class="flex justify-between">
             <span class="text-muted-foreground">Risorse p.c.:</span>
-            <span class="font-semibold">${Math.round(comuneA.risorse_fiscali_procapite_2022).toLocaleString()} CHF</span>
+            <span class="font-semibold">${comuneA.risorse_fiscali_procapite_2022 != null ? Math.round(comuneA.risorse_fiscali_procapite_2022).toLocaleString() : '—'} CHF</span>
           </div>
           <div class="flex justify-between pt-2 border-t">
             <span class="text-muted-foreground">Indice forza:</span>
-            <span class="font-bold">${comuneA.indice_forza_finanziaria_2025_26.toFixed(1)}</span>
+            <span class="font-bold">${comuneA.indice_forza_finanziaria_2025_26 != null ? comuneA.indice_forza_finanziaria_2025_26.toFixed(1) : '—'}</span>
           </div>
         </div>
       </div>
@@ -231,23 +233,23 @@ function compareComuni(): void {
         <div class="space-y-2 text-sm">
           <div class="flex justify-between">
             <span class="text-muted-foreground">Popolazione:</span>
-            <span class="font-semibold">${comuneB.popolazione_2024.toLocaleString()}</span>
+            <span class="font-semibold">${comuneB.popolazione_2024 != null ? comuneB.popolazione_2024.toLocaleString() : '—'}</span>
           </div>
           <div class="flex justify-between">
             <span class="text-muted-foreground">MP PF:</span>
-            <span class="font-semibold">${comuneB.moltiplicatore_PF_2025}%</span>
+            <span class="font-semibold">${comuneB.moltiplicatore_PF_2025 != null ? comuneB.moltiplicatore_PF_2025 : '—'}%</span>
           </div>
           <div class="flex justify-between">
             <span class="text-muted-foreground">MP PG:</span>
-            <span class="font-semibold">${comuneB.moltiplicatore_PG_2025}%</span>
+            <span class="font-semibold">${comuneB.moltiplicatore_PG_2025 != null ? comuneB.moltiplicatore_PG_2025 : '—'}%</span>
           </div>
           <div class="flex justify-between">
             <span class="text-muted-foreground">Risorse p.c.:</span>
-            <span class="font-semibold">${Math.round(comuneB.risorse_fiscali_procapite_2022).toLocaleString()} CHF</span>
+            <span class="font-semibold">${comuneB.risorse_fiscali_procapite_2022 != null ? Math.round(comuneB.risorse_fiscali_procapite_2022).toLocaleString() : '—'} CHF</span>
           </div>
           <div class="flex justify-between pt-2 border-t">
             <span class="text-muted-foreground">Indice forza:</span>
-            <span class="font-bold">${comuneB.indice_forza_finanziaria_2025_26.toFixed(1)}</span>
+            <span class="font-bold">${comuneB.indice_forza_finanziaria_2025_26 != null ? comuneB.indice_forza_finanziaria_2025_26.toFixed(1) : '—'}</span>
           </div>
         </div>
       </div>
@@ -258,20 +260,20 @@ function compareComuni(): void {
       <div class="grid gap-2">
         <div class="flex justify-between">
           <span>MP PF:</span>
-          <span class="${comuneA.moltiplicatore_PF_2025 > comuneB.moltiplicatore_PF_2025 ? 'text-red-600' : 'text-green-600'}">
-            ${(comuneA.moltiplicatore_PF_2025 - comuneB.moltiplicatore_PF_2025).toFixed(1)}%
+          <span class="${(comuneA.moltiplicatore_PF_2025 != null && comuneB.moltiplicatore_PF_2025 != null && comuneA.moltiplicatore_PF_2025 > comuneB.moltiplicatore_PF_2025) ? 'text-red-600' : 'text-green-600'}">
+            ${(comuneA.moltiplicatore_PF_2025 != null && comuneB.moltiplicatore_PF_2025 != null) ? (comuneA.moltiplicatore_PF_2025 - comuneB.moltiplicatore_PF_2025).toFixed(1) : '—'}%
           </span>
         </div>
         <div class="flex justify-between">
           <span>Risorse p.c.:</span>
-          <span class="${comuneA.risorse_fiscali_procapite_2022 > comuneB.risorse_fiscali_procapite_2022 ? 'text-green-600' : 'text-red-600'}">
-            ${(comuneA.risorse_fiscali_procapite_2022 - comuneB.risorse_fiscali_procapite_2022).toFixed(0)} CHF
+          <span class="${(comuneA.risorse_fiscali_procapite_2022 != null && comuneB.risorse_fiscali_procapite_2022 != null && comuneA.risorse_fiscali_procapite_2022 > comuneB.risorse_fiscali_procapite_2022) ? 'text-green-600' : 'text-red-600'}">
+            ${(comuneA.risorse_fiscali_procapite_2022 != null && comuneB.risorse_fiscali_procapite_2022 != null) ? (comuneA.risorse_fiscali_procapite_2022 - comuneB.risorse_fiscali_procapite_2022).toFixed(0) : '—'} CHF
           </span>
         </div>
         <div class="flex justify-between">
           <span>Indice forza:</span>
-          <span class="${comuneA.indice_forza_finanziaria_2025_26 > comuneB.indice_forza_finanziaria_2025_26 ? 'text-green-600' : 'text-red-600'}">
-            ${(comuneA.indice_forza_finanziaria_2025_26 - comuneB.indice_forza_finanziaria_2025_26).toFixed(1)}
+          <span class="${(comuneA.indice_forza_finanziaria_2025_26 != null && comuneB.indice_forza_finanziaria_2025_26 != null && comuneA.indice_forza_finanziaria_2025_26 > comuneB.indice_forza_finanziaria_2025_26) ? 'text-green-600' : 'text-red-600'}">
+            ${(comuneA.indice_forza_finanziaria_2025_26 != null && comuneB.indice_forza_finanziaria_2025_26 != null) ? (comuneA.indice_forza_finanziaria_2025_26 - comuneB.indice_forza_finanziaria_2025_26).toFixed(1) : '—'}
           </span>
         </div>
       </div>

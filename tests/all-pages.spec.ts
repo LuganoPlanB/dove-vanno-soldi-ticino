@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test';
 
-const BASE_URL = 'https://tiero.github.io/dove-vanno-soldi-ticino';
 const VIEWPORTS = [
   { width: 320, height: 568, name: '320px' },
   { width: 375, height: 667, name: '375px' },
@@ -18,7 +17,7 @@ for (const viewport of VIEWPORTS) {
         if (msg.type() === 'error') errors.push(msg.text());
       });
 
-      await page.goto(`${BASE_URL}/`);
+      await page.goto('./');
       
       // Check hero metrics loaded
       await expect(page.locator('#hero-metrics')).toBeVisible();
@@ -63,7 +62,7 @@ for (const viewport of VIEWPORTS) {
         if (msg.type() === 'error') errors.push(msg.text());
       });
 
-      await page.goto(`${BASE_URL}/storia-debito.html`);
+      await page.goto('./storia-debito.html');
       
       // Wait for page to load
       await page.waitForLoadState('networkidle');
@@ -115,7 +114,7 @@ for (const viewport of VIEWPORTS) {
         if (msg.type() === 'error') errors.push(msg.text());
       });
 
-      await page.goto(`${BASE_URL}/tassazione-imprese.html`);
+      await page.goto('./tassazione-imprese.html');
       
       await page.waitForLoadState('networkidle');
       
@@ -146,7 +145,7 @@ for (const viewport of VIEWPORTS) {
       const errors: string[] = [];
       page.on('pageerror', err => errors.push(err.message));
 
-      const response = await page.goto(`${BASE_URL}/metodologia.html`);
+      const response = await page.goto('./metodologia.html');
       expect(response?.status()).toBe(200);
       
       await expect(page.locator('h1')).toContainText('Metodologia');
@@ -158,7 +157,7 @@ for (const viewport of VIEWPORTS) {
 
 test.describe('Home page comuni section', () => {
   test('No placeholder text, search enabled', async ({ page }) => {
-    await page.goto(`${BASE_URL}/`);
+    await page.goto('./');
     
     // Check NO placeholder warning
     const bodyText = await page.textContent('body');

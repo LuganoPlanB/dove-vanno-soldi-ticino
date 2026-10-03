@@ -52,27 +52,27 @@ export function renderComuneCard(comune: ComuneFinanze): string {
       <div class="grid grid-cols-2 gap-3 text-sm mb-3">
         <div>
           <div class="text-muted-foreground">Popolazione 2024</div>
-          <div class="font-semibold">${comune.popolazione_2024.toLocaleString()}</div>
+          <div class="font-semibold">${comune.popolazione_2024 != null ? comune.popolazione_2024.toLocaleString() : '—'}</div>
         </div>
         <div>
           <div class="text-muted-foreground">MP PF 2025</div>
-          <div class="font-semibold">${comune.moltiplicatore_PF_2025}%</div>
+          <div class="font-semibold">${comune.moltiplicatore_PF_2025 != null ? comune.moltiplicatore_PF_2025 : '—'}%</div>
         </div>
       </div>
       
       <div class="border-t pt-3 space-y-2 text-sm">
         <div class="flex justify-between">
           <span class="text-muted-foreground">MP PG:</span>
-          <span class="font-semibold">${comune.moltiplicatore_PG_2025}%</span>
+          <span class="font-semibold">${comune.moltiplicatore_PG_2025 != null ? comune.moltiplicatore_PG_2025 : '—'}%</span>
         </div>
         <div class="flex justify-between">
           <span class="text-muted-foreground">Risorse fiscali p.c. (2022):</span>
-          <span class="font-semibold">${Math.round(comune.risorse_fiscali_procapite_2022).toLocaleString()} CHF</span>
+          <span class="font-semibold">${comune.risorse_fiscali_procapite_2022 != null ? Math.round(comune.risorse_fiscali_procapite_2022).toLocaleString() : '—'} CHF</span>
         </div>
         <div class="flex justify-between items-center border-t pt-2">
           <span class="text-muted-foreground">Indice forza finanziaria:</span>
           <span class="font-bold ${forzaClass}">
-            ${forzaIcon} ${comune.indice_forza_finanziaria_2025_26.toFixed(1)}
+            ${forzaIcon} ${comune.indice_forza_finanziaria_2025_26 != null ? comune.indice_forza_finanziaria_2025_26.toFixed(1) : '—'}
           </span>
         </div>
       </div>

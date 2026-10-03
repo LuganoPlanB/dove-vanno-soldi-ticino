@@ -281,7 +281,7 @@ async function renderSpeseNatura() {
             </div>
             <div>
               <div class="text-sm text-muted-foreground">% bilancio</div>
-              <div class="text-2xl font-bold">${(spesa.percentualeTotale || 0).toFixed(1)}%</div>
+              <div class="text-2xl font-bold">${spesa.percentualeTotale != null ? spesa.percentualeTotale.toFixed(1) : '0.0'}%</div>
             </div>
             <div>
               <div class="text-sm text-muted-foreground">Per abitante</div>
