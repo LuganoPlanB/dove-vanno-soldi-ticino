@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Finanze dei comuni ticinesi 2024 - Confronta moltiplicatori, indici e risorse fiscali">
+  <meta name="theme-color" content="#3b82f6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1e40af" media="(prefers-color-scheme: dark)">
+  <title>Comuni Ticinesi - Finanze 2024 | Dove vanno i soldi del Ticino</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="font-sans antialiased">
+  <nav class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div class="container mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="flex h-14 sm:h-16 items-center justify-between gap-2">
+        <div class="flex items-center gap-1.5 sm:gap-2 min-w-0 flex-shrink">
+          <span class="text-xl sm:text-2xl flex-shrink-0">💰</span>
+          <a href="./index.html" class="font-bold text-sm sm:text-lg truncate hover:text-primary transition-colors">
+            Dove vanno i soldi del Ticino
+          </a>
+        </div>
+        
+        <div class="flex items-center gap-1 sm:gap-3 flex-shrink-0">
+          <button id="mobile-menu-button" class="inline-flex xs:hidden btn btn-secondary h-8 w-8 p-0 items-center justify-center" aria-label="Menu">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+          
+          <a href="./metodologia.html" class="hidden xs:inline-block text-xs sm:text-sm font-medium text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">
+            Metodologia
+          </a>
+          
+          <button id="theme-toggle" class="btn btn-secondary h-8 w-8 sm:h-9 sm:w-9 p-0 flex-shrink-0" aria-label="Toggle theme">
+            <svg id="sun-icon" class="h-3.5 w-3.5 sm:h-4 sm:w-4 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+            <svg id="moon-icon" class="h-3.5 w-3.5 sm:h-4 sm:w-4 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="mobile-menu" class="hidden border-t bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700">
+      <div class="container mx-auto px-3 py-2 bg-white dark:bg-slate-900">
+        <a href="./index.html" class="block px-3 py-2 text-sm font-medium hover:bg-accent rounded">
+          Home
+        </a>
+        <a href="./metodologia.html" class="block px-3 py-2 text-sm font-medium hover:bg-accent rounded">
+          Metodologia
+        </a>
+        <a href="./storia-debito.html" class="block px-3 py-2 text-sm font-medium hover:bg-accent rounded">
+          Storia debito
+        </a>
+        <a href="./tassazione-imprese.html" class="block px-3 py-2 text-sm font-medium hover:bg-accent rounded">
+          Tassazione imprese
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="min-h-screen">
+    <section class="py-12 sm:py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-6xl">
+          <!-- Header -->
+          <div class="space-y-4 mb-8">
+            <div class="inline-flex items-center rounded-full border px-3 py-1 text-sm">
+              <span class="mr-2">🏘️</span>
+              <span>Dati finanziari comuni 2024</span>
+            </div>
+            
+            <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">
+              Finanze dei Comuni Ticinesi
+            </h1>
+            
+            <p class="text-lg text-muted-foreground max-w-3xl">
+              Confronta moltiplicatori, indici di forza finanziaria e risorse fiscali pro-capite dei 108 comuni ticinesi.
+              Dati ufficiali 2024 dal Rapporto "I conti dei comuni nel 2024" - Allegato statistico.
+            </p>
+          </div>
+
+          <!-- Stats Overview -->
+          <div class="grid gap-4 sm:grid-cols-3 mb-8">
+            <div class="card p-4">
+              <div class="text-sm text-muted-foreground mb-1">Comuni totali</div>
+              <div class="text-3xl font-bold" id="total-comuni">108</div>
+            </div>
+            <div class="card p-4">
+              <div class="text-sm text-muted-foreground mb-1">MP medio PF</div>
+              <div class="text-3xl font-bold" id="avg-mp-pf">-</div>
+            </div>
+            <div class="card p-4">
+              <div class="text-sm text-muted-foreground mb-1">Indice forza medio</div>
+              <div class="text-3xl font-bold" id="avg-forza">-</div>
+            </div>
+          </div>
+
+          <!-- Search and Sort Controls -->
+          <div class="card p-4 mb-6 space-y-4">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label for="comuni-search" class="block text-sm font-medium mb-2">Cerca comune</label>
+                <input
+                  id="comuni-search"
+                  type="search"
+                  placeholder="Es: Lugano, Bellinzona..."
+                  class="w-full px-4 py-2 rounded-lg border bg-background focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label for="comuni-sort" class="block text-sm font-medium mb-2">Ordina per</label>
+                <select id="comuni-sort" class="w-full px-4 py-2 rounded-lg border bg-background focus:ring-2 focus:ring-primary">
+                  <option value="nome">Nome (A-Z)</option>
+                  <option value="popolazione">Popolazione (↓)</option>
+                  <option value="mp-pf">Moltiplicatore PF (↓)</option>
+                  <option value="mp-pg">Moltiplicatore PG (↓)</option>
+                  <option value="forza">Indice forza finanziaria (↓)</option>
+                  <option value="risorse">Risorse fiscali p.c. (↓)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+              <button id="filter-all" class="btn btn-secondary btn-sm">Tutti</button>
+              <button id="filter-forti" class="btn btn-secondary btn-sm">Forti (≥100)</button>
+              <button id="filter-medi" class="btn btn-secondary btn-sm">Medi (80-100)</button>
+              <button id="filter-deboli" class="btn btn-secondary btn-sm">Deboli (<80)</button>
+            </div>
+          </div>
+
+          <!-- Comparison Tool -->
+          <div class="card p-4 mb-6">
+            <h3 class="text-lg font-semibold mb-4">🔄 Confronta due comuni</h3>
+            <div class="grid gap-4 sm:grid-cols-2 mb-4">
+              <div>
+                <label for="compare-a" class="block text-sm font-medium mb-2">Comune A</label>
+                <select id="compare-a" class="w-full px-4 py-2 rounded-lg border bg-background">
+                  <option value="">Seleziona...</option>
+                </select>
+              </div>
+              <div>
+                <label for="compare-b" class="block text-sm font-medium mb-2">Comune B</label>
+                <select id="compare-b" class="w-full px-4 py-2 rounded-lg border bg-background">
+                  <option value="">Seleziona...</option>
+                </select>
+              </div>
+            </div>
+            <div id="comparison-result" class="hidden">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Results Count -->
+          <div class="mb-4">
+            <span class="text-sm text-muted-foreground">
+              Risultati: <span id="results-count" class="font-semibold">0</span>
+            </span>
+          </div>
+
+          <!-- Results Grid -->
+          <div id="comuni-results" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t py-12 sm:py-16">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl space-y-6 text-center">
+        <div class="space-y-2">
+          <div class="text-lg font-semibold">Dove vanno i soldi del Ticino</div>
+          <p class="text-sm text-muted-foreground">
+            Un progetto di trasparenza finanziaria. Tutti i dati provengono da fonti ufficiali del Canton Ticino.
+          </p>
+        </div>
+        <div class="text-xs text-muted-foreground">
+          Questo sito è indipendente e non è affiliato al governo cantonale.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/comuni-page.ts"></script>
+</body>
+</html>
