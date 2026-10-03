@@ -107,8 +107,9 @@ function renderAllCharts() {
     if (treemapEl && (spesePerFunzione as any).spesePerFunzione) {
       // Translate categories
       const translatedData = (spesePerFunzione as any).spesePerFunzione.map((d: any) => ({
-        ...d,
-        categoria: translateCategory(d.categoria)
+        categoria: translateCategory(d.funzione),
+        importo: d.importo,
+        percentuale: d.percentuale
       }));
       charts.renderTreemap('spending-function-treemap', translatedData, i18n.t('charts.spending.title'));
     }
