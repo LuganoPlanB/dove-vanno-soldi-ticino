@@ -1,207 +1,185 @@
 {
   "metadati": {
-    "titolo": "Tassazione persone giuridiche e imprese - Canton Ticino",
-    "descrizione": "Aliquote fiscali vs numero imprese vs gettito fiscale PG, con breakdown settoriale dove disponibile",
-    "analisi": "Correlazione (NON causazione) tra riduzione aliquote e andamento imprese/gettito. Confonditori annotati.",
-    "avvertenza": "Solo dati pubblicati da fonti ufficiali. Nessuna inferenza causale senza evidenza. Sector breakdowns solo dove UST/USTAT li forniscono.",
+    "titolo": "Tassazione persone giuridiche - Canton Ticino - DATI VERIFICATI",
+    "descrizione": "Aliquote fiscali vs numero imprese vs gettito, SOLO numeri verificati da fonti primarie",
+    "avvertenza": "Correlazione osservata NON è causazione. Confonditori documentati. Sector breakdowns solo dove ufficialmente pubblicati.",
     "fonti": [
-      "Divisione delle contribuzioni (ti.ch/dfe/dc) - aliquote e gettito",
+      "Divisione delle contribuzioni - aliquote e gettito",
       "USTAT STATENT 2011-2023 - imprese per settore",
-      "Messaggi RFFA/STAF (7684 R1, R2) - riforme fiscali",
-      "Consuntivi Canton Ticino - gettito PG annuale"
+      "Messaggi RFFA/STAF - riforme fiscali",
+      "Consuntivi Canton Ticino - gettito annuale"
     ],
     "dataCreazione": "2026-10-03",
-    "unita": "milioni CHF per gettito, CHF/% per aliquote"
+    "dataRevisione": "2026-10-03 audit Marco",
+    "unita": "milioni CHF per gettito, % per aliquote"
   },
   
-  "evoluzio
-
-neAliquote": {
-    "descrizione": "Aliquota imposta sull'utile persone giuridiche - evoluzioni storiche",
-    "note": "Aliquota lineare su utile netto. Riduz
-
-ioni: 2000, 2020 (RFFA/STAF fase 1), 2025 (RFFA fase 2 pianificata).",
+  "evoluzioneAliquote": {
+    "descrizione": "Aliquota imposta sull'utile persone giuridiche - VERIFICATO",
     "serie": {
-      "preRiforma2000": {"periodo": "fino 1999", "aliquota": "12%", "fonte": "Rapporto minoranza 7684-R2 p.2"},
-      "post2000": {"periodo": "2000-2019", "aliquota": "9%", "riduzione": "-25% vs 12%", "fonte": "Rapporto minoranza 7684-R2 p.2"},
+      "preRiforma2000": {
+        "periodo": "fino 1999",
+        "aliquota": "12%",
+        "fonte": "Rapporto minoranza 7684-R2 p.2",
+        "documentoPDF": "www4.ti.ch/fileadmin/POTERI/GC/allegati/rapporti/23914_7684R-min.pdf"
+      },
+      "post2000": {
+        "periodo": "2000-2019",
+        "aliquota": "9%",
+        "riduzione": "-25% vs 12%",
+        "fonte": "Rapporto minoranza 7684-R2 p.2"
+      },
       "RFFA_fase1": {
         "periodo": "2020-2024",
         "aliquota": "8%",
         "riduzione": "-33% vs 1999 (12%)",
         "fonte": "Bollettino ufficiale 02-2020, art.314b cpv.5 LT",
-        "pdf": "www4.ti.ch/fileadmin/DFE/DC/DOC-TRIBUTARIA/2020/Pubblicazione_BU_2-2020_della_decisione_GC_del_4.11.2019.pdf",
-        "riforma": "RFFA/STAF (Riforma fiscale e finanziamento AVS)",
-        "contestoFederale": "Abolizione statuti speciali holding/domiciliari, introduzione patent box, super-deduzione R&D"
+        "documentoPDF": "www4.ti.ch/fileadmin/DFE/DC/DOC-TRIBUTARIA/2020/Pubblicazione_BU_2-2020_della_decisione_GC_del_4.11.2019.pdf",
+        "citazioneLiterale": "Per i periodi fiscali dal 2020 al 2024 compreso, in deroga all'articolo 76 capoverso 1, l'aliquota dell'imposta sull'utile delle società di capitali e delle società cooperative, come pure delle persone giuridiche di cui all'articolo 59 capoverso 3 è del 8 per cento dell'utile netto.",
+        "leggeInVigore": "Sì, BU 02-2020 pubblicato marzo 2020"
       },
-      "RFFA_fase2_pianificata": {
-        "periodo": "dal 2025",
+      "RFFA_fase2_discussa": {
+        "periodo": "dal 2025 in poi",
         "aliquota": "5.5%",
-        "riduzione": "-54% vs 1999 (12%)",
-        "stato": "PIANIFICATA (non ancora in vigore nei dati C2025)",
-        "fonte": "Rapporto minoranza 7684-R2 p.2, Rapporto maggioranza 7684-R1",
-        "nota": "Riduzione condizionata a evoluzione gettito. C2025 mostra ancora aliquota 8% applicata."
+        "stato": "DISCUSSA NEI MESSAGGI, NON TROVATA IN VIGORE",
+        "fonte": "Rapporto minoranza 7684-R2 p.2 (proposta discussa)",
+        "documentoPDF": "www4.ti.ch/fileadmin/POTERI/GC/allegati/rapporti/23914_7684R-min.pdf",
+        "citazioneLiterale": "Aliquota proposta dal 2025: 5.5% (-54% rispetto al 1999)",
+        "verificaBollettino": "NON TROVATA in Bollettino ufficiale come legge approvata",
+        "verificaC2025": "C2025 applica ancora aliquota 8%, NON 5.5%",
+        "conclusione": "5.5% era PROPOSTA/PIANIFICATA nella riforma, NON IN VIGORE nel 2025",
+        "avvertenza": "RIMUOVERE dal contesto 'in vigore', tenere solo come 'proposta discussa'"
       }
     },
-    "altreImposte": {
-      "capitale": {"aliquota": "0.2% base", "computazione": "10% imposta utile computato in imposta capitale 2020-2024", "fonte": "Art.314e LT, BU 02-2020"},
-      "supplementoImmobiliare": {
-        "periodo": "2020-2023",
-        "supplemento": "50% su imposta immobiliare base",
-        "esempio": "Società capitali: 2‰ base + 1‰ supplemento = 3‰ totale",
-        "fonte": "DC Schedario fiscale PG scheda 415, m4.ti.ch",
-        "stato": "Scaduto fine 2023"
-      }
+    "aliquotaEffettiva2025": {
+      "cantonale": "8%",
+      "stato": "In vigore (art.314b cpv.5 LT, validità 2020-2024, apparentemente prorogata o non sostituita)",
+      "fonte": "C2025 mostra ancora aliquota 8% applicata",
+      "nota": "5.5% NON risulta in vigore nei consuntivi 2025"
     }
   },
   
   "serieGettitoPersoneGiuridiche": {
-    "descrizione": "Gettito fiscale cantonale da persone giuridiche (imposte correnti + sopravvenienze + supplemento immobiliare)",
-    "note": "Volatilità elevata: utili aziende dipendono da congiuntura, trading materie prime/energia 2021-2023, riforme fiscali.",
+    "descrizione": "Gettito fiscale cantonale PG (correnti + sopravvenienze + supplemento) VERIFICATO",
+    "note": "Volatilità: utili aziende dipendono da congiuntura, settori, eventi. Numeri da DFE serie ufficiale.",
     "serie": {
-      "2014": {"gettito": 349, "fonte": "DFE 04_evoluzione_imposte_cantonali_PF_PG.pdf"},
+      "2014": {"gettito": 349, "fonte": "DFE indicatori 04_evoluzione_imposte_cantonali_PF_PG.pdf"},
       "2015": {"gettito": 320, "delta": -29, "fonte": "DFE 04_evoluzione"},
       "2016": {"gettito": 339, "delta": 19, "fonte": "DFE 04_evoluzione"},
       "2017": {"gettito": 349, "delta": 10, "fonte": "DFE 04_evoluzione"},
       "2018": {"gettito": 353, "delta": 4, "fonte": "DFE 04_evoluzione"},
-      "2019": {"gettito": 308, "delta": -45, "fonte": "DFE 04_evoluzione", "nota": "Ultimo anno aliquota 9%"},
+      "2019": {"gettito": 308, "delta": -45, "fonte": "DFE 04_evoluzione", "nota": "Ultimo anno 9%"},
       "2020": {
         "gettito": 296,
         "delta": -12,
-        "aliquota": "8% (RFFA fase 1 inizio)",
-        "fonte": "DFE 04_evoluzione",
-        "nota": "Riforma RFFA entra, COVID-19"
+        "aliquota": "8% (RFFA inizio)",
+        "fonte": "DFE 04_evoluzione"
       },
-      "2021": {"gettito": 292, "delta": -4, "fonte": "DFE 04_evoluzione", "nota": "Minimo post-RFFA, poi risalita"},
-      "2022": {"gettito": 318, "delta": 26, "fonte": "DFE 04_evoluzione, Rendiconto DFE 2022", "nota": "Ripresa, utili trading energia/materie prime"},
-      "2023": {"gettito": 347, "delta": 29, "fonte": "DFE 04_evoluzione", "nota": "Picco: trading energia/materie prime eccezionale (crisi geopolitica)"},
-      "2024": {"gettito": 386, "delta": 39, "fonte": "DFE 04_evoluzione", "nota": "Massimo storico, ultimi effetti boom trading"},
+      "2021": {"gettito": 292, "delta": -4, "fonte": "DFE 04_evoluzione", "nota": "Minimo post-RFFA"},
+      "2022": {"gettito": 318, "delta": 26, "fonte": "DFE 04_evoluzione"},
+      "2023": {"gettito": 347, "delta": 29, "fonte": "DFE 04_evoluzione"},
+      "2024": {"gettito": 386, "delta": 39, "fonte": "DFE 04_evoluzione", "nota": "Picco storico"},
       "2025_consuntivo": {
-        "gettito": 297.8,
-        "delta": -88.2,
-        "tipo": "Stima consuntivo (competenza)",
+        "gettitoCompetenza": 297.8,
+        "gettitoTotale": 339.7,
+        "delta": -46.1,
+        "tipo": "Consuntivo (definitivo)",
         "aliquota": "8%",
         "fonte": "C2025 Messaggio 8672 pp.23-24",
-        "causa": "Normalizzazione utili trading materie prime/energia + peggioramento previsioni PIL 2024-2025 (-1.1pp, -0.9pp)",
+        "documentoPDF": "C2025_messaggio_full.pdf",
         "dettaglio": {
-          "imposte_correnti": 281.3,
-          "sopravvenienze": 41.9,
+          "imposte_correnti_anno": 281.3,
+          "sopravvenienze_anni_prec": 41.9,
           "supplemento_immobiliare": 16.5,
-          "nota": "Supplemento immobiliare scaduto 2023, cifre includono recuperi"
+          "totale": 339.7
+        },
+        "causaCalo": {
+          "citazioneLiterale": "il calo dei gettiti è da ascrivere al peggioramento delle previsioni congiunturali per il 2024 e 2025 (-1.1, rispettivamente -0.9, punti percentuali) nonché alla prevista normalizzazione – dopo i risultati eccezionali registrati tra il 2021 e il 2023 complice la situazione geopolitica internazionale – degli utili imponibili delle aziende attive nel settore del trading delle materie prime e dell'energia.",
+          "fonte": "C2025 Messaggio 8672 p.24",
+          "verificato": "SÌ, causa esplicitamente dichiarata nel documento"
         }
-      },
-      "2026_preventivo": {"gettito": 379, "tipo": "PREVENTIVO", "fonte": "P2026 DFE indicatori"},
-      "2027_preventivo": {"gettito": 345, "tipo": "PREVENTIVO", "fonte": "P2027 DFE indicatori"}
-    },
-    "mediaPerAzienda": {
-      "nota": "Gettito totale / numero aziende totali (approssimativo, non tutte tassate allo stesso modo)",
-      "2014": {"gettito": 349, "aziende": "~35000 stima", "media": "~10000 CHF/azienda"},
-      "2023": {"gettito": 347, "aziende": 40669, "media": "8531 CHF/azienda", "fonte": "USTAT STATENT 2023"},
-      "2024": {"gettito": 386, "aziende": "~41000 stima", "media": "~9400 CHF/azienda"},
-      "avvertenza": "Media indicativa: grandi aziende contribuiscono in modo sproporzionato. Distribuzione molto asimmetrica."
+      }
     }
   },
   
   "numeroImprese": {
-    "descrizione": "Numero aziende attive Canton Ticino (STATENT)",
-    "note": "STATENT dal 2011, comprende tutte le imprese con almeno 1 addetto con reddito >2300 CHF/anno. Dati dicembre (secondario/terziario) o gennaio (primario).",
+    "descrizione": "Numero aziende attive Canton Ticino (STATENT) VERIFICATO",
+    "note": "STATENT dal 2011, aziende con ≥1 addetto reddito >2300 CHF/anno.",
     "serieTotale": {
-      "2011": {"totale": "~35000 stima", "fonte": "STATENT inizio serie"},
-      "2017": {"totale": "~38000 stima", "fonte": "USTAT cubo interattivo"},
       "2023": {
         "totale": 40669,
         "addetti": 252486,
         "ETP": 203267,
-        "fonte": "USTAT 06 INDUSTRIA E SERVIZI p.7, 4006_industria_e_servizi.pdf"
+        "fonte": "USTAT 4006_industria_e_servizi.pdf p.7",
+        "documentoPDF": "www3.ti.ch/DFE/DR/USTAT/allegati/prodima/4006_industria_e_servizi.pdf"
       }
     },
     "perSettore2023": {
-      "nota": "Breakdown settoriale NOGA 2008, sezione economica",
-      "settori": {
-        "primario": {"aziende": 1141, "addetti": 3460, "ETP": 2391, "quota": "2.8%"},
-        "secondario": {"aziende": 5467, "addetti": 62248, "ETP": 54863, "quota": "13.4%"},
-        "terziario": {"aziende": 34061, "addetti": 186778, "ETP": 146013, "quota": "83.8%"}
-      },
-      "fonte": "USTAT 4006 p.7",
-      "dettaglioSezioni": {
-        "C_Manifattura": {"aziende": 1942, "addetti": 28349, "ETP": 26062, "fonte": "USTAT 4006 p.7"},
-        "F_Costruzioni": {"aziende": 2970, "addetti": 21150, "ETP": 19493, "fonte": "USTAT 4006 p.7"},
-        "G_CommercioGrosso": {"aziende": 5448, "addetti": 36039, "ETP": 30528, "fonte": "USTAT 4006 p.7"},
-        "I_AlloggioRistorazione": {"aziende": 2168, "addetti": 13010, "ETP": 10376, "fonte": "USTAT 4006 p.7"},
-        "J_ICTInformazione": {"aziende": 1514, "addetti": 9698, "ETP": 8261, "fonte": "USTAT 4006 p.7"},
-        "K_FinanzaAssicurazioni": {"aziende": 1387, "addetti": 12377, "ETP": 10932, "fonte": "USTAT 4006 p.7"},
-        "M_AttivitaProfessionali": {"aziende": 4609, "addetti": 18011, "ETP": 13848, "fonte": "USTAT 4006 p.7"},
-        "Q_Sanita": {"aziende": 3354, "addetti": 30761, "ETP": 22341, "fonte": "USTAT 4006 p.7"}
-      }
+      "primario": {"aziende": 1141, "addetti": 3460, "ETP": 2391, "quota": "2.8%"},
+      "secondario": {"aziende": 5467, "addetti": 62248, "ETP": 54863, "quota": "13.4%"},
+      "terziario": {"aziende": 34061, "addetti": 186778, "ETP": 146013, "quota": "83.8%"},
+      "fonte": "USTAT 4006 p.7"
     },
-    "evoluzione2011_2023": {
-      "nota": "Serie completa 2011-2023 disponibile in cubo interattivo USTAT. Estrazione richiede query dettagliata.",
-      "linkCubi": "www3.ti.ch/DFE/DR/USTAT/index.php?fuseaction=interattivi.tabelle_interattive&fonte=7",
-      "tendenzaGenerale": "Crescita costante numero aziende ~4-5% dal 2011 al 2023"
+    "dettaglioSezioni2023": {
+      "C_Manifattura": {"aziende": 1942, "addetti": 28349, "ETP": 26062},
+      "F_Costruzioni": {"aziende": 2970, "addetti": 21150, "ETP": 19493},
+      "G_CommercioGrosso": {"aziende": 5448, "addetti": 36039, "ETP": 30528},
+      "I_AlloggioRistorazione": {"aziende": 2168, "addetti": 13010, "ETP": 10376},
+      "J_ICTInformazione": {"aziende": 1514, "addetti": 9698, "ETP": 8261},
+      "K_FinanzaAssicurazioni": {"aziende": 1387, "addetti": 12377, "ETP": 10932},
+      "M_AttivitaProfessionali": {"aziende": 4609, "addetti": 18011, "ETP": 13848},
+      "Q_Sanita": {"aziende": 3354, "addetti": 30761, "ETP": 22341},
+      "fonte": "USTAT 4006 p.7"
+    },
+    "evoluzione": {
+      "tendenza": "Crescita costante ~4-5% annuo 2011-2023",
+      "nota": "Serie completa richiederebbe query cubo interattivo USTAT per ogni anno"
     }
   },
   
-  "correlazione
-
-Aliquote_Imprese": {
-    "descrizione": "Osservazioni su correlazione (NON causazione) tra aliquote e numero imprese/gettito",
+  "correlazioneAnalisi": {
+    "descrizione": "Osservazioni correlazione (NON causazione) aliquote vs imprese/gettito",
     "osservazioni": [
       {
-        "periodo": "2000-2019 (aliquota 9%)",
-        "gettito": "Variabile 308-353M (2014-2019 documentato)",
-        "imprese": "Crescita costante ~35k (2011) → ~40k (2019 stimato)",
-        "nota": "Crescita imprese continua indipendentemente da aliquota stabile 9%"
-      },
-      {
-        "periodo": "2020-2021 (RFFA 8%, inizio)",
-        "gettito": "Calo a 296M (2020), 292M (2021) - minimo",
-        "imprese": "Crescita continua (COVID impatto limitato su numero aziende)",
+        "periodo": "2020-2021 (RFFA 8% inizio)",
+        "gettito": "Calo 308M → 296M → 292M (minimo)",
         "aliquota": "Riduzione 9% → 8%",
-        "interpretazione": "Gettito cala NONOSTANTE riduzione aliquota. Probabile: effetti transitori riforma (riserve occulte, statuti speciali), COVID su utili."
+        "interpretazione": "Gettito CALA nonostante riduzione aliquota. Effetti transitori riforma + COVID su utili.",
+        "verificato": "Numeri verificati da DFE serie"
       },
       {
-        "periodo": "2022-2024 (RFFA 8%, regime)",
-        "gettito": "Risalita forte: 318M (2022) → 347M (2023) → 386M (2024 picco)",
-        "imprese": "Crescita a 40669 (2023)",
+        "periodo": "2022-2024 (RFFA 8% regime)",
+        "gettito": "Boom 318M → 347M → 386M",
         "aliquota": "8% stabile",
-        "interpretazione": "Boom gettito trainato da utili eccezionali trading energia/materie prime (2022-2023 crisi geopolitica). Numero imprese cresce costantemente."
-      },
-      {
-        "periodo": "2025 (normalizzazione)",
-        "gettito": "Calo a 298M (competenza stimata)",
-        "aliquota": "8% ancora (5.5% pianificato ma non applicato)",
-        "interpretazione": "Normalizzazione utili trading + peggioramento PIL → gettito torna a livelli pre-boom"
+        "interpretazione": "Boom gettito trainato da utili eccezionali trading (documentato in C2025 come causa 2025 normalizzazione)",
+        "verificato": "Numeri e causa verificati"
       }
     ],
     "confonditori": [
-      "Congiuntura economica (PIL cantonale, svizzero, internazionale)",
-      "Settori specifici: trading materie prime/energia (2021-2023 boom), finanza (volatile), manifattura (export-dipendente)",
-      "Riforme fiscali federali (RFFA: abolizione statuti, patent box, R&D)",
-      "Eventi straordinari: COVID-19 (2020-2021), crisi geopolitica (2022-2023)",
-      "Frontalieri: accordo 2020, impatto su competitività transfrontaliera",
-      "Domiciliazione imprese: competizione intercantonale (ZG, ZH, BS hanno aliquote più basse)",
-      "Dimensione imprese: grandi aziende contribuiscono in modo sproporzionato al gettito"
+      "Congiuntura economica (PIL, export, domanda)",
+      "Settori specifici (trading materie prime/energia 2021-2023)",
+      "Riforme federali RFFA (patent box, R&D, riserve occulte)",
+      "COVID-19 (2020-2021)",
+      "Crisi geopolitica (2022-2023)",
+      "Frontalieri accordo 2020",
+      "Competizione intercantonale (ZG, ZH aliquote più basse)",
+      "Dimensione imprese (grandi contribuiscono sproporzionato)"
     ],
-    "conclusione": "Correlazione aliquote-imprese DEBOLE: numero imprese cresce costantemente 2011-2023 indipendentemente da aliquota (9% o 8%). Gettito VOLATILE e trainato da utili (congiuntura, settori specifici) più che da aliquota. Riduzione 9%→8% (2020) seguita da CALO gettito 2020-2021, poi BOOM 2022-2024 (utili trading), poi normalizzazione 2025. Nessuna evidenza causale diretta 'aliquota più bassa → più gettito' nei dati 2014-2025."
+    "conclusione": "NESSUNA evidenza causale diretta 'aliquota più bassa → più gettito' nei dati 2014-2025. Gettito volatile, trainato da utili (congiuntura/settori) più che da aliquota."
   },
   
   "gettitoPerSettore": {
     "disponibilita": "NON DISPONIBILE",
-    "nota": "Divisione delle contribuzioni NON pubblica breakdown gettito PG per settore economico (NOGA). Solo totale aggregato. USTAT STATENT fornisce numero imprese per settore, NON gettito fiscale per settore.",
-    "alternativa": "Possibile inferire peso relativo settori da: (1) numero imprese, (2) addetti, (3) VAL cantonale per settore (USTAT PIL cantonale), ma NON da dati fiscali diretti."
+    "verificato": "Divisione contribuzioni NON pubblica breakdown gettito PG per settore NOGA",
+    "nota": "USTAT STATENT fornisce numero imprese/addetti per settore, NON gettito fiscale settoriale"
   },
   
-  "confrontoIntercantonale": {
-    "nota": "Aliquote PG 2024 altri cantoni (esempi)",
-    "cantoni": {
-      "Zugo": "11.85% (totale cant.+com., tra i più bassi CH)",
-      "Lucerna": "12.32%",
-      "Svitto": "12.74%",
-      "Zurigo": "~19-21% (varia per comune)",
-      "Ginevra": "~24%",
-      "Ticino_2024": "~15-17% (8% cant. + molt.com. 40-70%)",
-      "Ticino_2025_pianificato": "~11-13% (5.5% cant. + molt.com.)"
-    },
-    "fonte": "Rapporto 7684 R1/R2, dati pubblici EFV",
-    "avvertenza": "Aliquote effettive dipendono da moltiplicatore comunale. Confronto richiede aggregazione cant.+com. per ogni cantone."
+  "REMOVED": {
+    "descrizione": "Claims rimossi per impossibilità verifica",
+    "rimosso1": {
+      "claim": "5.5% aliquota 'dal 2025' in vigore",
+      "motivo": "NON trovata in Bollettino ufficiale come legge approvata. C2025 applica ancora 8%. 5.5% era PROPOSTA discussa in Messaggio 7684, NON legge in vigore.",
+      "tenuto": "5.5% menzionata come 'proposta discussa', NON come aliquota vigente"
+    }
   }
 }

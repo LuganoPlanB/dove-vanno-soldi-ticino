@@ -10,7 +10,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        metodologia: resolve(__dirname, 'metodologia.html')
+        metodologia: resolve(__dirname, 'metodologia.html'),
+        storiaDebito: resolve(__dirname, 'storia-debito.html'),
+        tassazioneImprese: resolve(__dirname, 'tassazione-imprese.html'),
       }
     }
   },

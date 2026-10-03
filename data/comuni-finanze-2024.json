@@ -1,0 +1,989 @@
+{
+  "metadati": {
+    "titolo": "Finanze dei comuni ticinesi - Dati 2024",
+    "fonte": "Rapporto 'I conti dei comuni nel 2024', Allegato statistico",
+    "documentoPDF": "comuni_allegato_2024.xlsx (tab8)",
+    "dataEstrazione": "2026-10-03",
+    "numeroComuni": 108,
+    "note": [
+      "Popolazione residente al 31.12.2024",
+      "Moltiplicatori politici (MP) 2025: PF=persone fisiche, PG=persone giuridiche",
+      "Risorse fiscali pro-capite 2022 (CHF)",
+      "Indice di forza finanziaria 2025-26"
+    ]
+  },
+  "comuni": [
+    {
+      "nome": "ACQUAROSSA",
+      "popolazione_2024": 1796,
+      "moltiplicatore_PF_2025": 95,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 95,
+      "risorse_fiscali_procapite_2022": 3115.716488257783,
+      "indice_forza_finanziaria_2025_26": 64.22
+    },
+    {
+      "nome": "AGNO",
+      "popolazione_2024": 4554,
+      "moltiplicatore_PF_2025": 82,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 84,
+      "risorse_fiscali_procapite_2022": 3268.8098374263104,
+      "indice_forza_finanziaria_2025_26": 94.82
+    },
+    {
+      "nome": "AIROLO",
+      "popolazione_2024": 1452,
+      "moltiplicatore_PF_2025": 87,
+      "moltiplicatore_PG_2025": 87,
+      "moltiplicatore_coordinato_2025": 87,
+      "risorse_fiscali_procapite_2022": 3189.656578212291,
+      "indice_forza_finanziaria_2025_26": 69.98
+    },
+    {
+      "nome": "ALTO MALCANTONE",
+      "popolazione_2024": 1390,
+      "moltiplicatore_PF_2025": 90,
+      "moltiplicatore_PG_2025": 90,
+      "moltiplicatore_coordinato_2025": 90,
+      "risorse_fiscali_procapite_2022": 3177.866895306858,
+      "indice_forza_finanziaria_2025_26": 72.81
+    },
+    {
+      "nome": "ARANNO",
+      "popolazione_2024": 351,
+      "moltiplicatore_PF_2025": 92,
+      "moltiplicatore_PG_2025": 92,
+      "moltiplicatore_coordinato_2025": 92,
+      "risorse_fiscali_procapite_2022": 2993.0093074792258,
+      "indice_forza_finanziaria_2025_26": 80.34
+    },
+    {
+      "nome": "ARBEDO-CASTIONE",
+      "popolazione_2024": 5160,
+      "moltiplicatore_PF_2025": 91,
+      "moltiplicatore_PG_2025": 91,
+      "moltiplicatore_coordinato_2025": 91,
+      "risorse_fiscali_procapite_2022": 2953.475573270082,
+      "indice_forza_finanziaria_2025_26": 85.21
+    },
+    {
+      "nome": "AROGNO",
+      "popolazione_2024": 938,
+      "moltiplicatore_PF_2025": 95,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 95,
+      "risorse_fiscali_procapite_2022": 3246.961916230367,
+      "indice_forza_finanziaria_2025_26": 71.4
+    },
+    {
+      "nome": "ASCONA",
+      "popolazione_2024": 5322,
+      "moltiplicatore_PF_2025": 75,
+      "moltiplicatore_PG_2025": 75,
+      "moltiplicatore_coordinato_2025": 75,
+      "risorse_fiscali_procapite_2022": 6029.673739763553,
+      "indice_forza_finanziaria_2025_26": 117.91
+    },
+    {
+      "nome": "ASTANO",
+      "popolazione_2024": 313,
+      "moltiplicatore_PF_2025": 95,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 95,
+      "risorse_fiscali_procapite_2022": 3114.8202341137126,
+      "indice_forza_finanziaria_2025_26": 66.71
+    },
+    {
+      "nome": "AVEGNO GORDEVIO",
+      "popolazione_2024": 1534,
+      "moltiplicatore_PF_2025": 95,
+      "moltiplicatore_PG_2025": 121,
+      "moltiplicatore_coordinato_2025": 98,
+      "risorse_fiscali_procapite_2022": 3183.524521515735,
+      "indice_forza_finanziaria_2025_26": 76.51
+    },
+    {
+      "nome": "BALERNA",
+      "popolazione_2024": 3356,
+      "moltiplicatore_PF_2025": 75,
+      "moltiplicatore_PG_2025": 75,
+      "moltiplicatore_coordinato_2025": 75,
+      "risorse_fiscali_procapite_2022": 5743.73777271346,
+      "indice_forza_finanziaria_2025_26": 113.8
+    },
+    {
+      "nome": "BEDANO",
+      "popolazione_2024": 1510,
+      "moltiplicatore_PF_2025": 78,
+      "moltiplicatore_PG_2025": 78,
+      "moltiplicatore_coordinato_2025": 78,
+      "risorse_fiscali_procapite_2022": 4574.787672240805,
+      "indice_forza_finanziaria_2025_26": 102.55
+    },
+    {
+      "nome": "BEDIGLIORA",
+      "popolazione_2024": 619,
+      "moltiplicatore_PF_2025": 95,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 95,
+      "risorse_fiscali_procapite_2022": 2888.5198735483873,
+      "indice_forza_finanziaria_2025_26": 71.22
+    },
+    {
+      "nome": "BEDRETTO",
+      "popolazione_2024": 108,
+      "moltiplicatore_PF_2025": 60,
+      "moltiplicatore_PG_2025": 60,
+      "moltiplicatore_coordinato_2025": 60,
+      "risorse_fiscali_procapite_2022": 10377.482553191488,
+      "indice_forza_finanziaria_2025_26": 155.4
+    },
+    {
+      "nome": "BELLINZONA",
+      "popolazione_2024": 45305,
+      "moltiplicatore_PF_2025": 93,
+      "moltiplicatore_PG_2025": 93,
+      "moltiplicatore_coordinato_2025": 93,
+      "risorse_fiscali_procapite_2022": 3077.419879194125,
+      "indice_forza_finanziaria_2025_26": 81.37
+    },
+    {
+      "nome": "BIASCA",
+      "popolazione_2024": 6201,
+      "moltiplicatore_PF_2025": 95,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 95,
+      "risorse_fiscali_procapite_2022": 3146.2455861087437,
+      "indice_forza_finanziaria_2025_26": 75.43
+    },
+    {
+      "nome": "BIOGGIO",
+      "popolazione_2024": 2801,
+      "moltiplicatore_PF_2025": 65,
+      "moltiplicatore_PG_2025": 72,
+      "moltiplicatore_coordinato_2025": 68,
+      "risorse_fiscali_procapite_2022": 5101.165732553892,
+      "indice_forza_finanziaria_2025_26": 138.82
+    },
+    {
+      "nome": "BISSONE",
+      "popolazione_2024": 930,
+      "moltiplicatore_PF_2025": 69,
+      "moltiplicatore_PG_2025": 69,
+      "moltiplicatore_coordinato_2025": 69,
+      "risorse_fiscali_procapite_2022": 5791.911076604471,
+      "indice_forza_finanziaria_2025_26": 123.18
+    },
+    {
+      "nome": "BLENIO",
+      "popolazione_2024": 1747,
+      "moltiplicatore_PF_2025": 90,
+      "moltiplicatore_PG_2025": 90,
+      "moltiplicatore_coordinato_2025": 90,
+      "risorse_fiscali_procapite_2022": 2958.7092831232085,
+      "indice_forza_finanziaria_2025_26": 65.45
+    },
+    {
+      "nome": "BODIO",
+      "popolazione_2024": 961,
+      "moltiplicatore_PF_2025": 95,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 95,
+      "risorse_fiscali_procapite_2022": 3011.272733785346,
+      "indice_forza_finanziaria_2025_26": 59.24
+    },
+    {
+      "nome": "BOSCO GURIN",
+      "popolazione_2024": 47,
+      "moltiplicatore_PF_2025": 100,
+      "moltiplicatore_PG_2025": 100,
+      "moltiplicatore_coordinato_2025": 100,
+      "risorse_fiscali_procapite_2022": 3973.039433962264,
+      "indice_forza_finanziaria_2025_26": 64.73
+    },
+    {
+      "nome": "BREGGIA",
+      "popolazione_2024": 1889,
+      "moltiplicatore_PF_2025": 95,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 95,
+      "risorse_fiscali_procapite_2022": 3163.7439602925797,
+      "indice_forza_finanziaria_2025_26": 70.17
+    },
+    {
+      "nome": "BRIONE sopra MINUSIO",
+      "popolazione_2024": 436,
+      "moltiplicatore_PF_2025": 78,
+      "moltiplicatore_PG_2025": 78,
+      "moltiplicatore_coordinato_2025": 78,
+      "risorse_fiscali_procapite_2022": 5695.461457411502,
+      "indice_forza_finanziaria_2025_26": 87.94
+    },
+    {
+      "nome": "BRISSAGO",
+      "popolazione_2024": 1619,
+      "moltiplicatore_PF_2025": 85,
+      "moltiplicatore_PG_2025": 85,
+      "moltiplicatore_coordinato_2025": 85,
+      "risorse_fiscali_procapite_2022": 5273.791928084315,
+      "indice_forza_finanziaria_2025_26": 91.3
+    },
+    {
+      "nome": "BRUSINO ARSIZIO",
+      "popolazione_2024": 474,
+      "moltiplicatore_PF_2025": 85,
+      "moltiplicatore_PG_2025": 85,
+      "moltiplicatore_coordinato_2025": 85,
+      "risorse_fiscali_procapite_2022": 3770.584454148473,
+      "indice_forza_finanziaria_2025_26": 88.4
+    },
+    {
+      "nome": "CADEMARIO",
+      "popolazione_2024": 790,
+      "moltiplicatore_PF_2025": 95,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 95,
+      "risorse_fiscali_procapite_2022": 3472.27164765526,
+      "indice_forza_finanziaria_2025_26": 76.66
+    },
+    {
+      "nome": "CADEMPINO",
+      "popolazione_2024": 1585,
+      "moltiplicatore_PF_2025": 70,
+      "moltiplicatore_PG_2025": 70,
+      "moltiplicatore_coordinato_2025": 70,
+      "risorse_fiscali_procapite_2022": 331.866202531648,
+      "indice_forza_finanziaria_2025_26": 130.37
+    },
+    {
+      "nome": "CADENAZZO",
+      "popolazione_2024": 3132,
+      "moltiplicatore_PF_2025": 88,
+      "moltiplicatore_PG_2025": 88,
+      "moltiplicatore_coordinato_2025": 88,
+      "risorse_fiscali_procapite_2022": 2728.740190983183,
+      "indice_forza_finanziaria_2025_26": 85.05
+    },
+    {
+      "nome": "CAMPO (VALLEMAGGIA)",
+      "popolazione_2024": 49,
+      "moltiplicatore_PF_2025": 65,
+      "moltiplicatore_PG_2025": 65,
+      "moltiplicatore_coordinato_2025": 65,
+      "risorse_fiscali_procapite_2022": 2946.9940816326525,
+      "indice_forza_finanziaria_2025_26": 70.65
+    },
+    {
+      "nome": "CANOBBIO",
+      "popolazione_2024": 2404,
+      "moltiplicatore_PF_2025": 78,
+      "moltiplicatore_PG_2025": 78,
+      "moltiplicatore_coordinato_2025": 78,
+      "risorse_fiscali_procapite_2022": 3779.4881768240357,
+      "indice_forza_finanziaria_2025_26": 105.67
+    },
+    {
+      "nome": "CAPRIASCA",
+      "popolazione_2024": 6717,
+      "moltiplicatore_PF_2025": 94,
+      "moltiplicatore_PG_2025": 94,
+      "moltiplicatore_coordinato_2025": 94,
+      "risorse_fiscali_procapite_2022": 3196.3193461167284,
+      "indice_forza_finanziaria_2025_26": 76.97
+    },
+    {
+      "nome": "CASLANO",
+      "popolazione_2024": 4400,
+      "moltiplicatore_PF_2025": 85,
+      "moltiplicatore_PG_2025": 85,
+      "moltiplicatore_coordinato_2025": 85,
+      "risorse_fiscali_procapite_2022": 3259.6121934366997,
+      "indice_forza_finanziaria_2025_26": 86.38
+    },
+    {
+      "nome": "CASTEL SAN PIETRO",
+      "popolazione_2024": 2262,
+      "moltiplicatore_PF_2025": 65,
+      "moltiplicatore_PG_2025": 70,
+      "moltiplicatore_coordinato_2025": 66,
+      "risorse_fiscali_procapite_2022": 5622.829416255049,
+      "indice_forza_finanziaria_2025_26": 122.22
+    },
+    {
+      "nome": "CENTOVALLI",
+      "popolazione_2024": 1070,
+      "moltiplicatore_PF_2025": 95,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 95,
+      "risorse_fiscali_procapite_2022": 3015.363523526997,
+      "indice_forza_finanziaria_2025_26": 62.61
+    },
+    {
+      "nome": "CERENTINO",
+      "popolazione_2024": 37,
+      "moltiplicatore_PF_2025": 100,
+      "moltiplicatore_PG_2025": 100,
+      "moltiplicatore_coordinato_2025": 100,
+      "risorse_fiscali_procapite_2022": 2438.5366666666664,
+      "indice_forza_finanziaria_2025_26": 67.46
+    },
+    {
+      "nome": "CEVIO",
+      "popolazione_2024": 1111,
+      "moltiplicatore_PF_2025": 94,
+      "moltiplicatore_PG_2025": 113,
+      "moltiplicatore_coordinato_2025": 97,
+      "risorse_fiscali_procapite_2022": 2758.5140540540538,
+      "indice_forza_finanziaria_2025_26": 65.75
+    },
+    {
+      "nome": "CHIASSO",
+      "popolazione_2024": 7564,
+      "moltiplicatore_PF_2025": 88,
+      "moltiplicatore_PG_2025": 88,
+      "moltiplicatore_coordinato_2025": 88,
+      "risorse_fiscali_procapite_2022": 4886.280528398479,
+      "indice_forza_finanziaria_2025_26": 104.35
+    },
+    {
+      "nome": "COLDRERIO",
+      "popolazione_2024": 2834,
+      "moltiplicatore_PF_2025": 80,
+      "moltiplicatore_PG_2025": 80,
+      "moltiplicatore_coordinato_2025": 80,
+      "risorse_fiscali_procapite_2022": 2595.744501314107,
+      "indice_forza_finanziaria_2025_26": 86.93
+    },
+    {
+      "nome": "COLLINA D'ORO",
+      "popolazione_2024": 4903,
+      "moltiplicatore_PF_2025": 60,
+      "moltiplicatore_PG_2025": 60,
+      "moltiplicatore_coordinato_2025": 60,
+      "risorse_fiscali_procapite_2022": 10180.18425777901,
+      "indice_forza_finanziaria_2025_26": 165.6
+    },
+    {
+      "nome": "COMANO",
+      "popolazione_2024": 2186,
+      "moltiplicatore_PF_2025": 75,
+      "moltiplicatore_PG_2025": 75,
+      "moltiplicatore_coordinato_2025": 75,
+      "risorse_fiscali_procapite_2022": 4364.428965197216,
+      "indice_forza_finanziaria_2025_26": 123.04
+    },
+    {
+      "nome": "CUGNASCO-GERRA",
+      "popolazione_2024": 2858,
+      "moltiplicatore_PF_2025": 90,
+      "moltiplicatore_PG_2025": 90,
+      "moltiplicatore_coordinato_2025": 90,
+      "risorse_fiscali_procapite_2022": 2934.8301515094086,
+      "indice_forza_finanziaria_2025_26": 80.03
+    },
+    {
+      "nome": "CUREGLIA",
+      "popolazione_2024": 1483,
+      "moltiplicatore_PF_2025": 75,
+      "moltiplicatore_PG_2025": 75,
+      "moltiplicatore_coordinato_2025": 75,
+      "risorse_fiscali_procapite_2022": 4447.336482851379,
+      "indice_forza_finanziaria_2025_26": 117.83
+    },
+    {
+      "nome": "CURIO",
+      "popolazione_2024": 587,
+      "moltiplicatore_PF_2025": 95,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 95,
+      "risorse_fiscali_procapite_2022": 3483.087598684211,
+      "indice_forza_finanziaria_2025_26": 74.41
+    },
+    {
+      "nome": "DALPE",
+      "popolazione_2024": 185,
+      "moltiplicatore_PF_2025": 70,
+      "moltiplicatore_PG_2025": 70,
+      "moltiplicatore_coordinato_2025": 70,
+      "risorse_fiscali_procapite_2022": 3547.2332768361584,
+      "indice_forza_finanziaria_2025_26": 82.26
+    },
+    {
+      "nome": "FAIDO",
+      "popolazione_2024": 2705,
+      "moltiplicatore_PF_2025": 94,
+      "moltiplicatore_PG_2025": 94,
+      "moltiplicatore_coordinato_2025": 94,
+      "risorse_fiscali_procapite_2022": 2693.183202390368,
+      "indice_forza_finanziaria_2025_26": 61.97
+    },
+    {
+      "nome": "GAMBAROGNO",
+      "popolazione_2024": 5024,
+      "moltiplicatore_PF_2025": 85,
+      "moltiplicatore_PG_2025": 100,
+      "moltiplicatore_coordinato_2025": 87,
+      "risorse_fiscali_procapite_2022": 3542.8737072792087,
+      "indice_forza_finanziaria_2025_26": 77.99
+    },
+    {
+      "nome": "GIORNICO",
+      "popolazione_2024": 801,
+      "moltiplicatore_PF_2025": 95,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 95,
+      "risorse_fiscali_procapite_2022": 3134.1077532996,
+      "indice_forza_finanziaria_2025_26": 82.63
+    },
+    {
+      "nome": "GORDOLA",
+      "popolazione_2024": 4831,
+      "moltiplicatore_PF_2025": 86,
+      "moltiplicatore_PG_2025": 86,
+      "moltiplicatore_coordinato_2025": 86,
+      "risorse_fiscali_procapite_2022": 2966.4129605809144,
+      "indice_forza_finanziaria_2025_26": 92.38
+    },
+    {
+      "nome": "GRANCIA",
+      "popolazione_2024": 468,
+      "moltiplicatore_PF_2025": 75,
+      "moltiplicatore_PG_2025": 75,
+      "moltiplicatore_coordinato_2025": 75,
+      "risorse_fiscali_procapite_2022": 8987.733361522196,
+      "indice_forza_finanziaria_2025_26": 119.66
+    },
+    {
+      "nome": "GRAVESANO",
+      "popolazione_2024": 1398,
+      "moltiplicatore_PF_2025": 70,
+      "moltiplicatore_PG_2025": 70,
+      "moltiplicatore_coordinato_2025": 70,
+      "risorse_fiscali_procapite_2022": 4754.786847110461,
+      "indice_forza_finanziaria_2025_26": 112.96
+    },
+    {
+      "nome": "ISONE",
+      "popolazione_2024": 404,
+      "moltiplicatore_PF_2025": 92,
+      "moltiplicatore_PG_2025": 92,
+      "moltiplicatore_coordinato_2025": 92,
+      "risorse_fiscali_procapite_2022": 2983.9458762886597,
+      "indice_forza_finanziaria_2025_26": 55.75
+    },
+    {
+      "nome": "LAMONE",
+      "popolazione_2024": 1757,
+      "moltiplicatore_PF_2025": 85,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 88,
+      "risorse_fiscali_procapite_2022": 3697.7241618087573,
+      "indice_forza_finanziaria_2025_26": 89.98
+    },
+    {
+      "nome": "LAVERTEZZO",
+      "popolazione_2024": 1253,
+      "moltiplicatore_PF_2025": 100,
+      "moltiplicatore_PG_2025": 100,
+      "moltiplicatore_coordinato_2025": 100,
+      "risorse_fiscali_procapite_2022": 3113.5257472137628,
+      "indice_forza_finanziaria_2025_26": 74.04
+    },
+    {
+      "nome": "LAVIZZARA",
+      "popolazione_2024": 498,
+      "moltiplicatore_PF_2025": 95,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 95,
+      "risorse_fiscali_procapite_2022": 2783.6854396728013,
+      "indice_forza_finanziaria_2025_26": 63.63
+    },
+    {
+      "nome": "LINESCIO",
+      "popolazione_2024": 41,
+      "moltiplicatore_PF_2025": 65,
+      "moltiplicatore_PG_2025": 65,
+      "moltiplicatore_coordinato_2025": 65,
+      "risorse_fiscali_procapite_2022": 3305.295476190477,
+      "indice_forza_finanziaria_2025_26": 79.09
+    },
+    {
+      "nome": "LOCARNO",
+      "popolazione_2024": 16374,
+      "moltiplicatore_PF_2025": 90,
+      "moltiplicatore_PG_2025": 97,
+      "moltiplicatore_coordinato_2025": 91,
+      "risorse_fiscali_procapite_2022": 3336.093634012683,
+      "indice_forza_finanziaria_2025_26": 84.39
+    },
+    {
+      "nome": "LOSONE",
+      "popolazione_2024": 6727,
+      "moltiplicatore_PF_2025": 90,
+      "moltiplicatore_PG_2025": 90,
+      "moltiplicatore_coordinato_2025": 90,
+      "risorse_fiscali_procapite_2022": 3086.473149153388,
+      "indice_forza_finanziaria_2025_26": 90.64
+    },
+    {
+      "nome": "LUGANO",
+      "popolazione_2024": 63629,
+      "moltiplicatore_PF_2025": 77,
+      "moltiplicatore_PG_2025": 82,
+      "moltiplicatore_coordinato_2025": 78,
+      "risorse_fiscali_procapite_2022": 6788.245227519653,
+      "indice_forza_finanziaria_2025_26": 131.75
+    },
+    {
+      "nome": "LUMINO",
+      "popolazione_2024": 1684,
+      "moltiplicatore_PF_2025": 90,
+      "moltiplicatore_PG_2025": 90,
+      "moltiplicatore_coordinato_2025": 90,
+      "risorse_fiscali_procapite_2022": 3027.7467885926844,
+      "indice_forza_finanziaria_2025_26": 79.39
+    },
+    {
+      "nome": "MAGGIA",
+      "popolazione_2024": 2674,
+      "moltiplicatore_PF_2025": 90,
+      "moltiplicatore_PG_2025": 126,
+      "moltiplicatore_coordinato_2025": 93,
+      "risorse_fiscali_procapite_2022": 2958.909101487095,
+      "indice_forza_finanziaria_2025_26": 70.6
+    },
+    {
+      "nome": "MAGLIASO",
+      "popolazione_2024": 1622,
+      "moltiplicatore_PF_2025": 75,
+      "moltiplicatore_PG_2025": 75,
+      "moltiplicatore_coordinato_2025": 75,
+      "risorse_fiscali_procapite_2022": 3978.303462911108,
+      "indice_forza_finanziaria_2025_26": 96.89
+    },
+    {
+      "nome": "MANNO",
+      "popolazione_2024": 1373,
+      "moltiplicatore_PF_2025": 65,
+      "moltiplicatore_PG_2025": 65,
+      "moltiplicatore_coordinato_2025": 65,
+      "risorse_fiscali_procapite_2022": 10968.788789473687,
+      "indice_forza_finanziaria_2025_26": 186.44
+    },
+    {
+      "nome": "MASSAGNO",
+      "popolazione_2024": 6799,
+      "moltiplicatore_PF_2025": 70,
+      "moltiplicatore_PG_2025": 70,
+      "moltiplicatore_coordinato_2025": 70,
+      "risorse_fiscali_procapite_2022": 4375.374926235741,
+      "indice_forza_finanziaria_2025_26": 115.9
+    },
+    {
+      "nome": "MELIDE",
+      "popolazione_2024": 1785,
+      "moltiplicatore_PF_2025": 65,
+      "moltiplicatore_PG_2025": 65,
+      "moltiplicatore_coordinato_2025": 65,
+      "risorse_fiscali_procapite_2022": 4556.365362790959,
+      "indice_forza_finanziaria_2025_26": 105.11
+    },
+    {
+      "nome": "MENDRISIO",
+      "popolazione_2024": 15085,
+      "moltiplicatore_PF_2025": 77,
+      "moltiplicatore_PG_2025": 82,
+      "moltiplicatore_coordinato_2025": 79,
+      "risorse_fiscali_procapite_2022": 5509.357728698763,
+      "indice_forza_finanziaria_2025_26": 102.98
+    },
+    {
+      "nome": "MERGOSCIA",
+      "popolazione_2024": 201,
+      "moltiplicatore_PF_2025": 100,
+      "moltiplicatore_PG_2025": 100,
+      "moltiplicatore_coordinato_2025": 100,
+      "risorse_fiscali_procapite_2022": 3420.784141414141,
+      "indice_forza_finanziaria_2025_26": 59.73
+    },
+    {
+      "nome": "MEZZOVICO-VIRA",
+      "popolazione_2024": 1389,
+      "moltiplicatore_PF_2025": 60,
+      "moltiplicatore_PG_2025": 60,
+      "moltiplicatore_coordinato_2025": 60,
+      "risorse_fiscali_procapite_2022": 6406.156013024604,
+      "indice_forza_finanziaria_2025_26": 125.56
+    },
+    {
+      "nome": "MIGLIEGLIA",
+      "popolazione_2024": 293,
+      "moltiplicatore_PF_2025": 95,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 95,
+      "risorse_fiscali_procapite_2022": 2971.646322580644,
+      "indice_forza_finanziaria_2025_26": 65.73
+    },
+    {
+      "nome": "MINUSIO",
+      "popolazione_2024": 7321,
+      "moltiplicatore_PF_2025": 82,
+      "moltiplicatore_PG_2025": 82,
+      "moltiplicatore_coordinato_2025": 82,
+      "risorse_fiscali_procapite_2022": 3867.539885460179,
+      "indice_forza_finanziaria_2025_26": 96.49
+    },
+    {
+      "nome": "MONTECENERI",
+      "popolazione_2024": 4729,
+      "moltiplicatore_PF_2025": 92,
+      "moltiplicatore_PG_2025": 92,
+      "moltiplicatore_coordinato_2025": 92,
+      "risorse_fiscali_procapite_2022": 3064.7974223853325,
+      "indice_forza_finanziaria_2025_26": 77.21
+    },
+    {
+      "nome": "MORBIO INFERIORE",
+      "popolazione_2024": 4412,
+      "moltiplicatore_PF_2025": 82,
+      "moltiplicatore_PG_2025": 82,
+      "moltiplicatore_coordinato_2025": 82,
+      "risorse_fiscali_procapite_2022": 3604.2291044430744,
+      "indice_forza_finanziaria_2025_26": 94.11
+    },
+    {
+      "nome": "MORCOTE",
+      "popolazione_2024": 713,
+      "moltiplicatore_PF_2025": 80,
+      "moltiplicatore_PG_2025": 80,
+      "moltiplicatore_coordinato_2025": 80,
+      "risorse_fiscali_procapite_2022": 18279.6706442577,
+      "indice_forza_finanziaria_2025_26": 153.37
+    },
+    {
+      "nome": "MURALTO",
+      "popolazione_2024": 2572,
+      "moltiplicatore_PF_2025": 75,
+      "moltiplicatore_PG_2025": 75,
+      "moltiplicatore_coordinato_2025": 75,
+      "risorse_fiscali_procapite_2022": 4510.565758209955,
+      "indice_forza_finanziaria_2025_26": 100.25
+    },
+    {
+      "nome": "MUZZANO",
+      "popolazione_2024": 805,
+      "moltiplicatore_PF_2025": 75,
+      "moltiplicatore_PG_2025": 75,
+      "moltiplicatore_coordinato_2025": 75,
+      "risorse_fiscali_procapite_2022": 4434.231498771495,
+      "indice_forza_finanziaria_2025_26": 113.34
+    },
+    {
+      "nome": "NEGGIO",
+      "popolazione_2024": 328,
+      "moltiplicatore_PF_2025": 90,
+      "moltiplicatore_PG_2025": 90,
+      "moltiplicatore_coordinato_2025": 90,
+      "risorse_fiscali_procapite_2022": 3978.9413354037265,
+      "indice_forza_finanziaria_2025_26": 88.03
+    },
+    {
+      "nome": "NOVAGGIO",
+      "popolazione_2024": 850,
+      "moltiplicatore_PF_2025": 95,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 95,
+      "risorse_fiscali_procapite_2022": 3268.436444981862,
+      "indice_forza_finanziaria_2025_26": 70.56
+    },
+    {
+      "nome": "NOVAZZANO",
+      "popolazione_2024": 2340,
+      "moltiplicatore_PF_2025": 65,
+      "moltiplicatore_PG_2025": 65,
+      "moltiplicatore_coordinato_2025": 65,
+      "risorse_fiscali_procapite_2022": 5588.867770673486,
+      "indice_forza_finanziaria_2025_26": 119.58
+    },
+    {
+      "nome": "ONSERNONE",
+      "popolazione_2024": 663,
+      "moltiplicatore_PF_2025": 95,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 95,
+      "risorse_fiscali_procapite_2022": 2702.2700740740734,
+      "indice_forza_finanziaria_2025_26": 54.58
+    },
+    {
+      "nome": "ORIGLIO",
+      "popolazione_2024": 1526,
+      "moltiplicatore_PF_2025": 70,
+      "moltiplicatore_PG_2025": 70,
+      "moltiplicatore_coordinato_2025": 70,
+      "risorse_fiscali_procapite_2022": 5163.744689812232,
+      "indice_forza_finanziaria_2025_26": 112.79
+    },
+    {
+      "nome": "ORSELINA",
+      "popolazione_2024": 687,
+      "moltiplicatore_PF_2025": 82,
+      "moltiplicatore_PG_2025": 82,
+      "moltiplicatore_coordinato_2025": 82,
+      "risorse_fiscali_procapite_2022": 6160.883266761767,
+      "indice_forza_finanziaria_2025_26": 109.85
+    },
+    {
+      "nome": "PARADISO",
+      "popolazione_2024": 4853,
+      "moltiplicatore_PF_2025": 58,
+      "moltiplicatore_PG_2025": 58,
+      "moltiplicatore_coordinato_2025": 58,
+      "risorse_fiscali_procapite_2022": 12002.416472354567,
+      "indice_forza_finanziaria_2025_26": 230.99
+    },
+    {
+      "nome": "PERSONICO",
+      "popolazione_2024": 317,
+      "moltiplicatore_PF_2025": 90,
+      "moltiplicatore_PG_2025": 90,
+      "moltiplicatore_coordinato_2025": 90,
+      "risorse_fiscali_procapite_2022": 3037.8300974025974,
+      "indice_forza_finanziaria_2025_26": 61.36
+    },
+    {
+      "nome": "POLLEGIO",
+      "popolazione_2024": 920,
+      "moltiplicatore_PF_2025": 95,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 95,
+      "risorse_fiscali_procapite_2022": 2614.351052843601,
+      "indice_forza_finanziaria_2025_26": 63.88
+    },
+    {
+      "nome": "PONTE CAPRIASCA",
+      "popolazione_2024": 1958,
+      "moltiplicatore_PF_2025": 85,
+      "moltiplicatore_PG_2025": 85,
+      "moltiplicatore_coordinato_2025": 85,
+      "risorse_fiscali_procapite_2022": 3327.7222320499477,
+      "indice_forza_finanziaria_2025_26": 100.08
+    },
+    {
+      "nome": "PORZA",
+      "popolazione_2024": 1717,
+      "moltiplicatore_PF_2025": 56,
+      "moltiplicatore_PG_2025": 56,
+      "moltiplicatore_coordinato_2025": 56,
+      "risorse_fiscali_procapite_2022": 7598.199774294669,
+      "indice_forza_finanziaria_2025_26": 156.33
+    },
+    {
+      "nome": "PRATO (LEVENTINA)",
+      "popolazione_2024": 376,
+      "moltiplicatore_PF_2025": 90,
+      "moltiplicatore_PG_2025": 90,
+      "moltiplicatore_coordinato_2025": 90,
+      "risorse_fiscali_procapite_2022": 3122.501627296588,
+      "indice_forza_finanziaria_2025_26": 71.49
+    },
+    {
+      "nome": "PURA",
+      "popolazione_2024": 1355,
+      "moltiplicatore_PF_2025": 87,
+      "moltiplicatore_PG_2025": 87,
+      "moltiplicatore_coordinato_2025": 87,
+      "risorse_fiscali_procapite_2022": 3647.6341788856294,
+      "indice_forza_finanziaria_2025_26": 85.1
+    },
+    {
+      "nome": "QUINTO",
+      "popolazione_2024": 926,
+      "moltiplicatore_PF_2025": 90,
+      "moltiplicatore_PG_2025": 90,
+      "moltiplicatore_coordinato_2025": 90,
+      "risorse_fiscali_procapite_2022": 3209.198916929549,
+      "indice_forza_finanziaria_2025_26": 67.06
+    },
+    {
+      "nome": "RIVA SAN VITALE",
+      "popolazione_2024": 2695,
+      "moltiplicatore_PF_2025": 80,
+      "moltiplicatore_PG_2025": 80,
+      "moltiplicatore_coordinato_2025": 80,
+      "risorse_fiscali_procapite_2022": 3447.94947815694,
+      "indice_forza_finanziaria_2025_26": 84.5
+    },
+    {
+      "nome": "RIVIERA",
+      "popolazione_2024": 4269,
+      "moltiplicatore_PF_2025": 95,
+      "moltiplicatore_PG_2025": 95,
+      "moltiplicatore_coordinato_2025": 95,
+      "risorse_fiscali_procapite_2022": 3018.9838258479786,
+      "indice_forza_finanziaria_2025_26": 75.37
+    },
+    {
+      "nome": "RONCO SOPRA ASCONA",
+      "popolazione_2024": 522,
+      "moltiplicatore_PF_2025": 75,
+      "moltiplicatore_PG_2025": 75,
+      "moltiplicatore_coordinato_2025": 75,
+      "risorse_fiscali_procapite_2022": 8688.242936802973,
+      "indice_forza_finanziaria_2025_26": 147.16
+    },
+    {
+      "nome": "SANT'ANTONINO",
+      "popolazione_2024": 2671,
+      "moltiplicatore_PF_2025": 70,
+      "moltiplicatore_PG_2025": 70,
+      "moltiplicatore_coordinato_2025": 70,
+      "risorse_fiscali_procapite_2022": 4396.0021284829745,
+      "indice_forza_finanziaria_2025_26": 114.05
+    },
+    {
+      "nome": "SAVOSA",
+      "popolazione_2024": 2276,
+      "moltiplicatore_PF_2025": 75,
+      "moltiplicatore_PG_2025": 75,
+      "moltiplicatore_coordinato_2025": 75,
+      "risorse_fiscali_procapite_2022": 5292.590030395411,
+      "indice_forza_finanziaria_2025_26": 117.6
+    },
+    {
+      "nome": "SERRAVALLE",
+      "popolazione_2024": 2070,
+      "moltiplicatore_PF_2025": 93,
+      "moltiplicatore_PG_2025": 93,
+      "moltiplicatore_coordinato_2025": 93,
+      "risorse_fiscali_procapite_2022": 3190.4637067705785,
+      "indice_forza_finanziaria_2025_26": 68.31
+    },
+    {
+      "nome": "SORENGO",
+      "popolazione_2024": 2183,
+      "moltiplicatore_PF_2025": 65,
+      "moltiplicatore_PG_2025": 65,
+      "moltiplicatore_coordinato_2025": 65,
+      "risorse_fiscali_procapite_2022": 6532.886381642513,
+      "indice_forza_finanziaria_2025_26": 133.02
+    },
+    {
+      "nome": "STABIO",
+      "popolazione_2024": 4522,
+      "moltiplicatore_PF_2025": 65,
+      "moltiplicatore_PG_2025": 65,
+      "moltiplicatore_coordinato_2025": 65,
+      "risorse_fiscali_procapite_2022": 8438.997209145935,
+      "indice_forza_finanziaria_2025_26": 142.33
+    },
+    {
+      "nome": "TENERO-CONTRA",
+      "popolazione_2024": 3393,
+      "moltiplicatore_PF_2025": 93,
+      "moltiplicatore_PG_2025": 93,
+      "moltiplicatore_coordinato_2025": 93,
+      "risorse_fiscali_procapite_2022": 3193.784763234232,
+      "indice_forza_finanziaria_2025_26": 90.25
+    },
+    {
+      "nome": "TERRE DI PEDEMONTE",
+      "popolazione_2024": 2685,
+      "moltiplicatore_PF_2025": 85,
+      "moltiplicatore_PG_2025": 85,
+      "moltiplicatore_coordinato_2025": 85,
+      "risorse_fiscali_procapite_2022": 3135.384773570898,
+      "indice_forza_finanziaria_2025_26": 82.61
+    },
+    {
+      "nome": "TORRICELLA-TAVERNE",
+      "popolazione_2024": 3087,
+      "moltiplicatore_PF_2025": 85,
+      "moltiplicatore_PG_2025": 85,
+      "moltiplicatore_coordinato_2025": 85,
+      "risorse_fiscali_procapite_2022": 3114.5156468181804,
+      "indice_forza_finanziaria_2025_26": 86.3
+    },
+    {
+      "nome": "TRESA",
+      "popolazione_2024": 3126,
+      "moltiplicatore_PF_2025": 85,
+      "moltiplicatore_PG_2025": 85,
+      "moltiplicatore_coordinato_2025": 85,
+      "risorse_fiscali_procapite_2022": 3366.287684552846,
+      "indice_forza_finanziaria_2025_26": 77.8
+    },
+    {
+      "nome": "VACALLO",
+      "popolazione_2024": 3491,
+      "moltiplicatore_PF_2025": 84,
+      "moltiplicatore_PG_2025": 84,
+      "moltiplicatore_coordinato_2025": 84,
+      "risorse_fiscali_procapite_2022": 4585.48507614066,
+      "indice_forza_finanziaria_2025_26": 97.6
+    },
+    {
+      "nome": "VAL MARA",
+      "popolazione_2024": 3005,
+      "moltiplicatore_PF_2025": 80,
+      "moltiplicatore_PG_2025": 80,
+      "moltiplicatore_coordinato_2025": 80,
+      "risorse_fiscali_procapite_2022": 3231.309451067854,
+      "indice_forza_finanziaria_2025_26": 100.76
+    },
+    {
+      "nome": "VERNATE",
+      "popolazione_2024": 613,
+      "moltiplicatore_PF_2025": 80,
+      "moltiplicatore_PG_2025": 80,
+      "moltiplicatore_coordinato_2025": 80,
+      "risorse_fiscali_procapite_2022": 4957.040645161293,
+      "indice_forza_finanziaria_2025_26": 103.09
+    },
+    {
+      "nome": "VERZASCA",
+      "popolazione_2024": 776,
+      "moltiplicatore_PF_2025": 100,
+      "moltiplicatore_PG_2025": 100,
+      "moltiplicatore_coordinato_2025": 100,
+      "risorse_fiscali_procapite_2022": 3262.559999999999,
+      "indice_forza_finanziaria_2025_26": 63.37
+    },
+    {
+      "nome": "VEZIA",
+      "popolazione_2024": 1958,
+      "moltiplicatore_PF_2025": 85,
+      "moltiplicatore_PG_2025": 85,
+      "moltiplicatore_coordinato_2025": 85,
+      "risorse_fiscali_procapite_2022": 3650.9874021909236,
+      "indice_forza_finanziaria_2025_26": 101.04
+    },
+    {
+      "nome": "VICO MORCOTE",
+      "popolazione_2024": 408,
+      "moltiplicatore_PF_2025": 65,
+      "moltiplicatore_PG_2025": 65,
+      "moltiplicatore_coordinato_2025": 65,
+      "risorse_fiscali_procapite_2022": 10846.309445783132,
+      "indice_forza_finanziaria_2025_26": 176.4
+    },
+    {
+      "nome": "TOTALE",
+      "popolazione_2024": 358903,
+      "moltiplicatore_PF_2025": null,
+      "moltiplicatore_PG_2025": null,
+      "moltiplicatore_coordinato_2025": 79.15747250042963,
+      "risorse_fiscali_procapite_2022": 4613.648437870989,
+      "indice_forza_finanziaria_2025_26": 100
+    },
+    {
+      "nome": "(1) rapporto tra la somma delle imposte comunali PF+PG (applicando i rispettivi MP al gettito di tre anni prima) e il gettito base cantonale PF+PG (gettito di tre anni prima)",
+      "popolazione_2024": null,
+      "moltiplicatore_PF_2025": null,
+      "moltiplicatore_PG_2025": null,
+      "moltiplicatore_coordinato_2025": null,
+      "risorse_fiscali_procapite_2022": null,
+      "indice_forza_finanziaria_2025_26": null
+    }
+  ]
+}
