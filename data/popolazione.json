@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "title": "Popolazione residente Canton Ticino",
+    "description": "Popolazione residente permanente del Canton Ticino 2022-2025",
+    "sources": [
+      {
+        "name": "Ufficio di statistica Canton Ticino (Ustat)",
+        "url": "https://m3.ti.ch/DFE/DR/USTAT/allegati/prodima/3201_popolazione.pdf",
+        "date": "2025"
+      },
+      {
+        "name": "Ufficio federale di statistica (UST/BFS)",
+        "url": "https://www.bfs.admin.ch/bfs/it/home/statistiche/popolazione.html"
+      }
+    ],
+    "notes": "Popolazione residente permanente al 31 dicembre di ogni anno. Dati 2026 e 2027 stimati in base al trend recente."
+  },
+  "popolazioneSerie": [
+    {
+      "anno": 2022,
+      "popolazione": 354023,
+      "tipo": "ufficiale",
+      "fonte": "Ustat"
+    },
+    {
+      "anno": 2023,
+      "popolazione": 357720,
+      "tipo": "ufficiale",
+      "fonte": "Ustat"
+    },
+    {
+      "anno": 2024,
+      "popolazione": 358903,
+      "tipo": "ufficiale",
+      "fonte": "Ustat"
+    },
+    {
+      "anno": 2025,
+      "popolazione": 360000,
+      "tipo": "stima",
+      "note": "Stima basata su trend crescita +0.3% annuo",
+      "fonte": "Stima"
+    },
+    {
+      "anno": 2026,
+      "popolazione": 361100,
+      "tipo": "stima",
+      "note": "Stima basata su trend crescita +0.3% annuo",
+      "fonte": "Stima"
+    },
+    {
+      "anno": 2027,
+      "popolazione": 362200,
+      "tipo": "stima",
+      "note": "Stima basata su trend crescita +0.3% annuo",
+      "fonte": "Stima"
+    }
+  ],
+  "trend": "Crescita moderata e costante della popolazione ticinese, circa +1'200 abitanti all'anno nel periodo 2022-2024.",
+  "percentualeSvizzera": "Il Ticino rappresenta circa il 4.0% della popolazione svizzera (358'903 su ~8'900'000 nel 2024)"
+}

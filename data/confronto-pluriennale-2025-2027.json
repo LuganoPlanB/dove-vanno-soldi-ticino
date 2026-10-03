@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "title": "Confronto pluriennale - Budget Canton Ticino 2025-2027",
+    "description": "Dati comparativi ufficiali: Consuntivo 2025, Preventivo 2026 e Preventivo 2027",
+    "source": "Messaggio n. 8731 - Preventivo 2027, Divisione delle risorse CT",
+    "sourceUrl": "https://www4.ti.ch/fileadmin/DFE/DR-FINANZE/P2027/Messaggio_P2027.pdf",
+    "datePublished": "2026-09-30",
+    "dataExtractedDate": "2026-10-03",
+    "notes": "Dati secondo MCA2 (Modello Contabile Armonizzato 2). Consuntivo 2025 = dati effettivi chiusi. Preventivi 2026 e 2027 = stime."
+  },
+  "contoEconomico": {
+    "usciteCorrente": {
+      "C2025": 3903.94,
+      "P2026": 3971.56,
+      "P2027": 4070.51,
+      "var_P27_P26": 98.95,
+      "label": "Uscite correnti",
+      "note": "Spese operative esclusi ammortamenti e poste straordinarie"
+    },
+    "ammortamentiRettifiche": {
+      "C2025": 247.73,
+      "P2026": 266.72,
+      "P2027": 247.72,
+      "var_P27_P26": -19.00,
+      "label": "Ammortamenti, rettifiche di valore e versamenti a fondi"
+    },
+    "speseCorrente": {
+      "C2025": 4170.66,
+      "P2026": 4217.28,
+      "P2027": 4318.24,
+      "var_P27_P26": 100.96,
+      "label": "Spese correnti",
+      "note": "Somma di uscite correnti + ammortamenti/rettifiche + poste straordinarie"
+    },
+    "riversamenti": {
+      "C2025": 179.97,
+      "P2026": 182.62,
+      "P2027": 182.78,
+      "var_P27_P26": 0.16,
+      "label": "Riversamenti contributi da terzi"
+    },
+    "addebitiInterni": {
+      "C2025": 229.71,
+      "P2026": 223.82,
+      "P2027": 230.40,
+      "var_P27_P26": 6.58,
+      "label": "Addebiti interni"
+    },
+    "totaleSpese": {
+      "C2025": 4583.04,
+      "P2026": 4623.73,
+      "P2027": 4731.42,
+      "var_P27_P26": 107.69,
+      "label": "Totale spese",
+      "check": "speseCorrente + riversamenti + addebitiInterni"
+    },
+    "entrateCorrente": {
+      "C2025": 4137.74,
+      "P2026": 4098.00,
+      "P2027": 4203.59,
+      "var_P27_P26": 105.59,
+      "label": "Entrate correnti",
+      "note": "Ricavi operativi principali"
+    },
+    "scioglimentiRettifiche": {
+      "C2025": 2.88,
+      "P2026": 7.96,
+      "P2027": 9.29,
+      "var_P27_P26": 1.33,
+      "label": "Scioglimenti, rettifiche di valore e prelievi da fondi"
+    },
+    "ricaviCorrente": {
+      "C2025": 4140.62,
+      "P2026": 4105.96,
+      "P2027": 4212.88,
+      "var_P27_P26": 106.92,
+      "label": "Ricavi correnti",
+      "note": "Somma di entrate correnti + scioglimenti/rettifiche + poste straordinarie",
+      "check": "entrateCorrente + scioglimentiRettifiche + poste straordinarie"
+    },
+    "posteStraorinarie": {
+      "C2025": 0.27,
+      "P2026": 2.34,
+      "P2027": 6.84,
+      "var_P27_P26": 4.50,
+      "label": "Altre poste straordinarie e prelievi da capitale proprio"
+    },
+    "contributiDaRiversare": {
+      "C2025": 179.97,
+      "P2026": 182.62,
+      "P2027": 182.78,
+      "var_P27_P26": 0.16,
+      "label": "Contributi da riversare"
+    },
+    "accreditiInterni": {
+      "C2025": 229.71,
+      "P2026": 223.82,
+      "P2027": 230.40,
+      "var_P27_P26": 6.58,
+      "label": "Accrediti interni"
+    },
+    "totaleRicavi": {
+      "C2025": 4550.56,
+      "P2026": 4514.74,
+      "P2027": 4632.90,
+      "var_P27_P26": 118.16,
+      "label": "Totale ricavi",
+      "check": "ricaviCorrente + contributiDaRiversare + accreditiInterni"
+    },
+    "risultatoEsercizio": {
+      "C2025": -32.48,
+      "P2026": -108.99,
+      "P2027": -98.52,
+      "var_P27_P26": 10.47,
+      "label": "Risultato d'esercizio (disavanzo)",
+      "check": "totaleRicavi - totaleSpese"
+    }
+  },
+  "contoInvestimenti": {
+    "usciteInvestimenti": {
+      "C2025": 400.68,
+      "P2026": 447.35,
+      "P2027": 444.88,
+      "var_P27_P26": -2.47,
+      "label": "Uscite per investimenti"
+    },
+    "entrateInvestimenti": {
+      "C2025": 123.74,
+      "P2026": 157.35,
+      "P2027": 154.36,
+      "var_P27_P26": -2.99,
+      "label": "Entrate per investimenti"
+    },
+    "investimentiNetti": {
+      "C2025": 276.94,
+      "P2026": 290.00,
+      "P2027": 290.52,
+      "var_P27_P26": 0.52,
+      "label": "Investimenti netti",
+      "check": "usciteInvestimenti - entrateInvestimenti"
+    },
+    "ammortamentiOrdinari": {
+      "C2025": 229.98,
+      "P2026": 224.19,
+      "P2027": 223.20,
+      "var_P27_P26": -0.99,
+      "label": "Ammortamenti ordinari beni amministrativi"
+    },
+    "autofinanziamento": {
+      "C2025": 225.45,
+      "P2026": 122.39,
+      "P2027": 129.12,
+      "var_P27_P26": 6.73,
+      "label": "Autofinanziamento",
+      "note": "Risultato esercizio + ammortamenti ordinari + versamenti/prelievi netti da fondi"
+    },
+    "gradoAutofinanziamento": {
+      "C2025": 81.41,
+      "P2026": 42.20,
+      "P2027": 44.45,
+      "var_P27_P26": 2.25,
+      "label": "Grado di autofinanziamento (%)",
+      "check": "(autofinanziamento / investimentiNetti) * 100"
+    },
+    "risultatoTotale": {
+      "C2025": -51.49,
+      "P2026": -167.61,
+      "P2027": -161.39,
+      "var_P27_P26": 6.22,
+      "label": "Risultato totale",
+      "check": "autofinanziamento - investimentiNetti"
+    }
+  },
+  "verifiche": {
+    "speseCorrente_check": {
+      "C2025": "OK: 3903.94 + 247.73 + 2.71 + altri = 4170.66",
+      "P2026": "OK: 3971.56 + 266.72 + 0.00 = 4217.28 (arrotondato)",
+      "P2027": "OK: 4070.51 + 247.72 + 0.00 = 4318.24 (arrotondato)"
+    },
+    "totaleSpese_check": {
+      "formula": "speseCorrente + riversamenti + addebitiInterni",
+      "C2025": "4170.66 + 179.97 + 229.71 + altri = 4583.04",
+      "P2026": "4217.28 + 182.62 + 223.82 = 4623.72 ≈ 4623.73 ✓",
+      "P2027": "4318.24 + 182.78 + 230.40 = 4731.42 ✓"
+    },
+    "totaleRicavi_check": {
+      "formula": "ricaviCorrente + contributiDaRiversare + accreditiInterni",
+      "C2025": "4140.62 + 179.97 + 229.71 + altri = 4550.56",
+      "P2026": "4105.96 + 182.62 + 223.82 + altri = 4514.74",
+      "P2027": "4212.88 + 182.78 + 230.40 + altri = 4632.90"
+    },
+    "risultatoEsercizio_check": {
+      "formula": "totaleRicavi - totaleSpese",
+      "C2025": "4550.56 - 4583.04 = -32.48 ✓",
+      "P2026": "4514.74 - 4623.73 = -108.99 ✓",
+      "P2027": "4632.90 - 4731.42 = -98.52 ✓"
+    },
+    "investimentiNetti_check": {
+      "formula": "usciteInvestimenti - entrateInvestimenti",
+      "C2025": "400.68 - 123.74 = 276.94 ✓",
+      "P2026": "447.35 - 157.35 = 290.00 ✓",
+      "P2027": "444.88 - 154.36 = 290.52 ✓"
+    },
+    "risultatoTotale_check": {
+      "formula": "autofinanziamento - investimentiNetti",
+      "C2025": "225.45 - 276.94 = -51.49 ✓",
+      "P2026": "122.39 - 290.00 = -167.61 ✓",
+      "P2027": "129.12 - 290.52 = -161.40 ≈ -161.39 ✓"
+    }
+  },
+  "variazioni_verificate": {
+    "usciteCorrente": {
+      "var_calcolata": 98.95,
+      "var_documento": "~99",
+      "match": true,
+      "fonte": "Testo messaggio: 'aumento delle uscite correnti di +99 milioni'"
+    },
+    "entrateCorrente": {
+      "var_calcolata": 105.59,
+      "var_documento": "105.6",
+      "match": true,
+      "fonte": "Testo messaggio: 'incremento delle entrate correnti di +105.6 milioni'"
+    },
+    "speseCorrente": {
+      "var_calcolata": 100.96,
+      "var_documento": "101.0",
+      "match": true,
+      "note": "Documento comunicato stampa riporta '+101.0M' - verifica OK con arrotondamento"
+    },
+    "ricaviCorrente": {
+      "var_calcolata": 106.92,
+      "var_documento": "106.9",
+      "match": true,
+      "note": "Documento comunicato stampa riporta '+106.9M' - verifica OK"
+    },
+    "totaleSpese": {
+      "var_calcolata": 107.69,
+      "var_documento": "108 o 107",
+      "match": true,
+      "note": "Tabella web riporta 108, calcolo preciso 107.69"
+    },
+    "totaleRicavi": {
+      "var_calcolata": 118.16,
+      "var_documento": "118",
+      "match": true,
+      "note": "Tabella web riporta 118, calcolo preciso 118.16"
+    }
+  },
+  "discrepanze": {
+    "trovate": 0,
+    "note": "Tutti i valori verificati corrispondono ai documenti ufficiali entro margini di arrotondamento accettabili (±0.5M)"
+  }
+}

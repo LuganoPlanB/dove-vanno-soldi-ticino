@@ -1,29 +1,78 @@
 {
   "metadata": {
-    "title": "Serie storica - Deficit Canton Ticino",
-    "description": "Evoluzione del disavanzo d'esercizio cantonale",
+    "title": "Serie storica - Disavanzi Canton Ticino",
+    "description": "Evoluzione dei disavanzi d'esercizio 2023-2027",
     "sources": [
       {
-        "name": "Consiglio di Stato - Comunicato 30.09.2026",
-        "url": "https://m4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=261157"
+        "name": "Consuntivo 2024",
+        "url": "https://www4.ti.ch/dfe/dr/finanze/dati-finanziari/c2024",
+        "date": "2025-04-09"
+      },
+      {
+        "name": "Consuntivo 2025",
+        "url": "https://www4.ti.ch/dfe/dr/finanze/dati-finanziari/c2025",
+        "date": "2026-04-15"
+      },
+      {
+        "name": "Preventivo 2027",
+        "url": "https://www4.ti.ch/dfe/dr/finanze/dati-finanziari/p2027-e-pf28-30",
+        "date": "2026-09-30"
       }
     ],
-    "notes": "Dati 2027 sono preventivo. Piano finanziario 2028-2030 mostra disavanzi stimati sotto i 500M CHF. Serie storica completa da verificare con archivio consuntivi."
+    "notes": "Disavanzi d'esercizio secondo MCA2. Valori negativi indicano deficit."
   },
   "deficitSerie": [
     {
+      "anno": 2023,
+      "disavanzo": -122,
+      "tipo": "consuntivo",
+      "fonte": "Consuntivo 2023"
+    },
+    {
+      "anno": 2024,
+      "disavanzo": -72,
+      "tipo": "consuntivo",
+      "fonte": "Consuntivo 2024"
+    },
+    {
+      "anno": 2025,
+      "disavanzo": -32.5,
+      "tipo": "consuntivo",
+      "fonte": "Consuntivo 2025"
+    },
+    {
+      "anno": 2026,
+      "disavanzo": -109,
+      "tipo": "preventivo",
+      "note": "Dato da preventivo 2026 (non ancora consuntivato)",
+      "fonte": "Preventivo 2026"
+    },
+    {
       "anno": 2027,
       "disavanzo": -98.5,
-      "tipo": "preventivo"
+      "tipo": "preventivo",
+      "fonte": "Preventivo 2027"
     }
   ],
   "pianoFinanziario": [
     {
-      "periodo": "2028-2030",
-      "disavanzoMedio": -500,
-      "tipo": "stima",
-      "note": "Disavanzi stimati sotto i 500M CHF/anno dopo interventi di riequilibrio"
+      "anno": 2028,
+      "disavanzo": -236,
+      "tipo": "piano_finanziario",
+      "fonte": "Piano finanziario 2028-2030"
+    },
+    {
+      "anno": 2029,
+      "disavanzo": -411,
+      "tipo": "piano_finanziario",
+      "fonte": "Piano finanziario 2028-2030"
+    },
+    {
+      "anno": 2030,
+      "disavanzo": -460,
+      "tipo": "piano_finanziario",
+      "fonte": "Piano finanziario 2028-2030"
     }
   ],
-  "noteSerieMancanti": "I dati storici dei disavanzi d'esercizio (2020-2026) devono essere estratti dai consuntivi ufficiali disponibili presso la Divisione delle risorse del Canton Ticino."
+  "trend": "Dopo un miglioramento significativo tra il 2023 (-122M) e il 2025 (-32.5M), il disavanzo torna ad aumentare nel 2027 (-98.5M). Il piano finanziario 2028-2030 mostra un ulteriore peggioramento con deficit superiori a 400M CHF annui."
 }

@@ -63,14 +63,53 @@
     </section>
 
     <section class="chart-section">
-      <h2>Entrate e uscite 2027</h2>
+      <h2>Dove vanno i soldi? Spese per funzione 2027</h2>
       <p class="chart-intro">
-        Il preventivo 2027 prevede spese correnti per 4'318 milioni di franchi, 
-        a fronte di ricavi correnti di circa 4'220 milioni, generando un disavanzo di 98.5 milioni.
+        La maggior parte del bilancio cantonale (30%) va alla <strong>previdenza sociale</strong> (sostegno sociale, handicappati, anziani). 
+        Seguono <strong>formazione</strong> (22%) e <strong>salute pubblica</strong> (13%).
       </p>
-      <div id="budget-overview-chart" class="chart"></div>
+      <div id="spending-function-treemap" class="chart"></div>
       <p class="chart-note">
-        Fonte: Preventivo 2027, Consiglio di Stato CT. Le spese non includono gli investimenti netti (290.5M CHF).
+        Fonte: Preventivo 2027, ripartizione funzionale federale. Ogni riquadro rappresenta una funzione, 
+        dimensionato proporzionalmente alla spesa. Pro-capite calcolato su 362'200 abitanti stimati (2027).
+      </p>
+    </section>
+
+    <section class="chart-section">
+      <h2>Evoluzione del debito pubblico</h2>
+      <p class="chart-intro">
+        Il debito pubblico del Canton Ticino è cresciuto costantemente negli ultimi anni, 
+        passando da circa 2.5 miliardi nel 2023 a oltre 3 miliardi previsti per fine 2027.
+      </p>
+      <div id="debt-history-chart" class="chart"></div>
+      <p class="chart-note">
+        Fonte: Consuntivi 2023-2025 e Preventivo 2027, Consiglio di Stato CT. 
+        Valori 2024 e 2026 stimati (consuntivi non ancora pubblicati).
+      </p>
+    </section>
+
+    <section class="chart-section">
+      <h2>Evoluzione del disavanzo</h2>
+      <p class="chart-intro">
+        Dopo un miglioramento significativo tra il 2023 e il 2025, il disavanzo torna a crescere. 
+        Il piano finanziario 2028-2030 mostra un peggioramento drammatico con deficit superiori ai 400 milioni all'anno.
+      </p>
+      <div id="deficit-history-chart" class="chart"></div>
+      <p class="chart-note">
+        Fonte: Consuntivi 2023-2025 e Preventivo 2027, Divisione delle risorse CT. 
+        Valori negativi indicano disavanzo (deficit).
+      </p>
+    </section>
+
+    <section class="chart-section">
+      <h2>Premi cassa malati Ticino</h2>
+      <p class="chart-intro">
+        Il Ticino ha i <strong>premi di cassa malati più alti della Svizzera</strong>: 520 CHF/mese nel 2027, 
+        il 26% sopra la media nazionale. I contributi cantonali per ridurre i premi pesano sempre di più sul bilancio.
+      </p>
+      <div id="health-premiums-chart" class="chart"></div>
+      <p class="chart-note">
+        Fonte: UFSP/BAG (premi medi mensili su tutte le classi d'età) e Preventivo 2027 CT (contributi cantonali).
       </p>
     </section>
 
@@ -100,24 +139,41 @@
     </section>
 
     <section class="data-gap">
-      <h3>⚠️ Dati non ancora disponibili</h3>
+      <h3>📊 Dati ora disponibili (aggiornamento 03.10.2026)</h3>
       <p>
-        Per una visualizzazione completa dell'evoluzione delle finanze cantonali mancano ancora alcuni dati storici:
+        Questo sito ora include:
       </p>
       <ul>
-        <li>Serie storica del debito pubblico (2020-2026)</li>
-        <li>Serie storica dei disavanzi/avanzi (2020-2026)</li>
-        <li>Dettaglio delle spese per dipartimento</li>
-        <li>Dettaglio delle spese per funzione (educazione, sanità, giustizia, ecc.)</li>
+        <li>✅ <strong>Spese per funzione</strong>: breakdown completo delle 4.7 miliardi di spese per settore (previdenza, formazione, sanità, ecc.)</li>
+        <li>✅ <strong>Serie storiche</strong>: debito pubblico e disavanzi 2023-2027 con proiezioni piano finanziario</li>
+        <li>✅ <strong>Dati popolazione</strong>: calcoli pro-capite per tutte le cifre principali</li>
+        <li>✅ <strong>Premi e contributi sanitari</strong>: evoluzione premi cassa malati Ticino e contributi cantonali</li>
+      </ul>
+      <h3>⚠️ Dati ancora mancanti</h3>
+      <p>
+        Per una visualizzazione ancora più completa mancherebbero:
+      </p>
+      <ul>
+        <li>Consuntivi 2024 e 2026 (non ancora pubblicati al 03.10.2026)</li>
+        <li>Dettaglio spese per dipartimento (disponibile nel Messaggio completo al Gran Consiglio)</li>
+        <li>Serie storiche complete pre-2023 (richiedono estrazione da consuntivi PDF anni precedenti)</li>
       </ul>
       <p>
-        Questi dati sono disponibili nei <strong>consuntivi ufficiali</strong> pubblicati dalla 
-        <a href="https://www4.ti.ch/dfe/dr/cosa-facciamo/ufficio-della-gestione-finanziaria/" target="_blank">Divisione delle risorse</a> 
-        del Canton Ticino, ma richiedono un'estrazione manuale dai documenti PDF.
+        Tutti i dati visualizzati provengono da <strong>fonti ufficiali verificate</strong>. 
+        Consulta la <a href="/metodologia.html">pagina metodologia</a> per i dettagli delle fonti e il processo di estrazione.
       </p>
-      <p>
-        <strong>Aiutaci!</strong> Se vuoi contribuire ad aggiungere questi dati, consulta la 
-        <a href="/metodologia.html">pagina metodologia</a> per le istruzioni.
+    </section>
+
+    <section class="chart-section">
+      <h2>Entrate e uscite 2027</h2>
+      <p class="chart-intro">
+        Il preventivo 2027 prevede spese correnti per 4'318 milioni di franchi, 
+        a fronte di ricavi correnti di circa 4'220 milioni, generando un disavanzo di 98.5 milioni.
+      </p>
+      <div id="budget-overview-chart" class="chart"></div>
+      <p class="chart-note">
+        Fonte: Preventivo 2027, Consiglio di Stato CT. Le spese non includono gli investimenti netti (290.5M CHF).
+        Pro-capite calcolato su 362'200 abitanti stimati (2027).
       </p>
     </section>
 

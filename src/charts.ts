@@ -247,3 +247,119 @@ export function renderTreemap(containerId: string, data: TreemapData): void {
     .attr('fill', 'white')
     .text(d => `${d.value?.toLocaleString('it-CH')} M`);
 }
+
+export interface LineChartData {
+  year: number;
+  value: number;
+  type?: string;
+}
+
+export function renderLineChart(
+  containerId: string,
+  data: LineChartData[],
+  options: {
+    yLabel: string;
+    valueFormatter?: (v: number) => string;
+    color?: string;
+  }
+): void {
+  const container = d3.select(`#${containerId}`);
+  container.selectAll('*').remove();
+
+  const margin = { top: 20, right: 30, bottom: 50, left: 80 };
+  const containerWidth = (container.node() as HTMLElement).offsetWidth;
+  const width = containerWidth - margin.left - margin.right;
+  const height = 400 - margin.top - margin.bottom;
+
+  const svg = container
+    .append('svg')
+    .attr('width', containerWidth)
+    .attr('height', 400)
+    .append('g')
+    .attr('transform', `translate(${margin.left},${margin.top})`);
+
+  const x = d3.scaleLinear()
+    .domain(d3.extent(data, d => d.year) as [number, number])
+    .range([0, width]);
+
+  const y = d3.scaleLinear()
+    .domain([
+      Math.min(0, d3.min(data, d => d.value) || 0),
+      d3.max(data, d => d.value) || 0
+    ])
+    .nice()
+    .range([height, 0]);
+
+  const line = d3.line<LineChartData>()
+    .x(d => x(d.year))
+    .y(d => y(d.value))
+    .curve(d3.curveMonotoneX);
+
+  svg.append('g')
+    .attr('transform', `translate(0,${height})`)
+    .call(d3.axisBottom(x).tickFormat(d => d.toString()).ticks(data.length))
+    .selectAll('text')
+    .attr('font-size', '12px');
+
+  svg.append('g')
+    .call(d3.axisLeft(y).tickFormat(d => {
+      const formatter = options.valueFormatter || ((v: number) => v.toString());
+      return formatter(Number(d));
+    }))
+    .selectAll('text')
+    .attr('font-size', '12px');
+
+  if (y.domain()[0] < 0) {
+    svg.append('line')
+      .attr('x1', 0)
+      .attr('x2', width)
+      .attr('y1', y(0))
+      .attr('y2', y(0))
+      .attr('stroke', '#999')
+      .attr('stroke-width', 1)
+      .attr('stroke-dasharray', '3,3');
+  }
+
+  svg.append('path')
+    .datum(data)
+    .attr('fill', 'none')
+    .attr('stroke', options.color || '#0066cc')
+    .attr('stroke-width', 3)
+    .attr('d', line);
+
+  svg.selectAll('.dot')
+    .data(data)
+    .enter()
+    .append('circle')
+    .attr('class', 'dot')
+    .attr('cx', d => x(d.year))
+    .attr('cy', d => y(d.value))
+    .attr('r', 5)
+    .attr('fill', options.color || '#0066cc')
+    .attr('stroke', 'white')
+    .attr('stroke-width', 2);
+
+  svg.selectAll('.label')
+    .data(data)
+    .enter()
+    .append('text')
+    .attr('x', d => x(d.year))
+    .attr('y', d => y(d.value) - 12)
+    .attr('text-anchor', 'middle')
+    .attr('font-size', '11px')
+    .attr('font-weight', 'bold')
+    .attr('fill', '#212121')
+    .text(d => {
+      const formatter = options.valueFormatter || ((v: number) => v.toString());
+      return formatter(d.value);
+    });
+
+  svg.append('text')
+    .attr('transform', 'rotate(-90)')
+    .attr('y', -margin.left + 20)
+    .attr('x', -height / 2)
+    .attr('text-anchor', 'middle')
+    .attr('font-size', '13px')
+    .attr('fill', '#212121')
+    .text(options.yLabel);
+}

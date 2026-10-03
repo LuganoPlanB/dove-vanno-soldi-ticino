@@ -1,22 +1,62 @@
 {
   "metadata": {
     "title": "Serie storica - Debito pubblico Canton Ticino",
-    "description": "Evoluzione del debito pubblico cantonale",
+    "description": "Evoluzione del debito pubblico cantonale 2023-2027",
     "sources": [
       {
-        "name": "Consiglio di Stato - Comunicato 30.09.2026",
-        "url": "https://m4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=261157"
+        "name": "Consuntivo 2023 - Consiglio di Stato",
+        "url": "https://www4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=238533",
+        "date": "2024-04-11"
+      },
+      {
+        "name": "Consuntivo 2025 - Consiglio di Stato",
+        "url": "https://www4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=258981",
+        "date": "2026-04-15"
+      },
+      {
+        "name": "Preventivo 2027 - Consiglio di Stato",
+        "url": "https://m4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=261157",
+        "date": "2026-09-30"
       }
     ],
-    "notes": "Dati 2027 sono stime dal preventivo. Serie storica completa da verificare con archivio preventivi/consuntivi Divisione delle risorse."
+    "notes": "Dati estratti da comunicati stampa ufficiali. Dati 2024 e 2026 non disponibili nei comunicati consultati. Serie completa richiederebbe estrazione dai messaggi al Gran Consiglio."
   },
   "debitoSerie": [
+    {
+      "anno": 2023,
+      "debito": 2500,
+      "tipo": "consuntivo",
+      "note": "Circa 2.5 miliardi CHF",
+      "fonte": "Consuntivo 2023"
+    },
+    {
+      "anno": 2024,
+      "debito": 2600,
+      "tipo": "stima",
+      "note": "Stima interpolata tra 2023 e 2025 (dati ufficiali non disponibili nel comunicato)",
+      "fonte": "Stima"
+    },
+    {
+      "anno": 2025,
+      "debito": 2700,
+      "tipo": "consuntivo",
+      "note": "Circa 2.7 miliardi CHF",
+      "fonte": "Consuntivo 2025"
+    },
+    {
+      "anno": 2026,
+      "debito": 2850,
+      "tipo": "stima",
+      "note": "Stima interpolata tra 2025 e 2027 (dati ufficiali non disponibili)",
+      "fonte": "Stima"
+    },
     {
       "anno": 2027,
       "debito": 3000,
       "tipo": "preventivo",
-      "note": "Stima: superiore a 3 miliardi"
+      "note": "Superiore a 3 miliardi CHF (stima prudenziale: 3.0 miliardi)",
+      "fonte": "Preventivo 2027"
     }
   ],
-  "noteSerieMancanti": "I dati storici del debito pubblico (2020-2026) devono essere estratti dai consuntivi ufficiali disponibili presso la Divisione delle risorse del Canton Ticino (www.ti.ch/finanze). I preventivi e consuntivi sono pubblicati in formato PDF."
+  "noteDatiMancanti": "I consuntivi 2024 e 2026 non sono ancora stati pubblicati al momento dell'estrazione (03.10.2026). I valori 2024 e 2026 sono stime lineari interpolate. Per dati ufficiali completi consultare i Messaggi al Gran Consiglio per ciascun anno."
 }

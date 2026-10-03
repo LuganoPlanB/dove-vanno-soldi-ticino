@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "title": "Premi cassa malati e contributi cantonali - Ticino",
+    "description": "Evoluzione premi medi assicurazione malattia e contributi cantonali per riduzione premi",
+    "sources": [
+      {
+        "name": "UFSP/BAG - Premi cantonali 2026/2027",
+        "url": "https://www.bag.admin.ch/dam/en/sd-web/teJNcm9gd1rS/kantonale%20monatliche%20mittlere%20Pr%C3%A4mie%20alle%20Altersklasse_PG2027.pdf",
+        "date": "2026-09"
+      },
+      {
+        "name": "Canton Ticino - Premi LAMal 2025",
+        "url": "https://www4.ti.ch/dss/dsp/ags/cosa-facciamo/premi-assicurazione-di-base-lamal/premi-lamal-2025-ti"
+      },
+      {
+        "name": "Canton Ticino - Premi LAMal 2026",
+        "url": "https://www4.ti.ch/dss/dsp/ags/cosa-facciamo/premi-assicurazione-di-base-lamal/premi-lamal-2026-ti"
+      },
+      {
+        "name": "Preventivo 2027 Canton Ticino",
+        "url": "https://www4.ti.ch/fileadmin/DFE/DR-FINANZE/P2027/Messaggio_P2027.pdf"
+      }
+    ],
+    "notes": "Premi medi mensili su tutte le classi d'età incluse franchigie opzionali e modelli. Contributi cantonali includono RIPAM ordinaria e RIPAM per beneficiari PC."
+  },
+  "premiMedi": [
+    {
+      "anno": 2026,
+      "premioMedioMensile": 501.3,
+      "premioMedioAnnuo": 6015.6,
+      "variazionePrecedente": null,
+      "variazionePercentuale": null,
+      "tipo": "ufficiale",
+      "fonte": "UFSP"
+    },
+    {
+      "anno": 2027,
+      "premioMedioMensile": 519.9,
+      "premioMedioAnnuo": 6238.8,
+      "variazionePrecedente": 18.6,
+      "variazionePercentuale": 3.7,
+      "tipo": "ufficiale",
+      "fonte": "UFSP"
+    }
+  ],
+  "premiDettaglio2027": {
+    "adulti": 597.5,
+    "giovaniAdulti": 417.9,
+    "minorenni": 137.0,
+    "note": "Valori mensili stimati per Canton Ticino"
+  },
+  "contributiCantonali": [
+    {
+      "anno": 2023,
+      "contributoRIPAMOrdinaria": 200,
+      "contributoRIPAM_PC": 160,
+      "contributoTotale": 360,
+      "tipo": "consuntivo",
+      "note": "RIPAM ordinaria: contributi federali 120M + comunali 30M riducono onere netto cantone a ~50M",
+      "fonte": "Consuntivo 2023"
+    },
+    {
+      "anno": 2025,
+      "contributoRIPAMOrdinaria": 211,
+      "contributoRIPAM_PC": 176,
+      "contributoTotale": 387,
+      "variazioneTotale": 27,
+      "tipo": "consuntivo",
+      "note": "RIPAM ordinaria aumentata di 11M rispetto preventivo per annullamento misura risparmio",
+      "fonte": "Consuntivo 2025"
+    },
+    {
+      "anno": 2026,
+      "contributoTotale": 275,
+      "tipo": "preventivo",
+      "note": "Valore aggregato da preventivo 2026",
+      "fonte": "Preventivo 2026"
+    },
+    {
+      "anno": 2027,
+      "contributoRIPAM_PC": 188.5,
+      "contributoRIPAMOrdinaria": 143.5,
+      "contributoTotale": 332,
+      "variazioneTotale": 57,
+      "tipo": "preventivo",
+      "note": "Include potenziamento transitorio modello RIPAM (+38M) in attesa attuazione iniziativa 10% reddito (prevista 2029)",
+      "fonte": "Preventivo 2027"
+    }
+  ],
+  "trend": {
+    "premi": "I premi medi mensili in Ticino sono cresciuti costantemente, raggiungendo nel 2027 CHF 519.90/mese (+3.7% rispetto al 2026). Il Ticino ha i premi più alti della Svizzera.",
+    "contributi": "I contributi cantonali per la riduzione dei premi sono aumentati significativamente: da 360M nel 2023 a 332M preventivati per il 2027 (dati non direttamente comparabili per cambio classificazione). La spesa per RIPAM è una delle principali voci di crescita del bilancio cantonale."
+  },
+  "confrontoNazionale": {
+    "premioMedioSvizzera2027": 412.0,
+    "premioMedioTicino2027": 519.9,
+    "differenza": 107.9,
+    "percentualeSopraMedia": 26.2,
+    "note": "Il premio medio ticinese 2027 è del 26% superiore alla media svizzera"
+  }
+}
