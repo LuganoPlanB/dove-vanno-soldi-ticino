@@ -105,28 +105,15 @@ function translateCategory(category: string): string {
 
 function renderAllCharts() {
   Promise.all([
-    loadJSON('data/spese-per-funzione-2027.json'),
     loadJSON('data/storia-debito-pubblico.json'),
     loadJSON('data/deficit-storico.json'),
-    loadJSON('data/premi-e-contributi-sanita.json'),
     loadJSON('data/preventivo-2027.json'),
   ]).then(([
-    spesePerFunzione,
     storiaDebito,
     deficitStorico,
-    premiSanita,
     preventivo2027,
   ]) => {
-    const treemapEl = document.getElementById('spending-function-treemap');
-    if (treemapEl && (spesePerFunzione as any).spesePerFunzione) {
-      // Translate categories
-      const translatedData = (spesePerFunzione as any).spesePerFunzione.map((d: any) => ({
-        categoria: translateCategory(d.funzione),
-        importo: d.importo,
-        percentuale: d.percentuale
-      }));
-      charts.renderTreemap('spending-function-treemap', translatedData, i18n.t('charts.spending.title'));
-    }
+    // Spending by function treemap removed - no verified C2025 breakdown available yet
 
     const debtChartEl = document.getElementById('debt-history-chart');
     if (debtChartEl && (storiaDebito as any).serieDebito) {
@@ -149,43 +136,24 @@ function renderAllCharts() {
 
     const deficitChartEl = document.getElementById('deficit-history-chart');
     if (deficitChartEl && (deficitStorico as any).deficitSerie) {
-      const deficitData = (deficitStorico as any).deficitSerie.map((d: any) => ({
-        anno: d.anno,
-        valore: Math.abs(d.disavanzo),
-      }));
+      // Show only consuntivo (actual) years, not preventivo
+      const deficitData = (deficitStorico as any).deficitSerie
+        .filter((d: any) => d.tipo === 'consuntivo')
+        .map((d: any) => ({
+          anno: d.anno,
+          valore: Math.abs(d.disavanzo),
+        }));
       charts.renderLineChart(
         'deficit-history-chart',
         deficitData,
-        i18n.t('charts.deficit.title'),
-        i18n.t('charts.deficit.yAxis'),
+        'Disavanzo d\'esercizio (effettivo)',
+        'Milioni CHF',
         (n) => `${i18n.formatNumber(n, { maximumFractionDigits: 0 })} M`
       );
     }
 
-    const healthChartEl = document.getElementById('health-premiums-chart');
-    if (healthChartEl && (premiSanita as any).premiMedi) {
-      const healthData: charts.ComparisonData[] = [
-        {
-          categoria: translateCategory('Contributi cantonali'),
-          consuntivo2025: 318.0,
-          preventivo2026: 322.8,
-          preventivo2027: 332.0,
-        },
-        {
-          categoria: translateCategory('Premio medio TI'),
-          consuntivo2025: 491.0,
-          preventivo2026: 505.0,
-          preventivo2027: 519.9,
-        },
-        {
-          categoria: translateCategory('Premio medio CH'),
-          consuntivo2025: 390.0,
-          preventivo2026: 401.0,
-          preventivo2027: 412.0,
-        },
-      ];
-      charts.renderComparisonChart('health-premiums-chart', healthData, i18n.t('charts.health.title'));
-    }
+    // Health premiums comparison chart removed - conflicting sources
+    // Text-based explanation with verified 545 CHF UFSP figure used instead
 
     const budgetOverviewEl = document.getElementById('budget-overview-chart');
     if (budgetOverviewEl && (preventivo2027 as any).preventivo2027) {
