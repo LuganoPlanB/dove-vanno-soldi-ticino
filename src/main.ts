@@ -3,6 +3,7 @@ import * as charts from './charts';
 import { i18n, type Language } from './locales';
 import { enableShareableViews, addShareButtons } from './ux-enhancements';
 import { loadComuniData, searchComuni, renderComuneCard } from './comuni';
+import { renderAllInsightCards } from './insights';
 
 // Enable URL-based view sharing
 enableShareableViews();
@@ -237,11 +238,19 @@ if (window.location.pathname === '/' ||
   renderAllCharts();
   setupResponsiveCharts();
   setupComuniSearch();
+  renderInsights();
   
   // UX enhancements: Add share buttons after content loads
   setTimeout(() => {
     addShareButtons();
   }, 1000);
+}
+
+function renderInsights() {
+  const container = document.getElementById('insights-container');
+  if (!container) return;
+  
+  container.innerHTML = renderAllInsightCards();
 }
 
 async function setupComuniSearch() {
