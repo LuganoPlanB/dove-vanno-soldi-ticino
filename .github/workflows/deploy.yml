@@ -30,6 +30,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
+      - name: Validate JSON files
+        run: |
+          echo "🔍 Validating JSON files in data/..."
+          for file in data/*.json; do
+            echo "Checking $file..."
+            node -e "JSON.parse(require('fs').readFileSync('$file', 'utf-8'))" || {
+              echo "❌ INVALID JSON: $file"
+              exit 1
+            }
+          done
+          echo "✅ All JSON files valid"
+      
       - name: Install Playwright Browsers
         run: npx playwright install chromium --with-deps
       
