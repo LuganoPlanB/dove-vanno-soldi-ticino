@@ -1,7 +1,8 @@
 {
   "metadati": {
-    "titolo": "Spese per genere di conto - Cantone Ticino",
-    "descrizione": "Spese dell'amministrazione cantonale classificate secondo il Modello Contabile Armonizzato 2 (MCA2) - conti 30 (Personale), 31 (Beni e servizi), 33 (Ammortamenti), 35 (Versamenti fondi), 36 (Trasferimenti)",
+    "titolo": "Spese per genere di conto - Cantone Ticino - CONSUNTIVO 2025",
+    "descrizione": "Spese EFFETTIVE dell'amministrazione cantonale (Consuntivo 2025 - anno chiuso) e confronto con Preventivo 2027",
+    "priorita": "FOCUS SU DATI EFFETTIVI (C2025), non su previsioni",
     "fonte": "Repubblica e Cantone Ticino - Divisione delle risorse, Sezione delle finanze",
     "linkFonti": [
       {
@@ -20,12 +21,19 @@
     "unita": "milioni CHF",
     "metodologia": "MCA2",
     "avvertenze": [
+      "PRIORITÀ: Dati EFFETTIVI dal Consuntivo 2025 (anno chiuso). Preventivo 2027 solo per confronto futuro.",
+      "3-digit subaccounts (301, 302, 311, 312, etc.): Non pubblicati in dettaglio nei Messaggi ufficiali. Solo aggregati 2-digit (30, 31, 33, etc.) disponibili.",
       "I dati si riferiscono alle spese operative e finanziarie dell'amministrazione cantonale, esclusi riversamenti e addebiti interni.",
       "La classificazione economica MCA2 distingue le spese per natura (stipendi, beni, trasferimenti) indipendentemente dalla destinazione funzionale.",
       "Preventivo 2027 licenziato dal Consiglio di Stato il 30.09.2026; approvazione finale da parte del Gran Consiglio prevista per dicembre 2026."
     ]
   },
-  "spesePerNatura2025": [
+  "consuntivo2025": {
+    "anno": 2025,
+    "tipo": "EFFETTIVO",
+    "stato": "Anno chiuso, dati definitivi",
+    "dataApprovazione": "15 aprile 2026",
+    "spese": [
     {
       "id": "spese-personale-2025",
       "categoria": "30 - Spese per il personale",
@@ -81,8 +89,15 @@
       "fonte": "Messaggio Consuntivo 2025 n. 8672, p. 15 + pp. 18-21 dettaglio voce 363",
       "note": "Principali voci: PC AVS 149.9 M, PC AI 116.3 M, RIPAM ordinaria +11 M, ospedalizzazioni fuori Cantone 34.2 M, asilo ordinario +7.4 M"
     }
-  ],
-  "spesePerNatura2027": [
+  ]
+  },
+  "preventivo2027": {
+    "anno": 2027,
+    "tipo": "PREVISIONE",
+    "stato": "In attesa approvazione Gran Consiglio (dic. 2026)",
+    "dataLicenziamento": "30 settembre 2026",
+    "note": "DATI PREVISIONALI - focus dell'analisi su C2025 effettivi",
+    "spese": [
     {
       "id": "spese-personale-2027",
       "categoria": "30 - Spese per il personale",
