@@ -10,7 +10,7 @@ export default {
     github: 'Codice sorgente'
   },
   hero: {
-    badge: 'Dati ufficiali aggiornati al 3 ottobre 2026',
+    badge: 'Consuntivo 2025 - Dati effettivi',
     title: 'Dove vanno i soldi del',
     titleHighlight: 'Ticino',
     titleQuestion: '?',
@@ -22,9 +22,9 @@ export default {
         sub: 'Disavanzo effettivo (C2025)'
       },
       debt: {
-        label: 'Debito 2025',
-        value: '3.056 Mia',
-        sub: 'CHF +51M vs 2024'
+        label: 'Debito 2024',
+        value: '2.654 Mia',
+        sub: 'CHF (dato verificato più recente)'
       },
       spending: {
         label: 'Spese 2025',

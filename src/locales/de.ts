@@ -10,7 +10,7 @@ export default {
     github: 'Quellcode'
   },
   hero: {
-    badge: 'Offizielle Daten aktualisiert am 3. Oktober 2026',
+    badge: 'Ist-Daten 2025 - Consuntivo',
     title: 'Wohin geht das Geld des',
     titleHighlight: 'Tessins',
     titleQuestion: '?',
@@ -22,9 +22,9 @@ export default {
         sub: 'Tatsächliches Defizit (C2025)'
       },
       debt: {
-        label: 'Schulden 2025',
-        value: '3.056 Mrd',
-        sub: 'CHF +51M vs 2024'
+        label: 'Schulden 2024',
+        value: '2.654 Mrd',
+        sub: 'CHF (neueste verifizierte)'
       },
       spending: {
         label: 'Ausgaben 2025',

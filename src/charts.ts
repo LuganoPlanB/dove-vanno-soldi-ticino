@@ -265,11 +265,16 @@ export function renderLineChart(
   const line = d3.line<LineChartData>()
     .x(d => x(d.anno))
     .y(d => y(d.valore))
+    .defined(d => d.valore != null) // Don't draw line through gaps
     .curve(d3.curveMonotoneX);
 
+  // Use only integer years for x-axis ticks
+  const years = data.map(d => d.anno);
+  const uniqueYears = Array.from(new Set(years)).sort((a, b) => a - b);
+  
   svg.append('g')
     .attr('transform', `translate(0,${height})`)
-    .call(d3.axisBottom(x).tickFormat(d => d.toString()).ticks(mobile ? Math.min(4, data.length) : data.length))
+    .call(d3.axisBottom(x).tickValues(uniqueYears).tickFormat(d => d.toString()))
     .call(g => g.select('.domain').attr('stroke', colors.grid))
     .call(g => g.selectAll('.tick line').remove())
     .call(g => g.selectAll('.tick text')

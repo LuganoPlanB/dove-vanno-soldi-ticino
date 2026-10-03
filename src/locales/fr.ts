@@ -10,7 +10,7 @@ export default {
     github: 'Code source'
   },
   hero: {
-    badge: 'Données officielles mises à jour le 3 octobre 2026',
+    badge: 'Données réelles 2025 - Consuntivo',
     title: 'Où va l\'argent du',
     titleHighlight: 'Tessin',
     titleQuestion: ' ?',
@@ -22,9 +22,9 @@ export default {
         sub: 'Déficit effectif (C2025)'
       },
       debt: {
-        label: 'Dette 2025',
-        value: '3.056 Mrd',
-        sub: 'CHF +51M vs 2024'
+        label: 'Dette 2024',
+        value: '2.654 Mrd',
+        sub: 'CHF (plus récent vérifié)'
       },
       spending: {
         label: 'Dépenses 2025',

@@ -10,7 +10,7 @@ export default {
     github: 'Source code'
   },
   hero: {
-    badge: 'Official data updated October 3, 2026',
+    badge: 'Actual data 2025 - Consuntivo',
     title: 'Where does',
     titleHighlight: 'Ticino',
     titleQuestion: ' money go?',
@@ -22,9 +22,9 @@ export default {
         sub: 'Actual deficit (C2025)'
       },
       debt: {
-        label: '2025 Debt',
-        value: '3.056 Bn',
-        sub: 'CHF +51M vs 2024'
+        label: '2024 Debt',
+        value: '2.654 Bn',
+        sub: 'CHF (most recent verified)'
       },
       spending: {
         label: '2025 Spending',

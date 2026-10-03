@@ -212,11 +212,32 @@ if (window.location.pathname === '/' ||
   setupComuniSearch();
   renderInsights();
   renderSpeseNatura();
+  generateContextIntro();
   
   // UX enhancements: Add share buttons after content loads
   setTimeout(() => {
     addShareButtons();
   }, 1000);
+}
+
+async function generateContextIntro() {
+  try {
+    const [deficit, spending] = await Promise.all([
+      loadJSON('data/deficit-storico.json'),
+      loadJSON('data/storia-debito-pubblico.json')
+    ]);
+    
+    const deficit2025 = (deficit as any).deficitSerie?.find((d: any) => d.anno === 2025);
+    const spending2025 = (spending as any).serieSpese?.anni?.['2025'];
+    
+    const introEl = document.getElementById('context-intro');
+    if (introEl && deficit2025 && spending2025) {
+      const deficitValue = Math.abs(deficit2025.disavanzo);
+      introEl.textContent = `Il Canton Ticino chiude il 2025 con un disavanzo di ${deficitValue.toFixed(0)} milioni di franchi e spese totali di ${(spending2025.totale / 1000).toFixed(1)} miliardi. I premi sanitari ticinesi restano tra i più alti della Svizzera.`;
+    }
+  } catch (err) {
+    console.error('Error generating context intro:', err);
+  }
 }
 
 async function renderSpeseNatura() {
