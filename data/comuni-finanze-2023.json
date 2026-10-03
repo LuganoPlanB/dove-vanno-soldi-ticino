@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dati finanziari comunali Ticino",
+  "description": "Dati per comune: moltiplicatori, entrate, uscite, debito pro capite. Fonte: USTAT, Enti locali.",
+  "version": "2024.1",
+  "comuni": [
+    {
+      "id": "lugano",
+      "nome": "Lugano",
+      "popolazione": 62315,
+      "anno": 2023,
+      "finanze": {
+        "moltiplicatore_comunale": 75,
+        "entrate_totali_mchf": 523.4,
+        "uscite_totali_mchf": 518.2,
+        "debito_pubblico_mchf": 234.5,
+        "entrate_pro_capite_chf": 8400,
+        "uscite_pro_capite_chf": 8315,
+        "debito_pro_capite_chf": 3765
+      },
+      "fonte": "Bilancio consuntivo 2023, Città di Lugano"
+    },
+    {
+      "id": "bellinzona",
+      "nome": "Bellinzona",
+      "popolazione": 43360,
+      "anno": 2023,
+      "finanze": {
+        "moltiplicatore_comunale": 88,
+        "entrate_totali_mchf": 312.8,
+        "uscite_totali_mchf": 308.1,
+        "debito_pubblico_mchf": 187.3,
+        "entrate_pro_capite_chf": 7215,
+        "uscite_pro_capite_chf": 7105,
+        "debito_pro_capite_chf": 4320
+      },
+      "fonte": "Bilancio consuntivo 2023, Città di Bellinzona"
+    },
+    {
+      "id": "locarno",
+      "nome": "Locarno",
+      "popolazione": 16300,
+      "anno": 2023,
+      "finanze": {
+        "moltiplicatore_comunale": 82,
+        "entrate_totali_mchf": 118.5,
+        "uscite_totali_mchf": 116.2,
+        "debito_pubblico_mchf": 52.1,
+        "entrate_pro_capite_chf": 7270,
+        "uscite_pro_capite_chf": 7130,
+        "debito_pro_capite_chf": 3200
+      },
+      "fonte": "Bilancio consuntivo 2023, Città di Locarno"
+    },
+    {
+      "id": "mendrisio",
+      "nome": "Mendrisio",
+      "popolazione": 15800,
+      "anno": 2023,
+      "finanze": {
+        "moltiplicatore_comunale": 79,
+        "entrate_totali_mchf": 104.7,
+        "uscite_totali_mchf": 102.3,
+        "debito_pubblico_mchf": 38.9,
+        "entrate_pro_capite_chf": 6625,
+        "uscite_pro_capite_chf": 6475,
+        "debito_pro_capite_chf": 2460
+      },
+      "fonte": "Bilancio consuntivo 2023, Città di Mendrisio"
+    },
+    {
+      "id": "chiasso",
+      "nome": "Chiasso",
+      "popolazione": 8150,
+      "anno": 2023,
+      "finanze": {
+        "moltiplicatore_comunale": 85,
+        "entrate_totali_mchf": 58.3,
+        "uscite_totali_mchf": 57.1,
+        "debito_pubblico_mchf": 24.5,
+        "entrate_pro_capite_chf": 7155,
+        "uscite_pro_capite_chf": 7005,
+        "debito_pro_capite_chf": 3005
+      },
+      "fonte": "Bilancio consuntivo 2023, Città di Chiasso"
+    }
+  ],
+  "note": [
+    "Moltiplicatore comunale: percentuale dell'imposta cantonale base",
+    "Pro capite: calcolato sulla popolazione residente",
+    "Fonti primarie: USTAT (Ufficio di statistica del Cantone Ticino), bilanci comunali pubblicati",
+    "AVVISO: Questi sono dati DIMOSTRA TIVI per testare l'interfaccia.",
+    "Per la produzione, sostituire con dati UFFICIALI da USTAT e documenti comunali verificati."
+  ]
+}

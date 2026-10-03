@@ -2,6 +2,7 @@ import './style.css';
 import * as charts from './charts';
 import { i18n, type Language } from './locales';
 import { enableShareableViews, addShareButtons } from './ux-enhancements';
+import { loadComuniData, searchComuni, renderComuneCard } from './comuni';
 
 // Enable URL-based view sharing
 enableShareableViews();
@@ -235,9 +236,42 @@ if (window.location.pathname === '/' ||
   createLanguageSwitcher();
   renderAllCharts();
   setupResponsiveCharts();
+  setupComuniSearch();
   
   // UX enhancements: Add share buttons after content loads
   setTimeout(() => {
     addShareButtons();
   }, 1000);
+}
+
+async function setupComuniSearch() {
+  const searchInput = document.getElementById('comuni-search') as HTMLInputElement;
+  const resultsContainer = document.getElementById('comuni-results');
+  
+  if (!searchInput || !resultsContainer) return;
+  
+  const data = await loadComuniData();
+  
+  // Display all comuni initially
+  const renderResults = (comuni: typeof data.comuni) => {
+    if (comuni.length === 0) {
+      resultsContainer.innerHTML = '<div class="text-center py-8 text-muted-foreground">Nessun comune trovato</div>';
+      return;
+    }
+    
+    resultsContainer.innerHTML = `
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        ${comuni.map(c => renderComuneCard(c)).join('')}
+      </div>
+    `;
+  };
+  
+  renderResults(data.comuni);
+  
+  // Search on input
+  searchInput.addEventListener('input', (e) => {
+    const query = (e.target as HTMLInputElement).value;
+    const results = searchComuni(query, data);
+    renderResults(results);
+  });
 }

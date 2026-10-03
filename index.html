@@ -576,6 +576,42 @@
         </div>
       </div>
     </section>
+
+    <!-- Comuni Section -->
+    <section id="comuni" class="py-16 sm:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-6xl">
+          <div class="space-y-4 mb-8">
+            <h2 class="text-3xl font-bold tracking-tight">🏘️ Dati per comune</h2>
+            <p class="text-lg text-muted-foreground">
+              Confronta moltiplicatori, entrate, uscite e debito pro capite dei comuni ticinesi.
+            </p>
+            <div class="bg-amber-50 dark:bg-amber-950/20 border-l-4 border-amber-500 p-4 text-sm">
+              <p class="font-semibold mb-1">⚠️ Dati dimostrativi</p>
+              <p class="text-muted-foreground">
+                I dati mostrati sono esempi per testare l'interfaccia. Per la versione finale,
+                questi saranno sostituiti con dati ufficiali USTAT e bilanci comunali verificati.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Search -->
+          <div class="mb-6">
+            <input
+              id="comuni-search"
+              type="search"
+              placeholder="Cerca un comune..."
+              class="w-full px-4 py-3 rounded-lg border bg-background focus:ring-2 focus:ring-primary focus:border-transparent"
+            />
+          </div>
+          
+          <!-- Results -->
+          <div id="comuni-results" class="min-h-[200px]">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="border-t py-12 sm:py-16">
