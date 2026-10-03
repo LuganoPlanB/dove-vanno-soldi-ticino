@@ -80,7 +80,7 @@ interface TreemapNode extends d3.HierarchyRectangularNode<any> {
   data: TreemapData;
 }
 
-export function renderTreemap(containerId: string, data: TreemapData[]): void {
+export function renderTreemap(containerId: string, data: TreemapData[], title?: string): void {
   const container = d3.select(`#${containerId}`);
   container.selectAll('*').remove();
 
@@ -91,7 +91,7 @@ export function renderTreemap(containerId: string, data: TreemapData[]): void {
     .attr('class', 'mb-4')
     .append('h3')
     .attr('class', 'text-xl font-semibold')
-    .text('Spese per funzione 2027');
+    .text(title || 'Spese per funzione 2027');
 
   container.append('div')
     .attr('class', 'text-sm text-muted-foreground mb-4')
@@ -350,7 +350,7 @@ export interface ComparisonData {
   preventivo2027: number;
 }
 
-export function renderComparisonChart(containerId: string, data: ComparisonData[]): void {
+export function renderComparisonChart(containerId: string, data: ComparisonData[], title?: string): void {
   const container = d3.select(`#${containerId}`);
   container.selectAll('*').remove();
 
@@ -359,7 +359,7 @@ export function renderComparisonChart(containerId: string, data: ComparisonData[
 
   container.append('h3')
     .attr('class', 'text-xl font-semibold mb-2')
-    .text('Confronto 2025-2027');
+    .text(title || 'Confronto 2025-2027');
 
   container.append('div')
     .attr('class', 'text-sm text-muted-foreground mb-4')

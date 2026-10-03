@@ -1,8 +1,9 @@
 import './style.css';
 import * as charts from './charts';
-import { i18n, type Language } from './locales';
 
 // Respect base path for production builds
+// In production (GitHub Pages): /dove-vanno-soldi-ticino/
+// In development: /
 const BASE_URL = import.meta.env?.BASE_URL || '/';
 
 async function loadJSON<T>(path: string): Promise<T> {
@@ -34,59 +35,6 @@ function initializeTheme() {
   }
 }
 
-function createLanguageSwitcher() {
-  const nav = document.querySelector('nav .flex.items-center.gap-2');
-  if (!nav || document.getElementById('lang-switcher')) return;
-  
-  const switcher = document.createElement('div');
-  switcher.id = 'lang-switcher';
-  switcher.className = 'relative';
-  
-  const currentLang = i18n.getLanguage().toUpperCase();
-  
-  switcher.innerHTML = `
-    <button id="lang-button" class="btn btn-secondary h-9 px-3 text-sm font-medium" aria-label="Change language">
-      ${currentLang}
-    </button>
-    <div id="lang-menu" class="hidden absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-background border z-50">
-      <div class="py-1">
-        <button data-lang="it" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'it' ? 'font-bold' : ''}">Italiano</button>
-        <button data-lang="en" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'en' ? 'font-bold' : ''}">English</button>
-        <button data-lang="de" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'de' ? 'font-bold' : ''}">Deutsch</button>
-        <button data-lang="fr" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'fr' ? 'font-bold' : ''}">Français</button>
-      </div>
-    </div>
-  `;
-  
-  nav.insertBefore(switcher, nav.firstChild);
-  
-  const button = document.getElementById('lang-button');
-  const menu = document.getElementById('lang-menu');
-  
-  button?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    menu?.classList.toggle('hidden');
-  });
-  
-  document.addEventListener('click', () => {
-    menu?.classList.add('hidden');
-  });
-  
-  menu?.querySelectorAll('[data-lang]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const lang = (e.target as HTMLElement).dataset.lang as Language;
-      i18n.setLanguage(lang);
-      window.location.reload();
-    });
-  });
-}
-
-function translateCategory(category: string): string {
-  const key = `categories.${category}`;
-  const translated = i18n.t(key);
-  return translated === key ? category : translated;
-}
-
 function renderAllCharts() {
   Promise.all([
     loadJSON('data/spese-per-funzione-2027.json'),
@@ -100,17 +48,12 @@ function renderAllCharts() {
     debitoStorico,
     deficitStorico,
     premiSanita,
-    _confronto,
+    confronto,
     preventivo2027,
   ]) => {
     const treemapEl = document.getElementById('spending-function-treemap');
     if (treemapEl && (spesePerFunzione as any).spesePerFunzione) {
-      // Translate categories
-      const translatedData = (spesePerFunzione as any).spesePerFunzione.map((d: any) => ({
-        ...d,
-        categoria: translateCategory(d.categoria)
-      }));
-      charts.renderTreemap('spending-function-treemap', translatedData, i18n.t('charts.spending.title'));
+      charts.renderTreemap('spending-function-treemap', (spesePerFunzione as any).spesePerFunzione);
     }
 
     const debtChartEl = document.getElementById('debt-history-chart');
@@ -122,9 +65,9 @@ function renderAllCharts() {
       charts.renderLineChart(
         'debt-history-chart',
         debtData,
-        i18n.t('charts.debt.title'),
-        i18n.t('charts.debt.yAxis'),
-        (n) => `${(n / 1000).toFixed(2)} ${i18n.t('charts.debt.yAxis').split(' ')[1]}`
+        'Debito pubblico cantonale',
+        'Miliardi CHF',
+        (n) => `${(n / 1000).toFixed(2)} Mia`
       );
     }
 
@@ -137,9 +80,9 @@ function renderAllCharts() {
       charts.renderLineChart(
         'deficit-history-chart',
         deficitData,
-        i18n.t('charts.deficit.title'),
-        i18n.t('charts.deficit.yAxis'),
-        (n) => `${i18n.formatNumber(n, { maximumFractionDigits: 0 })} M`
+        'Disavanzo annuale',
+        'Milioni CHF',
+        (n) => `${n.toLocaleString('it-CH')} M`
       );
     }
 
@@ -147,45 +90,53 @@ function renderAllCharts() {
     if (healthChartEl && (premiSanita as any).premiMedi) {
       const healthData: charts.ComparisonData[] = [
         {
-          categoria: translateCategory('Contributi cantonali'),
+          categoria: 'Contributi cantonali',
           consuntivo2025: 318.0,
           preventivo2026: 322.8,
           preventivo2027: 332.0,
         },
         {
-          categoria: translateCategory('Premio medio TI'),
+          categoria: 'Premio medio TI',
           consuntivo2025: 491.0,
           preventivo2026: 505.0,
           preventivo2027: 519.9,
         },
         {
-          categoria: translateCategory('Premio medio CH'),
+          categoria: 'Premio medio CH',
           consuntivo2025: 390.0,
           preventivo2026: 401.0,
           preventivo2027: 412.0,
         },
       ];
-      charts.renderComparisonChart('health-premiums-chart', healthData, i18n.t('charts.health.title'));
+      charts.renderComparisonChart('health-premiums-chart', healthData);
     }
 
     const budgetOverviewEl = document.getElementById('budget-overview-chart');
     if (budgetOverviewEl && (preventivo2027 as any).preventivo2027) {
       const prev = (preventivo2027 as any).preventivo2027;
       const budgetData: charts.SimpleBarData[] = [
-        { label: translateCategory('Uscite correnti'), value: prev.speseCorrente?.value || 0, color: 'rgb(239 68 68)' },
-        { label: translateCategory('Entrate correnti'), value: prev.ricaviCorrenti?.value || 0, color: 'rgb(34 197 94)' },
-        { label: translateCategory('Investimenti'), value: prev.investimentiNetti?.value || 0, color: 'rgb(59 130 246)' },
+        { label: 'Uscite correnti', value: prev.speseCorrente?.value || 0, color: 'rgb(239 68 68)' },
+        { label: 'Entrate correnti', value: prev.ricaviCorrenti?.value || 0, color: 'rgb(34 197 94)' },
+        { label: 'Investimenti', value: prev.investimentiNetti?.value || 0, color: 'rgb(59 130 246)' },
       ];
-      charts.renderSimpleBarChart('budget-overview-chart', budgetData, i18n.t('charts.budget.title'));
+      charts.renderSimpleBarChart('budget-overview-chart', budgetData, 'Preventivo 2027 - Panoramica');
+    }
+
+    const healthSpendingEl = document.getElementById('health-spending-chart');
+    if (healthSpendingEl && (confronto as any).contoEconomico) {
+      // Data not available in correct format yet - skip for now
+      // TODO: Add health spending comparison data
     }
   }).catch(error => {
     console.error('Error loading data:', error);
+    // Display error in chart containers
     const chartIds = [
       'spending-function-treemap',
       'debt-history-chart', 
       'deficit-history-chart',
       'health-premiums-chart',
       'budget-overview-chart',
+      'health-spending-chart'
     ];
     chartIds.forEach(id => {
       const el = document.getElementById(id);
@@ -214,7 +165,6 @@ if (window.location.pathname === '/' ||
     window.location.pathname === '/dove-vanno-soldi-ticino/' ||
     window.location.pathname === '/dove-vanno-soldi-ticino/index.html') {
   initializeTheme();
-  createLanguageSwitcher();
   renderAllCharts();
   setupResponsiveCharts();
 }

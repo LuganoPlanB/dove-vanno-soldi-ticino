@@ -47,6 +47,14 @@
   
   .chart-container {
     @apply card p-6 space-y-4;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .chart-container svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
   
   .text-muted-foreground {
