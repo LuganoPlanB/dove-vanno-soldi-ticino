@@ -209,6 +209,339 @@
         </div>
       </div>
     </section>
+
+    <!-- Health Explainer Section -->
+    <section class="py-16 sm:py-24 bg-muted/30">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl">
+          <div class="space-y-4 mb-8">
+            <h2 class="text-3xl font-bold tracking-tight">💊 Spesa sanitaria: spiegazione per non esperti</h2>
+            <p class="text-lg text-muted-foreground">
+              La sanità rappresenta una delle voci principali del bilancio cantonale. Ecco cosa c'è da sapere.
+            </p>
+          </div>
+
+          <!-- FAQ Card -->
+          <div class="card p-6 mb-6">
+            <h3 class="text-xl font-semibold mb-4">❓ Domanda frequente</h3>
+            <div class="space-y-4">
+              <p class="font-medium text-primary">
+                Perché il Cantone spende soldi per la sanità se io pago già la cassa malati ogni mese?
+              </p>
+              <p class="text-muted-foreground">
+                La cassa malati copre solo le cure di base. Il Cantone deve pagare (per legge federale) il 55% dei ricoveri ospedalieri, aiutare chi non può permettersi i premi, e pagare servizi extra non coperti da LAMal (cure anziani, prevenzione, ecc.).
+              </p>
+              
+              <div class="mt-4 space-y-3 text-sm">
+                <details class="group">
+                  <summary class="cursor-pointer font-medium hover:text-primary">
+                    📋 1. LAMal copre solo cure di base
+                  </summary>
+                  <p class="mt-2 text-muted-foreground pl-6">
+                    La tua cassa malati paga visite mediche, esami, farmaci della lista federale. NON paga: dentista (salvo incidenti), molti occhiali, apparecchi acustici, cure a domicilio per anziani, rette case anziani, molti farmaci innovativi.
+                  </p>
+                </details>
+
+                <details class="group">
+                  <summary class="cursor-pointer font-medium hover:text-primary">
+                    🏥 2. Cantone obbligato a pagare 55% ospedali
+                  </summary>
+                  <p class="mt-2 text-muted-foreground pl-6">
+                    La legge federale LAMal (art. 49a) obbliga i Cantoni a finanziare il 55% dei costi dei ricoveri ospedalieri. Il 45% lo paga la cassa malati. Questo è per non far gravare tutto sui premi.
+                  </p>
+                </details>
+
+                <details class="group">
+                  <summary class="cursor-pointer font-medium hover:text-primary">
+                    💰 3. Premi altissimi in Ticino, molti non possono pagarli
+                  </summary>
+                  <p class="mt-2 text-muted-foreground pl-6">
+                    I premi in Ticino sono i più alti della Svizzera: <strong>520 CHF/mese</strong> di media nel 2027 contro 412 CHF media nazionale (+26%). Una famiglia di 4 persone può pagare oltre 2'000 CHF/mese. Molte famiglie non possono permetterselo senza aiuto pubblico (RIPAM).
+                  </p>
+                </details>
+
+                <details class="group">
+                  <summary class="cursor-pointer font-medium hover:text-primary">
+                    👴 4. Servizi extra per anziani e malati cronici
+                  </summary>
+                  <p class="mt-2 text-muted-foreground pl-6">
+                    Cure a domicilio per anziani, case per anziani, cure dentistiche per chi ha PC: tutto questo NON è coperto dalla cassa malati base. Il Cantone deve intervenire.
+                  </p>
+                </details>
+
+                <details class="group">
+                  <summary class="cursor-pointer font-medium hover:text-primary">
+                    🩺 5. Prevenzione e salute pubblica
+                  </summary>
+                  <p class="mt-2 text-muted-foreground pl-6">
+                    Vaccinazioni, screening tumori, controllo malattie infettive, medicina scolastica, lotta alle dipendenze: sono compiti del Cantone per proteggere la salute di tutta la popolazione.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </div>
+
+          <!-- Verified Health Spending -->
+          <div class="grid gap-6 sm:grid-cols-2 mb-6">
+            <div class="card p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="rounded-lg bg-primary/10 p-2">
+                  <svg class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold">Dati verificati</h3>
+              </div>
+              <div class="space-y-3">
+                <div>
+                  <div class="text-2xl font-bold text-primary">627 M CHF</div>
+                  <div class="text-sm text-muted-foreground">Funzione "Salute pubblica" 2027</div>
+                  <div class="text-xs text-muted-foreground mt-1">
+                    Fonte: P2027_spese_02.pdf
+                  </div>
+                </div>
+                <div class="pt-2 border-t">
+                  <div class="text-sm">
+                    <span class="font-medium">13.3%</span> del bilancio totale
+                  </div>
+                  <div class="text-sm">
+                    <span class="font-medium">1'731 CHF</span> per abitante
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="rounded-lg bg-amber-500/10 p-2">
+                  <svg class="h-5 w-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold">RIPAM (riduzione premi)</h3>
+              </div>
+              <div class="space-y-3">
+                <div>
+                  <div class="text-2xl font-bold text-amber-600">332 M CHF</div>
+                  <div class="text-sm text-muted-foreground">Classificato in "Previdenza sociale"</div>
+                </div>
+                <div class="pt-2 border-t text-sm text-muted-foreground">
+                  ⚠️ RIPAM è classificato nella funzione "Previdenza sociale" (non "Salute pubblica") perché è un trasferimento diretto alle famiglie.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Glossary -->
+          <div class="card p-6 mb-6">
+            <h3 class="text-lg font-semibold mb-4">📚 Glossario termini chiave</h3>
+            <div class="space-y-4">
+              <div class="pb-4 border-b">
+                <div class="font-medium">LAMal (Legge federale sull'assicurazione malattie)</div>
+                <p class="text-sm text-muted-foreground mt-1">
+                  L'assicurazione malattia obbligatoria che ogni persona residente in Svizzera deve avere. Ogni mese paghi un premio alla tua cassa malati (ad esempio Helsana, CSS, Assura).
+                </p>
+                <div class="text-xs text-muted-foreground mt-2">
+                  Base legale: RS 832.10
+                </div>
+              </div>
+
+              <div class="pb-4 border-b">
+                <div class="font-medium">Spese di trasferimento</div>
+                <p class="text-sm text-muted-foreground mt-1">
+                  Soldi che il Cantone 'trasferisce' ad altri (comuni, ospedali, casse malati, famiglie) invece di usarli direttamente per stipendi o materiali cantonali.
+                </p>
+                <div class="text-xs text-muted-foreground mt-2">
+                  Esempi: RIPAM (trasferimento a casse malati), quota ospedaliera (trasferimento a ospedali), PC (trasferimento ad anziani)
+                </div>
+              </div>
+
+              <div class="pb-4 border-b">
+                <div class="font-medium">Quota cantonale 55% (finanziamento ospedaliero)</div>
+                <p class="text-sm text-muted-foreground mt-1">
+                  Quando sei ricoverato in ospedale, il costo viene diviso per legge federale: il Cantone paga il 55%, la tua cassa malati paga il 45%. Tu paghi solo la franchigia normale.
+                </p>
+                <div class="text-xs text-muted-foreground mt-2">
+                  Base legale: LAMal art. 49a
+                </div>
+              </div>
+
+              <div>
+                <div class="font-medium">PC (Prestazioni Complementari AVS/AI)</div>
+                <p class="text-sm text-muted-foreground mt-1">
+                  Aiuto economico per anziani e persone con disabilità quando la pensione (AVS o AI) non basta per vivere. Include anche contributi per spese sanitarie extra (dentista, occhiali, farmaci non rimborsati).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Missing Health Data -->
+          <div class="card p-6 bg-muted/50">
+            <div class="flex items-start gap-3">
+              <svg class="h-5 w-5 text-muted-foreground mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <div class="flex-1">
+                <h4 class="font-semibold mb-2">Dati NON disponibili nel Preventivo 2027</h4>
+                <p class="text-sm text-muted-foreground mb-3">
+                  Il Messaggio 8731 non contiene un breakdown dettagliato della spesa sanitaria per singola voce. I 627M sono un aggregato.
+                </p>
+                <div class="text-sm space-y-2">
+                  <div class="flex items-start gap-2">
+                    <span class="text-muted-foreground">•</span>
+                    <div>
+                      <span class="font-medium">Contributi ospedalizzazioni:</span> NON DISPONIBILE
+                      <div class="text-xs text-muted-foreground">Dove trovarlo: Consuntivo dettagliato (marzo), Rapporti annuali EOC/OSC</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="text-muted-foreground">•</span>
+                    <div>
+                      <span class="font-medium">PC quota sanitaria:</span> NON DISPONIBILE
+                      <div class="text-xs text-muted-foreground">Dove trovarlo: Consuntivo, Conto economico per natura</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Administration Deep-Dive Section -->
+    <section class="py-16 sm:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl">
+          <div class="space-y-4 mb-8">
+            <h2 class="text-3xl font-bold tracking-tight">🏛️ Amministrazione cantonale: chi controlla i controllori?</h2>
+            <p class="text-lg text-muted-foreground">
+              Quanto costa l'amministrazione pubblica e chi controlla che i soldi siano spesi bene?
+            </p>
+          </div>
+
+          <!-- Verified Admin Spending -->
+          <div class="grid gap-6 sm:grid-cols-3 mb-6">
+            <div class="card p-6">
+              <div class="text-sm text-muted-foreground mb-1">Spesa totale 2027</div>
+              <div class="text-3xl font-bold text-primary">384 M</div>
+              <div class="text-xs text-muted-foreground mt-2">
+                Funzione "Amministrazione generale"
+              </div>
+              <div class="text-xs text-muted-foreground">
+                Fonte: P2027_spese_02.pdf
+              </div>
+            </div>
+
+            <div class="card p-6">
+              <div class="text-sm text-muted-foreground mb-1">% del bilancio</div>
+              <div class="text-3xl font-bold">8.1%</div>
+              <div class="text-xs text-muted-foreground mt-2">
+                91.9% va ad altre funzioni
+              </div>
+              <div class="text-xs text-muted-foreground">
+                (scuole, sanità, sicurezza)
+              </div>
+            </div>
+
+            <div class="card p-6">
+              <div class="text-sm text-muted-foreground mb-1">Per abitante</div>
+              <div class="text-3xl font-bold">1'061 CHF</div>
+              <div class="text-xs text-muted-foreground mt-2">
+                384M / 362'200 abitanti
+              </div>
+            </div>
+          </div>
+
+          <!-- Oversight Bodies -->
+          <div class="card p-6 mb-6">
+            <h3 class="text-lg font-semibold mb-4">🔍 Chi controlla?</h3>
+            <div class="space-y-4">
+              <div class="pb-4 border-b">
+                <div class="flex items-start gap-3">
+                  <div class="rounded-lg bg-primary/10 p-2">
+                    <svg class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <div class="font-semibold">Controllo cantonale delle finanze (CCF)</div>
+                    <p class="text-sm text-muted-foreground mt-1">
+                      I "revisori dei conti" del Cantone. Controllano che i soldi pubblici siano spesi correttamente e legalmente. Indipendente dal Governo, risponde al Parlamento.
+                    </p>
+                    <div class="text-xs text-muted-foreground mt-2">
+                      Base legale: Legge 2.4.4.1
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pb-4 border-b">
+                <div class="flex items-start gap-3">
+                  <div class="rounded-lg bg-primary/10 p-2">
+                    <svg class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <div class="font-semibold">Commissione della gestione e delle finanze (CGF)</div>
+                    <p class="text-sm text-muted-foreground mt-1">
+                      Commissione parlamentare permanente che sorveglia gestione finanziaria Governo. Circa 15 deputati del Gran Consiglio.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex items-start gap-3">
+                  <div class="rounded-lg bg-muted p-2">
+                    <svg class="h-5 w-5 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <div class="font-semibold">Corte dei conti</div>
+                    <p class="text-sm text-muted-foreground mt-1">
+                      ❌ Il Canton Ticino NON ha una Corte dei conti autonoma (a differenza di GE, VD). Il controllo è tramite CCF + CGF.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Missing Admin Data -->
+          <div class="card p-6 bg-muted/50">
+            <div class="flex items-start gap-3">
+              <svg class="h-5 w-5 text-muted-foreground mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <div class="flex-1">
+                <h4 class="font-semibold mb-3">Dati NON disponibili nel Preventivo 2027</h4>
+                <div class="space-y-3 text-sm">
+                  <div>
+                    <span class="font-medium">• FTE totali Canton Ticino:</span> NON DISPONIBILE
+                    <div class="text-xs text-muted-foreground ml-4">Dove trovarlo: USTAT "Il mercato del lavoro nel settore pubblico ticinese" (pubblicazione annuale)</div>
+                  </div>
+                  <div>
+                    <span class="font-medium">• Stipendi Consiglio di Stato:</span> NON DISPONIBILE
+                    <div class="text-xs text-muted-foreground ml-4">Dove trovarlo: LStip art. 3 o comunicati ufficiali</div>
+                  </div>
+                  <div>
+                    <span class="font-medium">• Indennità Gran Consiglio:</span> NON DISPONIBILE
+                    <div class="text-xs text-muted-foreground ml-4">Dove trovarlo: Legge sul Gran Consiglio, Regolamento indennità</div>
+                  </div>
+                  <div>
+                    <span class="font-medium">• Budget CCF:</span> NON DISPONIBILE
+                    <div class="text-xs text-muted-foreground ml-4">Dove trovarlo: Rapporto annuale CCF o Consuntivo dettagliato</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="border-t py-12 sm:py-16">
