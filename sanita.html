@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spesa sanitaria del Canton Ticino spiegata per non esperti">
+  <title>Spesa sanitaria | Dove vanno i soldi del Ticino</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="font-sans antialiased" data-page="sanita">
+  <div id="site-nav"></div>
+  <main class="min-h-screen">
+    <!-- Health Explainer Section -->
+    <section class="py-12 sm:py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl">
+          <a href="./" class="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-foreground mb-6">← Home</a>
+          <div class="space-y-4 mb-8">
+            <h1 class="text-4xl font-bold tracking-tight" data-i18n="health.sectionTitle">Spesa sanitaria, per non esperti</h1>
+            <p class="text-lg text-muted-foreground" data-i18n="health.intro">
+              La sanità rappresenta una delle voci principali del bilancio cantonale. Ecco cosa c'è da sapere.
+            </p>
+          </div>
+
+          <!-- FAQ Card -->
+          <div class="card p-6 mb-6">
+            <h3 class="text-xl font-semibold mb-4" data-i18n="health.faqTitle">❓ Domanda frequente</h3>
+            <div class="space-y-4">
+              <p class="font-medium text-primary" data-i18n="health.faqQuestion">
+                Perché il Cantone spende soldi per la sanità se io pago già la cassa malati ogni mese?
+              </p>
+              <p class="text-muted-foreground" data-i18n="health.faqAnswer">
+                La cassa malati copre solo le cure di base. Il Cantone deve pagare (per legge federale) il 55% dei ricoveri ospedalieri, aiutare chi non può permettersi i premi, e pagare servizi extra non coperti da LAMal (cure anziani, prevenzione, ecc.).
+              </p>
+              
+              <div class="mt-4 space-y-3 text-sm">
+                <details class="group">
+                  <summary class="cursor-pointer font-medium hover:text-primary" data-i18n="health.faq1Title">
+                    📋 1. LAMal copre solo cure di base
+                  </summary>
+                  <p class="mt-2 text-muted-foreground pl-6" data-i18n="health.faq1Text">
+                    La tua cassa malati paga visite mediche, esami, farmaci della lista federale. NON paga: dentista (salvo incidenti), molti occhiali, apparecchi acustici, cure a domicilio per anziani, rette case anziani, molti farmaci innovativi.
+                  </p>
+                </details>
+
+                <details class="group">
+                  <summary class="cursor-pointer font-medium hover:text-primary" data-i18n="health.faq2Title">
+                    🏥 2. Cantone obbligato a pagare 55% ospedali
+                  </summary>
+                  <p class="mt-2 text-muted-foreground pl-6" data-i18n="health.faq2Text">
+                    La legge federale LAMal (art. 49a) obbliga i Cantoni a finanziare il 55% dei costi dei ricoveri ospedalieri. Il 45% lo paga la cassa malati. Questo è per non far gravare tutto sui premi.
+                  </p>
+                </details>
+
+                <details class="group">
+                  <summary class="cursor-pointer font-medium hover:text-primary" data-i18n="health.faq3Title">
+                    💰 3. Premi altissimi in Ticino, molti non possono pagarli
+                  </summary>
+                  <p class="mt-2 text-muted-foreground pl-6" data-i18n-html="health.faq3Text">
+                    I premi in Ticino sono i più alti della Svizzera: <strong>545 CHF/mese</strong> per adulti nel 2025 (UFSP, fonte: bag.admin.ch premi cantonali). Media nazionale 449 CHF. Una famiglia di 4 persone può pagare oltre 2'000 CHF/mese. Molte famiglie non possono permetterselo senza aiuto pubblico (RIPAM).
+                  </p>
+                </details>
+
+                <details class="group">
+                  <summary class="cursor-pointer font-medium hover:text-primary" data-i18n="health.faq4Title">
+                    👴 4. Servizi extra per anziani e malati cronici
+                  </summary>
+                  <p class="mt-2 text-muted-foreground pl-6" data-i18n="health.faq4Text">
+                    Cure a domicilio per anziani, case per anziani, cure dentistiche per chi ha PC: tutto questo NON è coperto dalla cassa malati base. Il Cantone deve intervenire.
+                  </p>
+                </details>
+
+                <details class="group">
+                  <summary class="cursor-pointer font-medium hover:text-primary" data-i18n="health.faq5Title">
+                    🩺 5. Prevenzione e salute pubblica
+                  </summary>
+                  <p class="mt-2 text-muted-foreground pl-6" data-i18n="health.faq5Text">
+                    Vaccinazioni, screening tumori, controllo malattie infettive, medicina scolastica, lotta alle dipendenze: sono compiti del Cantone per proteggere la salute di tutta la popolazione.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </div>
+
+          <!-- Verified Health Spending -->
+          <div class="grid gap-6 sm:grid-cols-2 mb-6">
+            <div class="card p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="rounded-lg bg-primary/10 p-2">
+                  <svg class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold" data-i18n="health.verifiedTitle">Dati verificati</h3>
+              </div>
+              <div class="space-y-3">
+                <div>
+                  <div class="text-2xl font-bold text-primary" data-i18n="health.verifiedAmount">603 M CHF</div>
+                  <div class="text-sm text-muted-foreground" data-i18n="health.verifiedLabel">Salute pubblica 2025 (effettivo)</div>
+                  <div class="text-xs text-muted-foreground mt-1" data-i18n="health.verifiedSource">
+                    Fonte: C2025 Messaggio 8672
+                  </div>
+                </div>
+                <div class="pt-2 border-t">
+                  <div class="text-sm">
+                    <span class="font-medium">13.3%</span> <span data-i18n="health.verifiedPercent">del bilancio totale</span>
+                  </div>
+                  <div class="text-sm">
+                    <span class="font-medium">1'731 CHF</span> <span data-i18n="health.verifiedPerCapita">per abitante</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="rounded-lg bg-amber-500/10 p-2">
+                  <svg class="h-5 w-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold" data-i18n="health.ripamTitle">RIPAM (riduzione premi)</h3>
+              </div>
+              <div class="space-y-3">
+                <div>
+                  <div class="text-2xl font-bold text-amber-600" data-i18n="health.ripamAmount">332 M CHF</div>
+                  <div class="text-sm text-muted-foreground" data-i18n="health.ripamLabel">Classificato in "Previdenza sociale"</div>
+                </div>
+                <div class="pt-2 border-t text-sm text-muted-foreground" data-i18n="health.ripamNote">
+                  ⚠️ RIPAM è classificato nella funzione "Previdenza sociale" (non "Salute pubblica") perché è un trasferimento diretto alle famiglie.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Glossary -->
+          <div class="card p-6 mb-6">
+            <h3 class="text-lg font-semibold mb-4" data-i18n="health.glossaryTitle">📚 Glossario termini chiave</h3>
+            <div class="space-y-4">
+              <div class="pb-4 border-b">
+                <div class="font-medium" data-i18n="health.glossaryLAMalTitle">LAMal (Legge federale sull'assicurazione malattie)</div>
+                <p class="text-sm text-muted-foreground mt-1" data-i18n="health.glossaryLAMalText">
+                  L'assicurazione malattia obbligatoria che ogni persona residente in Svizzera deve avere. Ogni mese paghi un premio alla tua cassa malati (ad esempio Helsana, CSS, Assura).
+                </p>
+                <div class="text-xs text-muted-foreground mt-2" data-i18n="health.glossaryLAMalLegal">
+                  Base legale: RS 832.10
+                </div>
+              </div>
+
+              <div class="pb-4 border-b">
+                <div class="font-medium" data-i18n="health.glossaryTransferTitle">Spese di trasferimento</div>
+                <p class="text-sm text-muted-foreground mt-1" data-i18n="health.glossaryTransferText">
+                  Soldi che il Cantone 'trasferisce' ad altri (comuni, ospedali, casse malati, famiglie) invece di usarli direttamente per stipendi o materiali cantonali.
+                </p>
+                <div class="text-xs text-muted-foreground mt-2" data-i18n="health.glossaryTransferEx">
+                  Esempi: RIPAM (trasferimento a casse malati), quota ospedaliera (trasferimento a ospedali), PC (trasferimento ad anziani)
+                </div>
+              </div>
+
+              <div class="pb-4 border-b">
+                <div class="font-medium" data-i18n="health.glossaryQuota55Title">Quota cantonale 55% (finanziamento ospedaliero)</div>
+                <p class="text-sm text-muted-foreground mt-1" data-i18n="health.glossaryQuota55Text">
+                  Quando sei ricoverato in ospedale, il costo viene diviso per legge federale: il Cantone paga il 55%, la tua cassa malati paga il 45%. Tu paghi solo la franchigia normale.
+                </p>
+                <div class="text-xs text-muted-foreground mt-2" data-i18n="health.glossaryQuota55Legal">
+                  Base legale: LAMal art. 49a
+                </div>
+              </div>
+
+              <div>
+                <div class="font-medium" data-i18n="health.glossaryPCTitle">PC (Prestazioni Complementari AVS/AI)</div>
+                <p class="text-sm text-muted-foreground mt-1" data-i18n="health.glossaryPCText">
+                  Aiuto economico per anziani e persone con disabilità quando la pensione (AVS o AI) non basta per vivere. Include anche contributi per spese sanitarie extra (dentista, occhiali, farmaci non rimborsati).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Missing Health Data -->
+          <div class="card p-6 bg-muted/50">
+            <div class="flex items-start gap-3">
+              <svg class="h-5 w-5 text-muted-foreground mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <div class="flex-1">
+                <h4 class="font-semibold mb-2" data-i18n="health.missingTitle">Dettagli disponibili nel Consuntivo 2025</h4>
+                <p class="text-sm text-muted-foreground mb-3" data-i18n="health.missingIntro">
+                  Il Consuntivo 2025 contiene dati aggregati. Per breakdown dettagliati:
+                </p>
+                <div class="text-sm space-y-2">
+                  <div class="flex items-start gap-2">
+                    <span class="text-muted-foreground">•</span>
+                    <div>
+                      <span class="font-medium" data-i18n="health.missing1Label">Contributi ospedalizzazioni:</span> <span data-i18n="health.missing1Value">NON DISPONIBILE</span>
+                      <div class="text-xs text-muted-foreground" data-i18n="health.missing1Where">Dove trovarlo: Consuntivo dettagliato (marzo), Rapporti annuali EOC/OSC</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="text-muted-foreground">•</span>
+                    <div>
+                      <span class="font-medium" data-i18n="health.missing2Label">PC quota sanitaria:</span> <span data-i18n="health.missing2Value">NON DISPONIBILE</span>
+                      <div class="text-xs text-muted-foreground" data-i18n="health.missing2Where">Dove trovarlo: Consuntivo, Conto economico per natura</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="/src/page-boot.ts"></script>
+</body>
+</html>

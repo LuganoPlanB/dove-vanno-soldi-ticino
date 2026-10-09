@@ -8,6 +8,9 @@ const HTML_FILES = [
   'tassazione-imprese.html',
   'comuni.html',
   'metodologia.html',
+  'spese.html',
+  'sanita.html',
+  'controllo.html',
 ];
 
 test.describe('Anti-Duplication & Anti-Slop Tests', () => {

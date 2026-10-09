@@ -27,8 +27,10 @@ export async function loadComuniData(): Promise<ComuniData> {
   
   const basePath = import.meta.env.BASE_URL || '/';
   const response = await fetch(`${basePath}data/comuni-finanze-2024.json`);
-  comuniData = await response.json();
-  return comuniData!;
+  const parsed: ComuniData = await response.json();
+  parsed.comuni = parsed.comuni.filter((c) => c.nome.toUpperCase() !== 'TOTALE');
+  comuniData = parsed;
+  return parsed;
 }
 
 export function searchComuni(query: string, data: ComuniData): ComuneFinanze[] {

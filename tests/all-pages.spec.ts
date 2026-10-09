@@ -149,6 +149,9 @@ for (const viewport of VIEWPORTS) {
       expect(response?.status()).toBe(200);
       
       await expect(page.locator('h1')).toContainText('Metodologia');
+      await expect(page.locator('#lang-button')).toBeVisible();
+      await expect(page.locator('#site-nav a[href="./"]').first()).toBeVisible();
+      await expect(page.locator('#site-nav a[aria-current="page"]').first()).toHaveAttribute('href', './metodologia.html');
       
       expect(errors).toEqual([]);
     });
@@ -156,22 +159,20 @@ for (const viewport of VIEWPORTS) {
 }
 
 test.describe('Home page comuni section', () => {
-  test('No placeholder text, search enabled', async ({ page }) => {
+  test('Shows three largest comuni and keeps search on the dedicated page', async ({ page }) => {
     await page.goto('./');
     
-    // Check NO placeholder warning
     const bodyText = await page.textContent('body');
     expect(bodyText).not.toContain('Dati dimostrativi');
     expect(bodyText).not.toContain('esempi per testare');
     
-    // Check search input is enabled
+    const preview = page.locator('#comuni-preview');
+    await expect(preview).toBeVisible();
+    await expect(preview.locator(':scope > div')).toHaveCount(3);
+    
+    await page.goto('./comuni.html');
     const searchInput = page.locator('#comuni-search');
     await expect(searchInput).toBeVisible();
-    const isDisabled = await searchInput.isDisabled();
-    expect(isDisabled).toBe(false);
-    
-    // Check comuni results render
-    const results = page.locator('#comuni-results');
-    await expect(results).toBeVisible();
+    await expect(searchInput).toBeEnabled();
   });
 });

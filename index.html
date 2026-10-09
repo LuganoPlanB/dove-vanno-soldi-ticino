@@ -9,60 +9,8 @@
   <title>Dove vanno i soldi del Ticino</title>
   <link rel="stylesheet" href="/src/style.css">
 </head>
-<body class="font-sans antialiased">
-  <nav class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-    <div class="container mx-auto px-3 sm:px-6 lg:px-8">
-      <div class="flex h-14 sm:h-16 items-center justify-between gap-2">
-        <!-- Logo + Title (responsive) -->
-        <div class="flex items-center gap-1.5 sm:gap-2 min-w-0 flex-shrink">
-          <span class="text-xl sm:text-2xl flex-shrink-0">💰</span>
-          <span class="font-bold text-sm sm:text-lg truncate" data-i18n="nav.title">Dove vanno i soldi del Ticino</span>
-        </div>
-        
-        <!-- Right side controls -->
-        <div class="flex items-center gap-1 sm:gap-3 flex-shrink-0">
-          <!-- Mobile menu button (< 400px) -->
-          <button id="mobile-menu-button" class="inline-flex xs:hidden btn btn-secondary h-8 w-8 p-0 items-center justify-center" aria-label="Menu">
-            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-          
-          <!-- Metodologia link - hidden on very small screens, shown in mobile menu instead -->
-          <a href="./metodologia.html" class="hidden xs:inline-block text-xs sm:text-sm font-medium text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap" data-i18n="nav.methodology">
-            Metodologia
-          </a>
-          
-          <!-- Language switcher will be inserted here by JS -->
-          
-          <!-- Theme toggle -->
-          <button id="theme-toggle" class="btn btn-secondary h-8 w-8 sm:h-9 sm:w-9 p-0 flex-shrink-0" aria-label="Toggle theme">
-            <svg id="sun-icon" class="h-3.5 w-3.5 sm:h-4 sm:w-4 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-            </svg>
-            <svg id="moon-icon" class="h-3.5 w-3.5 sm:h-4 sm:w-4 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Mobile menu dropdown (< 400px) -->
-    <div id="mobile-menu" class="hidden border-t bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700">
-      <div class="container mx-auto px-3 py-2 bg-white dark:bg-slate-900">
-        <a href="./metodologia.html" class="block px-3 py-2 text-sm font-medium hover:bg-accent rounded" data-i18n="nav.methodology">
-          Metodologia
-        </a>
-        <a href="./storia-debito.html" class="block px-3 py-2 text-sm font-medium hover:bg-accent rounded">
-          Storia debito
-        </a>
-        <a href="./tassazione-imprese.html" class="block px-3 py-2 text-sm font-medium hover:bg-accent rounded">
-          Tassazione imprese
-        </a>
-      </div>
-    </div>
-  </nav>
+<body class="font-sans antialiased" data-page="home">
+  <div id="site-nav"></div>
 
   <main class="min-h-screen">
     <!-- Hero Section -->
@@ -80,6 +28,11 @@
           
           <p class="mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground text-balance" data-i18n="hero.subtitle">
             Trasparenza totale sulle finanze cantonali. Ogni dato verificato, ogni fonte citata, ogni numero tracciabile.
+          </p>
+          <p id="context-intro" class="mx-auto max-w-2xl text-base text-muted-foreground"></p>
+          <p class="text-sm text-muted-foreground">
+            Solo cifre stampate nei documenti ufficiali.
+            <a href="./metodologia.html" class="text-primary hover:underline">Fonti e lacune</a>
           </p>
 
           <!-- Key Metrics Grid -->
@@ -121,44 +74,29 @@
       </div>
     </section>
 
-    <!-- Context Section -->
-    <section id="context" class="py-16 sm:py-24">
+    <section id="insights" class="py-16 sm:py-20">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-3xl space-y-8">
-          <div class="space-y-4">
-            <h2 class="text-3xl font-bold tracking-tight" data-i18n="context.title">La situazione finanziaria</h2>
-            <p id="context-intro" class="text-lg text-muted-foreground leading-relaxed">
-              <!-- Generated from data -->
+        <div class="mx-auto max-w-6xl">
+          <div class="space-y-3 mb-8">
+            <h2 class="text-3xl font-bold tracking-tight">Quanto costa? Le formule spiegate</h2>
+            <p class="text-lg text-muted-foreground max-w-2xl">
+              Voci di spesa tradotte in costi per abitante, al giorno e per famiglia.
+              La formula resta visibile.
             </p>
           </div>
-
-          <div class="card p-6 bg-muted/50">
-            <div class="flex gap-3">
-              <svg class="h-6 w-6 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-              <div class="space-y-1">
-                <div class="font-medium">Fonti primarie</div>
-                <div class="text-sm text-muted-foreground">
-                  Ogni numero proviene da Messaggi del Consiglio di Stato al Gran Consiglio (DFE) e rapporti federali (Ustat, UFSP). <a href="./metodologia.html" class="text-primary hover:underline">Vedi fonti complete</a>.
-                </div>
-              </div>
-            </div>
-          </div>
+          <div id="insights-container" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
         </div>
       </div>
     </section>
 
-    <!-- Charts Section -->
-    <section id="charts" class="py-16 sm:py-24 bg-muted/30">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        <div class="text-center space-y-4">
-          <h2 class="text-3xl font-bold tracking-tight">📊 Quadro finanziario 2025</h2>
-          <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Consuntivo 2025: dati effettivi chiusi al 31.12.2025
+    <section id="charts" class="py-16 sm:py-20 bg-muted/30">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div class="space-y-3">
+          <h2 class="text-3xl font-bold tracking-tight">Quadro finanziario 2025</h2>
+          <p class="text-lg text-muted-foreground max-w-2xl">
+            Consuntivo 2025: dati effettivi chiusi al 31.12.2025.
           </p>
         </div>
-
         <div class="grid gap-6 lg:grid-cols-2">
           <div id="debt-history-chart" class="chart-container"></div>
           <div id="deficit-history-chart" class="chart-container"></div>
@@ -166,493 +104,69 @@
       </div>
     </section>
 
-    <!-- Data Status -->
-    <!-- Spese per Natura Section -->
-    <section id="spese-natura" class="py-16 sm:py-24 bg-muted/30">
+    <section id="spese-natura" class="py-16 sm:py-20">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-6xl">
-          <div class="space-y-4 mb-8">
-            <h2 class="text-3xl font-bold tracking-tight">💰 Amministrazione: dove vanno i soldi?</h2>
-            <p class="text-lg text-muted-foreground">
-              Breakdown economico dettagliato: stipendi, consulenze, IT, locazioni, energia e altri costi di funzionamento.
-            </p>
-            <div class="bg-blue-50 dark:bg-blue-950/20 border-l-4 border-blue-500 p-4 text-sm">
-              <p class="font-semibold mb-2">📊 Classificazione per natura economica (MCA2)</p>
-              <p class="text-muted-foreground mb-2">
-                Il Modello Contabile Armonizzato 2 classifica le spese per TIPO di costo (personale, beni, servizi) invece che per FUNZIONE (salute, educazione).
-              </p>
-              <div class="flex flex-wrap gap-2 mt-3">
-                <span class="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                  <span>✅</span> VERIFICATO
-                </span>
-              </div>
-            </div>
-            <div class="bg-green-50 dark:bg-green-950/20 border-l-4 border-green-500 p-4 text-sm">
-              <p class="font-semibold mb-1">✅ Dati verificati</p>
-              <p class="text-muted-foreground">
-                Il Consuntivo 2025 (Messaggio 8672) pubblica i dati effettivi con il 
-                <strong>Conto economico per natura</strong> completo. 
-                Tutti i numeri mostrati sono verificabili contro il documento ufficiale.
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between mb-6">
+            <div class="space-y-2">
+              <h2 class="text-3xl font-bold tracking-tight">Spese per natura economica</h2>
+              <p class="text-lg text-muted-foreground max-w-2xl">
+                Consuntivo 2025. Il riquadro cresce con l'importo. Apri una voce per il dettaglio.
               </p>
             </div>
+            <a href="./spese.html" class="btn btn-secondary h-10 px-4 inline-flex items-center justify-center text-sm font-medium">Tutte le voci</a>
           </div>
-          
-          <!-- Treemap -->
-          <div class="bg-card border rounded-lg p-4 sm:p-6 mb-6">
-            <h3 class="text-lg font-semibold mb-4">Spese per natura economica 2025 (Consuntivo)</h3>
-            <p class="text-sm text-muted-foreground mb-4">
-              Clicca su ogni riquadro per vedere dettagli. I colori indicano la qualità del dato.
-            </p>
-            <div id="spese-natura-treemap" class="w-full" style="min-height: 500px;"></div>
-          </div>
-          
-          <!-- Detailed breakdown table -->
-          <div id="spese-natura-details" class="space-y-4">
-            <!-- Populated by JS -->
-          </div>
+          <div id="spese-natura-treemap"></div>
         </div>
       </div>
     </section>
 
-    <!-- Health Explainer Section -->
-    <section class="py-16 sm:py-24 bg-muted/30">
+    <section id="richiami" class="py-16 sm:py-20 bg-muted/30">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-4xl">
-          <div class="space-y-4 mb-8">
-            <h2 class="text-3xl font-bold tracking-tight" data-i18n="health.sectionTitle">💊 Spesa sanitaria: spiegazione per non esperti</h2>
-            <p class="text-lg text-muted-foreground" data-i18n="health.intro">
-              La sanità rappresenta una delle voci principali del bilancio cantonale. Ecco cosa c'è da sapere.
-            </p>
-          </div>
-
-          <!-- FAQ Card -->
-          <div class="card p-6 mb-6">
-            <h3 class="text-xl font-semibold mb-4" data-i18n="health.faqTitle">❓ Domanda frequente</h3>
-            <div class="space-y-4">
-              <p class="font-medium text-primary" data-i18n="health.faqQuestion">
-                Perché il Cantone spende soldi per la sanità se io pago già la cassa malati ogni mese?
-              </p>
-              <p class="text-muted-foreground" data-i18n="health.faqAnswer">
-                La cassa malati copre solo le cure di base. Il Cantone deve pagare (per legge federale) il 55% dei ricoveri ospedalieri, aiutare chi non può permettersi i premi, e pagare servizi extra non coperti da LAMal (cure anziani, prevenzione, ecc.).
-              </p>
-              
-              <div class="mt-4 space-y-3 text-sm">
-                <details class="group">
-                  <summary class="cursor-pointer font-medium hover:text-primary" data-i18n="health.faq1Title">
-                    📋 1. LAMal copre solo cure di base
-                  </summary>
-                  <p class="mt-2 text-muted-foreground pl-6" data-i18n="health.faq1Text">
-                    La tua cassa malati paga visite mediche, esami, farmaci della lista federale. NON paga: dentista (salvo incidenti), molti occhiali, apparecchi acustici, cure a domicilio per anziani, rette case anziani, molti farmaci innovativi.
-                  </p>
-                </details>
-
-                <details class="group">
-                  <summary class="cursor-pointer font-medium hover:text-primary" data-i18n="health.faq2Title">
-                    🏥 2. Cantone obbligato a pagare 55% ospedali
-                  </summary>
-                  <p class="mt-2 text-muted-foreground pl-6" data-i18n="health.faq2Text">
-                    La legge federale LAMal (art. 49a) obbliga i Cantoni a finanziare il 55% dei costi dei ricoveri ospedalieri. Il 45% lo paga la cassa malati. Questo è per non far gravare tutto sui premi.
-                  </p>
-                </details>
-
-                <details class="group">
-                  <summary class="cursor-pointer font-medium hover:text-primary" data-i18n="health.faq3Title">
-                    💰 3. Premi altissimi in Ticino, molti non possono pagarli
-                  </summary>
-                  <p class="mt-2 text-muted-foreground pl-6" data-i18n-html="health.faq3Text">
-                    I premi in Ticino sono i più alti della Svizzera: <strong>545 CHF/mese</strong> per adulti nel 2025 (UFSP, fonte: bag.admin.ch premi cantonali). Media nazionale 449 CHF. Una famiglia di 4 persone può pagare oltre 2'000 CHF/mese. Molte famiglie non possono permetterselo senza aiuto pubblico (RIPAM).
-                  </p>
-                </details>
-
-                <details class="group">
-                  <summary class="cursor-pointer font-medium hover:text-primary" data-i18n="health.faq4Title">
-                    👴 4. Servizi extra per anziani e malati cronici
-                  </summary>
-                  <p class="mt-2 text-muted-foreground pl-6" data-i18n="health.faq4Text">
-                    Cure a domicilio per anziani, case per anziani, cure dentistiche per chi ha PC: tutto questo NON è coperto dalla cassa malati base. Il Cantone deve intervenire.
-                  </p>
-                </details>
-
-                <details class="group">
-                  <summary class="cursor-pointer font-medium hover:text-primary" data-i18n="health.faq5Title">
-                    🩺 5. Prevenzione e salute pubblica
-                  </summary>
-                  <p class="mt-2 text-muted-foreground pl-6" data-i18n="health.faq5Text">
-                    Vaccinazioni, screening tumori, controllo malattie infettive, medicina scolastica, lotta alle dipendenze: sono compiti del Cantone per proteggere la salute di tutta la popolazione.
-                  </p>
-                </details>
-              </div>
-            </div>
-          </div>
-
-          <!-- Verified Health Spending -->
-          <div class="grid gap-6 sm:grid-cols-2 mb-6">
-            <div class="card p-6">
-              <div class="flex items-center gap-3 mb-4">
-                <div class="rounded-lg bg-primary/10 p-2">
-                  <svg class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                </div>
-                <h3 class="text-lg font-semibold" data-i18n="health.verifiedTitle">Dati verificati</h3>
-              </div>
-              <div class="space-y-3">
-                <div>
-                  <div class="text-2xl font-bold text-primary" data-i18n="health.verifiedAmount">603 M CHF</div>
-                  <div class="text-sm text-muted-foreground" data-i18n="health.verifiedLabel">Salute pubblica 2025 (effettivo)</div>
-                  <div class="text-xs text-muted-foreground mt-1" data-i18n="health.verifiedSource">
-                    Fonte: C2025 Messaggio 8672
-                  </div>
-                </div>
-                <div class="pt-2 border-t">
-                  <div class="text-sm">
-                    <span class="font-medium">13.3%</span> <span data-i18n="health.verifiedPercent">del bilancio totale</span>
-                  </div>
-                  <div class="text-sm">
-                    <span class="font-medium">1'731 CHF</span> <span data-i18n="health.verifiedPerCapita">per abitante</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card p-6">
-              <div class="flex items-center gap-3 mb-4">
-                <div class="rounded-lg bg-amber-500/10 p-2">
-                  <svg class="h-5 w-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
-                  </svg>
-                </div>
-                <h3 class="text-lg font-semibold" data-i18n="health.ripamTitle">RIPAM (riduzione premi)</h3>
-              </div>
-              <div class="space-y-3">
-                <div>
-                  <div class="text-2xl font-bold text-amber-600" data-i18n="health.ripamAmount">332 M CHF</div>
-                  <div class="text-sm text-muted-foreground" data-i18n="health.ripamLabel">Classificato in "Previdenza sociale"</div>
-                </div>
-                <div class="pt-2 border-t text-sm text-muted-foreground" data-i18n="health.ripamNote">
-                  ⚠️ RIPAM è classificato nella funzione "Previdenza sociale" (non "Salute pubblica") perché è un trasferimento diretto alle famiglie.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Glossary -->
-          <div class="card p-6 mb-6">
-            <h3 class="text-lg font-semibold mb-4" data-i18n="health.glossaryTitle">📚 Glossario termini chiave</h3>
-            <div class="space-y-4">
-              <div class="pb-4 border-b">
-                <div class="font-medium" data-i18n="health.glossaryLAMalTitle">LAMal (Legge federale sull'assicurazione malattie)</div>
-                <p class="text-sm text-muted-foreground mt-1" data-i18n="health.glossaryLAMalText">
-                  L'assicurazione malattia obbligatoria che ogni persona residente in Svizzera deve avere. Ogni mese paghi un premio alla tua cassa malati (ad esempio Helsana, CSS, Assura).
-                </p>
-                <div class="text-xs text-muted-foreground mt-2" data-i18n="health.glossaryLAMalLegal">
-                  Base legale: RS 832.10
-                </div>
-              </div>
-
-              <div class="pb-4 border-b">
-                <div class="font-medium" data-i18n="health.glossaryTransferTitle">Spese di trasferimento</div>
-                <p class="text-sm text-muted-foreground mt-1" data-i18n="health.glossaryTransferText">
-                  Soldi che il Cantone 'trasferisce' ad altri (comuni, ospedali, casse malati, famiglie) invece di usarli direttamente per stipendi o materiali cantonali.
-                </p>
-                <div class="text-xs text-muted-foreground mt-2" data-i18n="health.glossaryTransferEx">
-                  Esempi: RIPAM (trasferimento a casse malati), quota ospedaliera (trasferimento a ospedali), PC (trasferimento ad anziani)
-                </div>
-              </div>
-
-              <div class="pb-4 border-b">
-                <div class="font-medium" data-i18n="health.glossaryQuota55Title">Quota cantonale 55% (finanziamento ospedaliero)</div>
-                <p class="text-sm text-muted-foreground mt-1" data-i18n="health.glossaryQuota55Text">
-                  Quando sei ricoverato in ospedale, il costo viene diviso per legge federale: il Cantone paga il 55%, la tua cassa malati paga il 45%. Tu paghi solo la franchigia normale.
-                </p>
-                <div class="text-xs text-muted-foreground mt-2" data-i18n="health.glossaryQuota55Legal">
-                  Base legale: LAMal art. 49a
-                </div>
-              </div>
-
-              <div>
-                <div class="font-medium" data-i18n="health.glossaryPCTitle">PC (Prestazioni Complementari AVS/AI)</div>
-                <p class="text-sm text-muted-foreground mt-1" data-i18n="health.glossaryPCText">
-                  Aiuto economico per anziani e persone con disabilità quando la pensione (AVS o AI) non basta per vivere. Include anche contributi per spese sanitarie extra (dentista, occhiali, farmaci non rimborsati).
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Missing Health Data -->
-          <div class="card p-6 bg-muted/50">
-            <div class="flex items-start gap-3">
-              <svg class="h-5 w-5 text-muted-foreground mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-              <div class="flex-1">
-                <h4 class="font-semibold mb-2" data-i18n="health.missingTitle">Dettagli disponibili nel Consuntivo 2025</h4>
-                <p class="text-sm text-muted-foreground mb-3" data-i18n="health.missingIntro">
-                  Il Consuntivo 2025 contiene dati aggregati. Per breakdown dettagliati:
-                </p>
-                <div class="text-sm space-y-2">
-                  <div class="flex items-start gap-2">
-                    <span class="text-muted-foreground">•</span>
-                    <div>
-                      <span class="font-medium" data-i18n="health.missing1Label">Contributi ospedalizzazioni:</span> <span data-i18n="health.missing1Value">NON DISPONIBILE</span>
-                      <div class="text-xs text-muted-foreground" data-i18n="health.missing1Where">Dove trovarlo: Consuntivo dettagliato (marzo), Rapporti annuali EOC/OSC</div>
-                    </div>
-                  </div>
-                  <div class="flex items-start gap-2">
-                    <span class="text-muted-foreground">•</span>
-                    <div>
-                      <span class="font-medium" data-i18n="health.missing2Label">PC quota sanitaria:</span> <span data-i18n="health.missing2Value">NON DISPONIBILE</span>
-                      <div class="text-xs text-muted-foreground" data-i18n="health.missing2Where">Dove trovarlo: Consuntivo, Conto economico per natura</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="mx-auto max-w-6xl grid gap-4 md:grid-cols-2">
+          <a href="./sanita.html" class="card p-6 hover:border-primary transition-colors block">
+            <p class="text-sm font-medium text-primary">Pagina dedicata</p>
+            <h2 class="text-2xl font-bold mt-2">Spesa sanitaria, per non esperti</h2>
+            <p class="mt-3 text-muted-foreground">Perché il Cantone spende per la sanità se la cassa malati la paghi già. Glossario e cifre stampate.</p>
+          </a>
+          <a href="./controllo.html" class="card p-6 hover:border-primary transition-colors block">
+            <p class="text-sm font-medium text-primary">Pagina dedicata</p>
+            <h2 class="text-2xl font-bold mt-2">Chi controlla i controllori</h2>
+            <p class="mt-3 text-muted-foreground">Controllo delle finanze, commissione parlamentare, e cosa il Cantone pubblica sul costo delle autorità.</p>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Administration Deep-Dive Section -->
-    <section class="py-16 sm:py-24">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-4xl">
-          <div class="space-y-4 mb-8">
-            <h2 class="text-3xl font-bold tracking-tight">🏛️ Amministrazione cantonale: chi controlla i controllori?</h2>
-            <p class="text-lg text-muted-foreground">
-              Quanto costa l'amministrazione pubblica e chi controlla che i soldi siano spesi bene?
-            </p>
-          </div>
-
-          <!-- Verified Admin Spending -->
-          <div class="grid gap-6 sm:grid-cols-3 mb-6">
-            <div class="card p-6">
-              <div class="text-sm text-muted-foreground mb-1">Spesa totale 2025</div>
-              <div class="text-3xl font-bold text-primary">—</div>
-              <div class="text-xs text-muted-foreground mt-2">
-                Dato C2025 in verifica
-              </div>
-              <div class="text-xs text-muted-foreground">
-                (no printed total found)
-              </div>
-            </div>
-
-            <div class="card p-6">
-              <div class="text-sm text-muted-foreground mb-1">% del bilancio</div>
-              <div class="text-3xl font-bold">—</div>
-              <div class="text-xs text-muted-foreground mt-2">
-                Dato in verifica
-              </div>
-              <div class="text-xs text-muted-foreground">
-                &nbsp;
-              </div>
-            </div>
-
-            <div class="card p-6">
-              <div class="text-sm text-muted-foreground mb-1">Per abitante</div>
-              <div class="text-3xl font-bold">—</div>
-              <div class="text-xs text-muted-foreground mt-2">
-                Dato in verifica
-              </div>
-            </div>
-          </div>
-
-          <!-- Oversight Bodies -->
-          <div class="card p-6 mb-6">
-            <h3 class="text-lg font-semibold mb-4">🔍 Chi controlla?</h3>
-            <div class="space-y-4">
-              <div class="pb-4 border-b">
-                <div class="flex items-start gap-3">
-                  <div class="rounded-lg bg-primary/10 p-2">
-                    <svg class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                  </div>
-                  <div class="flex-1">
-                    <div class="font-semibold">Controllo cantonale delle finanze (CCF)</div>
-                    <p class="text-sm text-muted-foreground mt-1">
-                      I "revisori dei conti" del Cantone. Controllano che i soldi pubblici siano spesi correttamente e legalmente. Indipendente dal Governo, risponde al Parlamento.
-                    </p>
-                    <div class="text-xs text-muted-foreground mt-2">
-                      Base legale: Legge 2.4.4.1
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="pb-4 border-b">
-                <div class="flex items-start gap-3">
-                  <div class="rounded-lg bg-primary/10 p-2">
-                    <svg class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                    </svg>
-                  </div>
-                  <div class="flex-1">
-                    <div class="font-semibold">Commissione della gestione e delle finanze (CGF)</div>
-                    <p class="text-sm text-muted-foreground mt-1">
-                      Commissione parlamentare permanente che sorveglia gestione finanziaria Governo. Circa 15 deputati del Gran Consiglio.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex items-start gap-3">
-                  <div class="rounded-lg bg-muted p-2">
-                    <svg class="h-5 w-5 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                  </div>
-                  <div class="flex-1">
-                    <div class="font-semibold">Corte dei conti</div>
-                    <p class="text-sm text-muted-foreground mt-1">
-                      ❌ Il Canton Ticino NON ha una Corte dei conti autonoma (a differenza di GE, VD). Il controllo è tramite CCF + CGF.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Missing Admin Data -->
-          <div class="card p-6 bg-muted/50">
-            <div class="flex items-start gap-3">
-              <svg class="h-5 w-5 text-muted-foreground mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-              <div class="flex-1">
-                <h4 class="font-semibold mb-3">Dati Autorità - Verificati</h4>
-                <div class="space-y-3 text-sm">
-                  <div>
-                    <span class="font-medium">• Consiglio di Stato (consulenze/perizie 2025):</span> CHF 1'014'905
-                    <div class="text-xs text-muted-foreground ml-4">✅ Rendiconto CdS 2025 - Spese esterne consulenze, non stipendi CdS (stipendi in voce 30 Personale)</div>
-                  </div>
-                  <div>
-                    <span class="font-medium">• Gran Consiglio (indennità deputati 2025):</span> CHF 1'777'559 nette
-                    <div class="text-xs text-muted-foreground ml-4">✅ Resoconto Art. 166a LGC - 90 deputati, indennità + trasferte CHF 162'763</div>
-                  </div>
-                  <div>
-                    <span class="font-medium">• FTE totali Canton Ticino:</span> NON DISPONIBILE nel Preventivo
-                    <div class="text-xs text-muted-foreground ml-4">Dove trovarlo: USTAT "Il mercato del lavoro nel settore pubblico ticinese" (pubblicazione annuale) o Consuntivo dettagliato</div>
-                  </div>
-                  <div>
-                    <span class="font-medium">• Stipendi membri CdS:</span> NON PUBBLICATI separatamente
-                    <div class="text-xs text-muted-foreground ml-4">Inclusi nella voce 30 Personale aggregata (CHF 1'219.7M totale 2025). Base legale: LStip art. 3</div>
-                  </div>
-                  <div>
-                    <span class="font-medium">• Budget CCF:</span> NON DISPONIBILE
-                    <div class="text-xs text-muted-foreground ml-4">Dove trovarlo: Rapporto annuale CCF o Consuntivo dettagliato</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Comuni Section -->
-    <section id="comuni" class="py-16 sm:py-24">
+    <section id="comuni" class="py-16 sm:py-20">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-6xl">
-          <div class="space-y-4 mb-8">
-            <h2 class="text-3xl font-bold tracking-tight">🏘️ Dati per comune</h2>
-            <p class="text-lg text-muted-foreground">
-              Confronta moltiplicatori, entrate, uscite e debito pro capite dei comuni ticinesi.
-            </p>
-            <div class="bg-blue-50 dark:bg-blue-950/20 border-l-4 border-blue-500 p-4 text-sm">
-              <p class="font-semibold mb-1">📊 Dati ufficiali 2024</p>
-              <p class="text-muted-foreground">
-                Dati estratti dal Rapporto 'I conti dei comuni nel 2024', Allegato statistico tab.8.
-                Popolazione, moltiplicatori fiscali, risorse e indice di forza finanziaria per 106 comuni.
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between mb-6">
+            <div class="space-y-2">
+              <h2 class="text-3xl font-bold tracking-tight">Tre comuni più grandi</h2>
+              <p class="text-lg text-muted-foreground max-w-2xl">
+                Per popolazione residente al 31.12.2024. La ricerca e il confronto stanno nella pagina comuni.
               </p>
             </div>
+            <a href="./comuni.html" class="btn btn-secondary h-10 px-4 inline-flex items-center justify-center text-sm font-medium">Tutti i comuni</a>
           </div>
-          
-          <!-- Search -->
-          <div class="mb-6">
-            <input
-              id="comuni-search"
-              type="search"
-              placeholder="Cerca un comune..."
-              class="w-full px-4 py-3 rounded-lg border bg-background focus:ring-2 focus:ring-primary focus:border-transparent"
-            />
-          </div>
-          
-          <!-- Results -->
-          <div id="comuni-results" class="min-h-[200px]">
-            <!-- Populated by JS -->
-          </div>
+          <div id="comuni-preview" class="grid gap-4 sm:grid-cols-3"></div>
         </div>
       </div>
     </section>
 
-    <!-- Insights Section -->
-    <section id="insights" class="py-16 sm:py-24 bg-muted/30">
+    <section id="budget-anni" class="py-16 sm:py-20 border-t bg-muted/30">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-6xl">
-          <div class="space-y-4 mb-8 text-center">
-            <h2 class="text-3xl font-bold tracking-tight">💡 Quanto costa? Le formule spiegate</h2>
-            <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Voci di spesa tradotte in costi per abitante, al giorno e per famiglia.
-              Tutte le formule sono visibili per massima trasparenza.
-            </p>
-          </div>
-          
-          <div id="insights-container" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <!-- Populated by JS -->
-          </div>
+        <div class="mx-auto max-w-6xl space-y-4 mb-8">
+          <h2 class="text-3xl font-bold tracking-tight">Dal consuntivo al preventivo</h2>
+          <p class="text-lg text-muted-foreground max-w-3xl">
+            2024 e 2025 sono conti chiusi. 2026 e 2027 sono preventivi: una promessa, non un risultato.
+          </p>
         </div>
+        <div id="budget-compare" class="mx-auto max-w-6xl"></div>
       </div>
     </section>
 
-    <!-- Budget 2027 Compact Section -->
-    <section id="budget-2027" class="py-12 sm:py-16 border-t bg-muted/50">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-4xl">
-          <div class="space-y-4 mb-6">
-            <div class="inline-flex items-center rounded-full border px-3 py-1 text-xs bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800">
-              <span class="mr-2">📋</span>
-              <span>Preventivo 2027 - In attesa approvazione</span>
-            </div>
-            <h2 class="text-2xl font-bold tracking-tight">Sguardo al Budget 2027</h2>
-            <p class="text-muted-foreground">
-              Il Preventivo 2027 è stato licenziato dal Consiglio di Stato il 30 settembre 2026. Approvazione finale da parte del Gran Consiglio prevista per dicembre 2026.
-            </p>
-          </div>
-
-          <div class="grid gap-4 sm:grid-cols-3 mb-6">
-            <div class="card p-4">
-              <div class="text-xs text-muted-foreground mb-1">Disavanzo previsto</div>
-              <div class="text-2xl font-bold text-destructive">-98.5M</div>
-              <div class="text-xs text-muted-foreground">CHF -274 per abitante</div>
-            </div>
-            <div class="card p-4">
-              <div class="text-xs text-muted-foreground mb-1">Spese totali</div>
-              <div class="text-2xl font-bold">4'730M</div>
-              <div class="text-xs text-muted-foreground">+3.2% vs C2025</div>
-            </div>
-            <div class="card p-4">
-              <div class="text-xs text-muted-foreground mb-1">Ricavi totali</div>
-              <div class="text-2xl font-bold">4'632M</div>
-              <div class="text-xs text-muted-foreground">+1.8% vs C2025</div>
-            </div>
-          </div>
-
-          <div class="card p-4 bg-amber-50 dark:bg-amber-950/20 border-l-4 border-amber-500">
-            <p class="text-sm font-medium mb-2">⚠️ Nota importante</p>
-            <p class="text-xs text-muted-foreground">
-              Il focus di questo sito è sui <strong>dati effettivi</strong> (Consuntivo 2025). 
-              I numeri del Preventivo 2027 sono previsioni soggette a modifica e approvazione parlamentare.
-              Per analisi dettagliate, consultare il 
-              <a href="https://www4.ti.ch/dfe/dr/finanze/dati-finanziari/p2027/" target="_blank" rel="noopener" class="underline hover:text-primary">
-                Messaggio 8731 completo
-              </a>.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="border-t py-12 sm:py-16">

@@ -5,7 +5,13 @@ export default {
   },
   nav: {
     title: 'Where does Ticino money go',
-    home: 'Dashboard',
+    home: 'Home',
+    spese: 'Spending',
+    sanita: 'Health',
+    controllo: 'Oversight',
+    comuni: 'Municipalities',
+    debito: 'Debt',
+    imprese: 'Companies',
     methodology: 'Methodology',
     github: 'Source code'
   },

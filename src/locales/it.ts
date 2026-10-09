@@ -5,7 +5,13 @@ export default {
   },
   nav: {
     title: 'Dove vanno i soldi del Ticino',
-    home: 'Dashboard',
+    home: 'Home',
+    spese: 'Spese',
+    sanita: 'Sanità',
+    controllo: 'Controllo',
+    comuni: 'Comuni',
+    debito: 'Debito',
+    imprese: 'Imprese',
     methodology: 'Metodologia',
     github: 'Codice sorgente'
   },
