@@ -13,7 +13,10 @@ export default defineConfig({
         metodologia: resolve(__dirname, 'metodologia.html'),
         storiaDebito: resolve(__dirname, 'storia-debito.html'),
         tassazioneImprese: resolve(__dirname, 'tassazione-imprese.html'),
-        comuni: resolve(__dirname, 'comuni.html')
+        comuni: resolve(__dirname, 'comuni.html'),
+        spese: resolve(__dirname, 'spese.html'),
+        sanita: resolve(__dirname, 'sanita.html'),
+        controllo: resolve(__dirname, 'controllo.html')
       }
     }
   },

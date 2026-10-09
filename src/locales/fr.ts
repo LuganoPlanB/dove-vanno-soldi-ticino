@@ -5,7 +5,13 @@ export default {
   },
   nav: {
     title: 'Où va l\'argent du Tessin',
-    home: 'Tableau de bord',
+    home: 'Accueil',
+    spese: 'Dépenses',
+    sanita: 'Santé',
+    controllo: 'Contrôle',
+    comuni: 'Communes',
+    debito: 'Dette',
+    imprese: 'Entreprises',
     methodology: 'Méthodologie',
     github: 'Code source'
   },

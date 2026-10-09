@@ -5,7 +5,13 @@ export default {
   },
   nav: {
     title: 'Wohin geht das Tessiner Geld',
-    home: 'Dashboard',
+    home: 'Home',
+    spese: 'Ausgaben',
+    sanita: 'Gesundheit',
+    controllo: 'Kontrolle',
+    comuni: 'Gemeinden',
+    debito: 'Schulden',
+    imprese: 'Unternehmen',
     methodology: 'Methodik',
     github: 'Quellcode'
   },

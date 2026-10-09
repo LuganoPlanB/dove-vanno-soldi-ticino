@@ -1,5 +1,9 @@
 import type { ComuneFinanze, ComuniData } from './comuni';
 import './ux-enhancements';
+import './style.css';
+import { mountSiteNav } from './shared-nav';
+
+mountSiteNav();
 
 let allComuni: ComuneFinanze[] = [];
 let filteredComuni: ComuneFinanze[] = [];
@@ -9,7 +13,7 @@ async function loadData(): Promise<void> {
   const basePath = import.meta.env.BASE_URL || '/';
   const response = await fetch(`${basePath}data/comuni-finanze-2024.json`);
   const data: ComuniData = await response.json();
-  allComuni = data.comuni;
+  allComuni = data.comuni.filter((c) => c.nome.toUpperCase() !== 'TOTALE');
   filteredComuni = [...allComuni];
   
   calculateStats();

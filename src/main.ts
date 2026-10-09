@@ -1,10 +1,11 @@
 import './style.css';
 import * as charts from './charts';
-import { i18n, type Language } from './locales';
+import { i18n } from './locales';
 import { enableShareableViews, addShareButtons } from './ux-enhancements';
-import { loadComuniData, searchComuni, renderComuneCard } from './comuni';
+import { loadComuniData, renderComuneCard } from './comuni';
 import { renderAllInsightCards } from './insights';
-import { loadSpeseNatura, prepareTreemapData, renderAvailabilityBadge, formatMillions, formatCurrency } from './spese-natura';
+import { loadSpeseNatura, renderSpeseHeatmap, type SpesaConto } from './spese-natura';
+import { mountSiteNav } from './shared-nav';
 
 // Enable URL-based view sharing
 enableShareableViews();
@@ -19,82 +20,6 @@ async function loadJSON<T>(path: string): Promise<T> {
     throw new Error(`Failed to load ${url}: ${response.statusText}`);
   }
   return response.json();
-}
-
-function initializeTheme() {
-  const storedTheme = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const theme = storedTheme || (prefersDark ? 'dark' : 'light');
-  
-  document.documentElement.classList.toggle('dark', theme === 'dark');
-  
-  const themeToggle = document.getElementById('theme-toggle');
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const isDark = document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      
-      setTimeout(() => {
-        renderAllCharts();
-      }, 50);
-    });
-  }
-}
-
-function createLanguageSwitcher() {
-  const nav = document.querySelector('nav .flex.items-center.gap-1');
-  if (!nav || document.getElementById('lang-switcher')) return;
-  
-  const switcher = document.createElement('div');
-  switcher.id = 'lang-switcher';
-  switcher.className = 'relative flex-shrink-0';
-  
-  const currentLang = i18n.getLanguage().toUpperCase();
-  
-  switcher.innerHTML = `
-    <button id="lang-button" class="btn btn-secondary h-8 sm:h-9 px-2 sm:px-3 text-xs sm:text-sm font-medium flex items-center gap-1" aria-label="Change language">
-      <svg class="h-3.5 w-3.5 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
-      </svg>
-      <span class="font-semibold">${currentLang}</span>
-    </button>
-    <div id="lang-menu" class="hidden absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 z-[100]">
-      <div class="py-1 bg-white dark:bg-slate-900">
-        <button data-lang="it" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'it' ? 'font-bold text-primary' : ''}">🇮🇹 Italiano</button>
-        <button data-lang="en" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'en' ? 'font-bold text-primary' : ''}">🇬🇧 English</button>
-        <button data-lang="de" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'de' ? 'font-bold text-primary' : ''}">🇩🇪 Deutsch</button>
-        <button data-lang="fr" class="block w-full text-left px-4 py-2 text-sm hover:bg-accent ${i18n.getLanguage() === 'fr' ? 'font-bold text-primary' : ''}">🇫🇷 Français</button>
-      </div>
-    </div>
-  `;
-  
-  // Insert before theme toggle
-  const themeToggle = nav.querySelector('#theme-toggle');
-  if (themeToggle) {
-    nav.insertBefore(switcher, themeToggle);
-  } else {
-    nav.appendChild(switcher);
-  }
-  
-  const button = document.getElementById('lang-button');
-  const menu = document.getElementById('lang-menu');
-  
-  button?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    menu?.classList.toggle('hidden');
-  });
-  
-  document.addEventListener('click', () => {
-    menu?.classList.add('hidden');
-  });
-  
-  menu?.querySelectorAll('[data-lang]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const lang = (e.target as HTMLElement).dataset.lang as Language;
-      i18n.setLanguage(lang);
-      window.location.reload();
-    });
-  });
 }
 
 function translateCategory(category: string): string {
@@ -200,18 +125,19 @@ if (window.location.pathname === '/' ||
     window.location.pathname.includes('index.html') ||
     window.location.pathname === '/dove-vanno-soldi-ticino/' ||
     window.location.pathname === '/dove-vanno-soldi-ticino/index.html') {
-  initializeTheme();
-  // Import translator dynamically
+  mountSiteNav();
   import('./translator').then(({ translatePage }) => {
     translatePage();
   });
-  createLanguageSwitcher();
-  setupMobileMenu();
+  window.addEventListener('themeChanged', () => {
+    setTimeout(() => renderAllCharts(), 50);
+  });
   renderAllCharts();
   setupResponsiveCharts();
-  setupComuniSearch();
+  renderComuniPreview();
   renderInsights();
   renderSpeseNatura();
+  renderBudgetCompare();
   generateContextIntro();
   
   // UX enhancements: Add share buttons after content loads
@@ -241,82 +167,16 @@ async function generateContextIntro() {
 }
 
 async function renderSpeseNatura() {
+  const treemapContainer = document.getElementById('spese-natura-treemap');
+  if (!treemapContainer) return;
   try {
     const data = await loadSpeseNatura();
-    
-    const treemapContainer = document.getElementById('spese-natura-treemap');
-    const detailsContainer = document.getElementById('spese-natura-details');
-    
-    // Check if we have real data
-    if (!data.consuntivo2025?.spese || data.consuntivo2025.spese.length === 0) {
-      // Show "data unavailable" message
-      if (treemapContainer) {
-        treemapContainer.innerHTML = `
-          <div class="flex items-center justify-center h-64 bg-muted/30 rounded-lg border-2 border-dashed">
-            <div class="text-center p-8 max-w-lg">
-              <div class="text-4xl mb-4">📋</div>
-              <h3 class="text-xl font-bold mb-2">Dati in estrazione da fonti ufficiali</h3>
-              <p class="text-muted-foreground mb-4">
-                Il breakdown dettagliato per natura economica (salari, consulenze, IT, ecc.) 
-                richiede il <strong>Consuntivo 2025</strong> con il "Conto economico per genere di spesa".
-              </p>
-              <p class="text-sm text-muted-foreground">
-                Ricerca in corso su ti.ch → Divisione delle risorse → Conti consuntivi
-              </p>
-              <p class="text-xs text-amber-600 dark:text-amber-400 mt-4 font-semibold">
-                ⚠️ NESSUN dato stimato o placeholder. Solo cifre ufficiali verificate.
-              </p>
-            </div>
-          </div>
-        `;
-      }
-      
-      if (detailsContainer) {
-        detailsContainer.innerHTML = '';
-      }
+    const spese = (data.consuntivo2025?.spese || []) as SpesaConto[];
+    if (spese.length === 0) {
+      treemapContainer.innerHTML = '<p class="text-muted-foreground">Nessuna voce verificata nel Consuntivo 2025.</p>';
       return;
     }
-    
-    // Render treemap (only if we have data)
-    const treemapData = prepareTreemapData(data);
-    charts.renderSpeseNaturaTreemap('spese-natura-treemap', treemapData);
-    
-    // Render detailed breakdown cards
-    if (detailsContainer && data.consuntivo2025?.spese) {
-      detailsContainer.innerHTML = data.consuntivo2025.spese
-        .filter(spesa => spesa && spesa.categoria && spesa.importoMilioni != null)
-        .map((spesa) => `
-        <div class="bg-card border rounded-lg p-4 sm:p-6">
-          <div class="flex items-start justify-between mb-3">
-            <div>
-              <h3 class="text-xl font-bold">${spesa.categoria}</h3>
-              <p class="text-sm text-muted-foreground mt-1">${spesa.descrizione || ''}</p>
-            </div>
-            <div>${renderAvailabilityBadge('VERIFICATO')}</div>
-          </div>
-          
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4">
-            <div>
-              <div class="text-sm text-muted-foreground">Importo</div>
-              <div class="text-2xl font-bold">${formatMillions(spesa.importoMilioni)}</div>
-            </div>
-            <div>
-              <div class="text-sm text-muted-foreground">% bilancio</div>
-              <div class="text-2xl font-bold">${spesa.percentualeTotale != null ? spesa.percentualeTotale.toFixed(1) : '0.0'}%</div>
-            </div>
-            <div>
-              <div class="text-sm text-muted-foreground">Per abitante</div>
-              <div class="text-xl font-bold">${spesa.importoProCapite != null ? formatCurrency(spesa.importoProCapite) : '—'}</div>
-            </div>
-          </div>
-          
-          <div class="text-xs text-muted-foreground border-t pt-2 mt-2">
-            <strong>Fonte:</strong> ${spesa.fonte || 'N/A'}
-          </div>
-          ${spesa.note ? `<div class="text-xs text-muted-foreground mt-1"><strong>Note:</strong> ${spesa.note}</div>` : ''}
-        </div>
-      `).join('');
-    }
+    renderSpeseHeatmap(treemapContainer, spese);
   } catch (err) {
     console.error('Error loading spese natura:', err);
   }
@@ -329,87 +189,103 @@ function renderInsights() {
   container.innerHTML = renderAllInsightCards();
 }
 
-function setupMobileMenu() {
-  const menuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
-  
-  if (!menuButton || !mobileMenu) return;
-  
-  menuButton.addEventListener('click', (e) => {
-    e.stopPropagation();
-    mobileMenu.classList.toggle('hidden');
-  });
-  
-  // Close on click outside
-  document.addEventListener('click', (e) => {
-    const target = e.target as Node;
-    if (!menuButton.contains(target) && !mobileMenu.contains(target)) {
-      mobileMenu.classList.add('hidden');
-    }
-  });
-  
-  // Close on link click
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-    });
-  });
+async function renderComuniPreview() {
+  const container = document.getElementById('comuni-preview');
+  if (!container) return;
+  try {
+    const data = await loadComuniData();
+    const top = [...data.comuni]
+      .filter((c) => c.popolazione_2024 != null)
+      .sort((a, b) => b.popolazione_2024 - a.popolazione_2024)
+      .slice(0, 3);
+    container.innerHTML = top.map((c) => renderComuneCard(c)).join('');
+  } catch (err) {
+    console.error('Error loading comuni preview:', err);
+  }
 }
 
-async function setupComuniSearch() {
-  const searchInput = document.getElementById('comuni-search') as HTMLInputElement;
-  const resultsContainer = document.getElementById('comuni-results');
-  
-  if (!searchInput || !resultsContainer) return;
-  
-  const data = await loadComuniData();
-  
-  // Check if we have real data
-  if (!data.comuni || data.comuni.length === 0) {
-    resultsContainer.innerHTML = `
-      <div class="flex items-center justify-center min-h-[300px] bg-muted/30 rounded-lg border-2 border-dashed">
-        <div class="text-center p-8 max-w-lg">
-          <div class="text-4xl mb-4">🏘️</div>
-          <h3 class="text-xl font-bold mb-2">Dati comunali in estrazione</h3>
-          <p class="text-muted-foreground mb-4">
-            I dati finanziari per comune devono essere estratti da 
-            <strong>USTAT</strong> (Ufficio di statistica) o dalla 
-            <strong>Sezione enti locali</strong> con conti consuntivi ufficiali verificati.
-          </p>
-          <p class="text-sm text-muted-foreground">
-            Fonti ufficiali: ti.ch/ustat e ti.ch/dfe/dr/sel
-          </p>
-          <p class="text-xs text-amber-600 dark:text-amber-400 mt-4 font-semibold">
-            ⚠️ NESSUN dato placeholder. Solo cifre verificate da bilanci comunali pubblicati.
-          </p>
+interface AnnoBilancio {
+  anno: number;
+  tipo: string;
+  etichetta: string;
+  speseTotali?: number;
+  ricaviTotali?: number;
+  speseCorrenti?: number;
+  disavanzo: number;
+  fonte: string;
+  url: string;
+  promessaConsiglioStato?: { disavanzo: number; data: string; fonte: string; url: string };
+}
+
+function mio(value: number | undefined): string {
+  if (value == null) return '—';
+  const abs = Math.abs(value);
+  const formatted = abs.toLocaleString('it-CH', { maximumFractionDigits: 1 });
+  return value < 0 ? `−${formatted}` : formatted;
+}
+
+async function renderBudgetCompare() {
+  const container = document.getElementById('budget-compare');
+  if (!container) return;
+  try {
+    const data = await loadJSON<{ metadati: { nota2026: string }; anni: AnnoBilancio[] }>('data/confronto-bilanci.json');
+    const max = Math.max(...data.anni.map((a) => Math.abs(a.disavanzo)), Math.abs(data.anni.find((a) => a.promessaConsiglioStato)?.promessaConsiglioStato?.disavanzo || 0));
+    const bars = data.anni.map((anno) => {
+      const width = Math.max(4, (Math.abs(anno.disavanzo) / max) * 100);
+      return `
+        <div>
+          <div class="flex justify-between text-sm mb-1">
+            <span class="font-medium">${anno.anno} · ${anno.etichetta}</span>
+            <span class="tabular-nums">${mio(anno.disavanzo)} mln</span>
+          </div>
+          <div class="h-2.5 rounded-full bg-muted overflow-hidden">
+            <div class="h-full rounded-full ${anno.tipo === 'consuntivo' ? 'bg-foreground' : 'bg-primary'}" style="width:${width}%"></div>
+          </div>
+        </div>`;
+    }).join('');
+
+    const rows = data.anni.map((anno) => `
+      <tr class="border-t">
+        <td class="py-3 pr-3 font-medium">${anno.anno}</td>
+        <td class="py-3 pr-3 text-muted-foreground">${anno.etichetta}</td>
+        <td class="py-3 pr-3 tabular-nums">${anno.speseTotali != null ? mio(anno.speseTotali) : anno.speseCorrenti != null ? `${mio(anno.speseCorrenti)} correnti` : '—'}</td>
+        <td class="py-3 pr-3 tabular-nums">${mio(anno.ricaviTotali)}</td>
+        <td class="py-3 pr-3 tabular-nums font-medium">${mio(anno.disavanzo)}</td>
+        <td class="py-3 text-xs text-muted-foreground"><a class="hover:underline" href="${anno.url}" target="_blank" rel="noopener">${anno.fonte}</a></td>
+      </tr>`).join('');
+
+    const promessa = data.anni.find((a) => a.promessaConsiglioStato)?.promessaConsiglioStato;
+
+    container.innerHTML = `
+      <div class="grid gap-8 lg:grid-cols-[minmax(0,16rem)_1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-medium">Disavanzo, milioni di franchi</p>
+          ${bars}
+          <p class="text-xs text-muted-foreground">Barra scura: consuntivo. Barra blu: preventivo.</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-left text-muted-foreground">
+                <th class="pb-2 pr-3 font-medium">Anno</th>
+                <th class="pb-2 pr-3 font-medium">Stato</th>
+                <th class="pb-2 pr-3 font-medium">Spese</th>
+                <th class="pb-2 pr-3 font-medium">Ricavi</th>
+                <th class="pb-2 pr-3 font-medium">Risultato</th>
+                <th class="pb-2 font-medium">Fonte</th>
+              </tr>
+            </thead>
+            <tbody>${rows}</tbody>
+          </table>
         </div>
       </div>
+      ${promessa ? `<div class="card p-4 mt-6 text-sm">
+        <p class="font-medium">2026, promessa e testo autorizzato</p>
+        <p class="mt-2 text-muted-foreground">Il 29 settembre 2025 il Consiglio di Stato ha presentato un disavanzo di ${mio(promessa.disavanzo)} milioni. Il preventivo poi autorizzato dal Gran Consiglio chiude a ${mio(data.anni.find((a) => a.anno === 2026)?.disavanzo)} milioni. <a class="text-primary hover:underline" href="${promessa.url}" target="_blank" rel="noopener">Comunicato</a>.</p>
+        <p class="mt-2 text-muted-foreground">${data.metadati.nota2026}</p>
+      </div>` : ''}
     `;
-    searchInput.disabled = true;
-    searchInput.placeholder = 'Dati in estrazione da fonti ufficiali...';
-    return;
+  } catch (err) {
+    console.error('Error loading budget compare:', err);
   }
-  
-  // Display all comuni initially
-  const renderResults = (comuni: typeof data.comuni) => {
-    if (comuni.length === 0) {
-      resultsContainer.innerHTML = '<div class="text-center py-8 text-muted-foreground">Nessun comune trovato</div>';
-      return;
-    }
-    
-    resultsContainer.innerHTML = `
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        ${comuni.map(c => renderComuneCard(c)).join('')}
-      </div>
-    `;
-  };
-  
-  renderResults(data.comuni);
-  
-  // Search on input
-  searchInput.addEventListener('input', (e) => {
-    const query = (e.target as HTMLInputElement).value;
-    const results = searchComuni(query, data);
-    renderResults(results);
-  });
 }

@@ -1,0 +1,54 @@
+{
+  "metadati": {
+    "titolo": "Conti 2024-2025 e preventivi 2026-2027",
+    "nota2026": "Il consuntivo 2026 non esiste ancora: l'esercizio si chiude il 31 dicembre 2026 e il messaggio di consuntivo esce di norma la primavera successiva. Qui si vede la promessa del preventivo, non l'andamento effettivo del 2026.",
+    "unita": "milioni CHF"
+  },
+  "anni": [
+    {
+      "anno": 2024,
+      "tipo": "consuntivo",
+      "etichetta": "Consuntivo",
+      "speseTotali": 4422,
+      "ricaviTotali": 4350,
+      "disavanzo": -72,
+      "fonte": "Consuntivo 2024",
+      "url": "https://www4.ti.ch/dfe/dr/finanze/dati-finanziari/c2024"
+    },
+    {
+      "anno": 2025,
+      "tipo": "consuntivo",
+      "etichetta": "Consuntivo",
+      "speseTotali": 4583,
+      "ricaviTotali": 4551,
+      "disavanzo": -32,
+      "fonte": "Messaggio Consuntivo 2025 n. 8672, p. 15",
+      "url": "https://www4.ti.ch/fileadmin/DFE/DR-FINANZE/C2025/MessaggioConsuntivo2025.pdf"
+    },
+    {
+      "anno": 2026,
+      "tipo": "preventivo",
+      "etichetta": "Preventivo autorizzato",
+      "speseTotali": 4617.2,
+      "ricaviTotali": 4514.8,
+      "disavanzo": -102.4,
+      "fonte": "Rapporto di maggioranza n. 8619 R1 del 2 dicembre 2025, decreto: spese 4'617'226'900, ricavi 4'514'822'500, risultato d'esercizio −102'404'400",
+      "url": "https://www4.ti.ch/fileadmin/POTERI/GC/allegati/rapporti/29550_8619%20R-magg.pdf",
+      "promessaConsiglioStato": {
+        "disavanzo": -97.4,
+        "data": "2025-09-29",
+        "fonte": "Comunicato del Consiglio di Stato, 29 settembre 2025: disavanzo d'esercizio di 97.4 milioni",
+        "url": "https://www4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=255340"
+      }
+    },
+    {
+      "anno": 2027,
+      "tipo": "preventivo",
+      "etichetta": "Preventivo licenziato",
+      "disavanzo": -98.5,
+      "speseCorrenti": 4318.2,
+      "fonte": "Comunicato del Consiglio di Stato, 30 settembre 2026. Le 4'318.2 sono spese correnti, non il totale del conto.",
+      "url": "https://m4.ti.ch/tich/area-media/comunicati/dettaglio-comunicato/?NEWS_ID=261157"
+    }
+  ]
+}

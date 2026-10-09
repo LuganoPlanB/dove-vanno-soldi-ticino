@@ -10,14 +10,17 @@
 
 ## Gerarchia Pagine
 
-### `index.html` — Home: Quadro generale 2025 + anticipazione 2026
-**Scopo**: Key numbers Consuntivo 2025 (anno chiuso, dati effettivi), anticipo Preventivo 2026 dove disponibile, un teaser compatto Preventivo 2027 (fondo pagina).
+### `index.html` — Home
+**Scopo**: Hero, formule «quanto costa», quadro 2025, mappa delle spese, tre richiami e il confronto 2024–2027. Il dettaglio sta nelle pagine dedicate.
 
 **Contenuti**:
-- Hero: 3 metriche chiave 2025 (Risultato -32M, Debito 2654M, Popolazione 360k)
-- Spese per natura economica 2025 (treemap): fonte canonica `data/spese-per-natura-2025.json`
-- Premi sanitari: dato stampato UFSP 545 CHF/mese adulti 2025, fonte canonica `data/premi-e-contributi-sanita.json`
-- Sezione 2027 (compatta, fondo pagina): solo il teaser Preventivo 2027 (disavanzo -98M, debito >3 Mia, una frase). Link a storia-debito e metodologia per dettagli.
+- Hero: metriche Consuntivo 2025
+- Quanto costa: formule per abitante
+- Quadro finanziario 2025
+- Mappa spese per natura: il click apre `spese.html`
+- Richiami a `sanita.html` e `controllo.html`
+- Tre comuni più grandi, link a `comuni.html`
+- Confronto consuntivi 2024–2025 e preventivi 2026–2027 (`data/confronto-bilanci.json`)
 
 **Dati canonici qui**:
 - `data/spese-per-natura-2025.json` → treemap Spese per natura economica 2025
@@ -89,11 +92,13 @@ Ogni file JSON ha uno scopo singolo e non duplica dati:
 
 ## Navigazione
 
-Header (tutte le pagine):
-- Logo + Titolo
-- Link: Home | Storia debito | Tassazione | Comuni | Metodologia
+Lo stesso header, montato da `src/shared-nav.ts`, sta su ogni pagina:
+- Logo (torna alla home)
+- Link: Home, Spese, Sanità, Controllo, Comuni, Debito, Imprese, Metodologia
 - Selettore lingua (IT/EN/DE/FR)
 - Toggle tema (light/dark)
+
+Sotto `lg` i link stanno nel menu. La home tiene l'hero, le formule, il quadro 2025, la mappa delle spese e tre richiami. Il dettaglio sta nelle pagine Spese, Sanità, Controllo e Comuni.
 
 Footer (tutte le pagine):
 - Descrizione breve (una riga)
